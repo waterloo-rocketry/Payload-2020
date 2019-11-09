@@ -1,0 +1,249 @@
+EESchema Schematic File Version 4
+LIBS:Experiment Board-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A?
+U 1 1 5DC71A14
+P 6450 3800
+F 0 "A?" H 6450 2711 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 6450 2620 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 6600 2850 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 6450 2800 50  0001 C CNN
+	1    6450 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Motion:LSM6DS3 U?
+U 1 1 5DC7202F
+P 3550 3400
+F 0 "U?" H 3550 2619 50  0000 C CNN
+F 1 "LSM6DS3" H 3550 2710 50  0000 C CNN
+F 2 "Package_LGA:LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y" H 3150 2700 50  0001 L CNN
+F 3 "www.st.com/resource/en/datasheet/lsm6ds3.pdf" H 3650 2750 50  0001 C CNN
+	1    3550 3400
+	-1   0    0    1   
+$EndComp
+$Sheet
+S 4850 4050 500  500 
+U 5DC74309
+F0 "SD Logger" 50
+F1 "SDLogger.sch" 50
+$EndSheet
+Text HLabel 5350 4100 0    50   Input ~ 0
+CLK
+Text HLabel 5350 4200 0    50   Input ~ 0
+DI
+Text HLabel 5350 4400 0    50   Input ~ 0
+CS
+Text HLabel 5350 4300 0    50   Input ~ 0
+DO
+Text HLabel 5350 4500 0    50   Input ~ 0
+CD
+Text HLabel 4850 4500 2    50   Input ~ 0
+VCC
+Text HLabel 4850 4400 2    50   Input ~ 0
+GND
+Wire Wire Line
+	5350 4500 5950 4500
+Wire Wire Line
+	5950 4400 5350 4400
+Wire Wire Line
+	5350 4300 5950 4300
+Wire Wire Line
+	5950 4200 5350 4200
+Wire Wire Line
+	5350 4100 5950 4100
+$Comp
+L power:+5V #PWR?
+U 1 1 5DC764F3
+P 4700 4500
+F 0 "#PWR?" H 4700 4350 50  0001 C CNN
+F 1 "+5V" H 4715 4673 50  0000 C CNN
+F 2 "" H 4700 4500 50  0001 C CNN
+F 3 "" H 4700 4500 50  0001 C CNN
+	1    4700 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4700 4500 4850 4500
+$Comp
+L power:GND #PWR?
+U 1 1 5DC76820
+P 4700 4400
+F 0 "#PWR?" H 4700 4150 50  0001 C CNN
+F 1 "GND" H 4705 4227 50  0000 C CNN
+F 2 "" H 4700 4400 50  0001 C CNN
+F 3 "" H 4700 4400 50  0001 C CNN
+	1    4700 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4700 4400 4850 4400
+$Sheet
+S 4650 3000 700  750 
+U 5DC76D8F
+F0 "Level Shifter" 50
+F1 "LevelShifter.sch" 50
+$EndSheet
+Text HLabel 4650 3100 2    50   Input ~ 0
+LV1
+Wire Wire Line
+	4650 3100 4150 3100
+Text HLabel 4650 3200 2    50   Input ~ 0
+LV2
+Wire Wire Line
+	4650 3200 4150 3200
+Text HLabel 4650 3300 2    50   Input ~ 0
+LV3
+Text HLabel 4650 3700 2    50   Input ~ 0
+LV4
+Wire Wire Line
+	4650 3700 4150 3700
+Text HLabel 5350 3100 0    50   Input ~ 0
+LV
+Text HLabel 5350 3200 0    50   Input ~ 0
+HV
+Text HLabel 5350 3400 0    50   Input ~ 0
+HV1
+Wire Wire Line
+	5350 3400 5950 3400
+Text HLabel 5350 3500 0    50   Input ~ 0
+HV2
+Wire Wire Line
+	5350 3500 5950 3500
+Text HLabel 5350 3600 0    50   Input ~ 0
+HV3
+Wire Wire Line
+	5350 3600 5950 3600
+Text HLabel 5350 3700 0    50   Input ~ 0
+HV4
+Wire Wire Line
+	5350 3700 5950 3700
+$Comp
+L power:+5V #PWR?
+U 1 1 5DC79889
+P 6650 2700
+F 0 "#PWR?" H 6650 2550 50  0001 C CNN
+F 1 "+5V" H 6665 2873 50  0000 C CNN
+F 2 "" H 6650 2700 50  0001 C CNN
+F 3 "" H 6650 2700 50  0001 C CNN
+	1    6650 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2700 6650 2800
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DC79CE1
+P 6550 2600
+F 0 "#PWR?" H 6550 2450 50  0001 C CNN
+F 1 "+3V3" H 6565 2773 50  0000 C CNN
+F 2 "" H 6550 2600 50  0001 C CNN
+F 3 "" H 6550 2600 50  0001 C CNN
+	1    6550 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 2600 6550 2800
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DC7A1A8
+P 5500 2900
+F 0 "#PWR?" H 5500 2750 50  0001 C CNN
+F 1 "+3V3" H 5515 3073 50  0000 C CNN
+F 2 "" H 5500 2900 50  0001 C CNN
+F 3 "" H 5500 2900 50  0001 C CNN
+	1    5500 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2900 5500 3100
+Wire Wire Line
+	5500 3100 5350 3100
+$Comp
+L power:+5V #PWR?
+U 1 1 5DC7AD7E
+P 5600 3000
+F 0 "#PWR?" H 5600 2850 50  0001 C CNN
+F 1 "+5V" H 5615 3173 50  0000 C CNN
+F 2 "" H 5600 3000 50  0001 C CNN
+F 3 "" H 5600 3000 50  0001 C CNN
+	1    5600 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3000 5600 3200
+Wire Wire Line
+	5600 3200 5350 3200
+$Comp
+L power:GND #PWR?
+U 1 1 5DC7B9B4
+P 3350 2800
+F 0 "#PWR?" H 3350 2550 50  0001 C CNN
+F 1 "GND" V 3355 2672 50  0000 R CNN
+F 2 "" H 3350 2800 50  0001 C CNN
+F 3 "" H 3350 2800 50  0001 C CNN
+	1    3350 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3350 2800 3450 2800
+$Comp
+L power:GND #PWR?
+U 1 1 5DC7BF01
+P 3650 2800
+F 0 "#PWR?" H 3650 2550 50  0001 C CNN
+F 1 "GND" V 3655 2672 50  0000 R CNN
+F 2 "" H 3650 2800 50  0001 C CNN
+F 3 "" H 3650 2800 50  0001 C CNN
+	1    3650 2800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3650 2800 3550 2800
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DC7C54F
+P 3450 4100
+F 0 "#PWR?" H 3450 3950 50  0001 C CNN
+F 1 "+3V3" H 3465 4273 50  0000 C CNN
+F 2 "" H 3450 4100 50  0001 C CNN
+F 3 "" H 3450 4100 50  0001 C CNN
+	1    3450 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3450 4100 3450 4000
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DC7CBF7
+P 3550 4100
+F 0 "#PWR?" H 3550 3950 50  0001 C CNN
+F 1 "+3V3" V 3565 4228 50  0000 L CNN
+F 2 "" H 3550 4100 50  0001 C CNN
+F 3 "" H 3550 4100 50  0001 C CNN
+	1    3550 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3550 4100 3550 4000
+NoConn ~ 2950 3700
+NoConn ~ 2950 3600
+NoConn ~ 4150 3600
+NoConn ~ 4150 3500
+Wire Wire Line
+	4150 3300 4650 3300
+$EndSCHEMATC
