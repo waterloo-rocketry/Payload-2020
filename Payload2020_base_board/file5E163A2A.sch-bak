@@ -1,0 +1,200 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L payload2020_custom:LT1109A U7
+U 1 1 5E167D58
+P 5750 3600
+F 0 "U7" H 5725 3975 50  0000 C CNN
+F 1 "LT1109A" H 5725 3884 50  0000 C CNN
+F 2 "" H 5550 3650 50  0001 C CNN
+F 3 "" H 5550 3650 50  0001 C CNN
+	1    5750 3600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5300 3550
+NoConn ~ 6150 3650
+$Comp
+L Device:C C9
+U 1 1 5E16894E
+P 4800 3700
+F 0 "C9" H 4850 3800 50  0000 L CNN
+F 1 "22uF" H 4850 3600 50  0000 L CNN
+F 2 "" H 4838 3550 50  0001 C CNN
+F 3 "~" H 4800 3700 50  0001 C CNN
+	1    4800 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3550 4800 3450
+$Comp
+L power:GND #PWR03
+U 1 1 5E16AA86
+P 4800 3850
+F 0 "#PWR03" H 4800 3600 50  0001 C CNN
+F 1 "GND" H 4805 3677 50  0000 C CNN
+F 2 "" H 4800 3850 50  0001 C CNN
+F 3 "" H 4800 3850 50  0001 C CNN
+	1    4800 3850
+	1    0    0    -1  
+$EndComp
+Text HLabel 4750 3450 0    50   Input ~ 0
+VIN
+Wire Wire Line
+	4750 3450 4800 3450
+Connection ~ 4800 3450
+$Comp
+L Device:L L2
+U 1 1 5E16C101
+P 5000 3050
+F 0 "L2" V 5100 3050 50  0000 C CNN
+F 1 "33uH" V 4950 3050 50  0000 C CNN
+F 2 "" H 5000 3050 50  0001 C CNN
+F 3 "~" H 5000 3050 50  0001 C CNN
+	1    5000 3050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5200 3650 5300 3650
+Wire Wire Line
+	4800 3450 5300 3450
+$Comp
+L power:GND #PWR04
+U 1 1 5E16DEF5
+P 5200 3850
+F 0 "#PWR04" H 5200 3600 50  0001 C CNN
+F 1 "GND" H 5205 3677 50  0000 C CNN
+F 2 "" H 5200 3850 50  0001 C CNN
+F 3 "" H 5200 3850 50  0001 C CNN
+	1    5200 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3850 5200 3750
+Wire Wire Line
+	5200 3750 5300 3750
+$Comp
+L Device:D_Schottky D4
+U 1 1 5E16F13E
+P 5700 3050
+F 0 "D4" H 5700 2834 50  0000 C CNN
+F 1 "MBRS130T3" H 5700 2925 50  0000 C CNN
+F 2 "" H 5700 3050 50  0001 C CNN
+F 3 "~" H 5700 3050 50  0001 C CNN
+	1    5700 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 3050 5200 3050
+Wire Wire Line
+	5200 3050 5200 3650
+Wire Wire Line
+	5850 3050 6300 3050
+Wire Wire Line
+	6300 3050 6300 3450
+Wire Wire Line
+	6300 3450 6150 3450
+Connection ~ 6300 3450
+Text Notes 4900 2550 0    50   ~ 0
+Use Datasheet Recommended Inductor (Coiltronics CTX33-2)
+Text HLabel 6150 3550 2    50   Input ~ 0
+~SHUTDOWN
+$Comp
+L Device:C C10
+U 1 1 5E170A11
+P 6700 3700
+F 0 "C10" H 6750 3800 50  0000 L CNN
+F 1 "47uF" H 6750 3600 50  0000 L CNN
+F 2 "" H 6738 3550 50  0001 C CNN
+F 3 "~" H 6700 3700 50  0001 C CNN
+	1    6700 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3550 6700 3450
+Connection ~ 6700 3450
+Wire Wire Line
+	6700 3450 6300 3450
+$Comp
+L power:GND #PWR06
+U 1 1 5E171575
+P 6700 3850
+F 0 "#PWR06" H 6700 3600 50  0001 C CNN
+F 1 "GND" H 6705 3677 50  0000 C CNN
+F 2 "" H 6700 3850 50  0001 C CNN
+F 3 "" H 6700 3850 50  0001 C CNN
+	1    6700 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5E171F05
+P 6250 3850
+F 0 "#PWR05" H 6250 3600 50  0001 C CNN
+F 1 "GND" H 6255 3677 50  0000 C CNN
+F 2 "" H 6250 3850 50  0001 C CNN
+F 3 "" H 6250 3850 50  0001 C CNN
+	1    6250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3850 6250 3750
+Wire Wire Line
+	6250 3750 6150 3750
+Wire Wire Line
+	5150 3050 5200 3050
+Connection ~ 5200 3050
+Wire Wire Line
+	4800 3450 4800 3050
+Wire Wire Line
+	4800 3050 4850 3050
+$Comp
+L Device:Q_NMOS_DGS Q4
+U 1 1 5E1797C6
+P 7950 3800
+F 0 "Q4" H 8155 3846 50  0000 L CNN
+F 1 "Q_NMOS_DGS" H 8155 3755 50  0000 L CNN
+F 2 "" H 8150 3900 50  0001 C CNN
+F 3 "~" H 7950 3800 50  0001 C CNN
+	1    7950 3800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3450 7850 3600
+Wire Wire Line
+	6700 3450 7850 3450
+Text HLabel 8150 3800 2    50   Input ~ 0
+VALVE_EN
+Text HLabel 8250 4200 2    50   Input ~ 0
+VALVE+
+Wire Wire Line
+	8250 4200 7850 4200
+Wire Wire Line
+	7850 4200 7850 4000
+Text HLabel 7850 2850 1    50   Input ~ 0
++12
+$Comp
+L Device:Jumper JP15
+U 1 1 5E17EF17
+P 7850 3150
+F 0 "JP15" V 7804 3277 50  0000 L CNN
+F 1 "Jumper" V 7895 3277 50  0000 L CNN
+F 2 "" H 7850 3150 50  0001 C CNN
+F 3 "~" H 7850 3150 50  0001 C CNN
+	1    7850 3150
+	0    1    1    0   
+$EndComp
+Connection ~ 7850 3450
+$EndSCHEMATC

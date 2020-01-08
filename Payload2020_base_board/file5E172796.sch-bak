@@ -1,0 +1,318 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_CAN_LIN:MCP2515-xSO U4
+U 1 1 5E172CD3
+P 6200 3850
+F 0 "U4" H 6450 4800 50  0000 C CNN
+F 1 "MCP2515-xSO" H 6550 4650 50  0000 C CNN
+F 2 "Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm" H 6200 2950 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21801e.pdf" H 6300 3050 50  0001 C CNN
+	1    6200 3850
+	1    0    0    -1  
+$EndComp
+Text HLabel 5600 3350 0    50   Input ~ 0
+MISO
+Text HLabel 5600 3250 0    50   Input ~ 0
+MOSI
+Text HLabel 5600 3450 0    50   Input ~ 0
+SS
+Text HLabel 5600 3550 0    50   Input ~ 0
+SCK
+$Comp
+L Device:Crystal Y1
+U 1 1 5E173524
+P 4750 4100
+F 0 "Y1" V 4704 4231 50  0000 L CNN
+F 1 "16MHz" V 4795 4231 50  0000 L CNN
+F 2 "" H 4750 4100 50  0001 C CNN
+F 3 "~" H 4750 4100 50  0001 C CNN
+	1    4750 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 3950 4750 3850
+Wire Wire Line
+	4750 3850 5250 3850
+Wire Wire Line
+	5250 3850 5250 4050
+Wire Wire Line
+	5250 4050 5600 4050
+Wire Wire Line
+	4750 4250 4750 4350
+Wire Wire Line
+	4750 4350 5250 4350
+Wire Wire Line
+	5250 4350 5250 4150
+Wire Wire Line
+	5250 4150 5600 4150
+$Comp
+L Device:C C1
+U 1 1 5E1747A1
+P 4400 3650
+F 0 "C1" V 4148 3650 50  0000 C CNN
+F 1 "22pF" V 4239 3650 50  0000 C CNN
+F 2 "" H 4438 3500 50  0001 C CNN
+F 3 "~" H 4400 3650 50  0001 C CNN
+	1    4400 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5E1751FC
+P 4400 4600
+F 0 "C2" V 4148 4600 50  0000 C CNN
+F 1 "22pF" V 4239 4600 50  0000 C CNN
+F 2 "" H 4438 4450 50  0001 C CNN
+F 3 "~" H 4400 4600 50  0001 C CNN
+	1    4400 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 3650 4750 3650
+Wire Wire Line
+	4750 3650 4750 3850
+Connection ~ 4750 3850
+Wire Wire Line
+	4550 4600 4750 4600
+Wire Wire Line
+	4750 4600 4750 4350
+Connection ~ 4750 4350
+$Comp
+L power:GND #PWR0128
+U 1 1 5E175DF3
+P 4050 4850
+F 0 "#PWR0128" H 4050 4600 50  0001 C CNN
+F 1 "GND" H 4055 4677 50  0000 C CNN
+F 2 "" H 4050 4850 50  0001 C CNN
+F 3 "" H 4050 4850 50  0001 C CNN
+	1    4050 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4850 4050 4600
+Wire Wire Line
+	4050 4600 4250 4600
+Wire Wire Line
+	4050 4600 4050 3650
+Wire Wire Line
+	4050 3650 4250 3650
+Connection ~ 4050 4600
+Text HLabel 6800 4450 2    50   Input ~ 0
+~RESET
+Text Notes 3200 2650 0    50   ~ 0
+Design influenced by http://cdn.sparkfun.com/datasheets/Dev/Arduino/Shields/SparkFun_CAN-Bus_Shield_v13a.pdf
+Text HLabel 6800 3850 2    50   Input ~ 0
+~INT
+$Comp
+L power:GND #PWR0129
+U 1 1 5E17861B
+P 6200 4650
+F 0 "#PWR0129" H 6200 4400 50  0001 C CNN
+F 1 "GND" H 6205 4477 50  0000 C CNN
+F 2 "" H 6200 4650 50  0001 C CNN
+F 3 "" H 6200 4650 50  0001 C CNN
+	1    6200 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_CAN_LIN:MCP2551-I-SN U5
+U 1 1 5E17902D
+P 8650 3850
+F 0 "U5" H 9000 4350 50  0000 C CNN
+F 1 "MCP2551-I-SN" H 9050 4250 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8650 3350 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/devicedoc/21667d.pdf" H 8650 3850 50  0001 C CNN
+	1    8650 3850
+	1    0    0    -1  
+$EndComp
+Text HLabel 6050 2850 0    50   Input ~ 0
+VIN
+Wire Wire Line
+	6050 2850 6200 2850
+Wire Wire Line
+	6200 2850 6200 3050
+Text HLabel 8550 3250 0    50   Input ~ 0
+VIN
+Wire Wire Line
+	8550 3250 8650 3250
+Wire Wire Line
+	8650 3250 8650 3450
+Wire Wire Line
+	6800 3250 7850 3250
+Wire Wire Line
+	7850 3250 7850 3750
+Wire Wire Line
+	7850 3750 8150 3750
+Wire Wire Line
+	6800 3350 7750 3350
+Wire Wire Line
+	7750 3350 7750 3650
+Wire Wire Line
+	7750 3650 8150 3650
+$Comp
+L Device:R R8
+U 1 1 5E17ACA5
+P 7950 4250
+F 0 "R8" H 8020 4296 50  0000 L CNN
+F 1 "4.7k" H 8020 4205 50  0000 L CNN
+F 2 "" V 7880 4250 50  0001 C CNN
+F 3 "~" H 7950 4250 50  0001 C CNN
+	1    7950 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 4100 7950 4050
+Wire Wire Line
+	7950 4050 8150 4050
+$Comp
+L power:GND #PWR0130
+U 1 1 5E17B588
+P 7950 4500
+F 0 "#PWR0130" H 7950 4250 50  0001 C CNN
+F 1 "GND" H 7955 4327 50  0000 C CNN
+F 2 "" H 7950 4500 50  0001 C CNN
+F 3 "" H 7950 4500 50  0001 C CNN
+	1    7950 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 4500 7950 4400
+$Comp
+L power:GND #PWR0131
+U 1 1 5E17C2FB
+P 8650 4500
+F 0 "#PWR0131" H 8650 4250 50  0001 C CNN
+F 1 "GND" H 8655 4327 50  0000 C CNN
+F 2 "" H 8650 4500 50  0001 C CNN
+F 3 "" H 8650 4500 50  0001 C CNN
+	1    8650 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 4500 8650 4250
+$Comp
+L Device:C C3
+U 1 1 5E17CFFD
+P 9200 3250
+F 0 "C3" V 8948 3250 50  0000 C CNN
+F 1 "0.1uF" V 9039 3250 50  0000 C CNN
+F 2 "" H 9238 3100 50  0001 C CNN
+F 3 "~" H 9200 3250 50  0001 C CNN
+	1    9200 3250
+	0    1    1    0   
+$EndComp
+Connection ~ 8650 3250
+Wire Wire Line
+	8650 3250 9050 3250
+$Comp
+L power:GND #PWR0132
+U 1 1 5E17EF6E
+P 9750 3400
+F 0 "#PWR0132" H 9750 3150 50  0001 C CNN
+F 1 "GND" H 9755 3227 50  0000 C CNN
+F 2 "" H 9750 3400 50  0001 C CNN
+F 3 "" H 9750 3400 50  0001 C CNN
+	1    9750 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 3400 9750 3250
+Wire Wire Line
+	9750 3250 9350 3250
+$Comp
+L Device:R R9
+U 1 1 5E17FE09
+P 9700 4150
+F 0 "R9" H 9770 4196 50  0000 L CNN
+F 1 "100" H 9770 4105 50  0000 L CNN
+F 2 "" V 9630 4150 50  0001 C CNN
+F 3 "~" H 9700 4150 50  0001 C CNN
+	1    9700 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5E18023A
+P 10150 4150
+F 0 "R10" H 10220 4196 50  0000 L CNN
+F 1 "100" H 10220 4105 50  0000 L CNN
+F 2 "" V 10080 4150 50  0001 C CNN
+F 3 "~" H 10150 4150 50  0001 C CNN
+	1    10150 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5E18069E
+P 9700 4450
+F 0 "C4" H 9585 4404 50  0000 R CNN
+F 1 "560pF" H 9585 4495 50  0000 R CNN
+F 2 "" H 9738 4300 50  0001 C CNN
+F 3 "~" H 9700 4450 50  0001 C CNN
+	1    9700 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5E181375
+P 10150 4450
+F 0 "C5" H 10035 4404 50  0000 R CNN
+F 1 "560pF" H 10035 4495 50  0000 R CNN
+F 2 "" H 10188 4300 50  0001 C CNN
+F 3 "~" H 10150 4450 50  0001 C CNN
+	1    10150 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0133
+U 1 1 5E1818A6
+P 9950 4700
+F 0 "#PWR0133" H 9950 4450 50  0001 C CNN
+F 1 "GND" H 9955 4527 50  0000 C CNN
+F 2 "" H 9950 4700 50  0001 C CNN
+F 3 "" H 9950 4700 50  0001 C CNN
+	1    9950 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 4700 9700 4700
+Wire Wire Line
+	9700 4700 9700 4600
+Wire Wire Line
+	9950 4700 10150 4700
+Wire Wire Line
+	10150 4700 10150 4600
+Connection ~ 9950 4700
+Wire Wire Line
+	9700 4000 9700 3950
+Wire Wire Line
+	9700 3950 9150 3950
+Wire Wire Line
+	9150 3750 10150 3750
+Wire Wire Line
+	10150 3750 10150 4000
+Text HLabel 10250 3750 2    50   Input ~ 0
+CANH
+Wire Wire Line
+	10250 3750 10150 3750
+Connection ~ 10150 3750
+Text HLabel 9800 3950 2    50   Input ~ 0
+CANL
+Wire Wire Line
+	9800 3950 9700 3950
+Connection ~ 9700 3950
+$EndSCHEMATC
