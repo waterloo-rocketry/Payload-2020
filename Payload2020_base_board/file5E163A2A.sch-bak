@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 3 8
 Title ""
 Date ""
 Rev ""
@@ -14,12 +14,14 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L payload2020_custom:LT1109A U7
+L payload2020_custom:LT1109A U?
 U 1 1 5E167D58
 P 5750 3600
+AR Path="/5E167D58" Ref="U?"  Part="1" 
+AR Path="/5E163A2B/5E167D58" Ref="U7"  Part="1" 
 F 0 "U7" H 5725 3975 50  0000 C CNN
 F 1 "LT1109A" H 5725 3884 50  0000 C CNN
-F 2 "" H 5550 3650 50  0001 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5550 3650 50  0001 C CNN
 F 3 "" H 5550 3650 50  0001 C CNN
 	1    5750 3600
 	1    0    0    -1  
@@ -32,7 +34,7 @@ U 1 1 5E16894E
 P 4800 3700
 F 0 "C9" H 4850 3800 50  0000 L CNN
 F 1 "22uF" H 4850 3600 50  0000 L CNN
-F 2 "" H 4838 3550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4838 3550 50  0001 C CNN
 F 3 "~" H 4800 3700 50  0001 C CNN
 	1    4800 3700
 	1    0    0    -1  
@@ -50,7 +52,7 @@ F 3 "" H 4800 3850 50  0001 C CNN
 	1    4800 3850
 	1    0    0    -1  
 $EndComp
-Text HLabel 4750 3450 0    50   Input ~ 0
+Text HLabel 4150 3450 0    50   Input ~ 0
 VIN
 Wire Wire Line
 	4750 3450 4800 3450
@@ -61,7 +63,7 @@ U 1 1 5E16C101
 P 5000 3050
 F 0 "L2" V 5100 3050 50  0000 C CNN
 F 1 "33uH" V 4950 3050 50  0000 C CNN
-F 2 "" H 5000 3050 50  0001 C CNN
+F 2 "Payload2020_custom:CR54NP-330LC" H 5000 3050 50  0001 C CNN
 F 3 "~" H 5000 3050 50  0001 C CNN
 	1    5000 3050
 	0    -1   -1   0   
@@ -91,7 +93,7 @@ U 1 1 5E16F13E
 P 5700 3050
 F 0 "D4" H 5700 2834 50  0000 C CNN
 F 1 "MBRS130T3" H 5700 2925 50  0000 C CNN
-F 2 "" H 5700 3050 50  0001 C CNN
+F 2 "Diode_SMD:D_SMB_Handsoldering" H 5700 3050 50  0001 C CNN
 F 3 "~" H 5700 3050 50  0001 C CNN
 	1    5700 3050
 	-1   0    0    1   
@@ -117,7 +119,7 @@ U 1 1 5E170A11
 P 6700 3700
 F 0 "C10" H 6750 3800 50  0000 L CNN
 F 1 "47uF" H 6750 3600 50  0000 L CNN
-F 2 "" H 6738 3550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6738 3550 50  0001 C CNN
 F 3 "~" H 6700 3700 50  0001 C CNN
 	1    6700 3700
 	1    0    0    -1  
@@ -160,41 +162,70 @@ Wire Wire Line
 	4800 3450 4800 3050
 Wire Wire Line
 	4800 3050 4850 3050
-$Comp
-L Device:Q_NMOS_DGS Q4
-U 1 1 5E1797C6
-P 7950 3800
-F 0 "Q4" H 8155 3846 50  0000 L CNN
-F 1 "Q_NMOS_DGS" H 8155 3755 50  0000 L CNN
-F 2 "" H 8150 3900 50  0001 C CNN
-F 3 "~" H 7950 3800 50  0001 C CNN
-	1    7950 3800
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	7850 3450 7850 3600
 Wire Wire Line
-	6700 3450 7850 3450
-Text HLabel 8150 3800 2    50   Input ~ 0
-VALVE_EN
+	6700 3450 6950 3450
+Text HLabel 8350 3800 2    50   Input ~ 0
+~VALVE_EN
 Text HLabel 8250 4200 2    50   Input ~ 0
 VALVE+
 Wire Wire Line
 	8250 4200 7850 4200
 Wire Wire Line
 	7850 4200 7850 4000
-Text HLabel 7850 2850 1    50   Input ~ 0
-+12
 $Comp
-L Device:Jumper JP15
-U 1 1 5E17EF17
-P 7850 3150
-F 0 "JP15" V 7804 3277 50  0000 L CNN
-F 1 "Jumper" V 7895 3277 50  0000 L CNN
-F 2 "" H 7850 3150 50  0001 C CNN
-F 3 "~" H 7850 3150 50  0001 C CNN
-	1    7850 3150
-	0    1    1    0   
+L Device:Q_PMOS_GSD Q4
+U 1 1 5EBB2611
+P 7950 3800
+F 0 "Q4" H 8155 3754 50  0000 L CNN
+F 1 "Q_PMOS_GSD" H 8155 3845 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 8150 3900 50  0001 C CNN
+F 3 "~" H 7950 3800 50  0001 C CNN
+	1    7950 3800
+	-1   0    0    1   
 $EndComp
+$Comp
+L Device:R R16
+U 1 1 5EBB4E97
+P 8150 3650
+F 0 "R16" H 8220 3696 50  0000 L CNN
+F 1 "10k" H 8220 3605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 8080 3650 50  0001 C CNN
+F 3 "~" H 8150 3650 50  0001 C CNN
+	1    8150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3500 8150 3450
+Wire Wire Line
+	8150 3450 7850 3450
 Connection ~ 7850 3450
+Wire Wire Line
+	8350 3800 8150 3800
+Connection ~ 8150 3800
+$Comp
+L Device:Jumper JP20
+U 1 1 5EBB7521
+P 4450 3450
+F 0 "JP20" H 4450 3714 50  0000 C CNN
+F 1 "Jumper" H 4450 3623 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4450 3450 50  0001 C CNN
+F 3 "~" H 4450 3450 50  0001 C CNN
+	1    4450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP21
+U 1 1 5EBB7DD7
+P 7250 3450
+F 0 "JP21" H 7250 3714 50  0000 C CNN
+F 1 "Jumper" H 7250 3623 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7250 3450 50  0001 C CNN
+F 3 "~" H 7250 3450 50  0001 C CNN
+	1    7250 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 3450 7850 3450
 $EndSCHEMATC

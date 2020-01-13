@@ -1,0 +1,13 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Conn_01x20_Female
+D Generic connector, single row, 01x20, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP SRAM_23LC1024T-I_ST
+D 	IC SRAM 1M SPI 20MHZ 8TSSOP
+$ENDCMP
+#
+#End Doc Library
