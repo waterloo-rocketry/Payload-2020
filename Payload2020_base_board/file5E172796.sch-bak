@@ -260,12 +260,12 @@ $EndComp
 Text GLabel 6000 2150 0    50   Input ~ 0
 SLEEP_5V
 $Comp
-L Device:Jumper JP18
+L Device:Jumper JP17
 U 1 1 5E18DFC8
 P 6300 2150
-AR Path="/5E172797/5E18DFC8" Ref="JP18"  Part="1" 
-AR Path="/5E2B166E/5E18DFC8" Ref="JP19"  Part="1" 
-F 0 "JP18" H 6300 2414 50  0000 C CNN
+AR Path="/5E172797/5E18DFC8" Ref="JP17"  Part="1" 
+AR Path="/5E2B166E/5E18DFC8" Ref="JP3"  Part="1" 
+F 0 "JP17" H 6300 2414 50  0000 C CNN
 F 1 "Jumper" H 6300 2323 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6300 2150 50  0001 C CNN
 F 3 "~" H 6300 2150 50  0001 C CNN

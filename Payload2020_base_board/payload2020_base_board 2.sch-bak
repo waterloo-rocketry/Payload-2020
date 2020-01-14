@@ -221,10 +221,10 @@ Wire Wire Line
 Text Notes 10550 1300 0    50   ~ 0
 To SiPM
 $Comp
-L Device:Jumper JP20
+L Device:Jumper JP7
 U 1 1 5E33666C
 P 5850 1300
-F 0 "JP20" H 5550 1400 50  0000 L CNN
+F 0 "JP7" H 5600 1400 50  0000 L CNN
 F 1 "Jumper" H 5895 1427 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5850 1300 50  0001 C CNN
 F 3 "~" H 5850 1300 50  0001 C CNN
@@ -234,10 +234,10 @@ $EndComp
 Wire Wire Line
 	3950 1100 4150 1100
 $Comp
-L Device:Jumper JP13
+L Device:Jumper JP11
 U 1 1 5E35ECDC
 P 9500 2750
-F 0 "JP13" H 9500 3014 50  0000 C CNN
+F 0 "JP11" H 9500 3014 50  0000 C CNN
 F 1 "Jumper" H 9500 2923 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9500 2750 50  0001 C CNN
 F 3 "~" H 9500 2750 50  0001 C CNN
@@ -249,10 +249,10 @@ Wire Wire Line
 Wire Wire Line
 	9100 2750 9200 2750
 $Comp
-L Device:Jumper JP16
+L Device:Jumper JP12
 U 1 1 5E3664AD
 P 9550 1250
-F 0 "JP16" H 9550 1514 50  0000 C CNN
+F 0 "JP12" H 9550 1514 50  0000 C CNN
 F 1 "Jumper" H 9550 1423 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9550 1250 50  0001 C CNN
 F 3 "~" H 9550 1250 50  0001 C CNN
@@ -266,10 +266,10 @@ Wire Wire Line
 Wire Wire Line
 	9850 1250 10100 1250
 $Comp
-L Device:Jumper JP10
+L Device:Jumper JP4
 U 1 1 5E38BEF7
 P 3400 4050
-F 0 "JP10" H 3050 4100 50  0000 C CNN
+F 0 "JP4" H 3050 4100 50  0000 C CNN
 F 1 "Jumper" H 3800 4100 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3400 4050 50  0001 C CNN
 F 3 "~" H 3400 4050 50  0001 C CNN
@@ -277,10 +277,21 @@ F 3 "~" H 3400 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper JP9
+L Device:Jumper JP5
+U 1 1 5E38CA65
+P 3400 4150
+F 0 "JP5" H 3050 4200 50  0000 C CNN
+F 1 "Jumper" H 3800 4200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3400 4150 50  0001 C CNN
+F 3 "~" H 3400 4150 50  0001 C CNN
+	1    3400 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP6
 U 1 1 5E38CFF7
 P 3400 4250
-F 0 "JP9" H 3050 4300 50  0000 C CNN
+F 0 "JP6" H 3050 4300 50  0000 C CNN
 F 1 "Jumper" H 3800 4300 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3400 4250 50  0001 C CNN
 F 3 "~" H 3400 4250 50  0001 C CNN
@@ -542,10 +553,10 @@ Wire Wire Line
 Wire Wire Line
 	6500 1300 6150 1300
 $Comp
-L Device:Jumper JP6
+L Device:Jumper JP2
 U 1 1 5E334947
 P 5000 850
-F 0 "JP6" H 4750 950 50  0000 L CNN
+F 0 "JP2" H 4750 950 50  0000 L CNN
 F 1 "Jumper" H 5100 950 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5000 850 50  0001 C CNN
 F 3 "~" H 5000 850 50  0001 C CNN
@@ -606,10 +617,10 @@ $EndComp
 Wire Wire Line
 	8550 3150 8550 2950
 $Comp
-L Device:Jumper JP18
+L Device:Jumper JP17
 U 1 1 5E26D139
 P 8550 3450
-F 0 "JP18" H 8200 3500 50  0000 C CNN
+F 0 "JP17" H 8200 3500 50  0000 C CNN
 F 1 "Jumper" H 8750 3600 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8550 3450 50  0001 C CNN
 F 3 "~" H 8550 3450 50  0001 C CNN
@@ -617,10 +628,10 @@ F 3 "~" H 8550 3450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Jumper JP15
+L Device:Jumper JP16
 U 1 1 5E26DE27
 P 8450 3450
-F 0 "JP15" H 8250 3600 50  0000 C CNN
+F 0 "JP16" H 8250 3600 50  0000 C CNN
 F 1 "Jumper" H 8850 3500 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8450 3450 50  0001 C CNN
 F 3 "~" H 8450 3450 50  0001 C CNN
@@ -636,14 +647,36 @@ MISO2
 Text Label 5800 3850 2    50   ~ 0
 MOSI2
 $Comp
-L Device:Jumper JP11
+L Device:Jumper JP9
 U 1 1 5E275F8C
 P 6350 3850
-F 0 "JP11" H 6000 3900 50  0000 C CNN
+F 0 "JP9" H 6000 3900 50  0000 C CNN
 F 1 "Jumper" H 6750 3900 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6350 3850 50  0001 C CNN
 F 3 "~" H 6350 3850 50  0001 C CNN
 	1    6350 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP10
+U 1 1 5E275F96
+P 6350 3950
+F 0 "JP10" H 6000 4000 50  0000 C CNN
+F 1 "Jumper" H 6750 4000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6350 3950 50  0001 C CNN
+F 3 "~" H 6350 3950 50  0001 C CNN
+	1    6350 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP15
+U 1 1 5E275FA0
+P 6350 4050
+F 0 "JP15" H 6000 4100 50  0000 C CNN
+F 1 "Jumper" H 6750 4100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6350 4050 50  0001 C CNN
+F 3 "~" H 6350 4050 50  0001 C CNN
+	1    6350 4050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -823,7 +856,7 @@ LED1
 Text Label 7900 3350 0    50   ~ 0
 LED2
 Text Label 1450 3050 0    50   ~ 0
-LED1
+LED2
 Wire Wire Line
 	1450 3050 1400 3050
 Wire Wire Line
@@ -1214,10 +1247,10 @@ Wire Wire Line
 Wire Wire Line
 	8550 3850 8550 3750
 $Comp
-L Device:Jumper JP4
+L Device:Jumper JP8
 U 1 1 5E810FBC
 P 5350 4600
-F 0 "JP4" H 5000 4650 50  0000 C CNN
+F 0 "JP8" H 5000 4650 50  0000 C CNN
 F 1 "Jumper" H 5550 4750 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5350 4600 50  0001 C CNN
 F 3 "~" H 5350 4600 50  0001 C CNN
@@ -1225,10 +1258,10 @@ F 3 "~" H 5350 4600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Jumper JP19
+L Device:Jumper JP3
 U 1 1 5E810FC6
 P 5250 4600
-F 0 "JP19" H 5050 4750 50  0000 C CNN
+F 0 "JP3" H 5050 4750 50  0000 C CNN
 F 1 "Jumper" H 5650 4650 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5250 4600 50  0001 C CNN
 F 3 "~" H 5250 4600 50  0001 C CNN
@@ -1426,10 +1459,10 @@ Battery 2
 Text Notes 650  1250 0    50   ~ 0
 Battery 1
 $Comp
-L Device:Jumper JP12
+L Device:Jumper JP1
 U 1 1 5E326DBA
 P 1700 850
-F 0 "JP12" H 1700 1114 50  0000 C CNN
+F 0 "JP1" H 1700 1114 50  0000 C CNN
 F 1 "Jumper" H 1700 1023 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1700 850 50  0001 C CNN
 F 3 "~" H 1700 850 50  0001 C CNN
@@ -1566,10 +1599,10 @@ F4 "CLK" I L 9800 5200 50
 F5 "CS" I L 9800 5500 50 
 $EndSheet
 $Comp
-L power:+5V #PWR02
+L power:+5V #PWR?
 U 1 1 5EECDA3C
 P 5250 6000
-F 0 "#PWR02" H 5250 5850 50  0001 C CNN
+F 0 "#PWR?" H 5250 5850 50  0001 C CNN
 F 1 "+5V" H 5265 6173 50  0000 C CNN
 F 2 "" H 5250 6000 50  0001 C CNN
 F 3 "" H 5250 6000 50  0001 C CNN
@@ -1582,10 +1615,10 @@ Connection ~ 5250 6200
 Wire Wire Line
 	5250 6200 5250 6250
 $Comp
-L power:GND #PWR08
+L power:GND #PWR?
 U 1 1 5EEE3EC9
 P 5900 6550
-F 0 "#PWR08" H 5900 6300 50  0001 C CNN
+F 0 "#PWR?" H 5900 6300 50  0001 C CNN
 F 1 "GND" H 5905 6377 50  0000 C CNN
 F 2 "" H 5900 6550 50  0001 C CNN
 F 3 "" H 5900 6550 50  0001 C CNN
@@ -1593,10 +1626,10 @@ F 3 "" H 5900 6550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR09
+L power:+3V3 #PWR?
 U 1 1 5EEE58E8
 P 6400 6000
-F 0 "#PWR09" H 6400 5850 50  0001 C CNN
+F 0 "#PWR?" H 6400 5850 50  0001 C CNN
 F 1 "+3V3" H 6415 6173 50  0000 C CNN
 F 2 "" H 6400 6000 50  0001 C CNN
 F 3 "" H 6400 6000 50  0001 C CNN
@@ -1606,10 +1639,10 @@ $EndComp
 Wire Wire Line
 	6400 6000 6400 6200
 $Comp
-L power:GND #PWR07
+L power:GND #PWR?
 U 1 1 5EF0AB27
 P 5250 6550
-F 0 "#PWR07" H 5250 6300 50  0001 C CNN
+F 0 "#PWR?" H 5250 6300 50  0001 C CNN
 F 1 "GND" H 5255 6377 50  0000 C CNN
 F 2 "" H 5250 6550 50  0001 C CNN
 F 3 "" H 5250 6550 50  0001 C CNN
@@ -1617,12 +1650,12 @@ F 3 "" H 5250 6550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C5
+L Device:C C?
 U 1 1 5EF0B3EA
 P 6550 6400
-F 0 "C5" H 6665 6446 50  0000 L CNN
+F 0 "C?" H 6665 6446 50  0000 L CNN
 F 1 "10uF" H 6665 6355 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6588 6250 50  0001 C CNN
+F 2 "" H 6588 6250 50  0001 C CNN
 F 3 "~" H 6550 6400 50  0001 C CNN
 	1    6550 6400
 	1    0    0    -1  
@@ -1633,10 +1666,10 @@ Wire Wire Line
 	6550 6200 6550 6250
 Connection ~ 6400 6200
 $Comp
-L power:GND #PWR010
+L power:GND #PWR?
 U 1 1 5EF1717E
 P 6550 6550
-F 0 "#PWR010" H 6550 6300 50  0001 C CNN
+F 0 "#PWR?" H 6550 6300 50  0001 C CNN
 F 1 "GND" H 6555 6377 50  0000 C CNN
 F 2 "" H 6550 6550 50  0001 C CNN
 F 3 "" H 6550 6550 50  0001 C CNN
@@ -1644,10 +1677,10 @@ F 3 "" H 6550 6550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:LD1117S33TR_SOT223 U2
+L Regulator_Linear:LD1117S33TR_SOT223 U?
 U 1 1 5EF1A0C8
 P 5900 6200
-F 0 "U2" H 5900 6442 50  0000 C CNN
+F 0 "U?" H 5900 6442 50  0000 C CNN
 F 1 "LD1117S33TR_SOT223" H 5900 6351 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 5900 6400 50  0001 C CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 6000 5950 50  0001 C CNN
@@ -1661,47 +1694,14 @@ Wire Wire Line
 Wire Wire Line
 	5900 6500 5900 6550
 $Comp
-L Device:C C4
+L Device:C C?
 U 1 1 5EF09B29
 P 5250 6400
-F 0 "C4" H 5365 6446 50  0000 L CNN
+F 0 "C?" H 5365 6446 50  0000 L CNN
 F 1 "100nF" H 5365 6355 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5288 6250 50  0001 C CNN
+F 2 "" H 5288 6250 50  0001 C CNN
 F 3 "~" H 5250 6400 50  0001 C CNN
 	1    5250 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper JP2
-U 1 1 5E38CA65
-P 3400 4150
-F 0 "JP2" H 3050 4200 50  0000 C CNN
-F 1 "Jumper" H 3800 4200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3400 4150 50  0001 C CNN
-F 3 "~" H 3400 4150 50  0001 C CNN
-	1    3400 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper JP1
-U 1 1 5E275FA0
-P 6350 4050
-F 0 "JP1" H 6000 4100 50  0000 C CNN
-F 1 "Jumper" H 6750 4100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6350 4050 50  0001 C CNN
-F 3 "~" H 6350 4050 50  0001 C CNN
-	1    6350 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper JP8
-U 1 1 5E275F96
-P 6350 3950
-F 0 "JP8" H 6000 4000 50  0000 C CNN
-F 1 "Jumper" H 6750 4000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6350 3950 50  0001 C CNN
-F 3 "~" H 6350 3950 50  0001 C CNN
-	1    6350 3950
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

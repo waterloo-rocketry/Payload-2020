@@ -205,10 +205,10 @@ Wire Wire Line
 	8350 3800 8150 3800
 Connection ~ 8150 3800
 $Comp
-L Device:Jumper JP7
+L Device:Jumper JP20
 U 1 1 5EBB7521
 P 4450 3450
-F 0 "JP7" H 4450 3714 50  0000 C CNN
+F 0 "JP20" H 4450 3714 50  0000 C CNN
 F 1 "Jumper" H 4450 3623 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4450 3450 50  0001 C CNN
 F 3 "~" H 4450 3450 50  0001 C CNN
@@ -216,10 +216,10 @@ F 3 "~" H 4450 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Jumper JP11
+L Device:Jumper JP21
 U 1 1 5EBB7DD7
 P 7250 3450
-F 0 "JP11" H 7250 3714 50  0000 C CNN
+F 0 "JP21" H 7250 3714 50  0000 C CNN
 F 1 "Jumper" H 7250 3623 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7250 3450 50  0001 C CNN
 F 3 "~" H 7250 3450 50  0001 C CNN
