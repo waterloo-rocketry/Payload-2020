@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 8
+Sheet 7 8
 Title ""
 Date ""
 Rev ""
@@ -163,47 +163,22 @@ Wire Wire Line
 Wire Wire Line
 	4800 3050 4850 3050
 Wire Wire Line
-	7850 3450 7850 3600
+	7750 3900 7750 4050
 Wire Wire Line
 	6700 3450 6950 3450
-Text HLabel 8350 3800 2    50   Input ~ 0
-~VALVE_EN
-Text HLabel 8250 4200 2    50   Input ~ 0
-VALVE+
-Wire Wire Line
-	8250 4200 7850 4200
-Wire Wire Line
-	7850 4200 7850 4000
-$Comp
-L Device:Q_PMOS_GSD Q4
-U 1 1 5EBB2611
-P 7950 3800
-F 0 "Q4" H 8155 3754 50  0000 L CNN
-F 1 "Q_PMOS_GSD" H 8155 3845 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 8150 3900 50  0001 C CNN
-F 3 "~" H 7950 3800 50  0001 C CNN
-	1    7950 3800
-	-1   0    0    1   
-$EndComp
+Text HLabel 8150 4250 2    50   Input ~ 0
+VALVE_EN
 $Comp
 L Device:R R16
 U 1 1 5EBB4E97
-P 8150 3650
-F 0 "R16" H 8220 3696 50  0000 L CNN
-F 1 "10k" H 8220 3605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 8080 3650 50  0001 C CNN
-F 3 "~" H 8150 3650 50  0001 C CNN
-	1    8150 3650
+P 8050 4500
+F 0 "R16" H 8120 4546 50  0000 L CNN
+F 1 "10k" H 8120 4455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7980 4500 50  0001 C CNN
+F 3 "~" H 8050 4500 50  0001 C CNN
+	1    8050 4500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8150 3500 8150 3450
-Wire Wire Line
-	8150 3450 7850 3450
-Connection ~ 7850 3450
-Wire Wire Line
-	8350 3800 8150 3800
-Connection ~ 8150 3800
 $Comp
 L Device:Jumper JP7
 U 1 1 5EBB7521
@@ -227,5 +202,51 @@ F 3 "~" H 7250 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7550 3450 7850 3450
+	7750 4650 7750 4450
+$Comp
+L Device:Q_NMOS_GSD Q4
+U 1 1 5F372F36
+P 7850 4250
+F 0 "Q4" H 8055 4296 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 8055 4205 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 8050 4350 50  0001 C CNN
+F 3 "~" H 7850 4250 50  0001 C CNN
+	1    7850 4250
+	-1   0    0    -1  
+$EndComp
+Text HLabel 8150 3900 2    50   Input ~ 0
+VALVE-
+Wire Wire Line
+	8050 4250 8150 4250
+$Comp
+L power:GND #PWR0107
+U 1 1 5F3764EA
+P 8050 4650
+F 0 "#PWR0107" H 8050 4400 50  0001 C CNN
+F 1 "GND" H 8055 4477 50  0000 C CNN
+F 2 "" H 8050 4650 50  0001 C CNN
+F 3 "" H 8050 4650 50  0001 C CNN
+	1    8050 4650
+	1    0    0    -1  
+$EndComp
+Connection ~ 8050 4250
+Wire Wire Line
+	8050 4250 8050 4350
+Wire Wire Line
+	7550 3450 8150 3450
+Wire Wire Line
+	8150 3900 7750 3900
+$Comp
+L power:GND #PWR0108
+U 1 1 5F37A78D
+P 7750 4650
+F 0 "#PWR0108" H 7750 4400 50  0001 C CNN
+F 1 "GND" H 7755 4477 50  0000 C CNN
+F 2 "" H 7750 4650 50  0001 C CNN
+F 3 "" H 7750 4650 50  0001 C CNN
+	1    7750 4650
+	1    0    0    -1  
+$EndComp
+Text HLabel 8150 3450 2    50   Input ~ 0
+VALVE+
 $EndSCHEMATC
