@@ -1,0 +1,11 @@
+(sym_lib_table
+  (lib (name instrumentation_board-rescue)(type Legacy)(uri ${KIPRJMOD}/instrumentation_board-rescue.lib)(options "")(descr ""))
+  (lib (name a2135-h)(type Legacy)(uri "C:/Users/lanam/OneDrive/Documents/WaterlooRocketry/Payload-2018/PCBs/libs/Schematic parts/a2135-h.lib")(options "")(descr ""))
+  (lib (name ap2204k-5)(type Legacy)(uri "C:/Users/lanam/OneDrive/Documents/WaterlooRocketry/Payload-2018/PCBs/libs/Schematic parts/ap2204k-5.lib")(options "")(descr ""))
+  (lib (name arduino_nano)(type Legacy)(uri "C:/Users/lanam/OneDrive/Documents/WaterlooRocketry/Payload-2018/PCBs/libs/Schematic parts/arduino_nano.lib")(options "")(descr ""))
+  (lib (name fgpmmopa6h)(type Legacy)(uri "C:/Users/lanam/OneDrive/Documents/WaterlooRocketry/Payload-2018/PCBs/libs/Schematic parts/fgpmmopa6h.lib")(options "")(descr ""))
+  (lib (name Recovery-Board-Parts)(type Legacy)(uri "C:/Users/lanam/OneDrive/Documents/WaterlooRocketry/Payload-2018/PCBs/libs/Schematic parts/Recovery Board Parts.lib")(options "")(descr ""))
+  (lib (name Recovery-Board-cache)(type Legacy)(uri "C:/Users/lanam/OneDrive/Documents/WaterlooRocketry/Payload-2018/PCBs/Recovery Board/Recovery Board-cache.lib")(options "")(descr ""))
+  (lib (name sot-223)(type Legacy)(uri "C:/Users/lanam/OneDrive/Documents/WaterlooRocketry/Payload-2018/PCBs/libs/Schematic parts/sot-223.lib")(options "")(descr ""))
+  (lib (name instrumentation_board_parts)(type Legacy)(uri ${KIPRJMOD}/instrumentation_board_parts.lib)(options "")(descr ""))
+)

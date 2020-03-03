@@ -1,0 +1,75 @@
+Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\sym-lib-table” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\sym-lib-table-2020-03-02-20-42-35”.
+Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\instrumentation_board.sch” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\instrumentation_board-2020-03-02-20-42-35.sch”.
+Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\file5AB2E5F2.sch” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\file5AB2E5F2-2020-03-02-20-42-35.sch”.
+Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\file5AB2F70B.sch” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\file5AB2F70B-2020-03-02-20-42-35.sch”.
+Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\Shifter.sch” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\Shifter-2020-03-02-20-42-35.sch”.
+Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\file5ABF9899.sch” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\file5ABF9899-2020-03-02-20-42-35.sch”.
+Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\instrumentation_board.pro” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\instrumentation_board-2020-03-02-20-42-35.pro”.
+Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\instrumentation_board-cache.lib” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\instrumentation_board-cache-2020-03-02-20-42-35.lib”.
+Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\instrumentation_board-rescue.lib” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\instrumentation_board-rescue-2020-03-02-20-42-35.lib”.
+Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\instrumentation_board-rescue.dcm” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\instrumentation_board-rescue-2020-03-02-20-42-35.dcm”.
+Info: Adding library “instrumentation_board-rescue”, file “${KIPRJMOD}/instrumentation_board-rescue.lib” to project symbol library table.
+Info: Adding library “a2135-h”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\a2135-h.lib” to project symbol library table.
+Info: Adding library “ap2204k-5”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\ap2204k-5.lib” to project symbol library table.
+Info: Adding library “arduino_nano”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\arduino_nano.lib” to project symbol library table.
+Info: Adding library “fgpmmopa6h”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\fgpmmopa6h.lib” to project symbol library table.
+Info: Adding library “Recovery-Board-Parts”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\Recovery Board Parts.lib” to project symbol library table.
+Info: Adding library “Recovery-Board-cache”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Recovery Board\Recovery Board-cache.lib” to project symbol library table.
+Info: Adding library “sot-223”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\sot-223.lib” to project symbol library table.
+Info: Adding library “instrumentation_board_parts”, file “${KIPRJMOD}/instrumentation_board_parts.lib” to project symbol library table.
+Symbol “Arduino_Nano-RESCUE-instrumentation_board-RESCUE-instrumentation_board” mapped to symbol library “instrumentation_board-rescue”.
+Symbol “Conn_01x02” mapped to symbol library “Recovery-Board-cache”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GPS” mapped to symbol library “Recovery-Board-Parts”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “Conn_01x02” mapped to symbol library “Recovery-Board-cache”.
+Symbol “MS5607-02BA03” mapped to symbol library “instrumentation_board_parts”.
+Symbol “C” mapped to symbol library “Device”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “MicroSDBreakout” mapped to symbol library “instrumentation_board_parts”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “LSM6DS3HTR” mapped to symbol library “instrumentation_board_parts”.
+Symbol “C” mapped to symbol library “Device”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “LSM6DS3HTR” mapped to symbol library “instrumentation_board_parts”.
+Symbol “C” mapped to symbol library “Device”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “Q_Photo_NPN” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “XC6201P302MR-G” mapped to symbol library “instrumentation_board_parts”.
+Symbol “C” mapped to symbol library “Device”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “C” mapped to symbol library “Device”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “TPS71518DCKR” mapped to symbol library “instrumentation_board_parts”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “C” mapped to symbol library “Device”.
+Symbol “C” mapped to symbol library “Device”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “PI4ULS5V201TAEX-RESCUE-instrumentation_board” mapped to symbol library “Recovery-Board-cache”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “C” mapped to symbol library “Device”.
+Symbol “C” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “Conn_01x02” mapped to symbol library “Recovery-Board-cache”.
+Symbol “GND” mapped to symbol library “power”.
+Info: Symbol library table mapping complete!
