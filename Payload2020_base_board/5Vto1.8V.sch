@@ -1,0 +1,104 @@
+EESchema Schematic File Version 4
+LIBS:payload2020_base_board-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 9 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6500 3900 6500 3800
+Text HLabel 6750 3300 2    50   Input ~ 0
+Vout
+$Comp
+L power:GND #PWR?
+U 1 1 5E66314E
+P 5900 3950
+F 0 "#PWR?" H 5900 3700 50  0001 C CNN
+F 1 "GND" H 5905 3777 50  0000 C CNN
+F 2 "" H 5900 3950 50  0001 C CNN
+F 3 "" H 5900 3950 50  0001 C CNN
+	1    5900 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3700 5900 3900
+Connection ~ 5900 3900
+Wire Wire Line
+	5900 3900 5900 3950
+Text HLabel 5100 3300 0    50   Input ~ 0
+Vin
+Wire Wire Line
+	5900 3900 6500 3900
+$Comp
+L payload2020_custom:TLV74118PDBVR U?
+U 1 1 5E690C1C
+P 5900 3200
+F 0 "U?" H 5900 3315 50  0000 C CNN
+F 1 "TLV74118PDBVR" H 5900 3224 50  0000 C CNN
+F 2 "" H 5900 3200 50  0001 C CNN
+F 3 "" H 5900 3200 50  0001 C CNN
+	1    5900 3200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5500 3450
+Wire Wire Line
+	5100 3300 5250 3300
+Wire Wire Line
+	6500 3300 6750 3300
+Wire Wire Line
+	6500 3300 6300 3300
+Connection ~ 6500 3300
+$Comp
+L pspice:CAP C?
+U 1 1 5E661747
+P 6500 3550
+F 0 "C?" H 6678 3596 50  0000 L CNN
+F 1 "CAP" H 6678 3505 50  0000 L CNN
+F 2 "" H 6500 3550 50  0001 C CNN
+F 3 "~" H 6500 3550 50  0001 C CNN
+	1    6500 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3450 6300 3700
+Wire Wire Line
+	6300 3700 5900 3700
+$Comp
+L pspice:CAP C?
+U 1 1 5E6933EC
+P 5250 3650
+F 0 "C?" H 5428 3696 50  0000 L CNN
+F 1 "CAP" H 5428 3605 50  0000 L CNN
+F 2 "" H 5250 3650 50  0001 C CNN
+F 3 "~" H 5250 3650 50  0001 C CNN
+	1    5250 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E69375D
+P 5250 3950
+F 0 "#PWR?" H 5250 3700 50  0001 C CNN
+F 1 "GND" H 5255 3777 50  0000 C CNN
+F 2 "" H 5250 3950 50  0001 C CNN
+F 3 "" H 5250 3950 50  0001 C CNN
+	1    5250 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3900 5250 3950
+Wire Wire Line
+	5250 3400 5250 3300
+Connection ~ 5250 3300
+Wire Wire Line
+	5250 3300 5500 3300
+$EndSCHEMATC
