@@ -8,4 +8,5 @@
   (lib (name Recovery-Board-cache)(type Legacy)(uri "C:/Users/lanam/OneDrive/Documents/WaterlooRocketry/Payload-2018/PCBs/Recovery Board/Recovery Board-cache.lib")(options "")(descr ""))
   (lib (name sot-223)(type Legacy)(uri "C:/Users/lanam/OneDrive/Documents/WaterlooRocketry/Payload-2018/PCBs/libs/Schematic parts/sot-223.lib")(options "")(descr ""))
   (lib (name instrumentation_board_parts)(type Legacy)(uri ${KIPRJMOD}/instrumentation_board_parts.lib)(options "")(descr ""))
+  (lib (name canhw)(type Legacy)(uri ${KIPRJMOD}/../canhw.lib)(options "")(descr ""))
 )

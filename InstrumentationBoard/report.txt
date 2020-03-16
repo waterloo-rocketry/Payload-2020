@@ -1,75 +1,46 @@
-Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\sym-lib-table” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\sym-lib-table-2020-03-02-20-42-35”.
-Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\instrumentation_board.sch” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\instrumentation_board-2020-03-02-20-42-35.sch”.
-Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\file5AB2E5F2.sch” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\file5AB2E5F2-2020-03-02-20-42-35.sch”.
-Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\file5AB2F70B.sch” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\file5AB2F70B-2020-03-02-20-42-35.sch”.
-Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\Shifter.sch” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\Shifter-2020-03-02-20-42-35.sch”.
-Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\file5ABF9899.sch” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\file5ABF9899-2020-03-02-20-42-35.sch”.
-Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\instrumentation_board.pro” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\instrumentation_board-2020-03-02-20-42-35.pro”.
-Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\instrumentation_board-cache.lib” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\instrumentation_board-cache-2020-03-02-20-42-35.lib”.
-Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\instrumentation_board-rescue.lib” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\instrumentation_board-rescue-2020-03-02-20-42-35.lib”.
-Info: Backing up file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\instrumentation_board-rescue.dcm” to file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Instrumentation Board\rescue-backup\instrumentation_board-rescue-2020-03-02-20-42-35.dcm”.
-Info: Adding library “instrumentation_board-rescue”, file “${KIPRJMOD}/instrumentation_board-rescue.lib” to project symbol library table.
-Info: Adding library “a2135-h”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\a2135-h.lib” to project symbol library table.
-Info: Adding library “ap2204k-5”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\ap2204k-5.lib” to project symbol library table.
-Info: Adding library “arduino_nano”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\arduino_nano.lib” to project symbol library table.
-Info: Adding library “fgpmmopa6h”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\fgpmmopa6h.lib” to project symbol library table.
-Info: Adding library “Recovery-Board-Parts”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\Recovery Board Parts.lib” to project symbol library table.
-Info: Adding library “Recovery-Board-cache”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\Recovery Board\Recovery Board-cache.lib” to project symbol library table.
-Info: Adding library “sot-223”, file “C:\Users\lanam\OneDrive\Documents\WaterlooRocketry\Payload-2018\PCBs\libs\Schematic parts\sot-223.lib” to project symbol library table.
-Info: Adding library “instrumentation_board_parts”, file “${KIPRJMOD}/instrumentation_board_parts.lib” to project symbol library table.
-Symbol “Arduino_Nano-RESCUE-instrumentation_board-RESCUE-instrumentation_board” mapped to symbol library “instrumentation_board-rescue”.
-Symbol “Conn_01x02” mapped to symbol library “Recovery-Board-cache”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GPS” mapped to symbol library “Recovery-Board-Parts”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “Conn_01x02” mapped to symbol library “Recovery-Board-cache”.
-Symbol “MS5607-02BA03” mapped to symbol library “instrumentation_board_parts”.
-Symbol “C” mapped to symbol library “Device”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “MicroSDBreakout” mapped to symbol library “instrumentation_board_parts”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “LSM6DS3HTR” mapped to symbol library “instrumentation_board_parts”.
-Symbol “C” mapped to symbol library “Device”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “LSM6DS3HTR” mapped to symbol library “instrumentation_board_parts”.
-Symbol “C” mapped to symbol library “Device”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “R” mapped to symbol library “Device”.
-Symbol “Q_Photo_NPN” mapped to symbol library “Device”.
-Symbol “R” mapped to symbol library “Device”.
-Symbol “R” mapped to symbol library “Device”.
-Symbol “R” mapped to symbol library “Device”.
-Symbol “R” mapped to symbol library “Device”.
-Symbol “R” mapped to symbol library “Device”.
-Symbol “R” mapped to symbol library “Device”.
-Symbol “R” mapped to symbol library “Device”.
-Symbol “R” mapped to symbol library “Device”.
-Symbol “XC6201P302MR-G” mapped to symbol library “instrumentation_board_parts”.
-Symbol “C” mapped to symbol library “Device”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “C” mapped to symbol library “Device”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “TPS71518DCKR” mapped to symbol library “instrumentation_board_parts”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “C” mapped to symbol library “Device”.
-Symbol “C” mapped to symbol library “Device”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “PI4ULS5V201TAEX-RESCUE-instrumentation_board” mapped to symbol library “Recovery-Board-cache”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “GND” mapped to symbol library “power”.
-Symbol “C” mapped to symbol library “Device”.
-Symbol “C” mapped to symbol library “Device”.
-Symbol “R” mapped to symbol library “Device”.
-Symbol “Conn_01x02” mapped to symbol library “Recovery-Board-cache”.
-Symbol “GND” mapped to symbol library “power”.
-Info: Symbol library table mapping complete!
+Info: Processing component “R11:/5ACAE98D:Resistors_SMD:R_0805_HandSoldering”.
+Info: Processing component “J4:/5ABFB303/5ABF9969:molex:molex_kk_22-23-2021”.
+Info: Processing component “J5:/5ABFB538/5ABF9969:molex:molex_kk_22-23-2021”.
+Info: Processing component “JP1:/5E6A9DDD:Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical”.
+Info: Processing component “JP2:/5E6AAB13:Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical”.
+Info: Processing component “R1:/5E6CEB32:Resistors_SMD:R_0805_HandSoldering”.
+Info: Processing component “R2:/5E6D2FAC:Resistors_SMD:R_0805_HandSoldering”.
+Info: Processing component “R3:/5E6D57AD:Resistors_SMD:R_0805_HandSoldering”.
+Info: Processing component “R4:/5ABF989A/5ABF994A:Resistors_SMD:R_0805_HandSoldering”.
+Info: Processing component “R5:/5ABFB303/5ABF994A:Resistors_SMD:R_0805_HandSoldering”.
+Info: Processing component “R6:/5ABFB538/5ABF994A:Resistors_SMD:R_0805_HandSoldering”.
+Info: Processing component “R7:/5E6C8A43:Resistors_SMD:R_0805_HandSoldering”.
+Info: Processing component “J3:/5ABF989A/5ABF9969:molex:molex_kk_22-23-2021”.
+Info: Processing component “R12:/5ACB0DCF:Resistors_SMD:R_0805_HandSoldering”.
+Info: Processing component “U1:/5E6B3A1B:Package_LGA:LGA-12_2x2mm_P0.5mm”.
+Info: Processing component “U2:/5AA2036E:LGA_Long:LGA-14”.
+Info: Processing component “U3:/5AA87733:LGA_Long:LGA-14”.
+Info: Processing component “U4:/5A9E222C:SMD:8-SMD”.
+Info: Processing component “U5:/5AA0C5D7:adafruit:adafruit254”.
+Info: Processing component “U8:/5AB87152/5AB871B5:TO_SOT_Packages_SMD:SOT-23-6_Handsoldering”.
+Info: Processing component “U9:/5AB8887F/5AB871B5:TO_SOT_Packages_SMD:SOT-23-6_Handsoldering”.
+Info: Processing component “U10:/5AB899BF/5AB871B5:TO_SOT_Packages_SMD:SOT-23-6_Handsoldering”.
+Info: Processing component “U11:/5AB899C9/5AB871B5:TO_SOT_Packages_SMD:SOT-23-6_Handsoldering”.
+Info: Processing component “C12:/5AB8887F/5AB872AC:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C1:/5AA212DA:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C2:/5AA8775E:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C3:/5AA0BC06:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C4:/5E6CF972:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C5:/5E6D6B40:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C6:/5E6E12AE:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C7:/5E6D6F90:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C10:/5AB87152/5AB872AC:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C11:/5AB87152/5AB8723F:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “A1:/5A9B0A95:arduino:Arduino_Nano”.
+Info: Processing component “C13:/5AB8887F/5AB8723F:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C14:/5AB899BF/5AB872AC:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C15:/5AB899BF/5AB8723F:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C16:/5AB899C9/5AB872AC:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “C17:/5AB899C9/5AB8723F:Capacitors_SMD:C_0805_HandSoldering”.
+Info: Processing component “D1:/5E6CEB38:Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder”.
+Info: Processing component “D2:/5E6D2FB2:Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder”.
+Info: Processing component “D3:/5E6D57B3:Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder”.
+Info: Processing component “D4:/5E6CB227:Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder”.
+Info: Processing component “J1:/5E6B7081:Connector_Harwin:Harwin_LTek-Male_2x03_P2.00mm_Vertical”.
+Error: Cannot add C5 (footprint “Capacitors_SMD:C_0805_HandSoldering” not found).
+Error: Cannot add C4 (footprint “Capacitors_SMD:C_0805_HandSoldering” not found).
