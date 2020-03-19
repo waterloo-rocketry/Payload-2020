@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:payload2020_base_board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Regulator_Switching:TPS62143 U6
-U 1 1 5E13FB4A
-P 5700 3700
-F 0 "U6" H 6100 3300 50  0000 C CNN
-F 1 "TPS62143" H 6100 3200 50  0000 C CNN
-F 2 "Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm_ThermalVias" H 5850 3250 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/TPS62140.pdf" H 5700 3700 50  0001 C CNN
-	1    5700 3700
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C6
 U 1 1 5E1408CA
@@ -121,7 +109,7 @@ F 3 "" H 5700 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5700 4300 5700 4200
+	5700 4300 5700 4260
 $Comp
 L Device:L L1
 U 1 1 5E145836
@@ -210,36 +198,6 @@ F 3 "" H 7550 3800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7550 3800 7550 3650
-$Comp
-L power:GND #PWR0140
-U 1 1 5E151A56
-P 5850 4300
-F 0 "#PWR0140" H 5850 4050 50  0001 C CNN
-F 1 "GND" H 5855 4127 50  0000 C CNN
-F 2 "" H 5850 4300 50  0001 C CNN
-F 3 "" H 5850 4300 50  0001 C CNN
-	1    5850 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0141
-U 1 1 5E152210
-P 5550 4300
-F 0 "#PWR0141" H 5550 4050 50  0001 C CNN
-F 1 "GND" H 5555 4127 50  0000 C CNN
-F 2 "" H 5550 4300 50  0001 C CNN
-F 3 "" H 5550 4300 50  0001 C CNN
-	1    5550 4300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5550 4300 5550 4200
-Wire Wire Line
-	5550 4200 5600 4200
-Wire Wire Line
-	5800 4200 5850 4200
-Wire Wire Line
-	5850 4200 5850 4300
 Text HLabel 7000 3800 2    50   Input ~ 0
 PG
 Wire Wire Line
@@ -258,4 +216,26 @@ Wire Wire Line
 Connection ~ 5250 3000
 Wire Wire Line
 	5250 3000 5600 3000
+$Comp
+L Regulator_Switching:TPS62143 U6
+U 1 1 5E13FB4A
+P 5700 3700
+F 0 "U6" H 6100 3300 50  0000 C CNN
+F 1 "TPS62143" H 6100 3200 50  0000 C CNN
+F 2 "Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm_ThermalVias" H 5850 3250 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/TPS62140.pdf" H 5700 3700 50  0001 C CNN
+	1    5700 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 4200 5600 4260
+Wire Wire Line
+	5600 4260 5700 4260
+Connection ~ 5700 4260
+Wire Wire Line
+	5700 4260 5700 4200
+Wire Wire Line
+	5800 4200 5800 4260
+Wire Wire Line
+	5700 4260 5800 4260
 $EndSCHEMATC

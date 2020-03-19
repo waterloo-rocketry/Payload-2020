@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:payload2020_base_board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -140,7 +139,7 @@ Wire Wire Line
 Wire Wire Line
 	6100 3950 6200 3950
 $Comp
-L payload2020_base_board-rescue:CD74HC4050-payload2020_custom U3
+L payload2020_custom:CD74HC4050 U3
 U 1 1 5EE822AD
 P 5550 4100
 AR Path="/5EE6FC0F/5EE822AD" Ref="U3"  Part="1" 
