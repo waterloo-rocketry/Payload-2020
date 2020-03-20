@@ -338,20 +338,10 @@ F 3 "" H 2150 2950 50  0001 C CNN
 	1    2150 2950
 	1    0    0    -1  
 $EndComp
-Connection ~ 2000 3050
 Wire Wire Line
 	2000 2900 2000 3050
 Wire Wire Line
 	2000 2350 2000 2200
-Connection ~ 2000 2200
-Wire Wire Line
-	2650 2350 2650 2200
-Wire Wire Line
-	2650 3050 2650 2900
-Connection ~ 2650 2350
-Connection ~ 2650 2900
-Wire Wire Line
-	2650 2900 2650 2350
 $Sheet
 S 6450 2850 550  500 
 U 5EE6FC0F
@@ -807,14 +797,11 @@ Wire Wire Line
 Wire Wire Line
 	9050 1850 8900 1850
 Wire Wire Line
-	2650 2200 2650 1650
-Wire Wire Line
 	2650 1650 900  1650
 Wire Wire Line
 	900  1650 900  850 
 Wire Wire Line
 	900  850  1400 850 
-Connection ~ 2650 2200
 Wire Notes Line
 	5650 1550 5650 500 
 Wire Notes Line
@@ -1181,4 +1168,17 @@ Wire Notes Line
 Wire Wire Line
 	3200 7000 3300 7000
 Connection ~ 3200 7000
+Wire Wire Line
+	2650 1650 2650 2200
+Connection ~ 2000 2200
+Wire Wire Line
+	2650 2350 2650 2900
+Connection ~ 2000 3050
+Wire Wire Line
+	2650 2200 2650 2350
+Connection ~ 2650 2200
+Connection ~ 2650 2350
+Wire Wire Line
+	2650 2900 2650 3050
+Connection ~ 2650 2900
 $EndSCHEMATC

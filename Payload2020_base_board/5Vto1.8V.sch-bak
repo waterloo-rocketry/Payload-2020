@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:payload2020_base_board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 9 10
+Sheet 6 7
 Title ""
 Date ""
 Rev ""

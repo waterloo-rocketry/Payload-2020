@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:payload2020_base_board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 7
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -145,7 +144,7 @@ U 1 1 5EE822AD
 P 5550 4100
 AR Path="/5EE6FC0F/5EE822AD" Ref="U3"  Part="1" 
 AR Path="/5EEA78A6/5EE822AD" Ref="U13"  Part="1" 
-F 0 "U13" H 5650 4700 50  0000 C CNN
+F 0 "U3" H 5650 4700 50  0000 C CNN
 F 1 "CD74HC4050" H 5650 4584 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5550 4100 50  0001 C CNN
 F 3 "" H 5550 4100 50  0001 C CNN

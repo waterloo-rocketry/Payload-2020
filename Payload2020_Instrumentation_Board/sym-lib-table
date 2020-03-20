@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name arduino_nano)(type Legacy)(uri /Users/adampaul/Documents/Rocketry/Payload-2020/libs/symbols/arduino_nano.lib)(options "")(descr ""))
+  (lib (name Payload_Connectors)(type Legacy)(uri /Users/adampaul/Documents/Rocketry/Payload-2020/libs/symbols/Payload_Connectors.lib)(options "")(descr ""))
+  (lib (name Recovery_Board_Parts)(type Legacy)(uri "/Users/adampaul/Documents/Rocketry/Payload-2020/libs/symbols/Recovery Board Parts.lib")(options "")(descr ""))
+  (lib (name instrumentation_board_parts)(type Legacy)(uri /Users/adampaul/Documents/Rocketry/Payload-2020/libs/symbols/instrumentation_board_parts.lib)(options "")(descr ""))
+)

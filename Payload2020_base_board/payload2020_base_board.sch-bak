@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:payload2020_base_board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -942,9 +941,6 @@ Wire Wire Line
 	2050 6350 2050 7100
 Wire Wire Line
 	2150 7000 1950 7000
-Connection ~ 1950 7000
-Wire Wire Line
-	1950 7000 1950 7100
 Wire Wire Line
 	3600 2450 3600 5750
 Wire Wire Line
@@ -1158,13 +1154,10 @@ F 3 "" H 10000 3450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10250 3450 10000 3450
-Wire Wire Line
-	10000 3450 10000 3500
 Text Label 8300 2250 0    50   ~ 0
 SDA
 Text Label 8300 2350 0    50   ~ 0
 SCL
-Connection ~ 10000 3450
 Wire Wire Line
 	9500 2950 10250 2950
 Connection ~ 10000 3050
@@ -1181,11 +1174,6 @@ Wire Notes Line
 Wire Notes Line
 	11150 3700 11150 2250
 Connection ~ 10250 2950
-Wire Wire Line
-	10250 2950 10450 2950
-Connection ~ 10250 3050
-Wire Wire Line
-	10250 3050 10450 3050
 Wire Notes Line
 	9050 2250 11150 2250
 Wire Notes Line
