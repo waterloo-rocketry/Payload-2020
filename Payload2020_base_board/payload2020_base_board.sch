@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -1026,61 +1026,6 @@ Wire Wire Line
 Wire Wire Line
 	1150 4050 1150 4150
 Connection ~ 1150 4150
-$Comp
-L power:+5V #PWR0130
-U 1 1 5E338214
-P 3200 6450
-F 0 "#PWR0130" H 3200 6300 50  0001 C CNN
-F 1 "+5V" H 3215 6623 50  0000 C CNN
-F 2 "" H 3200 6450 50  0001 C CNN
-F 3 "" H 3200 6450 50  0001 C CNN
-	1    3200 6450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3200 7000 3300 7000
-Wire Wire Line
-	2150 7000 1950 7000
-Connection ~ 2050 6350
-Wire Wire Line
-	2050 6350 2050 7100
-Wire Wire Line
-	2050 7100 2150 7100
-Connection ~ 1950 6250
-Wire Wire Line
-	1950 6250 1950 7000
-Text Label 3300 7000 0    50   ~ 0
-SS5
-Wire Wire Line
-	3200 6750 3200 7000
-Connection ~ 3200 7000
-Wire Wire Line
-	3200 7000 2800 7000
-$Comp
-L Device:R R24
-U 1 1 5E337786
-P 3200 6600
-F 0 "R24" H 3270 6646 50  0000 L CNN
-F 1 "10k" H 3270 6555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3130 6600 50  0001 C CNN
-F 3 "~" H 3200 6600 50  0001 C CNN
-	1    3200 6600
-	1    0    0    -1  
-$EndComp
-$Sheet
-S 2150 6700 650  700 
-U 5E2B166E
-F0 "sheet5E2B166E" 50
-F1 "file5E172796.sch" 50
-F2 "MISO" I R 2800 7200 50 
-F3 "MOSI" I R 2800 7100 50 
-F4 "SS" I R 2800 7000 50 
-F5 "SCK" I R 2800 7300 50 
-F6 "~RESET" I R 2800 6900 50 
-F7 "~INT" I R 2800 6800 50 
-F8 "CANH" I L 2150 7000 50 
-F9 "CANL" I L 2150 7100 50 
-$EndSheet
 Wire Wire Line
 	4950 2650 3300 2650
 Connection ~ 4950 2650
