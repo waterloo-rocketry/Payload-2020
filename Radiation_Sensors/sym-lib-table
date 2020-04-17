@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name payload2020_custom)(type Legacy)(uri ${KIPRJMOD}/../Payload2020_base_board/payload2020_custom.lib)(options "")(descr ""))
+)

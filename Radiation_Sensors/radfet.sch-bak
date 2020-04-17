@@ -1,0 +1,111 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L payload2020_custom:VT01 MOSFET?
+U 1 1 5E99B1AD
+P 5900 2750
+F 0 "MOSFET?" H 6025 2665 50  0000 C CNN
+F 1 "VT01" H 6025 2574 50  0000 C CNN
+F 2 "" H 5950 2750 50  0001 C CNN
+F 3 "" H 5950 2750 50  0001 C CNN
+	1    5900 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E9A0470
+P 6100 4000
+F 0 "R?" H 6170 4046 50  0000 L CNN
+F 1 "300K" H 6170 3955 50  0000 L CNN
+F 2 "" V 6030 4000 50  0001 C CNN
+F 3 "~" H 6100 4000 50  0001 C CNN
+	1    6100 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 4150 6100 4250
+Wire Wire Line
+	6100 3850 6100 3700
+$Comp
+L power:GND #PWR?
+U 1 1 5E9A3499
+P 7150 3250
+F 0 "#PWR?" H 7150 3000 50  0001 C CNN
+F 1 "GND" H 7155 3077 50  0000 C CNN
+F 2 "" H 7150 3250 50  0001 C CNN
+F 3 "" H 7150 3250 50  0001 C CNN
+	1    7150 3250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 4250 6100 4250
+Text Label 5900 4000 2    50   ~ 0
+Output_RC_V
+Wire Wire Line
+	5900 3700 5900 4000
+$Comp
+L power:GND #PWR?
+U 1 1 5E9A8802
+P 6900 3400
+F 0 "#PWR?" H 6900 3150 50  0001 C CNN
+F 1 "GND" H 6905 3227 50  0000 C CNN
+F 2 "" H 6900 3400 50  0001 C CNN
+F 3 "" H 6900 3400 50  0001 C CNN
+	1    6900 3400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9A9DF8
+P 5150 3400
+F 0 "#PWR?" H 5150 3150 50  0001 C CNN
+F 1 "GND" H 5155 3227 50  0000 C CNN
+F 2 "" H 5150 3400 50  0001 C CNN
+F 3 "" H 5150 3400 50  0001 C CNN
+	1    5150 3400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9AA966
+P 4950 3250
+F 0 "#PWR?" H 4950 3000 50  0001 C CNN
+F 1 "GND" H 4955 3077 50  0000 C CNN
+F 2 "" H 4950 3250 50  0001 C CNN
+F 3 "" H 4950 3250 50  0001 C CNN
+	1    4950 3250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3250 5300 3250
+Wire Wire Line
+	5150 3400 5300 3400
+Wire Wire Line
+	6900 3400 6750 3400
+Wire Wire Line
+	7150 3250 6750 3250
+$Comp
+L power:+3V0 #PWR?
+U 1 1 5E9AB5A0
+P 6550 4250
+F 0 "#PWR?" H 6550 4100 50  0001 C CNN
+F 1 "+3V0" H 6565 4423 50  0000 C CNN
+F 2 "" H 6550 4250 50  0001 C CNN
+F 3 "" H 6550 4250 50  0001 C CNN
+	1    6550 4250
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
