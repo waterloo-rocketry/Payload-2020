@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:payload2020_base_board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 7
+Sheet 5 5
 Title ""
 Date ""
 Rev ""
@@ -28,7 +29,7 @@ AR Path="/5E77C9E5/5E661747" Ref="C1"  Part="1"
 AR Path="/5E6A231E/5E661747" Ref="C?"  Part="1" 
 AR Path="/5E71B806/5E661747" Ref="C15"  Part="1" 
 F 0 "C15" H 6928 3446 50  0000 L CNN
-F 1 "CAP" H 6928 3355 50  0000 L CNN
+F 1 "1 uF" H 6928 3355 50  0000 L CNN
 F 2 "" H 6750 3400 50  0001 C CNN
 F 3 "~" H 6750 3400 50  0001 C CNN
 	1    6750 3400
@@ -70,7 +71,7 @@ AR Path="/5E77C9E5/5E699893" Ref="C?"  Part="1"
 AR Path="/5E6A231E/5E699893" Ref="C?"  Part="1" 
 AR Path="/5E71B806/5E699893" Ref="C14"  Part="1" 
 F 0 "C14" H 5278 3346 50  0000 L CNN
-F 1 "CAP" H 5278 3255 50  0000 L CNN
+F 1 "1 uF" H 5278 3255 50  0000 L CNN
 F 2 "" H 5100 3300 50  0001 C CNN
 F 3 "~" H 5100 3300 50  0001 C CNN
 	1    5100 3300
