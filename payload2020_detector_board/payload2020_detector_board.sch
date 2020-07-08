@@ -546,4 +546,10 @@ Wire Wire Line
 	9900 2900 10550 2900
 Wire Wire Line
 	5300 2900 5950 2900
+Text Notes 950  1450 0    50   ~ 0
+Transimpedance amplifier taken from: https://robertgawron.blogspot.com/2019/05/semiconductor-radioactivity-detector.html\n
+Text Notes 5950 1300 0    50   ~ 0
+Same amplifier & peak detector as scintellator, sourced from CosmicWatch - The Desktop Muon Detector
+Text Notes 2600 4000 0    50   ~ 0
+R1, R4, R5, R6, and possibly R8 are all subject to change
 $EndSCHEMATC

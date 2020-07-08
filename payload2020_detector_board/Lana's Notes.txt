@@ -1,0 +1,15 @@
+Lana's Notes of Confusion:
+1. This needs to amplify radiation of unknown amounts to between 0-5V
+	I do not know how much radiation, or what kind we're expecting.
+2. The photodiode measures it's input interms of Iux, which is only applicable to visible light.
+	I have no idea how to measure what kind of current output we are going to receive from 
+	energy sources that can't me measured in Iux. 
+
+Lana's Note of Hope:
+1. The op amp will not amplify anything above 5V, so seems to me, to be no harm in
+   just way overamplifying because that way we won't miss anything.
+	
+   The only problem with that is that we might read noise as input. 
+
+
+ALRIGHT THANKS FOR YOUR TIME and I'm really sorry
