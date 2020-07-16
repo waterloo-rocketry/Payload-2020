@@ -1,0 +1,135 @@
+EESchema Schematic File Version 4
+LIBS:payload2020_detector_board-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L payload202_custom:PDME1-S5-D15-S U5
+U 1 1 5F137AD6
+P 5450 2450
+F 0 "U5" H 5700 1400 50  0000 C CNN
+F 1 "PDME1-S5-D15-S" H 5700 1500 50  0000 C CNN
+F 2 "" H 5700 2200 50  0001 C CNN
+F 3 "" H 5700 2200 50  0001 C CNN
+	1    5450 2450
+	1    0    0    -1  
+$EndComp
+Text HLabel 3900 2800 0    50   Input ~ 0
++5V
+Text HLabel 3900 3100 0    50   Input ~ 0
+GND
+Text HLabel 7000 2750 2    50   Input ~ 0
+-15V
+Text HLabel 7000 3050 2    50   Input ~ 0
+0V
+$Comp
+L Device:C C6
+U 1 1 5F13849B
+P 4200 2950
+F 0 "C6" H 4315 2996 50  0000 L CNN
+F 1 "4.7uF" H 4315 2905 50  0000 L CNN
+F 2 "" H 4238 2800 50  0001 C CNN
+F 3 "~" H 4200 2950 50  0001 C CNN
+	1    4200 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5F138D92
+P 4800 2950
+F 0 "C7" H 4915 2996 50  0000 L CNN
+F 1 "4.7uF" H 4915 2905 50  0000 L CNN
+F 2 "" H 4838 2800 50  0001 C CNN
+F 3 "~" H 4800 2950 50  0001 C CNN
+	1    4800 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5F13A58E
+P 4500 2800
+F 0 "L1" V 4319 2800 50  0000 C CNN
+F 1 "6.8uH (FeSi Core)" V 4410 2800 50  0000 C CNN
+F 2 "" H 4500 2800 50  0001 C CNN
+F 3 "~" H 4500 2800 50  0001 C CNN
+	1    4500 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 2800 4200 2800
+Wire Wire Line
+	4200 2800 4350 2800
+Connection ~ 4200 2800
+Wire Wire Line
+	4650 2800 4800 2800
+Wire Wire Line
+	3900 3100 4200 3100
+Wire Wire Line
+	4200 3100 4800 3100
+Connection ~ 4200 3100
+Wire Wire Line
+	4800 3100 5350 3100
+Wire Wire Line
+	5350 3100 5350 3050
+Connection ~ 4800 3100
+Wire Wire Line
+	4800 2800 5350 2800
+Wire Wire Line
+	5350 2800 5350 2900
+Connection ~ 4800 2800
+$Comp
+L Device:C C8
+U 1 1 5F13CD77
+P 6500 2900
+F 0 "C8" H 6615 2946 50  0000 L CNN
+F 1 "0.47uF" H 6615 2855 50  0000 L CNN
+F 2 "" H 6538 2750 50  0001 C CNN
+F 3 "~" H 6500 2900 50  0001 C CNN
+	1    6500 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 5F13D822
+P 6500 3200
+F 0 "C9" H 6615 3246 50  0000 L CNN
+F 1 "0.47uF" H 6615 3155 50  0000 L CNN
+F 2 "" H 6538 3050 50  0001 C CNN
+F 3 "~" H 6500 3200 50  0001 C CNN
+	1    6500 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 3200 6250 3200
+Wire Wire Line
+	6250 3200 6250 3350
+Wire Wire Line
+	6250 3350 6500 3350
+Wire Wire Line
+	6050 3050 6500 3050
+Connection ~ 6500 3050
+Wire Wire Line
+	6050 2900 6250 2900
+Wire Wire Line
+	6250 2900 6250 2750
+Wire Wire Line
+	6250 2750 6500 2750
+Wire Wire Line
+	6500 3050 7000 3050
+Wire Wire Line
+	6500 2750 7000 2750
+Connection ~ 6500 2750
+Text Notes 5450 2500 0    50   ~ 0
+DC/DC Converter
+$EndSCHEMATC
