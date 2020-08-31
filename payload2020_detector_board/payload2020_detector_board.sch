@@ -26,17 +26,6 @@ F 3 "~" H 2500 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-15V #PWR01
-U 1 1 5EF69ADC
-P 2500 1950
-F 0 "#PWR01" H 2500 2050 50  0001 C CNN
-F 1 "-15V" H 2515 2123 50  0000 C CNN
-F 2 "" H 2500 1950 50  0001 C CNN
-F 3 "" H 2500 1950 50  0001 C CNN
-	1    2500 1950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Sensor_Optical:SFH225FA D1
 U 1 1 5EF6A6D6
 P 3000 1950
@@ -60,17 +49,6 @@ Text Notes 2000 1700 0    50   ~ 0
 Transimpedance amplifier used to stabilize conversion of current output to voltage\n
 Text Notes 5800 1700 0    50   ~ 0
 PEAK DETECTOR
-$Comp
-L payload202_custom:LT1006 U1
-U 1 1 5EF8C394
-P 4000 2850
-F 0 "U1" H 4000 3225 50  0000 C CNN
-F 1 "LT1006" H 4000 3134 50  0000 C CNN
-F 2 "" H 3650 2900 50  0001 C CNN
-F 3 "" H 3650 2900 50  0001 C CNN
-	1    4000 2850
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR05
 U 1 1 5EF90362
@@ -148,17 +126,6 @@ F 3 "" H 3050 3200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4500 2900 4750 2900
-$Comp
-L payload202_custom:LT1006 U3
-U 1 1 5EF9AD1E
-P 6200 2850
-F 0 "U3" H 6200 3225 50  0000 C CNN
-F 1 "LT1006" H 6200 3134 50  0000 C CNN
-F 2 "" H 5850 2900 50  0001 C CNN
-F 3 "" H 5850 2900 50  0001 C CNN
-	1    6200 2850
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR012
 U 1 1 5EF9AD24
@@ -353,39 +320,6 @@ Wire Wire Line
 Wire Wire Line
 	4650 2100 4650 2800
 Connection ~ 4950 2100
-$Comp
-L power:+5V #PWR03
-U 1 1 5F02DF07
-P 3050 2600
-F 0 "#PWR03" H 3050 2450 50  0001 C CNN
-F 1 "+5V" H 3065 2773 50  0000 C CNN
-F 2 "" H 3050 2600 50  0001 C CNN
-F 3 "" H 3050 2600 50  0001 C CNN
-	1    3050 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5F02E664
-P 2800 3050
-F 0 "R2" H 2870 3096 50  0000 L CNN
-F 1 "10k" H 2870 3005 50  0000 L CNN
-F 2 "" V 2730 3050 50  0001 C CNN
-F 3 "~" H 2800 3050 50  0001 C CNN
-	1    2800 3050
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR02
-U 1 1 5F02EC43
-P 2800 3200
-F 0 "#PWR02" H 2800 2950 50  0001 C CNN
-F 1 "GND" H 2805 3027 50  0000 C CNN
-F 2 "" H 2800 3200 50  0001 C CNN
-F 3 "" H 2800 3200 50  0001 C CNN
-	1    2800 3200
-	1    0    0    -1  
-$EndComp
 Connection ~ 5850 2400
 Wire Wire Line
 	5850 2400 6250 2400
@@ -407,8 +341,6 @@ Wire Wire Line
 	2000 2850 2500 2850
 Connection ~ 2500 2850
 Connection ~ 3050 2900
-Wire Wire Line
-	2800 2900 3050 2900
 Wire Wire Line
 	3050 2900 3500 2900
 Wire Wire Line
@@ -450,26 +382,6 @@ Text Notes 1200 1000 0    50   ~ 0
 +5V
 Text Notes 1200 1100 0    50   ~ 0
 GND
-$Comp
-L power:-15V #PWR016
-U 1 1 5F132310
-P 3000 1000
-F 0 "#PWR016" H 3000 1100 50  0001 C CNN
-F 1 "-15V" H 3015 1173 50  0000 C CNN
-F 2 "" H 3000 1000 50  0001 C CNN
-F 3 "" H 3000 1000 50  0001 C CNN
-	1    3000 1000
-	1    0    0    -1  
-$EndComp
-$Sheet
-S 1750 950  600  300 
-U 5F137185
-F0 "DC/DC 5V to -15V" 50
-F1 "dcdcConverter.sch" 50
-F2 "+5V" I L 1750 1000 50 
-F3 "GND" I L 1750 1150 50 
-F4 "-15V" I R 2350 1000 50 
-$EndSheet
 Wire Wire Line
 	2350 1000 3000 1000
 Wire Wire Line
@@ -534,4 +446,106 @@ Text Notes 7050 6750 0    50   ~ 0
 Board Intends to amplify the output of a photodiode so it can be processed by an \nMCU for radiation detection purposes.\n
 Wire Wire Line
 	4750 2900 5700 2900
+Wire Wire Line
+	2800 2900 3050 2900
+$Comp
+L power:GND #PWR02
+U 1 1 5F02EC43
+P 2800 3200
+F 0 "#PWR02" H 2800 2950 50  0001 C CNN
+F 1 "GND" H 2805 3027 50  0000 C CNN
+F 2 "" H 2800 3200 50  0001 C CNN
+F 3 "" H 2800 3200 50  0001 C CNN
+	1    2800 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F02E664
+P 2800 3050
+F 0 "R2" H 2870 3096 50  0000 L CNN
+F 1 "10k" H 2870 3005 50  0000 L CNN
+F 2 "" V 2730 3050 50  0001 C CNN
+F 3 "~" H 2800 3050 50  0001 C CNN
+	1    2800 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:-12V #PWR03
+U 1 1 5F4D773E
+P 3000 1000
+F 0 "#PWR03" H 3000 1100 50  0001 C CNN
+F 1 "-12V" H 3015 1173 50  0000 C CNN
+F 2 "" H 3000 1000 50  0001 C CNN
+F 3 "" H 3000 1000 50  0001 C CNN
+	1    3000 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L payload202_custom:LT1006 U?
+U 1 1 5F4DA72C
+P 4000 2850
+F 0 "U?" H 4000 3225 50  0000 C CNN
+F 1 "LT1006" H 4000 3134 50  0000 C CNN
+F 2 "" H 3650 2900 50  0001 C CNN
+F 3 "" H 3650 2900 50  0001 C CNN
+	1    4000 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L payload202_custom:LT1006 U?
+U 1 1 5F4DAFC2
+P 6200 2850
+F 0 "U?" H 6200 3225 50  0000 C CNN
+F 1 "LT1006" H 6200 3134 50  0000 C CNN
+F 2 "" H 5850 2900 50  0001 C CNN
+F 3 "" H 5850 2900 50  0001 C CNN
+	1    6200 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5F4DD64A
+P 2500 1950
+F 0 "#PWR?" H 2500 2050 50  0001 C CNN
+F 1 "-12V" H 2515 2123 50  0000 C CNN
+F 2 "" H 2500 1950 50  0001 C CNN
+F 3 "" H 2500 1950 50  0001 C CNN
+	1    2500 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F4DDDE1
+P 3050 2600
+F 0 "#PWR?" H 3050 2450 50  0001 C CNN
+F 1 "+5V" H 3065 2773 50  0000 C CNN
+F 2 "" H 3050 2600 50  0001 C CNN
+F 3 "" H 3050 2600 50  0001 C CNN
+	1    3050 2600
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 1750 950  600  300 
+U 5F137185
+F0 "DC/DC 5V to -12V" 50
+F1 "dcdcConverter.sch" 50
+F2 "+5V" I L 1750 1000 50 
+F3 "GND" I L 1750 1150 50 
+F4 "-12V" I R 2350 1000 50 
+F5 "0V" I R 2350 1150 50 
+$EndSheet
+$Comp
+L power:GND #PWR?
+U 1 1 5F4DFB4C
+P 3000 1150
+F 0 "#PWR?" H 3000 900 50  0001 C CNN
+F 1 "GND" H 3005 977 50  0000 C CNN
+F 2 "" H 3000 1150 50  0001 C CNN
+F 3 "" H 3000 1150 50  0001 C CNN
+	1    3000 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1150 3000 1150
 $EndSCHEMATC
