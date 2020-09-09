@@ -14,25 +14,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L payload202_custom:PDME1-S5-D15-S U5
-U 1 1 5F137AD6
-P 5450 2450
-F 0 "U5" H 5700 1400 50  0000 C CNN
-F 1 "PDME1-S5-D15-S" H 5700 1500 50  0000 C CNN
-F 2 "" H 5700 2200 50  0001 C CNN
-F 3 "" H 5700 2200 50  0001 C CNN
-	1    5450 2450
-	1    0    0    -1  
-$EndComp
 Text HLabel 3900 2800 0    50   Input ~ 0
 +5V
 Text HLabel 3900 3100 0    50   Input ~ 0
 GND
-Text HLabel 7000 2750 2    50   Input ~ 0
--15V
-Text HLabel 7000 3050 2    50   Input ~ 0
-0V
+Text HLabel 7350 2750 2    50   Input ~ 0
+-12V
 $Comp
 L Device:C C6
 U 1 1 5F13849B
@@ -130,6 +117,36 @@ Wire Wire Line
 Wire Wire Line
 	6500 2750 7000 2750
 Connection ~ 6500 2750
-Text Notes 5450 2500 0    50   ~ 0
+Text Notes 5400 2600 0    50   ~ 0
 DC/DC Converter
+$Comp
+L Device:R R10
+U 1 1 5F19EDAA
+P 7000 2900
+F 0 "R10" H 7070 2946 50  0000 L CNN
+F 1 "2K" H 7070 2855 50  0000 L CNN
+F 2 "" V 6930 2900 50  0001 C CNN
+F 3 "~" H 7000 2900 50  0001 C CNN
+	1    7000 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 7000 3050
+Wire Wire Line
+	7000 2750 7350 2750
+Connection ~ 7000 2750
+Wire Wire Line
+	7000 3050 7350 3050
+$Comp
+L payload202_custom:PDME1-S5-S12-S U1
+U 1 1 5F4D96CF
+P 5450 2450
+F 0 "U1" H 5700 2225 50  0000 C CNN
+F 1 "PDME1-S5-S12-S" H 5700 2134 50  0000 C CNN
+F 2 "" H 5700 2200 50  0001 C CNN
+F 3 "" H 5700 2200 50  0001 C CNN
+	1    5450 2450
+	1    0    0    -1  
+$EndComp
+Text HLabel 7350 3050 2    50   Input ~ 0
+0V
 $EndSCHEMATC
