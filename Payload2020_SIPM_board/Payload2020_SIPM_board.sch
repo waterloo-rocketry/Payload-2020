@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Payload2020_SIPM_board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -433,8 +434,6 @@ F 3 "~" H 5300 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5300 5700 5300 5200
-Wire Wire Line
 	5300 5200 5600 5200
 $Comp
 L power:GND #PWR0111
@@ -529,12 +528,6 @@ Wire Wire Line
 	6350 5950 6350 5700
 Wire Wire Line
 	6350 5700 6300 5700
-Wire Wire Line
-	5950 5700 5300 5700
-Connection ~ 5950 5700
-Connection ~ 5300 5700
-Wire Wire Line
-	5300 5750 5300 5700
 Wire Wire Line
 	6350 5700 6750 5700
 Wire Wire Line
@@ -884,4 +877,22 @@ Text Notes 7800 4550 0    50   ~ 0
 Peak Detector
 Text Notes 10550 5600 0    50   ~ 0
 To Base Board
+Text Notes 5150 3550 0    50   ~ 0
+every time photon goes though it allows a little bit of current to go through so you see like a couple mV\n
+Text Notes 3900 6500 0    50   ~ 0
+signal is in range of a few millivolts - take signal and scale output to milivolts to volts
+Text Notes 7800 4400 0    50   ~ 0
+extends output
+Text Notes 7650 6200 0    50   ~ 0
+schottky diodes with very low forward voltage, high current applications, put them in power and they dissipate a very small amount of power
+Text Notes 8800 4700 0    50   ~ 0
+prevents reverse voltage, only allow current to flow one way
+Wire Wire Line
+	5300 5200 5300 5700
+Wire Wire Line
+	5950 5700 5300 5700
+Connection ~ 5950 5700
+Connection ~ 5300 5700
+Wire Wire Line
+	5300 5700 5300 5750
 $EndSCHEMATC
