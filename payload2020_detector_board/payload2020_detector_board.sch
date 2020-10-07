@@ -19,7 +19,7 @@ L Device:R R1
 U 1 1 5EC2CD3C
 P 2500 2700
 F 0 "R1" H 2570 2746 50  0000 L CNN
-F 1 "100" H 2570 2655 50  0000 L CNN
+F 1 "1M" H 2570 2655 50  0000 L CNN
 F 2 "" V 2430 2700 50  0001 C CNN
 F 3 "~" H 2500 2700 50  0001 C CNN
 	1    2500 2700
@@ -37,17 +37,17 @@ F 3 "http://www.osram-os.com/Graphics/XPic0/00209685_0.pdf/SFH%20225%20FA.pdf" H
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2500 1950 2900 1950
+	2500 1950 2800 1950
 Wire Wire Line
-	3200 1950 3400 1950
+	3200 1950 3250 1950
 Wire Wire Line
 	3400 1950 3400 2300
 Wire Wire Line
 	2500 2300 3400 2300
 Connection ~ 3400 2300
-Text Notes 2000 1700 0    50   ~ 0
+Text Notes 1800 1450 0    50   ~ 0
 Transimpedance amplifier used to stabilize conversion of current output to voltage\n
-Text Notes 5800 1700 0    50   ~ 0
+Text Notes 5550 1450 0    50   ~ 0
 PEAK DETECTOR
 $Comp
 L power:GND #PWR05
@@ -330,8 +330,6 @@ Wire Wire Line
 	7900 2900 8550 2900
 Text Notes 1950 4250 0    50   ~ 0
 Transimpedance amplifier taken from: \nhttps://robertgawron.blogspot.com/2019/05/semiconductor-radioactivity-detector.html\n
-Text Notes 2600 4000 0    50   ~ 0
-R1, R4, R7, and possibly R8 are all subject to change
 Wire Wire Line
 	2500 2850 2500 3450
 Wire Wire Line
@@ -548,4 +546,29 @@ F 3 "" H 2500 1950 50  0001 C CNN
 	1    2500 1950
 	1    0    0    -1  
 $EndComp
+$Comp
+L Sensor_Optical:SFH225FA D4
+U 1 1 5F7E0045
+P 3000 1550
+F 0 "D4" H 2950 1845 50  0000 C CNN
+F 1 "SFH2201" H 2950 1754 50  0000 C CNN
+F 2 "OptoDevice:Osram_SFH225" H 3000 1725 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic0/00209685_0.pdf/SFH%20225%20FA.pdf" H 2950 1550 50  0001 C CNN
+	1    3000 1550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 1950 2800 1550
+Wire Wire Line
+	2800 1550 2900 1550
+Connection ~ 2800 1950
+Wire Wire Line
+	2800 1950 2900 1950
+Wire Wire Line
+	3200 1550 3250 1550
+Wire Wire Line
+	3250 1550 3250 1950
+Connection ~ 3250 1950
+Wire Wire Line
+	3250 1950 3400 1950
 $EndSCHEMATC
