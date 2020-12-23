@@ -24,3 +24,12 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+
+# Debug/Binary files
+*.ld
+
+# CUBE IDE cache files
+.settings
+.cproject
+.mxproject
+.project

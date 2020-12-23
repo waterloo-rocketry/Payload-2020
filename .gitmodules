@@ -1,0 +1,3 @@
+[submodule "controller_firmware/canlib"]
+	path = controller_firmware/canlib
+	url = https://github.com/waterloo-rocketry/canlib.git
