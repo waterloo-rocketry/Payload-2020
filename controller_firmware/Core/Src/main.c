@@ -23,7 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "can.h"
+#include "mcp_2515.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

@@ -6,13 +6,16 @@
 *.bak
 *.bck
 *.kicad_pcb-bak
-*~
+~$*
 _autosave-*
 *.tmp
 *-cache.lib
 *-rescue.lib
 *-save.pro
 *-save.kicad_pcb
+
+# Random MacOS UI file
+.DS_Store
 
 # Netlist files (exported from Eeschema)
 *.net
