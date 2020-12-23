@@ -27,9 +27,12 @@ _autosave-*
 
 # Debug/Binary files
 *.ld
+Debug
 
 # CUBE IDE cache files
+# PS the IDE won't open the project unless .project is present
+# the IDE won't build unless .cproject is present
+# .mxproject seem to have no valuable metrics thus ignored
+# .ioc only has the I/O config, no compilation dependency info
 .settings
-.cproject
 .mxproject
-.project
