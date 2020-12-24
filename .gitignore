@@ -6,13 +6,16 @@
 *.bak
 *.bck
 *.kicad_pcb-bak
-*~
+~$*
 _autosave-*
 *.tmp
 *-cache.lib
 *-rescue.lib
 *-save.pro
 *-save.kicad_pcb
+
+# Random MacOS UI file
+.DS_Store
 
 # Netlist files (exported from Eeschema)
 *.net
@@ -24,3 +27,15 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+
+# Debug/Binary files
+*.ld
+Debug
+
+# CUBE IDE cache files
+# PS the IDE won't open the project unless .project is present
+# the IDE won't build unless .cproject is present
+# .mxproject seem to have no valuable metrics thus ignored
+# .ioc only has the I/O config, no compilation dependency info
+.settings
+.mxproject
