@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Payload2020_SIPM_board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -15,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L payload202_custom:Broadcom_sipm U2
+L payload2020_custom:Broadcom_sipm U2
 U 1 1 5E14A9D9
 P 5500 3950
 F 0 "U2" H 5525 4225 50  0000 C CNN
@@ -158,7 +157,7 @@ Wire Wire Line
 	3850 2500 4000 2500
 Connection ~ 4000 2500
 $Comp
-L payload202_custom:Lineartech_DC_booster U1
+L payload2020_custom:Lineartech_DC_booster U1
 U 1 1 5E1573D3
 P 2150 1900
 F 0 "U1" H 2175 2425 50  0000 C CNN
