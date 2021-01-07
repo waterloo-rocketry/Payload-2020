@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 3 4
 Title ""
 Date ""
 Rev ""
@@ -283,8 +283,6 @@ Text Label 4950 4300 2    50   ~ 0
 CS
 Text Label 6150 4100 0    50   ~ 0
 SCK
-Text Label 6150 2900 0    50   ~ 0
-MOSI
 Text Label 6150 3100 0    50   ~ 0
 CAN_INT
 Text Label 6150 3800 0    50   ~ 0
@@ -618,15 +616,13 @@ Text HLabel 9600 2100 0    50   Input ~ 0
 GND
 Wire Wire Line
 	4950 3100 4700 3100
-Text HLabel 4700 3100 3    50   Input ~ 0
-MCLR
 Text Notes 4550 3350 2    50   ~ 0
 Is MCLR what should be \nconnected to PWR_EN?
 Text Notes 3800 1450 2    50   ~ 0
 Connector for programming
 Text HLabel 4950 3800 0    50   Input ~ 0
 LED
-Text HLabel 6150 3000 2    50   Input ~ 0
+Text HLabel 6150 3300 2    50   Input ~ 0
 PIC_MISO
 Text HLabel 7200 3300 0    50   Input ~ 0
 MCP_MOSI
@@ -635,6 +631,10 @@ NoConn ~ 4950 4100
 NoConn ~ 4950 4200
 Text HLabel 7000 2400 2    50   Input ~ 0
 CS
-NoConn ~ 6150 3200
-NoConn ~ 6150 3300
+Text Label 6150 3200 0    50   ~ 0
+MOSI
+Text HLabel 6150 2900 2    50   Input ~ 0
+PWR_ON
+Text HLabel 6150 3000 2    50   Input ~ 0
+PWR_GND
 $EndSCHEMATC
