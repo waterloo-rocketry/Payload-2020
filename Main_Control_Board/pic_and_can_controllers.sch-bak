@@ -265,8 +265,6 @@ Wire Wire Line
 	8900 3650 9250 3650
 Text Label 7200 3200 2    50   ~ 0
 MOSI
-Text Label 7200 3300 2    50   ~ 0
-MISO
 Text Label 7200 3400 2    50   ~ 0
 CS
 Text Label 7200 3500 2    50   ~ 0
@@ -287,8 +285,6 @@ Text Label 6150 4100 0    50   ~ 0
 SCK
 Text Label 6150 2900 0    50   ~ 0
 MOSI
-Text Label 6150 3000 0    50   ~ 0
-MISO
 Text Label 6150 3100 0    50   ~ 0
 CAN_INT
 Text Label 6150 3800 0    50   ~ 0
@@ -558,38 +554,8 @@ F 3 "" H 7000 2050 50  0001 C CNN
 	1    7000 2050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7450 2400 7450 2250
-$Comp
-L Device:R_Small R?
-U 1 1 600B1536
-P 7450 2150
-F 0 "R?" H 7509 2196 50  0000 L CNN
-F 1 "10k" H 7509 2105 50  0000 L CNN
-F 2 "" H 7450 2150 50  0001 C CNN
-F 3 "~" H 7450 2150 50  0001 C CNN
-	1    7450 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 600B153C
-P 7450 2050
-F 0 "#PWR?" H 7450 1900 50  0001 C CNN
-F 1 "+5V" H 7465 2223 50  0000 C CNN
-F 2 "" H 7450 2050 50  0001 C CNN
-F 3 "" H 7450 2050 50  0001 C CNN
-	1    7450 2050
-	1    0    0    -1  
-$EndComp
-Text Label 4950 4200 2    50   ~ 0
-CS_EXT3
 Text Label 7000 2400 2    50   ~ 0
 CS
-Text Label 7450 2400 2    50   ~ 0
-CS_EXT3
-Text HLabel 7450 2400 2    50   Input ~ 0
-SS_SD
 Wire Wire Line
 	8900 2550 8900 2400
 $Comp
@@ -620,14 +586,6 @@ Text Notes 8650 1750 2    50   ~ 0
 Not quite sure about whether these pull-ups are needed.\nFollowing suit from the original schematic with the Arduino
 Text Notes 3550 4500 0    50   ~ 0
 Not sure if can use \nboth RA4 and RA5 for\nchip select. \nDocumentation only says\nRA5 has SS1 functionality...
-Wire Wire Line
-	6150 2900 6350 2900
-Wire Wire Line
-	6150 3000 6350 3000
-Text HLabel 6350 2900 2    50   Input ~ 0
-PIC_MOSI
-Text HLabel 6350 3000 2    50   Input ~ 0
-PIC_MISO
 Wire Wire Line
 	6150 4100 6350 4100
 Text HLabel 6350 4100 2    50   Input ~ 0
@@ -672,64 +630,13 @@ Text Notes 3800 1450 2    50   ~ 0
 Connector for programming
 Text HLabel 4950 3800 0    50   Input ~ 0
 LED
-Text Label 4950 4000 2    50   ~ 0
-CS_EXT1
-Text Label 4950 4100 2    50   ~ 0
-CS_EXT2
-Wire Wire Line
-	7950 2350 7950 2200
-$Comp
-L Device:R_Small R?
-U 1 1 5FFC3233
-P 7950 2100
-F 0 "R?" H 8009 2146 50  0000 L CNN
-F 1 "10k" H 8009 2055 50  0000 L CNN
-F 2 "" H 7950 2100 50  0001 C CNN
-F 3 "~" H 7950 2100 50  0001 C CNN
-	1    7950 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5FFC3239
-P 7950 2000
-F 0 "#PWR?" H 7950 1850 50  0001 C CNN
-F 1 "+5V" H 7965 2173 50  0000 C CNN
-F 2 "" H 7950 2000 50  0001 C CNN
-F 3 "" H 7950 2000 50  0001 C CNN
-	1    7950 2000
-	1    0    0    -1  
-$EndComp
-Text Label 7950 2350 2    50   ~ 0
-CS_EXT2
-Text HLabel 7950 2350 2    50   Input ~ 0
-SS_MAMA
-Wire Wire Line
-	6200 2300 6200 2150
-$Comp
-L Device:R_Small R?
-U 1 1 5FFDDA6E
-P 6200 2050
-F 0 "R?" H 6259 2096 50  0000 L CNN
-F 1 "10k" H 6259 2005 50  0000 L CNN
-F 2 "" H 6200 2050 50  0001 C CNN
-F 3 "~" H 6200 2050 50  0001 C CNN
-	1    6200 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5FFDDA74
-P 6200 1950
-F 0 "#PWR?" H 6200 1800 50  0001 C CNN
-F 1 "+5V" H 6215 2123 50  0000 C CNN
-F 2 "" H 6200 1950 50  0001 C CNN
-F 3 "" H 6200 1950 50  0001 C CNN
-	1    6200 1950
-	1    0    0    -1  
-$EndComp
-Text Label 6200 2300 2    50   ~ 0
-CS_EXT1
-Text HLabel 6200 2300 2    50   Input ~ 0
-SS_MAMA_DUP
+Text HLabel 6150 3000 2    50   Input ~ 0
+PIC_MISO
+Text HLabel 7200 3300 0    50   Input ~ 0
+MCP_MOSI
+NoConn ~ 4950 4000
+NoConn ~ 4950 4100
+NoConn ~ 4950 4200
+Text HLabel 7000 2400 2    50   Input ~ 0
+CS
 $EndSCHEMATC
