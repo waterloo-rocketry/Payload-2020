@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 4
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -211,4 +211,19 @@ Wire Wire Line
 Connection ~ 6850 3250
 Wire Wire Line
 	6850 3250 6850 4000
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FFC43F2
+P 4300 2600
+AR Path="/5EE6FC0F/5FFC43F2" Ref="#PWR?"  Part="1" 
+AR Path="/5EEA78A6/5FFC43F2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4300 2450 50  0001 C CNN
+F 1 "+3V3" H 4315 2773 50  0000 C CNN
+F 2 "" H 4300 2600 50  0001 C CNN
+F 3 "" H 4300 2600 50  0001 C CNN
+	1    4300 2600
+	1    0    0    -1  
+$EndComp
+Text HLabel 4300 2600 2    50   Input ~ 0
+3V3
 $EndSCHEMATC
