@@ -211,16 +211,6 @@ Text GLabel 5500 1500 2    50   Input ~ 0
 SLEEP_5V
 Wire Wire Line
 	3550 1500 4150 1500
-$Sheet
-S 3000 1350 550  450 
-U 5E13F8E9
-F0 "battery_management" 50
-F1 "file5E13F8E8.sch" 50
-F2 "VIN" I L 3000 1500 50 
-F3 "VOUT" I R 3550 1500 50 
-F4 "PG" I R 3550 1650 50 
-F5 "GND" I L 3000 1650 50 
-$EndSheet
 Text Label 3750 1650 0    50   ~ 0
 PG
 $Comp
@@ -761,17 +751,6 @@ Wire Wire Line
 	9500 4200 9700 4200
 Text Notes 10000 4100 0    50   ~ 0
 To Payload CAN
-$Sheet
-S 9700 5050 550  500 
-U 5EE6FC0F
-F0 "SD Card" 50
-F1 "file5EE6FC0E.sch" 50
-F2 "DO" I L 9700 5250 50 
-F3 "DI" I L 9700 5350 50 
-F4 "CLK" I L 9700 5150 50 
-F5 "CS" I L 9700 5450 50 
-F6 "3V3" I R 10250 5200 50 
-$EndSheet
 $Comp
 L power:+3V3 #PWR026
 U 1 1 5FFC70CE
@@ -807,4 +786,25 @@ Text Label 9700 4400 2    50   ~ 0
 CANH_PAYLOAD
 Text Label 9700 4500 2    50   ~ 0
 CANL_PAYLOAD
+$Sheet
+S 3000 1350 550  450 
+U 5E13F8E9
+F0 "battery_management" 50
+F1 "battery_management.sch" 50
+F2 "VIN" I L 3000 1500 50 
+F3 "VOUT" I R 3550 1500 50 
+F4 "PG" I R 3550 1650 50 
+F5 "GND" I L 3000 1650 50 
+$EndSheet
+$Sheet
+S 9700 5050 550  500 
+U 5EE6FC0F
+F0 "SD Card" 50
+F1 "sd_breakout.sch" 50
+F2 "DO" I L 9700 5250 50 
+F3 "DI" I L 9700 5350 50 
+F4 "CLK" I L 9700 5150 50 
+F5 "CS" I L 9700 5450 50 
+F6 "3V3" I R 10250 5200 50 
+$EndSheet
 $EndSCHEMATC
