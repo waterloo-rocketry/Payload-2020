@@ -1,0 +1,229 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6850 4000 7150 4000
+$Comp
+L power:+3V3 #PWR0122
+U 1 1 5EE746CE
+P 4900 2600
+AR Path="/5EE6FC0F/5EE746CE" Ref="#PWR0122"  Part="1" 
+AR Path="/5EEA78A6/5EE746CE" Ref="#PWR015"  Part="1" 
+F 0 "#PWR0122" H 4900 2450 50  0001 C CNN
+F 1 "+3V3" H 4915 2773 50  0000 C CNN
+F 2 "" H 4900 2600 50  0001 C CNN
+F 3 "" H 4900 2600 50  0001 C CNN
+	1    4900 2600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6100 3750
+NoConn ~ 6100 4050
+$Comp
+L Connector:Micro_SD_Card J9
+U 1 1 5EE786FC
+P 8050 4000
+AR Path="/5EE6FC0F/5EE786FC" Ref="J9"  Part="1" 
+AR Path="/5EEA78A6/5EE786FC" Ref="J10"  Part="1" 
+F 0 "J9" H 8000 4717 50  0000 C CNN
+F 1 "Micro_SD_Card" H 8000 4626 50  0000 C CNN
+F 2 "Connector_Card:microSD_HC_Molex_104031-0811" H 9200 4300 50  0001 C CNN
+F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 8050 4000 50  0001 C CNN
+	1    8050 4000
+	1    0    0    -1  
+$EndComp
+Text HLabel 7150 4300 0    50   Input ~ 0
+DO
+Wire Wire Line
+	7150 3900 6500 3900
+Wire Wire Line
+	6500 3900 6500 4800
+Wire Wire Line
+	6500 4800 5050 4800
+Wire Wire Line
+	5050 4800 5050 4050
+Wire Wire Line
+	5050 4050 5200 4050
+Text HLabel 4600 4150 0    50   Input ~ 0
+DI
+Wire Wire Line
+	4600 4150 5200 4150
+Wire Wire Line
+	7150 4100 6600 4100
+Wire Wire Line
+	6600 4100 6600 4900
+Wire Wire Line
+	6600 4900 4950 4900
+Wire Wire Line
+	4950 4900 4950 3850
+Wire Wire Line
+	4950 3850 5200 3850
+Text HLabel 4600 3950 0    50   Input ~ 0
+CLK
+Wire Wire Line
+	7150 3800 6400 3800
+Wire Wire Line
+	6400 3800 6400 4700
+Wire Wire Line
+	6400 4700 5150 4700
+Wire Wire Line
+	5150 4700 5150 4250
+Wire Wire Line
+	5150 4250 5200 4250
+Text HLabel 4600 4350 0    50   Input ~ 0
+CS
+Wire Wire Line
+	4600 4350 5200 4350
+NoConn ~ 7150 4400
+$Comp
+L power:GND #PWR013
+U 1 1 5EE7E3C6
+P 6900 4600
+AR Path="/5EE6FC0F/5EE7E3C6" Ref="#PWR013"  Part="1" 
+AR Path="/5EEA78A6/5EE7E3C6" Ref="#PWR018"  Part="1" 
+F 0 "#PWR013" H 6900 4350 50  0001 C CNN
+F 1 "GND" H 6905 4427 50  0000 C CNN
+F 2 "" H 6900 4600 50  0001 C CNN
+F 3 "" H 6900 4600 50  0001 C CNN
+	1    6900 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 4600 6900 4200
+Wire Wire Line
+	6900 4200 7150 4200
+$Comp
+L power:GND #PWR011
+U 1 1 5EE7EC21
+P 5200 5000
+AR Path="/5EE6FC0F/5EE7EC21" Ref="#PWR011"  Part="1" 
+AR Path="/5EEA78A6/5EE7EC21" Ref="#PWR016"  Part="1" 
+F 0 "#PWR011" H 5200 4750 50  0001 C CNN
+F 1 "GND" H 5205 4827 50  0000 C CNN
+F 2 "" H 5200 5000 50  0001 C CNN
+F 3 "" H 5200 5000 50  0001 C CNN
+	1    5200 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 4450 5200 5000
+NoConn ~ 7150 3700
+$Comp
+L power:GND #PWR012
+U 1 1 5EE80EC4
+P 6200 4500
+AR Path="/5EE6FC0F/5EE80EC4" Ref="#PWR012"  Part="1" 
+AR Path="/5EEA78A6/5EE80EC4" Ref="#PWR017"  Part="1" 
+F 0 "#PWR012" H 6200 4250 50  0001 C CNN
+F 1 "GND" H 6200 4350 50  0000 C CNN
+F 2 "" H 6200 4500 50  0001 C CNN
+F 3 "" H 6200 4500 50  0001 C CNN
+	1    6200 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 4450 6200 4450
+Wire Wire Line
+	6100 4250 6200 4250
+Wire Wire Line
+	6100 3950 6200 3950
+$Comp
+L payload2020_custom:CD74HC4050 U3
+U 1 1 5EE822AD
+P 5550 4100
+AR Path="/5EE6FC0F/5EE822AD" Ref="U3"  Part="1" 
+AR Path="/5EEA78A6/5EE822AD" Ref="U13"  Part="1" 
+F 0 "U3" H 5650 4700 50  0000 C CNN
+F 1 "CD74HC4050" H 5650 4584 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5550 4100 50  0001 C CNN
+F 3 "" H 5550 4100 50  0001 C CNN
+	1    5550 4100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6100 4350
+NoConn ~ 6100 4150
+NoConn ~ 6100 3850
+Wire Wire Line
+	5050 3750 5200 3750
+$Comp
+L power:GND #PWR014
+U 1 1 5EE860FD
+P 9000 4750
+AR Path="/5EE6FC0F/5EE860FD" Ref="#PWR014"  Part="1" 
+AR Path="/5EEA78A6/5EE860FD" Ref="#PWR019"  Part="1" 
+F 0 "#PWR014" H 9000 4500 50  0001 C CNN
+F 1 "GND" H 9005 4577 50  0000 C CNN
+F 2 "" H 9000 4750 50  0001 C CNN
+F 3 "" H 9000 4750 50  0001 C CNN
+	1    9000 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 4750 9000 4600
+Wire Wire Line
+	9000 4600 8850 4600
+Wire Wire Line
+	4600 3950 5200 3950
+Wire Wire Line
+	6200 3950 6200 4250
+Connection ~ 6200 4250
+Wire Wire Line
+	6200 4250 6200 4450
+Connection ~ 6200 4450
+Wire Wire Line
+	6200 4450 6200 4500
+$Comp
+L Device:Jumper JP13
+U 1 1 5EEBCBD3
+P 5300 2800
+AR Path="/5EE6FC0F/5EEBCBD3" Ref="JP13"  Part="1" 
+AR Path="/5EEA78A6/5EEBCBD3" Ref="JP14"  Part="1" 
+F 0 "JP13" H 5300 3064 50  0000 C CNN
+F 1 "Jumper" H 5300 2973 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5300 2800 50  0001 C CNN
+F 3 "~" H 5300 2800 50  0001 C CNN
+	1    5300 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 2600 4900 2800
+Wire Wire Line
+	4900 2800 5000 2800
+Wire Wire Line
+	5600 2800 6850 2800
+Wire Wire Line
+	6850 2800 6850 3250
+Wire Wire Line
+	6850 3250 5050 3250
+Wire Wire Line
+	5050 3250 5050 3750
+Connection ~ 6850 3250
+Wire Wire Line
+	6850 3250 6850 4000
+$Comp
+L power:+3V3 #PWR049
+U 1 1 5FFC43F2
+P 4300 2600
+AR Path="/5EE6FC0F/5FFC43F2" Ref="#PWR049"  Part="1" 
+AR Path="/5EEA78A6/5FFC43F2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR049" H 4300 2450 50  0001 C CNN
+F 1 "+3V3" H 4315 2773 50  0000 C CNN
+F 2 "" H 4300 2600 50  0001 C CNN
+F 3 "" H 4300 2600 50  0001 C CNN
+	1    4300 2600
+	1    0    0    -1  
+$EndComp
+Text HLabel 4300 2600 2    50   Input ~ 0
+3V3
+$EndSCHEMATC
