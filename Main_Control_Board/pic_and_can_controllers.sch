@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 2 3
 Title ""
 Date ""
 Rev ""
@@ -270,12 +270,6 @@ F 3 "" H 3650 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3650 3850
-Text Label 3400 3850 2    50   ~ 0
-~MCLR
-Text Label 4850 4350 0    50   ~ 0
-ICSPDAT
-Text Label 4850 4250 0    50   ~ 0
-ICSPCLK
 NoConn ~ 3650 4650
 NoConn ~ 4850 4950
 NoConn ~ 4850 5050
@@ -347,17 +341,6 @@ Text Label 4400 6500 0    50   ~ 0
 CLKIN
 Text Label 4400 6800 0    50   ~ 0
 CLKOUT
-$Comp
-L Connector:Conn_01x05_Female J10
-U 1 1 5FF81DF6
-P 2150 2650
-F 0 "J10" H 2042 2225 50  0000 C CNN
-F 1 "Conn_01x05_Female" H 2042 2316 50  0000 C CNN
-F 2 "" H 2150 2650 50  0001 C CNN
-F 3 "~" H 2150 2650 50  0001 C CNN
-	1    2150 2650
-	-1   0    0    1   
-$EndComp
 NoConn ~ 4850 4750
 $Comp
 L Device:C_Small C3
@@ -410,48 +393,6 @@ F 3 "" H 4250 5650 50  0001 C CNN
 	1    4250 5650
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR030
-U 1 1 5FF8AC61
-P 2700 2950
-F 0 "#PWR030" H 2700 2700 50  0001 C CNN
-F 1 "GND" H 2705 2777 50  0000 C CNN
-F 2 "" H 2700 2950 50  0001 C CNN
-F 3 "" H 2700 2950 50  0001 C CNN
-	1    2700 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR029
-U 1 1 5FF8B5EE
-P 2700 2150
-F 0 "#PWR029" H 2700 2000 50  0001 C CNN
-F 1 "+5V" H 2715 2323 50  0000 C CNN
-F 2 "" H 2700 2150 50  0001 C CNN
-F 3 "" H 2700 2150 50  0001 C CNN
-	1    2700 2150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2350 2550 2700 2550
-Wire Wire Line
-	2700 2550 2700 2150
-Wire Wire Line
-	2350 2650 2700 2650
-Wire Wire Line
-	2700 2650 2700 2950
-Wire Wire Line
-	2350 2450 2850 2450
-Wire Wire Line
-	2350 2750 2850 2750
-Wire Wire Line
-	2350 2850 2850 2850
-Text Label 2850 2450 0    50   ~ 0
-~MCLR
-Text Label 2850 2750 0    50   ~ 0
-ICSPDAT
-Text Label 2850 2850 0    50   ~ 0
-ICSPCLK
 Wire Wire Line
 	4850 3850 5500 3850
 Wire Wire Line
@@ -502,8 +443,6 @@ F 3 "" H 3250 4700 50  0001 C CNN
 	1    3250 4700
 	1    0    0    -1  
 $EndComp
-Text Notes 7350 2500 2    50   ~ 0
-Not quite sure about whether these pull-ups are needed.\nFollowing suit from the original schematic with the Arduino
 Wire Wire Line
 	4850 4850 5050 4850
 Text HLabel 5050 4850 2    50   Input ~ 0
@@ -511,35 +450,31 @@ PIC_SCK
 $Comp
 L power:+5V #PWR027
 U 1 1 60228941
-P 2200 1050
-F 0 "#PWR027" H 2200 900 50  0001 C CNN
-F 1 "+5V" H 2215 1223 50  0000 C CNN
-F 2 "" H 2200 1050 50  0001 C CNN
-F 3 "" H 2200 1050 50  0001 C CNN
-	1    2200 1050
+P 2750 2050
+F 0 "#PWR027" H 2750 1900 50  0001 C CNN
+F 1 "+5V" H 2765 2223 50  0000 C CNN
+F 2 "" H 2750 2050 50  0001 C CNN
+F 3 "" H 2750 2050 50  0001 C CNN
+	1    2750 2050
 	1    0    0    -1  
 $EndComp
-Text HLabel 2200 1050 0    50   Input ~ 0
+Text HLabel 2750 2050 0    50   Input ~ 0
 5V
 $Comp
 L power:GND #PWR028
 U 1 1 602295CB
-P 2200 1350
-F 0 "#PWR028" H 2200 1100 50  0001 C CNN
-F 1 "GND" H 2205 1177 50  0000 C CNN
-F 2 "" H 2200 1350 50  0001 C CNN
-F 3 "" H 2200 1350 50  0001 C CNN
-	1    2200 1350
+P 2750 2350
+F 0 "#PWR028" H 2750 2100 50  0001 C CNN
+F 1 "GND" H 2755 2177 50  0000 C CNN
+F 2 "" H 2750 2350 50  0001 C CNN
+F 3 "" H 2750 2350 50  0001 C CNN
+	1    2750 2350
 	1    0    0    -1  
 $EndComp
-Text HLabel 2200 1350 0    50   Input ~ 0
+Text HLabel 2750 2350 0    50   Input ~ 0
 GND
 Wire Wire Line
 	3650 3850 3400 3850
-Text Notes 3250 4100 2    50   ~ 0
-Is MCLR what should be \nconnected to PWR_EN?
-Text Notes 3000 1800 2    50   ~ 0
-Connector for programming
 Text HLabel 3650 4550 0    50   Input ~ 0
 LED
 Text HLabel 4850 4050 2    50   Input ~ 0
@@ -584,4 +519,10 @@ Text Label 8600 4250 2    50   ~ 0
 MCP_RX
 Wire Wire Line
 	3650 5050 3250 5050
+Text HLabel 4850 4250 2    50   Input ~ 0
+ICSPCLK
+Text HLabel 4850 4350 2    50   Input ~ 0
+ICSPDAT
+Text HLabel 3400 3850 0    50   Input ~ 0
+~MCLR
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -142,6 +142,9 @@ F13 "MCP_MOSI" I R 7600 5500 50
 F14 "CS" I R 7600 6200 50 
 F15 "PWR_ON" I L 2950 4100 50 
 F16 "PWR_GND" I L 2950 4250 50 
+F17 "ICSPCLK" I R 7600 4250 50 
+F18 "ICSPDAT" I R 7600 4400 50 
+F19 "~MCLR" I R 7600 4550 50 
 $EndSheet
 Text Label 2950 4100 2    50   ~ 0
 PWR_EN
@@ -571,16 +574,6 @@ F 3 "" H 7900 1450 50  0001 C CNN
 $EndComp
 Connection ~ 1950 1500
 Connection ~ 1950 2350
-Text Label 9700 5150 2    50   ~ 0
-SCK
-Text Label 9700 5250 2    50   ~ 0
-MISO_SD_TO_MAMA1_MOSI
-Text Label 9700 5350 2    50   ~ 0
-SD_MOSI
-Text Label 9700 5450 2    50   ~ 0
-SS
-Text Notes 9800 5950 0    50   ~ 0
-SD Breakouts
 $Comp
 L Connector_Generic:Conn_01x07 J4
 U 1 1 5FFFAC2F
@@ -623,7 +616,7 @@ SCK
 Text Label 9700 2050 2    50   ~ 0
 MISO_MAMA1_TO_MAMA2_MOSI
 Text Label 9700 2150 2    50   ~ 0
-MISO_SD_TO_MAMA1_MOSI
+MOSI_PIC_TO_MAMA1_MOSI
 Text Label 9700 2250 2    50   ~ 0
 SS
 $Comp
@@ -749,23 +742,10 @@ Wire Wire Line
 	9500 4200 9700 4200
 Text Notes 10000 4100 0    50   ~ 0
 To Payload CAN
-$Comp
-L power:+3V3 #PWR026
-U 1 1 5FFC70CE
-P 10400 5200
-F 0 "#PWR026" H 10400 5050 50  0001 C CNN
-F 1 "+3V3" H 10415 5373 50  0000 C CNN
-F 2 "" H 10400 5200 50  0001 C CNN
-F 3 "" H 10400 5200 50  0001 C CNN
-	1    10400 5200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10250 5200 10400 5200
 Text Label 7600 6200 0    50   ~ 0
 SS
 Text Label 7600 5500 0    50   ~ 0
-SD_MOSI
+MOSI_PIC_TO_MAMA1_MOSI
 Text Label 7600 5350 0    50   ~ 0
 MISO_MAMA2_TO_PIC_MISO
 Text Label 7600 5200 0    50   ~ 0
@@ -793,17 +773,6 @@ F2 "VIN" I L 3000 1500 50
 F3 "VOUT" I R 3550 1500 50 
 F4 "PG" I R 3550 1650 50 
 F5 "GND" I L 3000 1650 50 
-$EndSheet
-$Sheet
-S 9700 5050 550  500 
-U 5EE6FC0F
-F0 "SD Card" 50
-F1 "sd_breakout.sch" 50
-F2 "DO" I L 9700 5250 50 
-F3 "DI" I L 9700 5350 50 
-F4 "CLK" I L 9700 5150 50 
-F5 "CS" I L 9700 5450 50 
-F6 "3V3" I R 10250 5200 50 
 $EndSheet
 Wire Wire Line
 	2600 1500 2600 1650
@@ -877,4 +846,67 @@ F 3 "" H 1350 4150 50  0001 C CNN
 	1    1350 4150
 	1    0    0    -1  
 $EndComp
+Text Notes 10000 4850 2    50   ~ 0
+Connector for programming
+$Comp
+L Connector:Conn_01x05_Female J?
+U 1 1 60049A82
+P 10050 5400
+AR Path="/6016C5CD/60049A82" Ref="J?"  Part="1" 
+AR Path="/60049A82" Ref="J?"  Part="1" 
+F 0 "J?" H 9942 4975 50  0000 C CNN
+F 1 "Conn_01x05_Female" H 9942 5066 50  0000 C CNN
+F 2 "" H 10050 5400 50  0001 C CNN
+F 3 "~" H 10050 5400 50  0001 C CNN
+	1    10050 5400
+	1    0    0    -1  
+$EndComp
+Text Label 9350 5200 2    50   ~ 0
+ICSPCLK
+Text Label 9350 5300 2    50   ~ 0
+ICSPDAT
+Text Label 9350 5600 2    50   ~ 0
+~MCLR
+Wire Wire Line
+	9850 5200 9350 5200
+Wire Wire Line
+	9850 5300 9350 5300
+Wire Wire Line
+	9850 5600 9350 5600
+Wire Wire Line
+	9500 5400 9500 5100
+Wire Wire Line
+	9850 5400 9500 5400
+Wire Wire Line
+	9500 5500 9500 5900
+Wire Wire Line
+	9850 5500 9500 5500
+$Comp
+L power:+5V #PWR?
+U 1 1 60049A8E
+P 9500 5900
+F 0 "#PWR?" H 9500 5750 50  0001 C CNN
+F 1 "+5V" H 9515 6073 50  0000 C CNN
+F 2 "" H 9500 5900 50  0001 C CNN
+F 3 "" H 9500 5900 50  0001 C CNN
+	1    9500 5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60049A88
+P 9500 5100
+F 0 "#PWR?" H 9500 4850 50  0001 C CNN
+F 1 "GND" H 9505 4927 50  0000 C CNN
+F 2 "" H 9500 5100 50  0001 C CNN
+F 3 "" H 9500 5100 50  0001 C CNN
+	1    9500 5100
+	-1   0    0    1   
+$EndComp
+Text Label 7600 4250 0    50   ~ 0
+ICSPCLK
+Text Label 7600 4400 0    50   ~ 0
+ICSPDAT
+Text Label 7600 4550 0    50   ~ 0
+~MCLR
 $EndSCHEMATC
