@@ -211,32 +211,8 @@ F 3 "" H 7650 3750 50  0001 C CNN
 	1    7650 3750
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR039
-U 1 1 5FF46E71
-P 7500 4150
-F 0 "#PWR039" H 7500 4000 50  0001 C CNN
-F 1 "+5V" H 7515 4323 50  0000 C CNN
-F 2 "" H 7500 4150 50  0001 C CNN
-F 3 "" H 7500 4150 50  0001 C CNN
-	1    7500 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R5
-U 1 1 5FF4774D
-P 7500 4250
-F 0 "R5" H 7559 4296 50  0000 L CNN
-F 1 "10k" H 7559 4205 50  0000 L CNN
-F 2 "" H 7500 4250 50  0001 C CNN
-F 3 "~" H 7500 4250 50  0001 C CNN
-	1    7500 4250
-	1    0    0    -1  
-$EndComp
-Text Label 7450 4550 2    50   ~ 0
+Text Label 7100 4550 0    50   ~ 0
 CAN_INT
-Wire Wire Line
-	7100 4550 7500 4550
 Text Label 5900 3950 2    50   ~ 0
 MOSI
 Text Label 5900 4150 2    50   ~ 0
@@ -503,61 +479,31 @@ F 3 "" H 5500 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5700 3150 5700 3000
+	3250 5050 3250 4900
 $Comp
 L Device:R_Small R4
 U 1 1 600AF1BF
-P 5700 2900
-F 0 "R4" H 5759 2946 50  0000 L CNN
-F 1 "10k" H 5759 2855 50  0000 L CNN
-F 2 "" H 5700 2900 50  0001 C CNN
-F 3 "~" H 5700 2900 50  0001 C CNN
-	1    5700 2900
+P 3250 4800
+F 0 "R4" H 3309 4846 50  0000 L CNN
+F 1 "10k" H 3309 4755 50  0000 L CNN
+F 2 "" H 3250 4800 50  0001 C CNN
+F 3 "~" H 3250 4800 50  0001 C CNN
+	1    3250 4800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR037
 U 1 1 600AF7AC
-P 5700 2800
-F 0 "#PWR037" H 5700 2650 50  0001 C CNN
-F 1 "+5V" H 5715 2973 50  0000 C CNN
-F 2 "" H 5700 2800 50  0001 C CNN
-F 3 "" H 5700 2800 50  0001 C CNN
-	1    5700 2800
+P 3250 4700
+F 0 "#PWR037" H 3250 4550 50  0001 C CNN
+F 1 "+5V" H 3265 4873 50  0000 C CNN
+F 2 "" H 3250 4700 50  0001 C CNN
+F 3 "" H 3250 4700 50  0001 C CNN
+	1    3250 4700
 	1    0    0    -1  
 $EndComp
-Text Label 5700 3150 2    50   ~ 0
-CS
-Wire Wire Line
-	7600 3300 7600 3150
-$Comp
-L Device:R_Small R6
-U 1 1 600B8D27
-P 7600 3050
-F 0 "R6" H 7659 3096 50  0000 L CNN
-F 1 "10k" H 7659 3005 50  0000 L CNN
-F 2 "" H 7600 3050 50  0001 C CNN
-F 3 "~" H 7600 3050 50  0001 C CNN
-	1    7600 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR040
-U 1 1 600B8D2D
-P 7600 2950
-F 0 "#PWR040" H 7600 2800 50  0001 C CNN
-F 1 "+5V" H 7615 3123 50  0000 C CNN
-F 2 "" H 7600 2950 50  0001 C CNN
-F 3 "" H 7600 2950 50  0001 C CNN
-	1    7600 2950
-	1    0    0    -1  
-$EndComp
-Text Label 7600 3300 2    50   ~ 0
-CAN_INT
 Text Notes 7350 2500 2    50   ~ 0
 Not quite sure about whether these pull-ups are needed.\nFollowing suit from the original schematic with the Arduino
-Text Notes 2250 5250 0    50   ~ 0
-Not sure if can use \nboth RA4 and RA5 for\nchip select. \nDocumentation only says\nRA5 has SS1 functionality...
 Wire Wire Line
 	4850 4850 5050 4850
 Text HLabel 5050 4850 2    50   Input ~ 0
@@ -603,7 +549,7 @@ MCP_MOSI
 NoConn ~ 3650 4750
 NoConn ~ 3650 4850
 NoConn ~ 3650 4950
-Text HLabel 5700 3150 2    50   Input ~ 0
+Text HLabel 3250 5050 0    50   Input ~ 0
 CS
 Text Label 4850 3950 0    50   ~ 0
 MOSI
@@ -628,8 +574,6 @@ Wire Wire Line
 Wire Wire Line
 	7100 5150 7650 5150
 Connection ~ 7650 3750
-Wire Wire Line
-	7500 4550 7500 4350
 Text Label 7100 3950 0    50   ~ 0
 MCP_RX
 Text Label 7100 4050 0    50   ~ 0
@@ -638,4 +582,6 @@ Text Label 8600 4150 2    50   ~ 0
 MCP_TX
 Text Label 8600 4250 2    50   ~ 0
 MCP_RX
+Wire Wire Line
+	3650 5050 3250 5050
 $EndSCHEMATC
