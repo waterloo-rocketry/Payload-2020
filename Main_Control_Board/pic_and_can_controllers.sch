@@ -453,7 +453,7 @@ Text HLabel 2500 4600 0    50   Input ~ 0
 LED
 Text HLabel 3700 4100 2    50   Input ~ 0
 PIC_MISO
-Text HLabel 5700 4050 0    50   Input ~ 0
+Text HLabel 5550 4050 0    50   Input ~ 0
 MCP_MOSI
 NoConn ~ 2500 4800
 NoConn ~ 2500 4900

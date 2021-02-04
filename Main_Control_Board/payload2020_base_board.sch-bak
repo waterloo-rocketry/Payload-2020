@@ -180,7 +180,7 @@ F 3 "" H 2850 6150 50  0001 C CNN
 	1    2850 6150
 	1    0    0    -1  
 $EndComp
-Text Label 2950 4250 2    50   ~ 0
+Text Label 2550 4250 2    50   ~ 0
 PG
 Text GLabel 5500 1500 2    50   Input ~ 0
 SLEEP_5V
@@ -585,11 +585,11 @@ Wire Wire Line
 	9400 1850 9700 1850
 Text Label 9700 1950 2    50   ~ 0
 SCK
-Text Label 9700 2050 2    50   ~ 0
+Text Label 9350 2050 2    50   ~ 0
 MAMA1_O_MAMA2_I
 Text Label 9700 2150 2    50   ~ 0
 MCP_MOSI
-Text Label 9700 2250 2    50   ~ 0
+Text Label 9300 2250 2    50   ~ 0
 SS
 $Comp
 L power:GND #PWR022
@@ -641,11 +641,9 @@ F 3 "" H 9450 2900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9450 2900 9750 2900
-Text Label 9750 3000 2    50   ~ 0
+Text Label 9250 3000 2    50   ~ 0
 SCK
-Text Label 9750 3100 2    50   ~ 0
-PIC_MISO
-Text Label 9750 3200 2    50   ~ 0
+Text Label 9350 3200 2    50   ~ 0
 MAM1_O_MAMA2_I
 Text Label 9750 3300 2    50   ~ 0
 SS
@@ -718,23 +716,23 @@ Text Label 7600 6200 0    50   ~ 0
 SS
 Text Label 7600 5500 0    50   ~ 0
 MCP_MOSI
-Text Label 7600 5350 0    50   ~ 0
+Text Label 8050 5350 0    50   ~ 0
 PIC_MISO
 Text Label 7600 5200 0    50   ~ 0
 SCK
 Text Label 7600 3750 0    50   ~ 0
 SS_MAMA
-Text Label 7600 4000 0    50   ~ 0
+Text Label 8050 4000 0    50   ~ 0
 SS_MAMA_DUP
 Wire Wire Line
 	9700 4300 8950 4300
-Text Label 7600 4800 0    50   ~ 0
+Text Label 8000 4800 0    50   ~ 0
 CANH_PAYLOAD
 Text Label 7600 4900 0    50   ~ 0
 CANL_PAYLOAD
 Text Label 9700 4400 2    50   ~ 0
 CANH_PAYLOAD
-Text Label 9700 4500 2    50   ~ 0
+Text Label 9700 4650 2    50   ~ 0
 CANL_PAYLOAD
 $Sheet
 S 3000 1350 550  450 
@@ -835,14 +833,14 @@ F 3 "~" H 10050 5400 50  0001 C CNN
 $EndComp
 Text Label 9350 5200 2    50   ~ 0
 ICSPCLK
-Text Label 9350 5300 2    50   ~ 0
+Text Label 8950 5300 2    50   ~ 0
 ICSPDAT
 Text Label 9350 5600 2    50   ~ 0
 ~MCLR
 Wire Wire Line
 	9850 5200 9350 5200
 Wire Wire Line
-	9850 5300 9350 5300
+	9850 5300 8950 5300
 Wire Wire Line
 	9850 5600 9350 5600
 Wire Wire Line
@@ -877,8 +875,30 @@ F 3 "" H 9500 5100 50  0001 C CNN
 $EndComp
 Text Label 7600 4250 0    50   ~ 0
 ICSPCLK
-Text Label 7600 4400 0    50   ~ 0
+Text Label 8050 4400 0    50   ~ 0
 ICSPDAT
 Text Label 7600 4550 0    50   ~ 0
 ~MCLR
+Wire Wire Line
+	8050 4000 7600 4000
+Wire Wire Line
+	8050 4400 7600 4400
+Wire Wire Line
+	8000 4800 7600 4800
+Wire Wire Line
+	8050 5350 7600 5350
+Wire Wire Line
+	2600 4250 2950 4250
+Text Label 9750 3100 2    50   ~ 0
+PIC_MISO
+Wire Wire Line
+	9250 3000 9750 3000
+Wire Wire Line
+	9350 3200 9750 3200
+Wire Wire Line
+	9350 2050 9700 2050
+Wire Wire Line
+	9300 2250 9700 2250
+Wire Wire Line
+	9700 4500 9700 4650
 $EndSCHEMATC
