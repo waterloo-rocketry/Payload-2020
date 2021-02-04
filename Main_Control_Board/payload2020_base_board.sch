@@ -614,9 +614,9 @@ Wire Wire Line
 Text Label 9700 1950 2    50   ~ 0
 SCK
 Text Label 9700 2050 2    50   ~ 0
-MISO_MAMA1_TO_MAMA2_MOSI
+MAMA1_O_MAMA2_I
 Text Label 9700 2150 2    50   ~ 0
-MOSI_PIC_TO_MAMA1_MOSI
+MCP_MOSI
 Text Label 9700 2250 2    50   ~ 0
 SS
 $Comp
@@ -672,9 +672,9 @@ Wire Wire Line
 Text Label 9750 3000 2    50   ~ 0
 SCK
 Text Label 9750 3100 2    50   ~ 0
-MISO_MAMA2_TO_PIC_MISO
+PIC_MISO
 Text Label 9750 3200 2    50   ~ 0
-MISO_MAMA1_TO_MAMA2_MOSI
+MAM1_O_MAMA2_I
 Text Label 9750 3300 2    50   ~ 0
 SS
 $Comp
@@ -745,9 +745,9 @@ To Payload CAN
 Text Label 7600 6200 0    50   ~ 0
 SS
 Text Label 7600 5500 0    50   ~ 0
-MOSI_PIC_TO_MAMA1_MOSI
+MCP_MOSI
 Text Label 7600 5350 0    50   ~ 0
-MISO_MAMA2_TO_PIC_MISO
+PIC_MISO
 Text Label 7600 5200 0    50   ~ 0
 SCK
 Text Label 7600 3750 0    50   ~ 0
