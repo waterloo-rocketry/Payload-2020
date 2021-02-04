@@ -447,32 +447,6 @@ Wire Wire Line
 	4850 4850 5050 4850
 Text HLabel 5050 4850 2    50   Input ~ 0
 PIC_SCK
-$Comp
-L power:+5V #PWR027
-U 1 1 60228941
-P 2750 2050
-F 0 "#PWR027" H 2750 1900 50  0001 C CNN
-F 1 "+5V" H 2765 2223 50  0000 C CNN
-F 2 "" H 2750 2050 50  0001 C CNN
-F 3 "" H 2750 2050 50  0001 C CNN
-	1    2750 2050
-	1    0    0    -1  
-$EndComp
-Text HLabel 2750 2050 0    50   Input ~ 0
-5V
-$Comp
-L power:GND #PWR028
-U 1 1 602295CB
-P 2750 2350
-F 0 "#PWR028" H 2750 2100 50  0001 C CNN
-F 1 "GND" H 2755 2177 50  0000 C CNN
-F 2 "" H 2750 2350 50  0001 C CNN
-F 3 "" H 2750 2350 50  0001 C CNN
-	1    2750 2350
-	1    0    0    -1  
-$EndComp
-Text HLabel 2750 2350 0    50   Input ~ 0
-GND
 Wire Wire Line
 	3650 3850 3400 3850
 Text HLabel 3650 4550 0    50   Input ~ 0
