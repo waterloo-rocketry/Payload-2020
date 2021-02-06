@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Payload2020_SIPM_board-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -211,8 +212,8 @@ F 3 "~" H 10350 3900 50  0001 C CNN
 	1    10350 3900
 	1    0    0    -1  
 $EndComp
-Text Notes 10300 4200 0    50   ~ 0
-To Base Board
+Text Notes 9950 3500 0    59   ~ 0
+To Control\n Board
 $Comp
 L Device:Jumper JP1
 U 1 1 5E72C023
@@ -225,10 +226,10 @@ F 3 "~" H 3200 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR02
 U 1 1 600FFE80
 P 3600 3950
-F 0 "#PWR?" H 3600 3700 50  0001 C CNN
+F 0 "#PWR02" H 3600 3700 50  0001 C CNN
 F 1 "GND" H 3605 3777 50  0000 C CNN
 F 2 "" H 3600 3950 50  0001 C CNN
 F 3 "" H 3600 3950 50  0001 C CNN
@@ -245,10 +246,10 @@ Connection ~ 4950 3100
 Wire Wire Line
 	4950 3100 4950 3700
 $Comp
-L power:VDD #PWR?
+L power:VDD #PWR01
 U 1 1 6010F8F6
 P 2250 3150
-F 0 "#PWR?" H 2250 3000 50  0001 C CNN
+F 0 "#PWR01" H 2250 3000 50  0001 C CNN
 F 1 "VDD" H 2267 3323 50  0000 C CNN
 F 2 "" H 2250 3150 50  0001 C CNN
 F 3 "" H 2250 3150 50  0001 C CNN
@@ -260,10 +261,10 @@ Wire Wire Line
 Text Notes 2150 2900 0    50   ~ 0
 +30V
 $Comp
-L power:-5V #PWR?
+L power:-5V #PWR03
 U 1 1 601235B6
 P 4400 4200
-F 0 "#PWR?" H 4400 4300 50  0001 C CNN
+F 0 "#PWR03" H 4400 4300 50  0001 C CNN
 F 1 "-5V" H 4415 4373 50  0000 C CNN
 F 2 "" H 4400 4200 50  0001 C CNN
 F 3 "" H 4400 4200 50  0001 C CNN
@@ -290,10 +291,10 @@ Connection ~ 3500 3700
 Wire Wire Line
 	4900 3800 4900 4950
 $Comp
-L Device:C C?
+L Device:C C1
 U 1 1 6012E79C
 P 5050 3250
-F 0 "C?" H 5165 3296 50  0000 L CNN
+F 0 "C1" H 5165 3296 50  0000 L CNN
 F 1 "10uF" H 5165 3205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5088 3100 50  0001 C CNN
 F 3 "~" H 5050 3250 50  0001 C CNN
@@ -301,10 +302,10 @@ F 3 "~" H 5050 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C2
 U 1 1 6012E7A2
 P 5450 3250
-F 0 "C?" H 5565 3296 50  0000 L CNN
+F 0 "C2" H 5565 3296 50  0000 L CNN
 F 1 "10uF" H 5565 3205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5488 3100 50  0001 C CNN
 F 3 "~" H 5450 3250 50  0001 C CNN
@@ -312,10 +313,10 @@ F 3 "~" H 5450 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR05
 U 1 1 6012E7A8
 P 5050 3400
-F 0 "#PWR?" H 5050 3150 50  0001 C CNN
+F 0 "#PWR05" H 5050 3150 50  0001 C CNN
 F 1 "GND" H 5055 3227 50  0000 C CNN
 F 2 "" H 5050 3400 50  0001 C CNN
 F 3 "" H 5050 3400 50  0001 C CNN
@@ -323,10 +324,10 @@ F 3 "" H 5050 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR06
 U 1 1 6012E7AE
 P 5450 3400
-F 0 "#PWR?" H 5450 3150 50  0001 C CNN
+F 0 "#PWR06" H 5450 3150 50  0001 C CNN
 F 1 "GND" H 5455 3227 50  0000 C CNN
 F 2 "" H 5450 3400 50  0001 C CNN
 F 3 "" H 5450 3400 50  0001 C CNN
@@ -336,10 +337,10 @@ $EndComp
 Wire Wire Line
 	6450 3900 6700 3900
 $Comp
-L Device:C C?
+L Device:C C4
 U 1 1 60134E46
 P 6700 4500
-F 0 "C?" H 6815 4546 50  0000 L CNN
+F 0 "C4" H 6815 4546 50  0000 L CNN
 F 1 "10uF" H 6815 4455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6738 4350 50  0001 C CNN
 F 3 "~" H 6700 4500 50  0001 C CNN
@@ -347,10 +348,10 @@ F 3 "~" H 6700 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C6
 U 1 1 60134E4C
 P 7150 4500
-F 0 "C?" H 7265 4546 50  0000 L CNN
+F 0 "C6" H 7265 4546 50  0000 L CNN
 F 1 "10uF" H 7265 4455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7188 4350 50  0001 C CNN
 F 3 "~" H 7150 4500 50  0001 C CNN
@@ -362,10 +363,10 @@ Wire Wire Line
 Wire Wire Line
 	7150 4300 7150 4350
 $Comp
-L power:-5V #PWR?
+L power:-5V #PWR08
 U 1 1 60134E60
 P 7250 4300
-F 0 "#PWR?" H 7250 4400 50  0001 C CNN
+F 0 "#PWR08" H 7250 4400 50  0001 C CNN
 F 1 "-5V" H 7265 4473 50  0000 C CNN
 F 2 "" H 7250 4300 50  0001 C CNN
 F 3 "" H 7250 4300 50  0001 C CNN
@@ -383,10 +384,10 @@ Wire Wire Line
 Wire Wire Line
 	6600 4000 6600 4300
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 6014AB98
 P 7100 5050
-F 0 "R?" V 7200 5050 50  0000 C CNN
+F 0 "R1" V 7200 5050 50  0000 C CNN
 F 1 "200k" V 7000 5050 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7030 5050 50  0001 C CNN
 F 3 "~" H 7100 5050 50  0001 C CNN
@@ -394,10 +395,10 @@ F 3 "~" H 7100 5050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C5
 U 1 1 6014AB9E
 P 7100 5300
-F 0 "C?" V 7150 5450 50  0000 C CNN
+F 0 "C5" V 7150 5450 50  0000 C CNN
 F 1 "10pF" V 7250 5300 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7138 5150 50  0001 C CNN
 F 3 "~" H 7100 5300 50  0001 C CNN
@@ -429,10 +430,10 @@ Wire Wire Line
 Wire Wire Line
 	7300 5050 7950 5050
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR010
 U 1 1 60157596
 P 7800 3150
-F 0 "#PWR?" H 7800 3000 50  0001 C CNN
+F 0 "#PWR010" H 7800 3000 50  0001 C CNN
 F 1 "+5V" H 7815 3323 50  0000 C CNN
 F 2 "" H 7800 3150 50  0001 C CNN
 F 3 "" H 7800 3150 50  0001 C CNN
@@ -447,10 +448,10 @@ Wire Wire Line
 Wire Wire Line
 	7800 3200 7950 3200
 $Comp
-L Device:C C?
+L Device:C C7
 U 1 1 601575A0
 P 7950 3350
-F 0 "C?" H 8065 3396 50  0000 L CNN
+F 0 "C7" H 8065 3396 50  0000 L CNN
 F 1 "10uF" H 8065 3305 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7988 3200 50  0001 C CNN
 F 3 "~" H 7950 3350 50  0001 C CNN
@@ -458,10 +459,10 @@ F 3 "~" H 7950 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C8
 U 1 1 601575A6
 P 8400 3350
-F 0 "C?" H 8515 3396 50  0000 L CNN
+F 0 "C8" H 8515 3396 50  0000 L CNN
 F 1 "10uF" H 8515 3305 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8438 3200 50  0001 C CNN
 F 3 "~" H 8400 3350 50  0001 C CNN
@@ -469,10 +470,10 @@ F 3 "~" H 8400 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR011
 U 1 1 601575AC
 P 7950 3500
-F 0 "#PWR?" H 7950 3250 50  0001 C CNN
+F 0 "#PWR011" H 7950 3250 50  0001 C CNN
 F 1 "GND" H 7955 3327 50  0000 C CNN
 F 2 "" H 7950 3500 50  0001 C CNN
 F 3 "" H 7950 3500 50  0001 C CNN
@@ -480,10 +481,10 @@ F 3 "" H 7950 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR012
 U 1 1 601575B2
 P 8400 3500
-F 0 "#PWR?" H 8400 3250 50  0001 C CNN
+F 0 "#PWR012" H 8400 3250 50  0001 C CNN
 F 1 "GND" H 8405 3327 50  0000 C CNN
 F 2 "" H 8400 3500 50  0001 C CNN
 F 3 "" H 8400 3500 50  0001 C CNN
@@ -501,10 +502,10 @@ Wire Wire Line
 	6700 4650 7150 4650
 Connection ~ 6700 4650
 $Comp
-L power:GND #PWR?
+L power:GND #PWR09
 U 1 1 60162119
 P 7250 4650
-F 0 "#PWR?" H 7250 4400 50  0001 C CNN
+F 0 "#PWR09" H 7250 4400 50  0001 C CNN
 F 1 "GND" H 7255 4477 50  0000 C CNN
 F 2 "" H 7250 4650 50  0001 C CNN
 F 3 "" H 7250 4650 50  0001 C CNN
@@ -523,10 +524,10 @@ Wire Wire Line
 	3850 4550 4300 4550
 Connection ~ 3850 4550
 $Comp
-L power:GND #PWR?
+L power:GND #PWR04
 U 1 1 601669F4
 P 4400 4550
-F 0 "#PWR?" H 4400 4300 50  0001 C CNN
+F 0 "#PWR04" H 4400 4300 50  0001 C CNN
 F 1 "GND" H 4405 4377 50  0000 C CNN
 F 2 "" H 4400 4550 50  0001 C CNN
 F 3 "" H 4400 4550 50  0001 C CNN
@@ -536,25 +537,23 @@ $EndComp
 Wire Wire Line
 	4300 4550 4400 4550
 Connection ~ 4300 4550
-Text Notes 1650 5800 0    50   ~ 0
-SiPM detects light from scintillator.\nScintillator lights up with ionizing radiation.\nExpected output just \nabove dark current: 10.7 uA
-Text Notes 3450 5750 0    50   ~ 0
+Text Notes 2150 5800 0    59   ~ 0
+SiPM detects light\n from scintillator.\nScintillator lights up with \nionizing radiation.\nExpected output just \nabove dark current:10.7 uA
+Text Notes 3450 5750 0    59   ~ 0
 Transimpedance amplifier.\nExpected voltage output from dark current:\n10mV
 Wire Notes Line
 	3400 5950 3400 2650
-Wire Notes Line
-	1550 2650 1550 5950
 Connection ~ 5050 3100
 Wire Wire Line
 	5050 3100 5450 3100
 Wire Notes Line
 	5750 5950 5750 2650
 $Comp
-L Device:R 10k
+L Device:R 10k1
 U 1 1 6017A077
 P 6050 3800
-F 0 "10k" V 5843 3800 50  0000 C CNN
-F 1 "R" V 5934 3800 50  0000 C CNN
+F 0 "10k1" V 5843 3800 50  0000 C CNN
+F 1 "R13" V 5934 3800 50  0000 C CNN
 F 2 "" V 5980 3800 50  0001 C CNN
 F 3 "~" H 6050 3800 50  0001 C CNN
 	1    6050 3800
@@ -564,15 +563,15 @@ Wire Wire Line
 	6300 3800 6200 3800
 Connection ~ 6300 3800
 Connection ~ 4900 3800
-Text Notes 5850 5800 0    50   ~ 0
+Text Notes 5850 5800 0    59   ~ 0
 Inverting Amplifier.\nExpected output from dark current:\n0.5V\n
 Wire Notes Line
 	8700 5950 8700 2650
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 6018600A
 P 5450 3950
-F 0 "C?" H 5565 3996 50  0000 L CNN
+F 0 "C3" H 5565 3996 50  0000 L CNN
 F 1 "20nF" H 5565 3905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5488 3800 50  0001 C CNN
 F 3 "~" H 5450 3950 50  0001 C CNN
@@ -580,10 +579,10 @@ F 3 "~" H 5450 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR07
 U 1 1 60186B2F
 P 5450 4100
-F 0 "#PWR?" H 5450 3850 50  0001 C CNN
+F 0 "#PWR07" H 5450 3850 50  0001 C CNN
 F 1 "GND" H 5455 3927 50  0000 C CNN
 F 2 "" H 5450 4100 50  0001 C CNN
 F 3 "" H 5450 4100 50  0001 C CNN
@@ -598,10 +597,10 @@ Wire Wire Line
 Wire Wire Line
 	9250 4200 9250 4250
 $Comp
-L Device:D_Schottky D?
+L Device:D_Schottky D1
 U 1 1 601919F3
 P 8950 3900
-F 0 "D?" H 8950 3684 50  0000 C CNN
+F 0 "D1" H 8950 3684 50  0000 C CNN
 F 1 "D_Schottky" H 8950 3775 50  0000 C CNN
 F 2 "" H 8950 3900 50  0001 C CNN
 F 3 "~" H 8950 3900 50  0001 C CNN
@@ -618,22 +617,18 @@ Wire Wire Line
 	7700 3900 7950 3900
 Wire Notes Line
 	9900 2650 9900 5950
-Wire Notes Line
-	1550 5950 9900 5950
-Wire Notes Line
-	1550 2650 9900 2650
-Text Notes 8750 5750 0    50   ~ 0
-Peak detector. \nExpected to slow down signal\nby approximately 2.5ms
+Text Notes 8750 5750 0    59   ~ 0
+Peak detector. \nExpected to slow down\nsignal to approximately \n2.5ms
 Connection ~ 9650 3900
 Wire Wire Line
 	9650 3900 10150 3900
 Wire Wire Line
 	9650 3900 9650 3950
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR013
 U 1 1 6019EFF2
 P 10050 3750
-F 0 "#PWR?" H 10050 3600 50  0001 C CNN
+F 0 "#PWR013" H 10050 3600 50  0001 C CNN
 F 1 "+5V" H 10065 3923 50  0000 C CNN
 F 2 "" H 10050 3750 50  0001 C CNN
 F 3 "" H 10050 3750 50  0001 C CNN
@@ -644,4 +639,6 @@ Wire Wire Line
 	10150 3800 10050 3800
 Wire Wire Line
 	10050 3800 10050 3750
+Wire Notes Line
+	2150 2650 2150 5950
 $EndSCHEMATC
