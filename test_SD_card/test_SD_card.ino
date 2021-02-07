@@ -50,11 +50,11 @@ void setup()
   TCNT1  = 0;
 
 
-  OCR1A = 31250;            // compare match register 16MHz/256/2Hz
+  OCR1A = 16;            // compare match register 16MHz/256/1MHz
 
   TCCR1B |= (1 << WGM12);   // CTC mode
 
-  TCCR1B |= (1 << CS12);    // 256 prescaler 
+  TCCR1B |= (1 << CS10);    // No prescaler 
 
   TIMSK1 |= (1 << OCIE1A);  // enable timer compare interrupt
 
@@ -63,7 +63,6 @@ void setup()
 
  
   //Interrupt Statements 
-  interrupts(); 
   //attachInterrupt(digitalPinToInterrupt(3), ISR, mode);
 }
 ISR(TIMER1_COMPA_vect){ // ISR(TIMER1_COMPA_vect) //you can choose any 
