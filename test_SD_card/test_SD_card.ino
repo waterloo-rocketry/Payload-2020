@@ -28,9 +28,9 @@ void setup()
     Serial.println("SD card initialization failed!");
   }
   
-  diodeOutput = SD.open("diode15.txt", FILE_WRITE);
-  sipmOutput = SD.open("sipm15.txt", FILE_WRITE);
-  voltage = SD.open("volt15.txt", FILE_WRITE);
+  diodeOutput = SD.open("test4.txt", FILE_WRITE);
+  sipmOutput = SD.open("test5.txt", FILE_WRITE);
+  voltage = SD.open("test6.txt", FILE_WRITE);
  
   // if the file opened okay, write to it:
   if (diodeOutput) {
@@ -50,11 +50,11 @@ void setup()
   TCNT1  = 0;
 
 
-  OCR1A = 16;            // compare match register 16MHz/256/1MHz
+  OCR1A = 6250;            // compare match register 16MHz/256/1MHz
 
   TCCR1B |= (1 << WGM12);   // CTC mode
 
-  TCCR1B |= (1 << CS10);    // No prescaler 
+  TCCR1B |= (1 << CS12);    // No prescaler 
 
   TIMSK1 |= (1 << OCIE1A);  // enable timer compare interrupt
 
@@ -67,48 +67,44 @@ void setup()
 }
 ISR(TIMER1_COMPA_vect){ // ISR(TIMER1_COMPA_vect) //you can choose any 
   //Interrupt Closes and reopens the files
-  Serial.println("interrupted");
+  Serial.println("diodeOutput");
   diodeOutput.close();
   sipmOutput.close();
   voltage.close();
 
-  diodeOutput = SD.open("diode15.txt", FILE_WRITE);
-  sipmOutput = SD.open("sipm15.txt", FILE_WRITE);
-  voltage = SD.open("volt15.txt", FILE_WRITE);
+  diodeOutput = SD.open("test4.txt", FILE_WRITE);
+  sipmOutput = SD.open("test5.txt", FILE_WRITE);
+  voltage = SD.open("test6.txt", FILE_WRITE);
 }
   
 void loop()
 {
     //initialize counter
-    millis();
-    analogWrite(3, 12);
-    unsigned long limit = 280;
-    interrupts();
-    if(millis()/(1000.0) < limit)
-    {
+    //millis();
+    //unsigned long limit = 280;
+    //interrupts();
+ 
         float diode_val = analogRead(A1)* 5.0/1023.0;
         float sipm_val = analogRead(A0)* 5.0/1023.0;
         float voltage_val = analogRead(A2)* 5.0/1023.0;
         Serial.print(diode_val, 6);
-        Serial.print(" : ");
-        Serial.print(sipm_val, 6);
-        Serial.print(" : ");
-        Serial.print(voltage_val, 6);
+        //Serial.print(" : ");
+        //Serial.print(sipm_val, 6);
+        //Serial.print(" : ");
+        //Serial.print(voltage_val, 6);
         Serial.println();
-        if(diode_val > 0)
-        {
-          diodeOutput.print(millis() );//+ i*3600);
-          diodeOutput.print(" : ");
-          diodeOutput.println(diode_val, 6);
-        }
-        if(sipm_val > 0)
-        {
-          sipmOutput.print(millis() );//+ i*3600);
-          sipmOutput.print(" : ");
-          sipmOutput.println(sipm_val, 6);
-        }
+     
+        diodeOutput.print(millis() );//+ i*3600);
+        diodeOutput.print(" : ");
+        diodeOutput.println(diode_val, 6);
+     
+        
+        sipmOutput.print(millis() );//+ i*3600);
+        sipmOutput.print(" : ");
+        sipmOutput.println(sipm_val, 6);
+        
         voltage.print(millis() );//+ i*3600);
         voltage.print(" : ");
         voltage.println(voltage_val, 6);
-    }
+ 
 }
