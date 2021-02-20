@@ -516,13 +516,7 @@ Wire Wire Line
 	7150 4650 7250 4650
 Connection ~ 7150 4650
 Wire Wire Line
-	3750 4200 3750 4550
-Wire Wire Line
-	3750 4550 3850 4550
-Connection ~ 3750 4200
-Wire Wire Line
 	3850 4550 4300 4550
-Connection ~ 3850 4550
 $Comp
 L power:GND #PWR04
 U 1 1 601669F4
@@ -567,33 +561,6 @@ Text Notes 5850 5800 0    59   ~ 0
 Inverting Amplifier.\nExpected output from dark current:\n0.5V\n
 Wire Notes Line
 	8700 5950 8700 2650
-$Comp
-L Device:C C3
-U 1 1 6018600A
-P 5450 3950
-F 0 "C3" H 5565 3996 50  0000 L CNN
-F 1 "20nF" H 5565 3905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5488 3800 50  0001 C CNN
-F 3 "~" H 5450 3950 50  0001 C CNN
-	1    5450 3950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR07
-U 1 1 60186B2F
-P 5450 4100
-F 0 "#PWR07" H 5450 3850 50  0001 C CNN
-F 1 "GND" H 5455 3927 50  0000 C CNN
-F 2 "" H 5450 4100 50  0001 C CNN
-F 3 "" H 5450 4100 50  0001 C CNN
-	1    5450 4100
-	1    0    0    -1  
-$EndComp
-Connection ~ 5450 3800
-Wire Wire Line
-	5450 3800 5900 3800
-Wire Wire Line
-	4900 3800 5450 3800
 Wire Wire Line
 	9250 4200 9250 4250
 $Comp
@@ -641,4 +608,31 @@ Wire Wire Line
 	10050 3800 10050 3750
 Wire Notes Line
 	2150 2650 2150 5950
+$Comp
+L power:GND #PWR07
+U 1 1 60186B2F
+P 5450 4100
+F 0 "#PWR07" H 5450 3850 50  0001 C CNN
+F 1 "GND" H 5455 3927 50  0000 C CNN
+F 2 "" H 5450 4100 50  0001 C CNN
+F 3 "" H 5450 4100 50  0001 C CNN
+	1    5450 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 3800 5450 3800
+Wire Wire Line
+	5450 3800 5900 3800
+Connection ~ 5450 3800
+$Comp
+L Device:C C3
+U 1 1 6018600A
+P 5450 3950
+F 0 "C3" H 5565 3996 50  0000 L CNN
+F 1 "20nF" H 5565 3905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5488 3800 50  0001 C CNN
+F 3 "~" H 5450 3950 50  0001 C CNN
+	1    5450 3950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
