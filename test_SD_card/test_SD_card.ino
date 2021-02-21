@@ -9,6 +9,9 @@ it gets data in a loop, but ideally, we'd like to use interrupts
 also, if  power gets cut accidentally and the file doesn't close, all the data gets lost
 which, is bad for obvious reasons
 */
+
+bool savefile = false;
+
 void setup()
 {
   //start serial
@@ -69,14 +72,7 @@ void setup()
 }
 ISR(TIMER1_COMPA_vect){ // ISR(TIMER1_COMPA_vect) //you can choose any 
   //Interrupt Closes and reopens the files
-  Serial.println("diodeOutput");
-  diodeOutput.close();
-  sipmOutput.close();
-  voltage.close();
-
-  diodeOutput = SD.open("test4.txt", FILE_WRITE);
-  sipmOutput = SD.open("test5.txt", FILE_WRITE);
-  voltage = SD.open("test6.txt", FILE_WRITE);
+  savefile = true;
 }
   
 void loop()
@@ -108,5 +104,15 @@ void loop()
         voltage.print(millis() );//+ i*3600);
         voltage.print(" : ");
         voltage.println(voltage_val, 6);
- 
+
+        if (savefile){
+          savefile = false;
+          diodeOutput.close();
+          sipmOutput.close();
+          voltage.close();
+
+          diodeOutput = SD.open("test4.txt", FILE_WRITE);
+          sipmOutput = SD.open("test5.txt", FILE_WRITE);
+          voltage = SD.open("test6.txt", FILE_WRITE);
+        }
 }
