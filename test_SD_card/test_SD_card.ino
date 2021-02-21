@@ -3,14 +3,7 @@ File diodeOutput;
 File sipmOutput;
 File voltage;
 
-/*
-I have written code that basically does that already, but it's pretty unreliable
-it gets data in a loop, but ideally, we'd like to use interrupts
-also, if  power gets cut accidentally and the file doesn't close, all the data gets lost
-which, is bad for obvious reasons
-*/
-
-bool savefile = false;
+volatile bool savefile = false;
 
 void setup()
 {
