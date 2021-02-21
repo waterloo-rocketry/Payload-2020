@@ -55,6 +55,8 @@ void setup()
   TCCR1B |= (1 << WGM12);   // CTC mode
 
   TCCR1B |= (1 << CS10);    // No prescaler 
+  TCCR1B |= (0 << CS11);    // No prescaler 
+  TCCR1B |= (0 << CS12);    // No prescaler 
 
   TIMSK1 |= (1 << OCIE1A);  // enable timer compare interrupt
 
