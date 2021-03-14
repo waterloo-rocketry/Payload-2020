@@ -449,8 +449,6 @@ Text HLabel 4100 4900 2    50   Input ~ 0
 PIC_SCK
 Wire Wire Line
 	2500 3900 2250 3900
-Text HLabel 2500 4600 0    50   Input ~ 0
-LED
 Text HLabel 3700 4100 2    50   Input ~ 0
 PIC_MISO
 Text HLabel 5550 4050 0    50   Input ~ 0
@@ -574,4 +572,5 @@ Text Label 3700 4400 0    50   ~ 0
 ICSPDAT
 Text Label 2250 3900 2    50   ~ 0
 ~MCLR
+NoConn ~ 2500 4600
 $EndSCHEMATC
