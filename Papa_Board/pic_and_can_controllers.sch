@@ -464,8 +464,6 @@ Text Label 4050 4000 0    50   ~ 0
 MOSI
 Text HLabel 3700 3700 2    50   Input ~ 0
 PWR_ON
-Text HLabel 4100 3800 2    50   Input ~ 0
-PWR_GND
 Wire Wire Line
 	8600 4450 8500 4450
 Wire Wire Line
@@ -493,18 +491,8 @@ Text Label 8250 4250 2    50   ~ 0
 MCP_RX
 Wire Wire Line
 	2500 5100 2100 5100
-Text HLabel 4100 4300 2    50   Input ~ 0
-ICSPCLK
-Text HLabel 3700 4400 2    50   Input ~ 0
-ICSPDAT
-Text HLabel 2250 3900 0    50   Input ~ 0
-~MCLR
-Wire Wire Line
-	3700 3800 4100 3800
 Wire Wire Line
 	3700 4000 4050 4000
-Wire Wire Line
-	3700 4300 4100 4300
 Wire Wire Line
 	3700 4600 4100 4600
 Wire Wire Line
@@ -519,4 +507,71 @@ Wire Wire Line
 	5700 4250 5900 4250
 Wire Wire Line
 	8250 4250 8600 4250
+Text Notes 2250 1150 2    50   ~ 0
+Connector for programming
+$Comp
+L Connector:Conn_01x05_Female J?
+U 1 1 60518218
+P 2300 1700
+AR Path="/6016C5CD/60518218" Ref="J?"  Part="1" 
+AR Path="/60518218" Ref="J?"  Part="1" 
+F 0 "J?" H 2192 1275 50  0000 C CNN
+F 1 "Conn_01x05_Female" H 2192 1366 50  0000 C CNN
+F 2 "" H 2300 1700 50  0001 C CNN
+F 3 "~" H 2300 1700 50  0001 C CNN
+	1    2300 1700
+	1    0    0    -1  
+$EndComp
+Text Label 1600 1500 2    50   ~ 0
+ICSPCLK
+Text Label 1200 1600 2    50   ~ 0
+ICSPDAT
+Text Label 1600 1900 2    50   ~ 0
+~MCLR
+Wire Wire Line
+	2100 1500 1600 1500
+Wire Wire Line
+	2100 1600 1200 1600
+Wire Wire Line
+	2100 1900 1600 1900
+Wire Wire Line
+	1750 1700 1750 1400
+Wire Wire Line
+	2100 1700 1750 1700
+Wire Wire Line
+	1750 1800 1750 2200
+Wire Wire Line
+	2100 1800 1750 1800
+$Comp
+L power:+5V #PWR?
+U 1 1 60518228
+P 1750 2200
+F 0 "#PWR?" H 1750 2050 50  0001 C CNN
+F 1 "+5V" H 1765 2373 50  0000 C CNN
+F 2 "" H 1750 2200 50  0001 C CNN
+F 3 "" H 1750 2200 50  0001 C CNN
+	1    1750 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6051822E
+P 1750 1400
+F 0 "#PWR?" H 1750 1150 50  0001 C CNN
+F 1 "GND" H 1755 1227 50  0000 C CNN
+F 2 "" H 1750 1400 50  0001 C CNN
+F 3 "" H 1750 1400 50  0001 C CNN
+	1    1750 1400
+	-1   0    0    1   
+$EndComp
+Text HLabel 4100 3800 2    50   Input ~ 0
+PWR_GND
+Wire Wire Line
+	3700 3800 4100 3800
+Text Label 3700 4300 0    50   ~ 0
+ICSPCLK
+Text Label 3700 4400 0    50   ~ 0
+ICSPDAT
+Text Label 2250 3900 2    50   ~ 0
+~MCLR
 $EndSCHEMATC
