@@ -683,63 +683,6 @@ F 3 "" H 2600 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 2600 2200
-Text Notes 10000 4850 2    50   ~ 0
-Connector for programming
-$Comp
-L Connector:Conn_01x05_Female J?
-U 1 1 60049A82
-P 10050 5400
-AR Path="/6016C5CD/60049A82" Ref="J?"  Part="1" 
-AR Path="/60049A82" Ref="J9"  Part="1" 
-F 0 "J9" H 9942 4975 50  0000 C CNN
-F 1 "Conn_01x05_Female" H 9942 5066 50  0000 C CNN
-F 2 "" H 10050 5400 50  0001 C CNN
-F 3 "~" H 10050 5400 50  0001 C CNN
-	1    10050 5400
-	1    0    0    -1  
-$EndComp
-Text Label 9350 5200 2    50   ~ 0
-ICSPCLK
-Text Label 8950 5300 2    50   ~ 0
-ICSPDAT
-Text Label 9350 5600 2    50   ~ 0
-~MCLR
-Wire Wire Line
-	9850 5200 9350 5200
-Wire Wire Line
-	9850 5300 8950 5300
-Wire Wire Line
-	9850 5600 9350 5600
-Wire Wire Line
-	9500 5400 9500 5100
-Wire Wire Line
-	9850 5400 9500 5400
-Wire Wire Line
-	9500 5500 9500 5900
-Wire Wire Line
-	9850 5500 9500 5500
-$Comp
-L power:+5V #PWR02
-U 1 1 60049A8E
-P 9500 5900
-F 0 "#PWR02" H 9500 5750 50  0001 C CNN
-F 1 "+5V" H 9515 6073 50  0000 C CNN
-F 2 "" H 9500 5900 50  0001 C CNN
-F 3 "" H 9500 5900 50  0001 C CNN
-	1    9500 5900
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR01
-U 1 1 60049A88
-P 9500 5100
-F 0 "#PWR01" H 9500 4850 50  0001 C CNN
-F 1 "GND" H 9505 4927 50  0000 C CNN
-F 2 "" H 9500 5100 50  0001 C CNN
-F 3 "" H 9500 5100 50  0001 C CNN
-	1    9500 5100
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	8050 4000 7600 4000
 Wire Wire Line
