@@ -67,8 +67,6 @@ Wire Wire Line
 Wire Wire Line
 	3750 1650 3550 1650
 Connection ~ 4150 1500
-Wire Wire Line
-	2850 1500 3000 1500
 $Comp
 L Device:Q_PMOS_GSD Q1
 U 1 1 5EBA9D74
@@ -131,30 +129,6 @@ PWR_EN
 Wire Wire Line
 	4450 2050 4650 2050
 Connection ~ 4450 2050
-Wire Wire Line
-	3000 1650 2850 1650
-$Comp
-L power:GND #PWR09
-U 1 1 5FFD5C88
-P 2850 1650
-F 0 "#PWR09" H 2850 1400 50  0001 C CNN
-F 1 "GND" H 2855 1477 50  0000 C CNN
-F 2 "" H 2850 1650 50  0001 C CNN
-F 3 "" H 2850 1650 50  0001 C CNN
-	1    2850 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR06
-U 1 1 5FFEFDB9
-P 2850 1500
-F 0 "#PWR06" H 2850 1350 50  0001 C CNN
-F 1 "+12V" H 2865 1673 50  0000 C CNN
-F 2 "" H 2850 1500 50  0001 C CNN
-F 3 "" H 2850 1500 50  0001 C CNN
-	1    2850 1500
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x07 J4
 U 1 1 5FFFAC2F
@@ -264,10 +238,8 @@ S 3000 1350 550  450
 U 5E13F8E9
 F0 "battery_management" 50
 F1 "battery_management.sch" 50
-F2 "VIN" I L 3000 1500 50 
-F3 "VOUT" I R 3550 1500 50 
-F4 "PG" I R 3550 1650 50 
-F5 "GND" I L 3000 1650 50 
+F2 "VOUT" I R 3550 1500 50 
+F3 "PG" I R 3550 1650 50 
 $EndSheet
 Wire Wire Line
 	2600 4250 2950 4250
