@@ -508,12 +508,12 @@ Wire Wire Line
 Text Notes 2250 1150 2    50   ~ 0
 Connector for programming
 $Comp
-L Connector:Conn_01x05_Female J?
+L Connector:Conn_01x05_Female J7
 U 1 1 60518218
 P 2300 1700
-AR Path="/6016C5CD/60518218" Ref="J?"  Part="1" 
+AR Path="/6016C5CD/60518218" Ref="J7"  Part="1" 
 AR Path="/60518218" Ref="J?"  Part="1" 
-F 0 "J?" H 2192 1275 50  0000 C CNN
+F 0 "J7" H 2192 1275 50  0000 C CNN
 F 1 "Conn_01x05_Female" H 2192 1366 50  0000 C CNN
 F 2 "" H 2300 1700 50  0001 C CNN
 F 3 "~" H 2300 1700 50  0001 C CNN
@@ -541,10 +541,10 @@ Wire Wire Line
 Wire Wire Line
 	2100 1800 1750 1800
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR08
 U 1 1 60518228
 P 1750 2200
-F 0 "#PWR?" H 1750 2050 50  0001 C CNN
+F 0 "#PWR08" H 1750 2050 50  0001 C CNN
 F 1 "+5V" H 1765 2373 50  0000 C CNN
 F 2 "" H 1750 2200 50  0001 C CNN
 F 3 "" H 1750 2200 50  0001 C CNN
@@ -552,10 +552,10 @@ F 3 "" H 1750 2200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR07
 U 1 1 6051822E
 P 1750 1400
-F 0 "#PWR?" H 1750 1150 50  0001 C CNN
+F 0 "#PWR07" H 1750 1150 50  0001 C CNN
 F 1 "GND" H 1755 1227 50  0000 C CNN
 F 2 "" H 1750 1400 50  0001 C CNN
 F 3 "" H 1750 1400 50  0001 C CNN
