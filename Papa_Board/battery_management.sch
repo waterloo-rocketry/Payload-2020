@@ -269,23 +269,6 @@ F 3 "" H 3000 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
-U 1 1 60598219
-P 2350 3100
-AR Path="/60598219" Ref="#PWR?"  Part="1" 
-AR Path="/5E13F8E9/60598219" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2350 2850 50  0001 C CNN
-F 1 "GND" H 2355 2927 50  0000 C CNN
-F 2 "" H 2350 3100 50  0001 C CNN
-F 3 "" H 2350 3100 50  0001 C CNN
-	1    2350 3100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 3100 2350 3100
-Text Notes 1500 3100 0    50   ~ 0
-Battery 1
-$Comp
 L Device:Jumper JP?
 U 1 1 60598226
 P 2550 3000
@@ -298,74 +281,13 @@ F 3 "~" H 2550 3000 50  0001 C CNN
 	1    2550 3000
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J?
-U 1 1 6059822D
-P 2000 3950
-AR Path="/6059822D" Ref="J?"  Part="1" 
-AR Path="/5E13F8E9/6059822D" Ref="J?"  Part="1" 
-F 0 "J?" H 1918 3625 50  0000 C CNN
-F 1 "Conn_01x02" H 1918 3716 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 2000 3950 50  0001 C CNN
-F 3 "~" H 2000 3950 50  0001 C CNN
-	1    2000 3950
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 60598239
-P 2350 3950
-AR Path="/60598239" Ref="#PWR?"  Part="1" 
-AR Path="/5E13F8E9/60598239" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2350 3700 50  0001 C CNN
-F 1 "GND" H 2355 3777 50  0000 C CNN
-F 2 "" H 2350 3950 50  0001 C CNN
-F 3 "" H 2350 3950 50  0001 C CNN
-	1    2350 3950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2350 3950 2200 3950
-Text Notes 1500 3950 0    50   ~ 0
+Text Notes 1200 3850 0    50   ~ 0
 Battery 2
-$Comp
-L Device:Jumper JP?
-U 1 1 60598246
-P 2550 3850
-AR Path="/60598246" Ref="JP?"  Part="1" 
-AR Path="/5E13F8E9/60598246" Ref="JP?"  Part="1" 
-F 0 "JP?" H 2550 4114 50  0000 C CNN
-F 1 "Jumper" H 2550 4023 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2550 3850 50  0001 C CNN
-F 3 "~" H 2550 3850 50  0001 C CNN
-	1    2550 3850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2250 3850 2200 3850
-$Comp
-L payload2020_custom:SM74611 U?
-U 1 1 6059824D
-P 3000 3750
-AR Path="/6059824D" Ref="U?"  Part="1" 
-AR Path="/5E13F8E9/6059824D" Ref="U?"  Part="1" 
-F 0 "U?" H 3175 4025 50  0000 C CNN
-F 1 "SM74611" H 3175 3934 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-263-3_TabPin4" H 3000 3750 50  0001 C CNN
-F 3 "" H 3000 3750 50  0001 C CNN
-	1    3000 3750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2850 3700 2850 3850
 Wire Wire Line
 	2850 3150 2850 3000
 Connection ~ 2850 3000
-Connection ~ 2850 3850
 Wire Wire Line
 	3500 3000 3500 3150
-Wire Wire Line
-	3500 3700 3500 3850
 $Comp
 L power:+12V #PWR?
 U 1 1 60598259
@@ -380,35 +302,8 @@ F 3 "" H 3500 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3500 3000
-$Comp
-L power:+12V #PWR?
-U 1 1 60598260
-P 3500 3700
-AR Path="/60598260" Ref="#PWR?"  Part="1" 
-AR Path="/5E13F8E9/60598260" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3500 3550 50  0001 C CNN
-F 1 "+12V" H 3515 3873 50  0000 C CNN
-F 2 "" H 3500 3700 50  0001 C CNN
-F 3 "" H 3500 3700 50  0001 C CNN
-	1    3500 3700
-	1    0    0    -1  
-$EndComp
-Connection ~ 3500 3700
 Wire Wire Line
 	2250 3000 2200 3000
-$Comp
-L Connector_Generic:Conn_01x02 J?
-U 1 1 60598213
-P 2000 3100
-AR Path="/60598213" Ref="J?"  Part="1" 
-AR Path="/5E13F8E9/60598213" Ref="J?"  Part="1" 
-F 0 "J?" H 1918 2775 50  0000 C CNN
-F 1 "Conn_01x02" H 1918 2866 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 2000 3100 50  0001 C CNN
-F 3 "~" H 2000 3100 50  0001 C CNN
-	1    2000 3100
-	-1   0    0    1   
-$EndComp
 $Comp
 L power:+12V #PWR?
 U 1 1 605BF75E
@@ -422,4 +317,135 @@ F 3 "" H 4400 3000 50  0001 C CNN
 	1    4400 3000
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:Fuse_Small F?
+U 1 1 605A038C
+P 2100 3000
+F 0 "F?" H 2100 3185 50  0000 C CNN
+F 1 "Fuse_Small" H 2100 3094 50  0000 C CNN
+F 2 "" H 2100 3000 50  0001 C CNN
+F 3 "~" H 2100 3000 50  0001 C CNN
+	1    2100 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 60598213
+P 1650 3100
+AR Path="/60598213" Ref="J?"  Part="1" 
+AR Path="/5E13F8E9/60598213" Ref="J?"  Part="1" 
+F 0 "J?" H 1568 2775 50  0000 C CNN
+F 1 "Conn_01x02" H 1750 2850 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 1650 3100 50  0001 C CNN
+F 3 "~" H 1650 3100 50  0001 C CNN
+	1    1650 3100
+	-1   0    0    1   
+$EndComp
+Text Notes 1150 3100 0    50   ~ 0
+Battery 1
+Wire Wire Line
+	1850 3100 2000 3100
+$Comp
+L power:GND #PWR?
+U 1 1 60598219
+P 2000 3100
+AR Path="/60598219" Ref="#PWR?"  Part="1" 
+AR Path="/5E13F8E9/60598219" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2000 2850 50  0001 C CNN
+F 1 "GND" H 2005 2927 50  0000 C CNN
+F 2 "" H 2000 3100 50  0001 C CNN
+F 3 "" H 2000 3100 50  0001 C CNN
+	1    2000 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 3000 2000 3000
+$Comp
+L payload2020_custom:SM74611 U?
+U 1 1 605AFF8E
+P 3000 3800
+AR Path="/605AFF8E" Ref="U?"  Part="1" 
+AR Path="/5E13F8E9/605AFF8E" Ref="U?"  Part="1" 
+F 0 "U?" H 3175 4075 50  0000 C CNN
+F 1 "SM74611" H 3175 3984 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-3_TabPin4" H 3000 3800 50  0001 C CNN
+F 3 "" H 3000 3800 50  0001 C CNN
+	1    3000 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP?
+U 1 1 605AFF94
+P 2550 3750
+AR Path="/605AFF94" Ref="JP?"  Part="1" 
+AR Path="/5E13F8E9/605AFF94" Ref="JP?"  Part="1" 
+F 0 "JP?" H 2550 4014 50  0000 C CNN
+F 1 "Jumper" H 2550 3923 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2550 3750 50  0001 C CNN
+F 3 "~" H 2550 3750 50  0001 C CNN
+	1    2550 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 3900 2850 3750
+Connection ~ 2850 3750
+Wire Wire Line
+	3500 3750 3500 3900
+$Comp
+L power:+12V #PWR?
+U 1 1 605AFF9D
+P 3500 3750
+AR Path="/605AFF9D" Ref="#PWR?"  Part="1" 
+AR Path="/5E13F8E9/605AFF9D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3500 3600 50  0001 C CNN
+F 1 "+12V" H 3515 3923 50  0000 C CNN
+F 2 "" H 3500 3750 50  0001 C CNN
+F 3 "" H 3500 3750 50  0001 C CNN
+	1    3500 3750
+	1    0    0    -1  
+$EndComp
+Connection ~ 3500 3750
+Wire Wire Line
+	2250 3750 2200 3750
+$Comp
+L Device:Fuse_Small F?
+U 1 1 605AFFA5
+P 2100 3750
+F 0 "F?" H 2100 3935 50  0000 C CNN
+F 1 "Fuse_Small" H 2100 3844 50  0000 C CNN
+F 2 "" H 2100 3750 50  0001 C CNN
+F 3 "~" H 2100 3750 50  0001 C CNN
+	1    2100 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 605AFFAB
+P 1650 3850
+AR Path="/605AFFAB" Ref="J?"  Part="1" 
+AR Path="/5E13F8E9/605AFFAB" Ref="J?"  Part="1" 
+F 0 "J?" H 1568 3525 50  0000 C CNN
+F 1 "Conn_01x02" H 1750 3600 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 1650 3850 50  0001 C CNN
+F 3 "~" H 1650 3850 50  0001 C CNN
+	1    1650 3850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1850 3850 2000 3850
+$Comp
+L power:GND #PWR?
+U 1 1 605AFFB2
+P 2000 3850
+AR Path="/605AFFB2" Ref="#PWR?"  Part="1" 
+AR Path="/5E13F8E9/605AFFB2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2000 3600 50  0001 C CNN
+F 1 "GND" H 2005 3677 50  0000 C CNN
+F 2 "" H 2000 3850 50  0001 C CNN
+F 3 "" H 2000 3850 50  0001 C CNN
+	1    2000 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 3750 2000 3750
 $EndSCHEMATC
