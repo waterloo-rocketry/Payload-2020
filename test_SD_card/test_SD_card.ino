@@ -1,7 +1,13 @@
 #include <SD.h>
+
+//Global vars
 File diodeOutput;
 File sipmOutput;
 File voltage;
+
+String file1 = "test4.txt";
+String file2 = "test5.txt";
+String file3 = "test6.txt";
 
 volatile bool savefile = false;
 
@@ -24,17 +30,18 @@ void setup()
     Serial.println("SD card initialization failed!");
   }
   
-  diodeOutput = SD.open("test4.txt", FILE_WRITE);
-  sipmOutput = SD.open("test5.txt", FILE_WRITE);
-  voltage = SD.open("test6.txt", FILE_WRITE);
+  diodeOutput = SD.open(file1, FILE_WRITE);
+  sipmOutput = SD.open(file2, FILE_WRITE);
+  voltage = SD.open(file3, FILE_WRITE);
  
   // if the file opened okay, write to it:
   if (diodeOutput) {
     Serial.println("SD okay");
   }
-    
-    diodeOutput.println("testStarted");
-    sipmOutput.println("testStarted");
+
+  diodeOutput.println("testStarted");
+  sipmOutput.println("testStarted");
+  
 //SET-UP FOR YOUR TIMERS: (stolen from https://www.robotshop.com/community/forum/t/arduino-101-timers-and-interrupts/13072)
 // initialize timer1 
   noInterrupts();           // disable all interrupts
@@ -45,67 +52,60 @@ void setup()
 
   TCNT1  = 0;
 
-
-  OCR1A = 6250;            // compare match register 16MHz/256/1MHz
+//https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
+  OCR1A = 6250;            // compare match register 16MHz/256 Prescalar/1MHz
 
   TCCR1B |= (1 << WGM12);   // CTC mode
 
-  TCCR1B &= (0 << CS10);    // No prescaler 
-  TCCR1B &= (0 << CS11);    // No prescaler 
-  TCCR1B |= (1 << CS12);    // No prescaler 
+  TCCR1B &= (0 << CS10);    // 0 
+  TCCR1B &= (0 << CS11);    // 0 
+  TCCR1B |= (1 << CS12);    // 1 
 
   TIMSK1 |= (1 << OCIE1A);  // enable timer compare interrupt
 
   interrupts();             // enable all interrupts
-
-
- 
-  //Interrupt Statements 
-  //attachInterrupt(digitalPinToInterrupt(3), ISR, mode);
+  
 }
-ISR(TIMER1_COMPA_vect){ // ISR(TIMER1_COMPA_vect) //you can choose any 
+
+ISR(TIMER1_COMPA_vect)
+{ 
   //Interrupt Closes and reopens the files
   savefile = true;
 }
   
 void loop()
 {
-    //initialize counter
-    //millis();
-    //unsigned long limit = 280;
-    //interrupts();
- 
-        float diode_val = analogRead(A1)* 5.0/1023.0;
-        float sipm_val = analogRead(A0)* 5.0/1023.0;
-        float voltage_val = analogRead(A2)* 5.0/1023.0;
-        Serial.print(diode_val, 6);
-        //Serial.print(" : ");
-        //Serial.print(sipm_val, 6);
-        //Serial.print(" : ");
-        //Serial.print(voltage_val, 6);
-        Serial.println();
-     
-        diodeOutput.print(millis() );//+ i*3600);
-        diodeOutput.print(" : ");
-        diodeOutput.println(diode_val, 6);
-     
-        
-        sipmOutput.print(millis() );//+ i*3600);
-        sipmOutput.print(" : ");
-        sipmOutput.println(sipm_val, 6);
-        
-        voltage.print(millis() );//+ i*3600);
-        voltage.print(" : ");
-        voltage.println(voltage_val, 6);
+  float diode_val = analogRead(A1)* 5.0/1023.0;
+  float sipm_val = analogRead(A0)* 5.0/1023.0;
+  float voltage_val = analogRead(A2)* 5.0/1023.0;
+  //Serial.print(diode_val, 6);
+  //Serial.print(" : ");
+  //Serial.print(sipm_val, 6);
+  //Serial.print(" : ");
+  //Serial.print(voltage_val, 6);
+  //Serial.println();
 
-        if (savefile){
-          savefile = false;
-          diodeOutput.close();
-          sipmOutput.close();
-          voltage.close();
+  diodeOutput.print(millis() );//+ i*3600);
+  diodeOutput.print(" : ");
+  diodeOutput.println(diode_val, 6);
 
-          diodeOutput = SD.open("test4.txt", FILE_WRITE);
-          sipmOutput = SD.open("test5.txt", FILE_WRITE);
-          voltage = SD.open("test6.txt", FILE_WRITE);
-        }
+
+  sipmOutput.print(millis() );//+ i*3600);
+  sipmOutput.print(" : ");
+  sipmOutput.println(sipm_val, 6);
+
+  voltage.print(millis() );//+ i*3600);
+  voltage.print(" : ");
+  voltage.println(voltage_val, 6);
+
+  if (savefile){ // Closes file and reopens it after interrupt
+    savefile = false;
+    diodeOutput.close();
+    sipmOutput.close();
+    voltage.close();
+
+    diodeOutput = SD.open(file1, FILE_WRITE);
+    sipmOutput = SD.open(file2, FILE_WRITE);
+    voltage = SD.open(file3, FILE_WRITE);
+  }
 }
