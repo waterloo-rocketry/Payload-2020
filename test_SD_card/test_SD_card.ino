@@ -14,17 +14,16 @@ volatile bool savefile = false;
 void setup()
 {
   //start serial
-  Serial.begin(115200);
-  
+  Serial.begin(115200); // Baud Rate (Clock frequency for serial
   
   //set pin to get 
   pinMode(A1, INPUT);
   pinMode(A2, INPUT);
   pinMode(A0, INPUT);
+  pinMode(3, INPUT);
   
   //setting CS pin to output
   pinMode(10, OUTPUT);
-  pinMode(3, INPUT);
   
   if (!SD.begin(10)) {
     Serial.println("SD card initialization failed!");
@@ -38,6 +37,7 @@ void setup()
   if (diodeOutput) {
     Serial.println("SD okay");
   }
+  // if file doesnt open okay then flash led on board and scream SD not okay (and try again)
 
   diodeOutput.println("testStarted");
   sipmOutput.println("testStarted");
@@ -72,12 +72,14 @@ ISR(TIMER1_COMPA_vect)
   //Interrupt Closes and reopens the files
   savefile = true;
 }
-  
+
+const float DAC = 5.0/1023.0; //DAC conversion rate (Voltage/Bits)
+
 void loop()
 {
-  float diode_val = analogRead(A1)* 5.0/1023.0;
-  float sipm_val = analogRead(A0)* 5.0/1023.0;
-  float voltage_val = analogRead(A2)* 5.0/1023.0;
+  float diode_val = analogRead(A1) * DAC; 
+  float sipm_val = analogRead(A0) * DAC;
+  float voltage_val = analogRead(A2) * DAC;
   //Serial.print(diode_val, 6);
   //Serial.print(" : ");
   //Serial.print(sipm_val, 6);
@@ -85,16 +87,16 @@ void loop()
   //Serial.print(voltage_val, 6);
   //Serial.println();
 
-  diodeOutput.print(millis() );//+ i*3600);
+  diodeOutput.print(millis() );
   diodeOutput.print(" : ");
   diodeOutput.println(diode_val, 6);
 
 
-  sipmOutput.print(millis() );//+ i*3600);
+  sipmOutput.print(millis() );
   sipmOutput.print(" : ");
   sipmOutput.println(sipm_val, 6);
 
-  voltage.print(millis() );//+ i*3600);
+  voltage.print(millis() );
   voltage.print(" : ");
   voltage.println(voltage_val, 6);
 
