@@ -1,0 +1,155 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Connection ~ 6300 4500
+Wire Wire Line
+	6300 3950 6300 4500
+Connection ~ 6300 4800
+$Comp
+L Device:CP C?
+U 1 1 608D0DD9
+P 6300 4650
+F 0 "C?" H 6418 4696 50  0000 L CNN
+F 1 "10 μ" H 6418 4605 50  0000 L CNN
+F 2 "" H 6338 4500 50  0001 C CNN
+F 3 "~" H 6300 4650 50  0001 C CNN
+	1    6300 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4300 6050 4450
+$Comp
+L Device:R_Small_US R?
+U 1 1 608D0749
+P 6050 4200
+F 0 "R?" H 6118 4246 50  0000 L CNN
+F 1 "82" H 6118 4155 50  0000 L CNN
+F 2 "" H 6050 4200 50  0001 C CNN
+F 3 "~" H 6050 4200 50  0001 C CNN
+	1    6050 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 4750 5450 4800
+Connection ~ 5450 4900
+$Comp
+L power:GND #PWR?
+U 1 1 608CFB4E
+P 5450 4900
+F 0 "#PWR?" H 5450 4650 50  0001 C CNN
+F 1 "GND" H 5455 4727 50  0000 C CNN
+F 2 "" H 5450 4900 50  0001 C CNN
+F 3 "" H 5450 4900 50  0001 C CNN
+	1    5450 4900
+	1    0    0    -1  
+$EndComp
+Connection ~ 6050 3950
+Connection ~ 5450 4800
+Wire Wire Line
+	6300 3950 6050 3950
+Wire Wire Line
+	6300 4800 6300 4500
+Wire Wire Line
+	5450 4800 6300 4800
+Connection ~ 5450 4450
+Wire Wire Line
+	5450 4450 5450 4300
+Wire Wire Line
+	5050 4900 5050 4750
+Wire Wire Line
+	5450 4900 5050 4900
+Wire Wire Line
+	5450 4450 5450 4500
+Wire Wire Line
+	6050 4450 5450 4450
+Wire Wire Line
+	6050 3950 6050 4100
+Wire Wire Line
+	5850 3950 6050 3950
+$Comp
+L Device:CP C?
+U 1 1 608CC2F6
+P 5050 4600
+F 0 "C?" H 5168 4646 50  0000 L CNN
+F 1 "1 μ" H 5168 4555 50  0000 L CNN
+F 2 "" H 5088 4450 50  0001 C CNN
+F 3 "~" H 5050 4600 50  0001 C CNN
+	1    5050 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 608973E1
+P 4900 3950
+F 0 "#PWR?" H 4900 3800 50  0001 C CNN
+F 1 "+12V" H 4915 4123 50  0000 C CNN
+F 2 "" H 4900 3950 50  0001 C CNN
+F 3 "" H 4900 3950 50  0001 C CNN
+	1    4900 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3950 6450 3950
+Connection ~ 6300 3950
+$Comp
+L power:+36V #PWR?
+U 1 1 6089A116
+P 6450 3950
+AR Path="/6089A116" Ref="#PWR?"  Part="1" 
+AR Path="/602CE3DD/6089A116" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6450 3800 50  0001 C CNN
+F 1 "+36V" H 6465 4123 50  0001 C CNN
+F 2 "" H 6450 3950 50  0001 C CNN
+F 3 "" H 6450 3950 50  0001 C CNN
+	1    6450 3950
+	1    0    0    -1  
+$EndComp
+Text Notes 6300 3800 0    50   ~ 0
++VSIPM
+$Comp
+L Device:R_Variable_US R?
+U 1 1 6089B334
+P 5450 4650
+F 0 "R?" H 5578 4696 50  0000 L CNN
+F 1 "0 - 8k" H 5578 4605 50  0000 L CNN
+F 2 "" V 5380 4650 50  0001 C CNN
+F 3 "~" H 5450 4650 50  0001 C CNN
+	1    5450 4650
+	1    0    0    -1  
+$EndComp
+Connection ~ 5450 4500
+Wire Wire Line
+	5450 4500 5450 4550
+Wire Wire Line
+	5450 4800 5450 4900
+Wire Wire Line
+	5050 3950 5050 4450
+Wire Wire Line
+	5050 3950 4900 3950
+Text Notes 4750 3700 0    50   ~ 0
+12V_Dirty\n
+$Comp
+L payload2020_custom:TL783CKCSE3 U?
+U 1 1 6088AE0F
+P 5450 4050
+F 0 "U?" H 5450 4415 50  0000 C CNN
+F 1 "TL783CKCSE3" H 5450 4324 50  0000 C CNN
+F 2 "" H 4950 4150 50  0001 C CNN
+F 3 "" H 4950 4150 50  0001 C CNN
+	1    5450 4050
+	1    0    0    -1  
+$EndComp
+Connection ~ 5050 3950
+$EndSCHEMATC
