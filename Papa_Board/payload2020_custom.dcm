@@ -6,4 +6,8 @@ K current monitor shunt sensor bidirectional
 F http://www.ti.com/lit/ds/symlink/ina181.pdf
 $ENDCMP
 #
+$CMP LDK320ADU120R
+F https://www.st.com/resource/en/datasheet/ldk320.pdf
+$ENDCMP
+#
 #End Doc Library
