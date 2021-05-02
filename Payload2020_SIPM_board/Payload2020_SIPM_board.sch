@@ -302,14 +302,12 @@ Wire Wire Line
 Text Notes 1050 5450 0    59   ~ 0
 SiPM detects light\n from scintillator.\nScintillator lights up with \nionizing radiation.\nExpected output just \nabove dark current:10.7 uA
 Text Notes 2500 5450 0    59   ~ 0
-Transimpedance amplifier.\nTyp. Radiation spike value: 500mV
+Transimpedance amplifier.\nTyp. Radiation spike value: 50mV
 Wire Notes Line
 	2300 5450 2300 2150
 Connection ~ 3950 2600
 Wire Wire Line
 	3950 2600 4350 2600
-Wire Notes Line
-	4700 5450 4700 2150
 Wire Notes Line
 	7200 5400 7200 2100
 Wire Wire Line
@@ -383,8 +381,6 @@ F 3 "" H 5700 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3800 3300 5200 3300
-Wire Wire Line
 	5100 3400 5100 4050
 Wire Wire Line
 	5100 4050 5250 4050
@@ -455,62 +451,19 @@ Connection ~ 2650 4050
 Wire Wire Line
 	3950 2900 4350 2900
 Connection ~ 4350 2900
-$Comp
-L Device:R 10k
-U 1 1 606EC635
-P 4800 2750
-F 0 "10k" H 4870 2796 50  0000 L CNN
-F 1 "R" H 4870 2705 50  0000 L CNN
-F 2 "" V 4730 2750 50  0001 C CNN
-F 3 "~" H 4800 2750 50  0001 C CNN
-	1    4800 2750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR08
-U 1 1 606ED9DF
-P 4800 2900
-F 0 "#PWR08" H 4800 2650 50  0001 C CNN
-F 1 "GND" H 4805 2727 50  0000 C CNN
-F 2 "" H 4800 2900 50  0001 C CNN
-F 3 "" H 4800 2900 50  0001 C CNN
-	1    4800 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 606F418E
-P 5700 2200
-F 0 "R1" V 5800 2200 50  0000 C CNN
-F 1 "20k" V 5600 2200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5630 2200 50  0001 C CNN
-F 3 "~" H 5700 2200 50  0001 C CNN
-	1    5700 2200
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	5200 3200 5050 3200
-Wire Wire Line
-	4800 2500 4800 2600
 $Comp
 L Device:D_Schottky D1
 U 1 1 606FBE78
-P 7450 2800
-F 0 "D1" V 7496 2721 50  0000 R CNN
-F 1 "D_Schottky" V 7405 2721 50  0000 R CNN
-F 2 "" H 7450 2800 50  0001 C CNN
-F 3 "~" H 7450 2800 50  0001 C CNN
-	1    7450 2800
-	0    -1   -1   0   
+P 6650 3300
+F 0 "D1" H 6700 3500 50  0000 R CNN
+F 1 "D_Schottky" H 6850 3400 50  0000 R CNN
+F 2 "" H 6650 3300 50  0001 C CNN
+F 3 "~" H 6650 3300 50  0001 C CNN
+	1    6650 3300
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5050 2200 5550 2200
-Wire Wire Line
-	5850 2200 7450 2200
-Wire Wire Line
-	7450 2200 7450 2650
-Wire Wire Line
-	7450 3300 7450 2950
 Connection ~ 7450 3300
 $Comp
 L payload2020_custom:LT1006 U1
@@ -523,8 +476,6 @@ F 3 "" H 8800 3300 50  0001 C CNN
 	1    9150 3250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6200 3300 7450 3300
 Wire Wire Line
 	8000 3300 8650 3300
 $Comp
@@ -653,13 +604,6 @@ NoConn ~ 9650 3400
 NoConn ~ 9650 3100
 Text Notes 8750 5350 0    59   ~ 0
 Voltage follower.\nEnsures the signal isn't lost \nwhen it is sampled
-Wire Wire Line
-	5050 2200 5050 2500
-Wire Wire Line
-	4800 2500 5050 2500
-Connection ~ 5050 2500
-Wire Wire Line
-	5050 2500 5050 3200
 Text Notes 5250 5400 0    59   ~ 0
 Second stage amplification\nFirst stage of peak detector
 Text Label 10600 3300 0    50   ~ 0
@@ -740,4 +684,64 @@ Wire Wire Line
 	10600 2200 10600 3300
 Wire Wire Line
 	9650 3300 10600 3300
+Wire Wire Line
+	7450 2200 7450 3300
+Wire Wire Line
+	5050 2200 5050 3200
+Wire Wire Line
+	5050 2200 7450 2200
+$Comp
+L Device:C C15
+U 1 1 608B83A1
+P 4250 3300
+F 0 "C15" V 3950 3300 50  0000 C CNN
+F 1 "10n" V 4050 3300 50  0000 C CNN
+F 2 "" H 4288 3150 50  0001 C CNN
+F 3 "~" H 4250 3300 50  0001 C CNN
+	1    4250 3300
+	0    -1   -1   0   
+$EndComp
+Text Notes 4000 3950 0    50   ~ 0
+HIGH PASS FILTER\n
+Wire Wire Line
+	3800 3300 4100 3300
+Wire Wire Line
+	6200 3300 6500 3300
+Wire Wire Line
+	6800 3300 7450 3300
+$Comp
+L Device:R R1
+U 1 1 608C2C17
+P 4450 3450
+F 0 "R1" H 4520 3496 50  0000 L CNN
+F 1 "100" H 4520 3405 50  0000 L CNN
+F 2 "" V 4380 3450 50  0001 C CNN
+F 3 "~" H 4450 3450 50  0001 C CNN
+	1    4450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 608C33E4
+P 4450 3600
+F 0 "#PWR08" H 4450 3350 50  0001 C CNN
+F 1 "GND" H 4455 3427 50  0000 C CNN
+F 2 "" H 4450 3600 50  0001 C CNN
+F 3 "" H 4450 3600 50  0001 C CNN
+	1    4450 3600
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	4100 3100 4100 3850
+Wire Wire Line
+	4400 3300 4450 3300
+Wire Notes Line
+	4100 3100 4700 3100
+Wire Notes Line
+	4100 3850 4700 3850
+Wire Notes Line
+	4700 2150 4700 5450
+Connection ~ 4450 3300
+Wire Wire Line
+	4450 3300 5200 3300
 $EndSCHEMATC
