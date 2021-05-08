@@ -588,10 +588,6 @@ Wire Wire Line
 	4000 1500 4300 1500
 Text Notes 4150 1300 0    50   ~ 0
 +VSIPM
-Text Notes 1550 1100 0    50   ~ 0
-12V_Dirty
-Text Notes 2100 1150 0    50   ~ 0
-12V_Dirty
 $Comp
 L power:+12V #PWR?
 U 1 1 6088E3B1
@@ -604,11 +600,11 @@ F 3 "" H 2200 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR?
-U 1 1 608924CF
+L power:+5V #PWR?
+U 1 1 60972C00
 P 1650 1350
 F 0 "#PWR?" H 1650 1200 50  0001 C CNN
-F 1 "+12V" H 1665 1523 50  0000 C CNN
+F 1 "+5V" H 1665 1523 50  0000 C CNN
 F 2 "" H 1650 1350 50  0001 C CNN
 F 3 "" H 1650 1350 50  0001 C CNN
 	1    1650 1350
