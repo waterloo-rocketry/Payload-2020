@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -543,62 +543,6 @@ Text Label 5450 4400 2    50   ~ 0
 DETECTOR_6
 Text Label 5450 4500 2    50   ~ 0
 DETECTOR_7
-$Sheet
-S 2600 1400 1400 450 
-U 602CE3DD
-F0 "power_management" 50
-F1 "power_management.sch" 50
-F2 "12V" I L 2600 1500 50 
-F3 "GND" I L 2600 1700 50 
-F4 "36V" I R 4000 1500 50 
-$EndSheet
-Wire Wire Line
-	2600 1500 2200 1500
-Wire Wire Line
-	2200 1500 2200 1450
-$Comp
-L power:GND #PWR?
-U 1 1 603D6D23
-P 2200 1750
-F 0 "#PWR?" H 2200 1500 50  0001 C CNN
-F 1 "GND" H 2205 1577 50  0000 C CNN
-F 2 "" H 2200 1750 50  0001 C CNN
-F 3 "" H 2200 1750 50  0001 C CNN
-	1    2200 1750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2600 1700 2200 1700
-Wire Wire Line
-	2200 1700 2200 1750
-$Comp
-L power:+36V #PWR?
-U 1 1 603D9219
-P 4300 1450
-F 0 "#PWR?" H 4300 1300 50  0001 C CNN
-F 1 "+36V" H 4315 1623 50  0001 C CNN
-F 2 "" H 4300 1450 50  0001 C CNN
-F 3 "" H 4300 1450 50  0001 C CNN
-	1    4300 1450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4300 1500 4300 1450
-Wire Wire Line
-	4000 1500 4300 1500
-Text Notes 4150 1300 0    50   ~ 0
-+VSIPM
-$Comp
-L power:+12V #PWR?
-U 1 1 6088E3B1
-P 2200 1450
-F 0 "#PWR?" H 2200 1300 50  0001 C CNN
-F 1 "+12V" H 2215 1623 50  0000 C CNN
-F 2 "" H 2200 1450 50  0001 C CNN
-F 3 "" H 2200 1450 50  0001 C CNN
-	1    2200 1450
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 60972C00
