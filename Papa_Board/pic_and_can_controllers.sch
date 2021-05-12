@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -325,7 +325,7 @@ F 3 "~" H 1500 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L canhw:PIC18F26K83 U?
+L payload2020_base_board-rescue:PIC18F26K83-canhw U?
 U 1 1 60A4A9BE
 P 2500 4800
 F 0 "U?" H 2475 5715 50  0000 C CNN
@@ -409,7 +409,7 @@ Wire Wire Line
 Wire Wire Line
 	4150 4100 4300 4100
 $Comp
-L canhw:MCP2515 U?
+L payload2020_base_board-rescue:MCP2515-canhw U?
 U 1 1 60A7DEA5
 P 5800 4800
 F 0 "U?" H 5800 5265 50  0000 C CNN

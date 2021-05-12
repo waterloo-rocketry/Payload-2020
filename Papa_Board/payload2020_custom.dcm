@@ -10,4 +10,12 @@ $CMP LDK320ADU120R
 F https://www.st.com/resource/en/datasheet/ldk320.pdf
 $ENDCMP
 #
+$CMP LM5122MH
+F https://www.ti.com/lit/ds/symlink/lm5122.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1620792952877
+$ENDCMP
+#
+$CMP TL783CKCSE3
+F https://www.ti.com/lit/ds/symlink/tl783.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1620796149408
+$ENDCMP
+#
 #End Doc Library
