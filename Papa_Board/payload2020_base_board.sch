@@ -151,20 +151,9 @@ F 3 "~" H 2300 1650 50  0001 C CNN
 	1    2300 1650
 	-1   0    0    1   
 $EndComp
-$Comp
-L power:+3.3VA #PWR06
-U 1 1 6096B9A9
-P 3650 1550
-F 0 "#PWR06" H 3650 1400 50  0001 C CNN
-F 1 "+3.3VA" H 3665 1723 50  0001 C CNN
-F 2 "" H 3650 1550 50  0001 C CNN
-F 3 "" H 3650 1550 50  0001 C CNN
-	1    3650 1550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3650 1550 4000 1550
-Text Notes 3950 1450 2    50   ~ 0
+Text Notes 3950 1500 2    50   ~ 0
 +11-16V Dirty\n\n
 $Comp
 L Device:Jumper JP2
@@ -232,18 +221,7 @@ Text Label 7000 1300 0    50   ~ 0
 5V_SLEEP
 Wire Wire Line
 	6850 1300 7000 1300
-$Comp
-L power:+3.3VA #PWR05
-U 1 1 6096AD96
-P 2450 1500
-F 0 "#PWR05" H 2450 1350 50  0001 C CNN
-F 1 "+3.3VA" H 2465 1673 50  0001 C CNN
-F 2 "" H 2450 1500 50  0001 C CNN
-F 3 "" H 2450 1500 50  0001 C CNN
-	1    2450 1500
-	1    0    0    -1  
-$EndComp
-Text Notes 2650 1400 2    50   ~ 0
+Text Notes 2725 1425 2    50   ~ 0
 +11-16V Dirty\n\n
 Text Label 3700 4800 2    50   ~ 0
 5V_SLEEP
@@ -403,7 +381,7 @@ $Comp
 L Regulator_Linear:LD3985M47R_SOT23 U1
 U 1 1 60B76ACC
 P 9050 1200
-F 0 "U1" H 9050 1542 50  0001 C CNN
+F 0 "U1" H 9050 1542 50  0000 C CNN
 F 1 "LD3985M47R" H 9050 1451 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 9050 1525 50  0001 C CIN
 F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00003395.pdf" H 9050 1200 50  0001 C CNN
@@ -428,17 +406,6 @@ Wire Wire Line
 Connection ~ 9050 1625
 Wire Wire Line
 	9350 1100 10000 1100
-$Comp
-L power:+3V8 #PWR025
-U 1 1 60BA33A0
-P 10525 1100
-F 0 "#PWR025" H 10525 950 50  0001 C CNN
-F 1 "+3V8" H 10540 1273 50  0001 C CNN
-F 2 "" H 10525 1100 50  0001 C CNN
-F 3 "" H 10525 1100 50  0001 C CNN
-	1    10525 1100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9350 1200 9425 1200
 Wire Wire Line
@@ -481,9 +448,7 @@ Wire Wire Line
 	10000 1275 10000 1100
 Text Notes 8450 1225 0    50   ~ 0
 ON/OFF
-Text Notes 10400 975  0    50   ~ 0
-+4.7V
-Text Notes 8400 875  0    50   ~ 0
+Text Notes 8375 800  0    50   ~ 0
 LD3986M47R is a 4.7V low dropout regulator.\nCapacitor values are from the datasheet.
 Text Notes 10225 1225 0    50   ~ 0
 to mama board op amp
@@ -962,21 +927,8 @@ Wire Wire Line
 NoConn ~ 7250 2450
 Text Notes 4975 2000 0    50   ~ 0
 DNP
-$Comp
-L power:+3V8 #PWR023
-U 1 1 609A55C4
-P 10200 2100
-F 0 "#PWR023" H 10200 1950 50  0001 C CNN
-F 1 "+3V8" H 10215 2273 50  0001 C CNN
-F 2 "" H 10200 2100 50  0001 C CNN
-F 3 "" H 10200 2100 50  0001 C CNN
-	1    10200 2100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10200 2100 10350 2100
-Text Notes 10100 1950 0    50   ~ 0
-+4.7V
 Wire Wire Line
 	9950 2200 10350 2200
 Wire Wire Line
@@ -1042,21 +994,8 @@ F 3 "~" H 10650 4900 50  0001 C CNN
 	1    10650 4900
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3V8 #PWR?
-U 1 1 60B15EFE
-P 10300 4500
-F 0 "#PWR?" H 10300 4350 50  0001 C CNN
-F 1 "+3V8" H 10315 4673 50  0001 C CNN
-F 2 "" H 10300 4500 50  0001 C CNN
-F 3 "" H 10300 4500 50  0001 C CNN
-	1    10300 4500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10300 4500 10450 4500
-Text Notes 10200 4350 0    50   ~ 0
-+4.7V
 Wire Wire Line
 	10050 4600 10450 4600
 Wire Wire Line
@@ -1108,4 +1047,69 @@ F 3 "" H 5250 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 7450 1550
+$Comp
+L power:+VSW #PWR?
+U 1 1 60A9CFB6
+P 10525 1100
+F 0 "#PWR?" H 10525 950 50  0001 C CNN
+F 1 "+VSW" H 10540 1273 50  0001 C CNN
+F 2 "" H 10525 1100 50  0001 C CNN
+F 3 "" H 10525 1100 50  0001 C CNN
+	1    10525 1100
+	1    0    0    -1  
+$EndComp
+Text Notes 10425 975  0    50   ~ 0
++4.7V
+$Comp
+L power:+VSW #PWR?
+U 1 1 60AA4A72
+P 10200 2100
+F 0 "#PWR?" H 10200 1950 50  0001 C CNN
+F 1 "+VSW" H 10215 2273 50  0001 C CNN
+F 2 "" H 10200 2100 50  0001 C CNN
+F 3 "" H 10200 2100 50  0001 C CNN
+	1    10200 2100
+	1    0    0    -1  
+$EndComp
+Text Notes 10100 1975 0    50   ~ 0
++4.7V
+$Comp
+L power:+VSW #PWR?
+U 1 1 60AB22E0
+P 10300 4500
+F 0 "#PWR?" H 10300 4350 50  0001 C CNN
+F 1 "+VSW" H 10315 4673 50  0001 C CNN
+F 2 "" H 10300 4500 50  0001 C CNN
+F 3 "" H 10300 4500 50  0001 C CNN
+	1    10300 4500
+	1    0    0    -1  
+$EndComp
+Text Notes 10200 4375 0    50   ~ 0
++4.7V
+$Comp
+L power:+BATT #PWR?
+U 1 1 60B026F3
+P 2450 1500
+AR Path="/5E13F8E9/60B026F3" Ref="#PWR?"  Part="1" 
+AR Path="/60B026F3" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2450 1350 50  0001 C CNN
+F 1 "+BATT" H 2465 1673 50  0001 C CNN
+F 2 "" H 2450 1500 50  0001 C CNN
+F 3 "" H 2450 1500 50  0001 C CNN
+	1    2450 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 60B0903F
+P 3650 1550
+AR Path="/5E13F8E9/60B0903F" Ref="#PWR?"  Part="1" 
+AR Path="/60B0903F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3650 1400 50  0001 C CNN
+F 1 "+BATT" H 3665 1723 50  0001 C CNN
+F 2 "" H 3650 1550 50  0001 C CNN
+F 3 "" H 3650 1550 50  0001 C CNN
+	1    3650 1550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
