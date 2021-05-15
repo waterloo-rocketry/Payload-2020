@@ -14,56 +14,40 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power_supply:TPSM84205 U4
-U 1 1 607CAAC5
-P 5125 3450
-F 0 "U4" H 5553 3496 50  0000 L CNN
-F 1 "TPSM84205" H 5553 3405 50  0000 L CNN
-F 2 "" H 5125 3450 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/tpsm84205.pdf?ts=1620822853459&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTPSM84205" H 5125 3450 50  0001 C CNN
-	1    5125 3450
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR032
 U 1 1 607D5186
-P 3925 3450
-F 0 "#PWR032" H 3925 3200 50  0001 C CNN
-F 1 "GND" H 3930 3277 50  0000 C CNN
-F 2 "" H 3925 3450 50  0001 C CNN
-F 3 "" H 3925 3450 50  0001 C CNN
-	1    3925 3450
+P 4700 3875
+F 0 "#PWR032" H 4700 3625 50  0001 C CNN
+F 1 "GND" H 4705 3702 50  0000 C CNN
+F 2 "" H 4700 3875 50  0001 C CNN
+F 3 "" H 4700 3875 50  0001 C CNN
+	1    4700 3875
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4625 3450 4225 3450
 $Comp
 L Device:C_Small C7
 U 1 1 607D9E7F
-P 4225 3200
-F 0 "C7" H 4317 3246 50  0000 L CNN
-F 1 "10uF" H 4317 3155 50  0000 L CNN
-F 2 "" H 4225 3200 50  0001 C CNN
-F 3 "~" H 4225 3200 50  0001 C CNN
-	1    4225 3200
+P 3525 3475
+F 0 "C7" H 3617 3521 50  0000 L CNN
+F 1 "10uF" H 3617 3430 50  0000 L CNN
+F 2 "" H 3525 3475 50  0001 C CNN
+F 3 "~" H 3525 3475 50  0001 C CNN
+	1    3525 3475
 	1    0    0    -1  
 $EndComp
-Connection ~ 4225 3450
-Wire Wire Line
-	4225 3450 3925 3450
 $Comp
 L Device:C_Small C8
 U 1 1 607E4B2D
-P 4225 3700
-F 0 "C8" H 4317 3746 50  0000 L CNN
-F 1 "100uF" H 4317 3655 50  0000 L CNN
-F 2 "" H 4225 3700 50  0001 C CNN
-F 3 "~" H 4225 3700 50  0001 C CNN
-	1    4225 3700
+P 5550 3500
+F 0 "C8" H 5642 3546 50  0000 L CNN
+F 1 "100uF" H 5642 3455 50  0000 L CNN
+F 2 "" H 5550 3500 50  0001 C CNN
+F 3 "~" H 5550 3500 50  0001 C CNN
+	1    5550 3500
 	1    0    0    -1  
 $EndComp
-Text HLabel 10075 2650 2    50   Input ~ 0
-5V
+Text HLabel 5675 3175 2    50   Input ~ 0
+5V0
 Wire Wire Line
 	3350 2050 3350 1850
 $Comp
@@ -110,17 +94,8 @@ Wire Wire Line
 	5550 1850 5550 2050
 Wire Wire Line
 	5550 1350 5550 1550
-Text Notes 6125 2900 2    50   ~ 0
-10uF and 100uF capacitors as per datasheet directly (no calculations)\nTPSM84205 is a 5V fixed-voltage regulator.\n\n
-Wire Wire Line
-	5550 1250 5550 1350
-Connection ~ 5550 1350
-Text Notes 5700 900  2    50   ~ 0
-1uF capacitors as per datasheet directly (no calculations)\nLDK320ADU120R is a 12V fixed-voltage regulator.\n\n
-Wire Wire Line
-	4625 3600 4625 3900
-Wire Wire Line
-	9775 2650 10075 2650
+Text Notes 5825 2900 2    50   ~ 0
+10uF and 100uF capacitors as per datasheet directly (no calculations)\nTPSM84205 is a 5V fixed-voltage regulator.\nMax Iout rating: 1.5A\n\n
 Wire Wire Line
 	3350 2050 4650 2050
 Wire Wire Line
@@ -138,62 +113,10 @@ F 3 "" H 1800 2475 50  0001 C CNN
 $EndComp
 Text HLabel 1500 2475 0    50   Input ~ 0
 GND
-Wire Wire Line
-	1500 2300 1750 2300
 Text HLabel 1500 2300 0    50   Input ~ 0
 Battery
-$Comp
-L power:+12V #PWR034
-U 1 1 609C8B39
-P 5550 1250
-F 0 "#PWR034" H 5550 1100 50  0001 C CNN
-F 1 "+12V" H 5565 1423 50  0000 C CNN
-F 2 "" H 5550 1250 50  0001 C CNN
-F 3 "" H 5550 1250 50  0001 C CNN
-	1    5550 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR038
-U 1 1 609C8D2E
-P 9700 1950
-F 0 "#PWR038" H 9700 1800 50  0001 C CNN
-F 1 "+12V" H 9715 2123 50  0000 C CNN
-F 2 "" H 9700 1950 50  0001 C CNN
-F 3 "" H 9700 1950 50  0001 C CNN
-	1    9700 1950
-	1    0    0    -1  
-$EndComp
-Text HLabel 10050 2000 2    50   Input ~ 0
-12V
-Wire Wire Line
-	9700 1950 9700 2000
-Wire Wire Line
-	9700 2000 10050 2000
-Text Label 3925 3900 2    50   ~ 0
-5V_Clean
-Text Label 9775 2650 2    50   ~ 0
-5V_Clean
-Wire Wire Line
-	4225 3800 4225 3900
-Wire Wire Line
-	4225 3900 4625 3900
-Wire Wire Line
-	4225 3600 4225 3450
-Wire Wire Line
-	4625 3000 4625 3300
-Wire Wire Line
-	4225 3100 4225 3000
-Wire Wire Line
-	4225 3000 4625 3000
-Wire Wire Line
-	4225 3300 4225 3450
-Wire Wire Line
-	4225 3000 3925 3000
-Connection ~ 4225 3000
-Wire Wire Line
-	4225 3900 3925 3900
-Connection ~ 4225 3900
+Text HLabel 5675 1350 2    50   Input ~ 0
+12V0
 $Comp
 L payload2020_custom:TL783CKCSE3 U?
 U 1 1 6099D590
@@ -209,8 +132,8 @@ F 3 "https://www.ti.com/lit/ds/symlink/tl783.pdf?HQS=dis-dk-null-digikeymode-dsf
 $EndComp
 Wire Wire Line
 	7975 5125 7675 5125
-Text Notes 7525 4850 0    50   ~ 0
-+36.6V\n
+Text Notes 7575 4875 0    50   ~ 0
+37V0\n
 Wire Wire Line
 	8775 5125 8975 5125
 Wire Wire Line
@@ -264,11 +187,11 @@ $EndComp
 Wire Wire Line
 	7675 4975 7675 5125
 Text Notes 7875 4750 0    79   ~ 0
-TL783CKCSE3 is a low dropout regulator.\nVo = 1.25(1+R2/R1)
+TL783CKCSE3 is a low dropout regulator.\nVo = 1.25(1+R2/R1)\nIout = 0.7A
 Text HLabel 10100 4950 2    50   Input ~ 0
-36V
+36V0
 Text Notes 1250 4500 0    50   ~ 0
-TPS61175 is a boost converter.\nValues are taken from WEBENCH power designer\nhttps://webench.ti.com/appinfo/webench/scripts/SDP.cgi?ID=C0ECCE8CB86139FD\n
+TPS61175 is a boost converter.\nMax Iout rating: 3A\nValues are taken from WEBENCH power designer\nhttps://webench.ti.com/appinfo/webench/scripts/SDP.cgi?ID=72ECE7EF0AA4EE07
 Wire Notes Line
 	2650 625  2650 2400
 Wire Notes Line
@@ -279,17 +202,6 @@ Wire Notes Line
 	2650 625  10425 625 
 Text Notes 7200 1525 0    118  ~ 0
 DNP - Do not place
-$Comp
-L pspice:INDUCTOR L1
-U 1 1 60A14C59
-P 3125 4975
-F 0 "L1" H 3125 5190 50  0000 C CNN
-F 1 "33u" H 3125 5099 50  0000 C CNN
-F 2 "" H 3125 4975 50  0001 C CNN
-F 3 "~" H 3125 4975 50  0001 C CNN
-	1    3125 4975
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2725 5375 2600 5375
 Wire Wire Line
@@ -314,17 +226,6 @@ Wire Wire Line
 Wire Wire Line
 	2525 4975 2600 4975
 Connection ~ 2600 4975
-$Comp
-L Device:D_Schottky D1
-U 1 1 60A17EAB
-P 3850 4975
-F 0 "D1" H 3850 4758 50  0000 C CNN
-F 1 "1V 150mA" H 3850 4849 50  0000 C CNN
-F 2 "" H 3850 4975 50  0001 C CNN
-F 3 "~" H 3850 4975 50  0001 C CNN
-	1    3850 4975
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3625 4975 3700 4975
 Connection ~ 3625 4975
@@ -335,7 +236,7 @@ L Device:R_US Rfbt
 U 1 1 60A1AC94
 P 4550 5225
 F 0 "Rfbt" H 4618 5271 50  0000 L CNN
-F 1 "464k" H 4618 5180 50  0000 L CNN
+F 1 "470k" H 4618 5180 50  0000 L CNN
 F 2 "" V 4590 5215 50  0001 C CNN
 F 3 "~" H 4550 5225 50  0001 C CNN
 	1    4550 5225
@@ -361,7 +262,7 @@ L Device:R_US Rcomp
 U 1 1 60A1B4F9
 P 3825 5725
 F 0 "Rcomp" V 3750 5725 50  0000 C CNN
-F 1 "23.7k" V 3900 5725 50  0000 C CNN
+F 1 "18.7k" V 3900 5725 50  0000 C CNN
 F 2 "" V 3865 5715 50  0001 C CNN
 F 3 "~" H 3825 5725 50  0001 C CNN
 	1    3825 5725
@@ -372,7 +273,7 @@ L Device:C Ccomp
 U 1 1 60A1F3F9
 P 4050 6075
 F 0 "Ccomp" H 4165 6121 50  0000 L CNN
-F 1 "680p" H 4165 6030 50  0000 L CNN
+F 1 "1.5n" H 4165 6030 50  0000 L CNN
 F 2 "" H 4088 5925 50  0001 C CNN
 F 3 "~" H 4050 6075 50  0001 C CNN
 	1    4050 6075
@@ -519,7 +420,7 @@ L Device:C Coutx
 U 1 1 60A4389F
 P 5350 5675
 F 0 "Coutx" H 5465 5721 50  0000 L CNN
-F 1 "2.2u" H 5465 5630 50  0000 L CNN
+F 1 "10u" H 5465 5630 50  0000 L CNN
 F 2 "" H 5388 5525 50  0001 C CNN
 F 3 "~" H 5350 5675 50  0001 C CNN
 	1    5350 5675
@@ -527,17 +428,6 @@ F 3 "~" H 5350 5675 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5350 5825 5350 6475
-$Comp
-L payload2020_custom:TPS61175 U6
-U 1 1 609F99D3
-P 3125 5675
-F 0 "U6" H 3125 6200 50  0000 C CNN
-F 1 "TPS61175" H 3125 6109 50  0000 C CNN
-F 2 "" H 3125 5675 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/tps61175.pdf?ts=1620964494413&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTPS61175" H 3125 5675 50  0001 C CNN
-	1    3125 5675
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5150 1350 5550 1350
 Wire Wire Line
@@ -546,73 +436,14 @@ Wire Wire Line
 	4650 1950 4650 2050
 Text HLabel 4150 1650 0    50   Input ~ 0
 POWER_EN
-$Comp
-L payload2020_custom:LDK320ADU120R U3
-U 1 1 608D1C19
-P 4650 1650
-F 0 "U3" H 4650 2215 50  0000 C CNN
-F 1 "LDK320ADU120R" H 4650 2124 50  0000 C CNN
-F 2 "" H 4650 1650 50  0001 C CNN
-F 3 "https://www.st.com/resource/en/datasheet/ldk320.pdf" H 4650 1650 50  0001 C CNN
-	1    4650 1650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3350 1350 3225 1350
-Wire Wire Line
-	3225 1350 3225 1325
 Connection ~ 3350 1350
-$Comp
-L power:+BATT #PWR?
-U 1 1 60A88A9F
-P 3925 3000
-F 0 "#PWR?" H 3925 2850 50  0001 C CNN
-F 1 "+BATT" H 3940 3173 50  0000 C CNN
-F 2 "" H 3925 3000 50  0001 C CNN
-F 3 "" H 3925 3000 50  0001 C CNN
-	1    3925 3000
-	1    0    0    -1  
-$EndComp
-Text Notes 1250 4650 0    51   ~ 0
-PDF verson: https://drive.google.com/file/d/1ouh2VsDleDKGxUwa38C0hp-pcs9DtVr6/view?usp=sharing
-$Comp
-L power:+BATT #PWR?
-U 1 1 60A7B0C8
-P 1750 2300
-F 0 "#PWR?" H 1750 2150 50  0001 C CNN
-F 1 "+BATT" H 1765 2473 50  0000 C CNN
-F 2 "" H 1750 2300 50  0001 C CNN
-F 3 "" H 1750 2300 50  0001 C CNN
-	1    1750 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+BATT #PWR?
-U 1 1 60A82F36
-P 3225 1325
-F 0 "#PWR?" H 3225 1175 50  0001 C CNN
-F 1 "+BATT" H 3240 1498 50  0000 C CNN
-F 2 "" H 3225 1325 50  0001 C CNN
-F 3 "" H 3225 1325 50  0001 C CNN
-	1    3225 1325
-	1    0    0    -1  
-$EndComp
-Text Notes 2075 2175 2    50   ~ 0
-+11-16V Dirty\n\n
+Text Notes 1250 4675 0    51   ~ 0
+PDF version:\nhttps://drive.google.com/file/d/1ktwurgh3BjmDxpc3J00zTu8lIix18m34/view?usp=sharing
 Wire Wire Line
 	2000 4975 2125 4975
 Connection ~ 2125 4975
-$Comp
-L power:+BATT #PWR?
-U 1 1 60B211FC
-P 2000 4975
-F 0 "#PWR?" H 2000 4825 50  0001 C CNN
-F 1 "+BATT" H 2015 5148 50  0000 C CNN
-F 2 "" H 2000 4975 50  0001 C CNN
-F 3 "" H 2000 4975 50  0001 C CNN
-	1    2000 4975
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5350 4975 5600 4975
 Connection ~ 5350 4975
@@ -628,7 +459,7 @@ F 3 "" H 5600 4975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 5475 4850 0    50   ~ 0
-+36.6V\n
+37V0\n
 $Comp
 L power:+VSW #PWR?
 U 1 1 60B2CA90
@@ -645,4 +476,105 @@ Wire Wire Line
 Wire Wire Line
 	10100 4950 10100 5125
 Connection ~ 8975 5125
+Text Label 1500 2300 0    50   ~ 0
+VBATT
+Text Label 3225 1350 2    50   ~ 0
+VBATT
+Text Label 3225 3175 2    50   ~ 0
+VBATT
+Text Label 2000 4975 2    50   ~ 0
+VBATT
+Text Notes 1475 2200 0    50   ~ 0
+12V-16V
+Text Notes 5650 1050 2    50   ~ 0
+1uF capacitors as per datasheet directly (no calculations)\nLDK320ADU120R is a 12V fixed-voltage regulator.\nMax Iout rating: 0.2A\n\n
+Wire Wire Line
+	3225 3175 3525 3175
+Wire Wire Line
+	3525 3175 3525 3375
+Connection ~ 3525 3175
+Wire Wire Line
+	3525 3175 4200 3175
+Wire Wire Line
+	4700 3725 4700 3800
+Wire Wire Line
+	4700 3800 3525 3800
+Wire Wire Line
+	3525 3575 3525 3800
+Connection ~ 4700 3800
+Wire Wire Line
+	4700 3800 4700 3875
+Wire Wire Line
+	5200 3175 5550 3175
+Wire Wire Line
+	5550 3175 5550 3400
+Wire Wire Line
+	5550 3800 4700 3800
+Wire Wire Line
+	5550 3600 5550 3800
+Wire Wire Line
+	5550 3175 5675 3175
+Connection ~ 5550 3175
+$Comp
+L payload2020_custom:LDK320ADU120R U3
+U 1 1 608D1C19
+P 4650 1650
+F 0 "U3" H 4650 2215 50  0000 C CNN
+F 1 "LDK320ADU120R" H 4650 2124 50  0000 C CNN
+F 2 "" H 4650 1650 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/ldk320.pdf" H 4650 1650 50  0001 C CNN
+	1    4650 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5675 1350 5550 1350
+Connection ~ 5550 1350
+$Comp
+L power_supply:TPSM84205EAB U4
+U 1 1 60B21BC5
+P 4700 3325
+F 0 "U4" H 4700 3790 50  0000 C CNN
+F 1 "TPSM84205EAB" H 4700 3699 50  0000 C CNN
+F 2 "" H 4700 3325 50  0001 C CNN
+F 3 "" H 4700 3325 50  0001 C CNN
+	1    4700 3325
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:PMEG6010CEH D1
+U 1 1 60B2A02B
+P 3850 4975
+F 0 "D1" H 3850 4759 50  0000 C CNN
+F 1 "PMEG6010CEH" H 3850 4850 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 3850 4800 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PMEG6010CEH_PMEG6010CEJ.pdf" H 3850 4975 50  0001 C CNN
+	1    3850 4975
+	-1   0    0    1   
+$EndComp
+Text Notes 3675 5100 0    50   ~ 0
+570mV 1A
+$Comp
+L pspice:INDUCTOR L1
+U 1 1 60B36838
+P 3125 4975
+F 0 "L1" H 3125 5190 50  0000 C CNN
+F 1 "SDR0403-270KL" H 3125 5099 50  0000 C CNN
+F 2 "" H 3125 4975 50  0001 C CNN
+F 3 "~" H 3125 4975 50  0001 C CNN
+	1    3125 4975
+	1    0    0    -1  
+$EndComp
+Text Notes 3050 5050 0    50   ~ 0
+27u\n
+$Comp
+L payload2020_custom:TPS61175QPWPRQ1 U6
+U 1 1 60B4551D
+P 3125 5675
+F 0 "U6" H 3125 6200 50  0000 C CNN
+F 1 "TPS61175QPWPRQ1" H 3125 6109 50  0000 C CNN
+F 2 "" H 3125 5675 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tps61175.pdf?ts=1620964494413&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTPS61175" H 3125 5675 50  0001 C CNN
+	1    3125 5675
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

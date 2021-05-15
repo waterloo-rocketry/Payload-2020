@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 2 3
 Title ""
 Date ""
 Rev ""
@@ -64,17 +64,13 @@ Wire Wire Line
 Wire Wire Line
 	8500 2400 8500 2900
 Text HLabel 10550 4550 2    50   Input ~ 0
-CANH_Rocket
+CANH_ROCKET
 Text HLabel 10550 4750 2    50   Input ~ 0
-CANL_Rocket
+CANL_ROCKET
 Text Label 9550 2600 2    50   ~ 0
 PIC_TX
 Text Label 9550 2700 2    50   ~ 0
 PIC_RX
-Text HLabel 10550 2700 2    50   Input ~ 0
-CANH_Payload
-Text HLabel 10550 2900 2    50   Input ~ 0
-CANL_Payload
 Text Label 9550 4450 2    50   ~ 0
 MCP_TX
 Text Label 9550 4550 2    50   ~ 0
@@ -325,10 +321,10 @@ F 3 "~" H 1500 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L payload2020_base_board-rescue:PIC18F26K83-canhw U?
+L payload2020_base_board-rescue:PIC18F26K83-canhw U8
 U 1 1 60A4A9BE
 P 2500 4800
-F 0 "U?" H 2475 5715 50  0000 C CNN
+F 0 "U8" H 2475 5715 50  0000 C CNN
 F 1 "PIC18F26K83" H 2475 5624 50  0000 C CNN
 F 2 "" H 2950 4800 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40001943A.pdf" H 2950 4800 50  0001 C CNN
@@ -409,10 +405,10 @@ Wire Wire Line
 Wire Wire Line
 	4150 4100 4300 4100
 $Comp
-L payload2020_base_board-rescue:MCP2515-canhw U?
+L payload2020_base_board-rescue:MCP2515-canhw U9
 U 1 1 60A7DEA5
 P 5800 4800
-F 0 "U?" H 5800 5265 50  0000 C CNN
+F 0 "U9" H 5800 5265 50  0000 C CNN
 F 1 "MCP2515" H 5800 5174 50  0000 C CNN
 F 2 "" H 5750 4800 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001801H.pdf" H 5750 4800 50  0001 C CNN
@@ -559,4 +555,8 @@ F 3 "~" H 7600 4550 50  0001 C CNN
 	1    7600 4550
 	1    0    0    -1  
 $EndComp
+Text HLabel 10550 2700 2    50   Input ~ 0
+CANH_PAYLOAD
+Text HLabel 10550 2900 2    50   Input ~ 0
+CANL_PAYLOAD
 $EndSCHEMATC

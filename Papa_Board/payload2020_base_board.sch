@@ -76,85 +76,53 @@ F 3 "~" H 7450 2650 50  0001 C CNN
 $EndComp
 NoConn ~ 1850 5100
 NoConn ~ 1850 5200
-$Comp
-L Device:Jumper JP1
-U 1 1 60962B79
-P 1850 1650
-AR Path="/60962B79" Ref="JP1"  Part="1" 
-AR Path="/5E13F8E9/60962B79" Ref="JP?"  Part="1" 
-F 0 "JP1" H 1850 1914 50  0000 C CNN
-F 1 "Jumper" H 1850 1823 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1850 1650 50  0001 C CNN
-F 3 "~" H 1850 1650 50  0001 C CNN
-	1    1850 1650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	2450 1500 2450 1650
-Wire Wire Line
-	1550 1650 1500 1650
+	2000 1650 2000 1800
 $Comp
 L Device:Fuse_Small F?
 U 1 1 60962B87
-P 1400 1650
+P 1400 1800
 AR Path="/5E13F8E9/60962B87" Ref="F?"  Part="1" 
 AR Path="/60962B87" Ref="F1"  Part="1" 
-F 0 "F1" H 1400 1835 50  0000 C CNN
-F 1 "Fuse_Small" H 1400 1744 50  0000 C CNN
-F 2 "" H 1400 1650 50  0001 C CNN
-F 3 "~" H 1400 1650 50  0001 C CNN
-	1    1400 1650
+F 0 "F1" H 1400 2050 50  0000 C CNN
+F 1 "RST 2 AMMO" H 1425 1975 50  0000 C CNN
+F 2 "" H 1400 1800 50  0001 C CNN
+F 3 "~" H 1400 1800 50  0001 C CNN
+	1    1400 1800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 60962B8D
-P 950 1750
+P 950 1900
 AR Path="/60962B8D" Ref="J1"  Part="1" 
 AR Path="/5E13F8E9/60962B8D" Ref="J?"  Part="1" 
-F 0 "J1" H 950 1400 50  0000 C CNN
-F 1 "Conn_01x02" H 950 1500 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 950 1750 50  0001 C CNN
-F 3 "~" H 950 1750 50  0001 C CNN
-	1    950  1750
+F 0 "J1" H 1025 1550 50  0000 C CNN
+F 1 "Conn_01x02" H 1025 1650 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 950 1900 50  0001 C CNN
+F 3 "~" H 950 1900 50  0001 C CNN
+	1    950  1900
 	-1   0    0    1   
 $EndComp
-Text Notes 750  2100 0    50   ~ 0
+Text Notes 2425 1175 0    50   ~ 0
 4 LiPO Cells\nin series
 Wire Wire Line
-	1150 1750 1300 1750
+	1150 1900 1300 1900
 $Comp
 L power:GND #PWR01
 U 1 1 60962B95
-P 1300 1750
+P 1300 2000
 AR Path="/60962B95" Ref="#PWR01"  Part="1" 
 AR Path="/5E13F8E9/60962B95" Ref="#PWR?"  Part="1" 
-F 0 "#PWR01" H 1300 1500 50  0001 C CNN
-F 1 "GND" H 1305 1577 50  0000 C CNN
-F 2 "" H 1300 1750 50  0001 C CNN
-F 3 "" H 1300 1750 50  0001 C CNN
-	1    1300 1750
+F 0 "#PWR01" H 1300 1750 50  0001 C CNN
+F 1 "GND" H 1305 1827 50  0000 C CNN
+F 2 "" H 1300 2000 50  0001 C CNN
+F 3 "" H 1300 2000 50  0001 C CNN
+	1    1300 2000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1150 1650 1300 1650
-$Comp
-L Device:D D?
-U 1 1 60962B9C
-P 2300 1650
-AR Path="/5E13F8E9/60962B9C" Ref="D?"  Part="1" 
-AR Path="/60962B9C" Ref="D1"  Part="1" 
-F 0 "D1" H 2300 1433 50  0000 C CNN
-F 1 "SM74611" H 2300 1524 50  0000 C CNN
-F 2 "" H 2300 1650 50  0001 C CNN
-F 3 "~" H 2300 1650 50  0001 C CNN
-	1    2300 1650
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3650 1550 4000 1550
-Text Notes 3950 1500 2    50   ~ 0
-+11-16V Dirty\n\n
+	1150 1800 1300 1800
 $Comp
 L Device:Jumper JP2
 U 1 1 6098E494
@@ -221,8 +189,8 @@ Text Label 7000 1300 0    50   ~ 0
 5V_SLEEP
 Wire Wire Line
 	6850 1300 7000 1300
-Text Notes 2725 1425 2    50   ~ 0
-+11-16V Dirty\n\n
+Text Notes 2200 1600 2    50   ~ 0
+12V - 16V\n\n
 Text Label 3700 4800 2    50   ~ 0
 5V_SLEEP
 Text Label 4950 1800 0    50   ~ 0
@@ -319,10 +287,10 @@ S 3700 3200 4650 2750
 U 6016C5CD
 F0 "MCU and CAN controllers" 50
 F1 "pic_and_can_controllers.sch" 50
-F2 "CANH_Rocket" I L 3700 5500 50 
-F3 "CANL_Rocket" I L 3700 5400 50 
-F4 "CANH_Payload" I R 8350 3450 50 
-F5 "CANL_Payload" I R 8350 3550 50 
+F2 "CANH_ROCKET" I L 3700 5500 50 
+F3 "CANL_ROCKET" I L 3700 5400 50 
+F4 "CANH_PAYLOAD" I R 8350 3450 50 
+F5 "CANL_PAYLOAD" I R 8350 3550 50 
 F6 "PWR_ON" I L 3700 4650 50 
 F7 "SLEEP_5V" I L 3700 4800 50 
 F8 "GND" I L 3700 4950 50 
@@ -343,7 +311,7 @@ F22 "DET2_ADC" I R 8350 4250 50
 F23 "ICSPCLK" I L 3700 3500 50 
 $EndSheet
 Text HLabel 4950 2200 0    50   Input ~ 0
-36V
+36V0
 $Comp
 L power:+5V #PWR011
 U 1 1 60B79F88
@@ -394,7 +362,7 @@ Wire Wire Line
 	8325 1100 8325 1250
 Connection ~ 8325 1100
 Wire Wire Line
-	8325 1100 8750 1100
+	8325 1100 8650 1100
 Wire Wire Line
 	8325 1550 8325 1625
 Wire Wire Line
@@ -446,10 +414,8 @@ F 3 "~" H 10000 1425 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10000 1275 10000 1100
-Text Notes 8450 1225 0    50   ~ 0
-ON/OFF
 Text Notes 8375 800  0    50   ~ 0
-LD3986M47R is a 4.7V low dropout regulator.\nCapacitor values are from the datasheet.
+LD3986M47R is a 4.7V low dropout regulator.\nCapacitor values are from the datasheet.\nMax Iout rating: 0.15A
 Text Notes 10225 1225 0    50   ~ 0
 to mama board op amp
 Wire Wire Line
@@ -749,13 +715,11 @@ F 3 "~" H 10150 5450 50  0001 C CNN
 $EndComp
 Connection ~ 5500 1550
 Text Label 3700 5400 2    50   ~ 0
-CANL_Rocket
-Text Label 3700 5500 2    50   ~ 0
-CANH_Rocket
+CANL_ROCKET
 Text Label 1850 5400 0    50   ~ 0
-CANH_Rocket
+CANH_ROCKET
 Text Label 1850 5500 0    50   ~ 0
-CANL_Rocket
+CANL_ROCKET
 Wire Wire Line
 	1850 5300 2500 5300
 Wire Wire Line
@@ -814,17 +778,17 @@ Wire Wire Line
 Wire Wire Line
 	1400 3800 2000 3800
 Text Label 7250 2750 2    50   ~ 0
-CANH_Payload
+CANH_PAYLOAD
 Wire Wire Line
 	7250 2650 6550 2650
 Wire Wire Line
 	6550 2650 6550 2750
 Text Label 8350 3450 0    50   ~ 0
-CANH_Payload
+CANH_PAYLOAD
 Text Label 7250 2850 2    50   ~ 0
-CANL_Payload
+CANL_PAYLOAD
 Text Label 8350 3550 0    50   ~ 0
-CANL_Payload
+CANL_PAYLOAD
 Wire Wire Line
 	6550 2550 7250 2550
 Wire Wire Line
@@ -949,11 +913,11 @@ S 4000 1400 950  850
 U 5E13F8E9
 F0 "battery_management" 50
 F1 "battery_management.sch" 50
-F2 "5V" I R 4950 1550 50 
+F2 "5V0" I R 4950 1550 50 
 F3 "Battery" I L 4000 1550 50 
 F4 "GND" I L 4000 2000 50 
 F5 "POWER_EN" I R 4950 1800 50 
-F6 "12V" I R 4950 2000 50 
+F6 "12V0" I R 4950 2000 50 
 $EndSheet
 $Comp
 L Connector_Generic:Conn_01x10 J5
@@ -1089,27 +1053,33 @@ Text Notes 10200 4375 0    50   ~ 0
 $Comp
 L power:+BATT #PWR?
 U 1 1 60B026F3
-P 2450 1500
+P 2000 1650
 AR Path="/5E13F8E9/60B026F3" Ref="#PWR?"  Part="1" 
 AR Path="/60B026F3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2450 1350 50  0001 C CNN
-F 1 "+BATT" H 2465 1673 50  0001 C CNN
-F 2 "" H 2450 1500 50  0001 C CNN
-F 3 "" H 2450 1500 50  0001 C CNN
-	1    2450 1500
+F 0 "#PWR?" H 2000 1500 50  0001 C CNN
+F 1 "+BATT" H 2015 1823 50  0001 C CNN
+F 2 "" H 2000 1650 50  0001 C CNN
+F 3 "" H 2000 1650 50  0001 C CNN
+	1    2000 1650
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+BATT #PWR?
-U 1 1 60B0903F
-P 3650 1550
-AR Path="/5E13F8E9/60B0903F" Ref="#PWR?"  Part="1" 
-AR Path="/60B0903F" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3650 1400 50  0001 C CNN
-F 1 "+BATT" H 3665 1723 50  0001 C CNN
-F 2 "" H 3650 1550 50  0001 C CNN
-F 3 "" H 3650 1550 50  0001 C CNN
-	1    3650 1550
-	1    0    0    -1  
-$EndComp
+Text Label 2000 1650 2    50   ~ 0
+VBATT
+Wire Wire Line
+	1500 1800 2000 1800
+Text Label 4000 1550 2    50   ~ 0
+VBATT
+Wire Wire Line
+	8750 1200 8650 1200
+Wire Wire Line
+	8650 1200 8650 1100
+Connection ~ 8650 1100
+Wire Wire Line
+	8650 1100 8750 1100
+Text Label 3700 5500 2    50   ~ 0
+CANH_ROCKET
+Text Notes 1350 1750 0    50   ~ 0
+2A
+Wire Wire Line
+	1300 1900 1300 2000
 $EndSCHEMATC
