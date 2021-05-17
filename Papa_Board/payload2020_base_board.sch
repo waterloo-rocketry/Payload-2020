@@ -1117,5 +1117,5 @@ Wire Wire Line
 Wire Wire Line
 	3625 1550 3625 1525
 Text Notes 8475 2375 0    50   ~ 0
-Low pass filter:\nCutoff frequency = approx. 1.6 Hz\n
+Low pass filter:\nCutoff frequency = approx. 1.6 kHz\n
 $EndSCHEMATC
