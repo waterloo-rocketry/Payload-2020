@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -35,7 +35,7 @@ MISO
 Text HLabel 4950 3450 0    50   Input ~ 0
 MOSI
 Text HLabel 4950 3650 0    50   Input ~ 0
-SCLK
+SCK
 Text HLabel 4950 3350 0    50   Input ~ 0
 CS
 Wire Wire Line

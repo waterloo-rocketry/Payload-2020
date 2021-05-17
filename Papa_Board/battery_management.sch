@@ -18,12 +18,12 @@ Logger Board Power Supplies
 $Comp
 L payload2020_custom:INA180 U2
 U 1 1 60A32560
-P 8125 2500
-F 0 "U2" H 8075 2027 50  0000 C CNN
-F 1 "INA180" H 8075 1936 50  0000 C CNN
-F 2 "" H 8125 2500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ina181.pdf" H 8125 2500 50  0001 C CNN
-	1    8125 2500
+P 7650 2750
+F 0 "U2" H 7600 2277 50  0000 C CNN
+F 1 "INA180" H 7600 2186 50  0000 C CNN
+F 2 "" H 7650 2750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ina181.pdf" H 7650 2750 50  0001 C CNN
+	1    7650 2750
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -42,50 +42,10 @@ Wire Notes Line
 	5600 600  5600 2325
 Wire Notes Line
 	2250 600  5600 600 
-Text Notes 6925 1250 0    50   ~ 0
+Text Notes 6300 1425 0    50   ~ 0
 62mR * I  * 200v/v = 3.3V\nImax = 266mA
-Text Notes 8225 2850 0    50   ~ 0
+Text Notes 7750 3100 0    50   ~ 0
 200V/V
-Wire Wire Line
-	6175 1650 7025 1650
-Wire Wire Line
-	6425 1550 6175 1550
-$Comp
-L Device:Polyfuse F2
-U 1 1 60A56DA8
-P 6575 1550
-F 0 "F2" V 6350 1550 50  0000 C CNN
-F 1 "Polyfuse" V 6441 1550 50  0000 C CNN
-F 2 "Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6625 1350 50  0001 L CNN
-F 3 "~" H 6575 1550 50  0001 C CNN
-	1    6575 1550
-	0    1    1    0   
-$EndComp
-NoConn ~ 6175 1450
-Wire Wire Line
-	7025 2100 7025 1650
-$Comp
-L power:+5V #PWR028
-U 1 1 60A56DA0
-P 7825 1500
-F 0 "#PWR028" H 7825 1350 50  0001 C CNN
-F 1 "+5V" H 7840 1673 50  0000 C CNN
-F 2 "" H 7825 1500 50  0001 C CNN
-F 3 "" H 7825 1500 50  0001 C CNN
-	1    7825 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x05_Female J7
-U 1 1 60A56D9A
-P 5975 1650
-F 0 "J7" H 5869 1225 50  0000 C CNN
-F 1 "BUS CONN" H 5869 1316 50  0000 C CNN
-F 2 "canhw_footprints:connector_Harwin_M80-5000642" H 5975 1650 50  0001 C CNN
-F 3 "~" H 5975 1650 50  0001 C CNN
-	1    5975 1650
-	-1   0    0    1   
-$EndComp
 Connection ~ 8775 3300
 Wire Wire Line
 	8625 3300 8775 3300
@@ -202,98 +162,79 @@ $EndComp
 $Comp
 L power:+3.3V #PWR030
 U 1 1 60A56D56
-P 7975 1850
-F 0 "#PWR030" H 7975 1700 50  0001 C CNN
-F 1 "+3.3V" H 7990 2023 50  0000 C CNN
-F 2 "" H 7975 1850 50  0001 C CNN
-F 3 "" H 7975 1850 50  0001 C CNN
-	1    7975 1850
+P 7500 2100
+F 0 "#PWR030" H 7500 1950 50  0001 C CNN
+F 1 "+3.3V" H 7515 2273 50  0000 C CNN
+F 2 "" H 7500 2100 50  0001 C CNN
+F 3 "" H 7500 2100 50  0001 C CNN
+	1    7500 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7825 1500 7825 1550
+	7500 2200 7500 2100
+Connection ~ 7500 2200
 Wire Wire Line
-	7975 1950 7975 1850
-Connection ~ 7975 1950
+	7500 2200 7600 2200
 Wire Wire Line
-	7975 1950 8075 1950
+	7500 2300 7500 2200
 Wire Wire Line
-	7975 2050 7975 1950
+	8000 2200 8000 2300
 Wire Wire Line
-	8475 1950 8475 2050
-Wire Wire Line
-	8375 1950 8475 1950
+	7900 2200 8000 2200
 $Comp
 L power:GND #PWR031
 U 1 1 60A56D49
-P 8475 2050
-F 0 "#PWR031" H 8475 1800 50  0001 C CNN
-F 1 "GND" H 8480 1877 50  0000 C CNN
-F 2 "" H 8475 2050 50  0001 C CNN
-F 3 "" H 8475 2050 50  0001 C CNN
-	1    8475 2050
+P 8000 2300
+F 0 "#PWR031" H 8000 2050 50  0001 C CNN
+F 1 "GND" H 8005 2127 50  0000 C CNN
+F 2 "" H 8000 2300 50  0001 C CNN
+F 3 "" H 8000 2300 50  0001 C CNN
+	1    8000 2300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C17
 U 1 1 60A56D43
-P 8225 1950
-F 0 "C17" V 7973 1950 50  0000 C CNN
-F 1 "0.1u" V 8064 1950 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8263 1800 50  0001 C CNN
-F 3 "~" H 8225 1950 50  0001 C CNN
-	1    8225 1950
+P 7750 2200
+F 0 "C17" V 7498 2200 50  0000 C CNN
+F 1 "0.1u" V 7589 2200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7788 2050 50  0001 C CNN
+F 3 "~" H 7750 2200 50  0001 C CNN
+	1    7750 2200
 	0    1    1    0   
 $EndComp
-Connection ~ 7625 1550
 Wire Wire Line
-	7625 1550 7825 1550
+	6650 1800 6750 1800
 Wire Wire Line
-	7125 1550 7225 1550
-Connection ~ 7125 1550
+	6650 2850 7150 2850
 Wire Wire Line
-	7125 2600 7625 2600
+	6650 1800 6650 2850
 Wire Wire Line
-	7125 1550 7125 2600
+	7150 1800 7150 2650
 Wire Wire Line
-	7625 1550 7625 2400
-Wire Wire Line
-	7525 1550 7625 1550
-Wire Wire Line
-	6725 1550 7125 1550
+	7050 1800 7150 1800
 $Comp
 L Device:R R11
 U 1 1 60A56D34
-P 7375 1550
-F 0 "R11" V 7168 1550 50  0000 C CNN
-F 1 "62mOhm" V 7259 1550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7305 1550 50  0001 C CNN
-F 3 "~" H 7375 1550 50  0001 C CNN
-	1    7375 1550
+P 6900 1800
+F 0 "R11" V 6693 1800 50  0000 C CNN
+F 1 "62mOhm" V 6784 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6830 1800 50  0001 C CNN
+F 3 "~" H 6900 1800 50  0001 C CNN
+	1    6900 1800
 	0    1    1    0   
 $EndComp
-Text GLabel 8525 2500 2    50   Input ~ 0
+Text GLabel 8050 2750 2    50   Input ~ 0
 CURR_AMP
 $Comp
 L power:GND #PWR027
 U 1 1 60A56D2D
-P 7625 2700
-F 0 "#PWR027" H 7625 2450 50  0001 C CNN
-F 1 "GND" H 7630 2527 50  0000 C CNN
-F 2 "" H 7625 2700 50  0001 C CNN
-F 3 "" H 7625 2700 50  0001 C CNN
-	1    7625 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR06
-U 1 1 60A56D21
-P 7025 2100
-F 0 "#PWR06" H 7025 1850 50  0001 C CNN
-F 1 "GND" H 7030 1927 50  0000 C CNN
-F 2 "" H 7025 2100 50  0001 C CNN
-F 3 "" H 7025 2100 50  0001 C CNN
-	1    7025 2100
+P 7150 2950
+F 0 "#PWR027" H 7150 2700 50  0001 C CNN
+F 1 "GND" H 7155 2777 50  0000 C CNN
+F 2 "" H 7150 2950 50  0001 C CNN
+F 3 "" H 7150 2950 50  0001 C CNN
+	1    7150 2950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -366,9 +307,6 @@ F 3 "" H 4100 3275 50  0001 C CNN
 	1    4100 3275
 	1    0    0    -1  
 $EndComp
-Connection ~ 5150 1325
-Wire Wire Line
-	5275 1325 5150 1325
 $Comp
 L payload2020_custom:LDK320ADU120R U3
 U 1 1 608D1C19
@@ -407,7 +345,7 @@ Wire Wire Line
 	2625 3125 2925 3125
 Text Notes 5100 975  2    50   ~ 0
 1uF capacitors as per datasheet directly (no calculations)\nLDK320ADU120R is a 12V fixed-voltage regulator.\nMax Iout rating: 0.2A\n\n
-Text Notes 1475 2075 0    50   ~ 0
+Text Notes 2700 1100 0    50   ~ 0
 12V-16V
 Connection ~ 8975 5125
 Wire Wire Line
@@ -420,7 +358,7 @@ Wire Wire Line
 Connection ~ 2125 4975
 Wire Wire Line
 	2000 4975 2125 4975
-Text Notes 1250 4675 0    51   ~ 0
+Text Notes 1275 4500 0    51   ~ 0
 PDF version:\nhttps://drive.google.com/file/d/1ktwurgh3BjmDxpc3J00zTu8lIix18m34/view?usp=sharing
 Connection ~ 2950 1325
 Wire Wire Line
@@ -604,9 +542,6 @@ F 3 "~" H 3825 5725 50  0001 C CNN
 	1    3825 5725
 	0    1    1    0   
 $EndComp
-Connection ~ 2525 4975
-Wire Wire Line
-	2125 4975 2525 4975
 Wire Wire Line
 	2125 6475 2125 5875
 Wire Wire Line
@@ -637,12 +572,6 @@ Wire Wire Line
 	3625 4975 3700 4975
 Connection ~ 2600 4975
 Wire Wire Line
-	2525 4975 2600 4975
-Wire Wire Line
-	2525 5525 2525 4975
-Wire Wire Line
-	2725 5525 2525 5525
-Wire Wire Line
 	3625 5375 3625 4975
 Connection ~ 3625 5375
 Wire Wire Line
@@ -659,12 +588,10 @@ Wire Wire Line
 	2600 5375 2600 4975
 Wire Wire Line
 	2725 5375 2600 5375
-Text Notes 2425 1050 0    69   ~ 0
+Text Notes 2375 925  0    69   ~ 0
 DNP - Do not place
-Text Notes 1250 4500 0    50   ~ 0
+Text Notes 1275 4325 0    50   ~ 0
 TPS61175 is a boost converter.\nMax Iout rating: 3A\nValues are taken from WEBENCH power designer\nhttps://webench.ti.com/appinfo/webench/scripts/SDP.cgi?ID=72ECE7EF0AA4EE07
-Text HLabel 10100 4950 2    50   Input ~ 0
-36V
 Text Notes 7875 4750 0    79   ~ 0
 TL783CKCSE3 is a low dropout regulator.\nVo = 1.25(1+R2/R1)\nIout = 0.7A
 Wire Wire Line
@@ -734,10 +661,6 @@ F 3 "https://www.ti.com/lit/ds/symlink/tl783.pdf?HQS=dis-dk-null-digikeymode-dsf
 	1    8375 5225
 	1    0    0    -1  
 $EndComp
-Text HLabel 5275 1325 2    50   Input ~ 0
-12V
-Text HLabel 1500 2300 0    50   Input ~ 0
-Battery
 Wire Wire Line
 	2950 2025 4250 2025
 Text Notes 5225 2850 2    50   ~ 0
@@ -821,42 +744,10 @@ F 3 "" H 4100 3825 50  0001 C CNN
 	1    4100 3825
 	1    0    0    -1  
 $EndComp
-Text HLabel 5375 3125 2    50   Input ~ 0
-5V
 Wire Wire Line
-	4950 3125 5375 3125
-NoConn ~ 6175 1750
-NoConn ~ 6175 1850
+	4950 3125 5200 3125
 Text Notes 9050 2975 0    50   ~ 0
 AP2114HA-3.3 is a 3.3V LDO\nIout = 600mA
-Text HLabel 10900 3050 2    50   Input ~ 0
-3.3V
-Wire Wire Line
-	10900 3050 10775 3050
-$Comp
-L power:+3.3V #PWR?
-U 1 1 60BB709D
-P 10775 3050
-F 0 "#PWR?" H 10775 2900 50  0001 C CNN
-F 1 "+3.3V" H 10790 3223 50  0000 C CNN
-F 2 "" H 10775 3050 50  0001 C CNN
-F 3 "" H 10775 3050 50  0001 C CNN
-	1    10775 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+BATT #PWR?
-U 1 1 60BFC711
-P 1625 2300
-F 0 "#PWR?" H 1625 2150 50  0001 C CNN
-F 1 "+BATT" H 1640 2473 50  0000 C CNN
-F 2 "" H 1625 2300 50  0001 C CNN
-F 3 "" H 1625 2300 50  0001 C CNN
-	1    1625 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1625 2300 1500 2300
 $Comp
 L power:+BATT #PWR?
 U 1 1 60C179CD
@@ -899,6 +790,83 @@ F 1 "GND" H 3130 6302 50  0000 C CNN
 F 2 "" H 3125 6475 50  0001 C CNN
 F 3 "" H 3125 6475 50  0001 C CNN
 	1    3125 6475
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 60A50D23
+P 5225 1325
+F 0 "#PWR?" H 5225 1175 50  0001 C CNN
+F 1 "+12V" H 5240 1498 50  0000 C CNN
+F 2 "" H 5225 1325 50  0001 C CNN
+F 3 "" H 5225 1325 50  0001 C CNN
+	1    5225 1325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5225 1325 5150 1325
+Connection ~ 5150 1325
+$Comp
+L power:+36V #PWR?
+U 1 1 60A5DE1C
+P 10100 4950
+F 0 "#PWR?" H 10100 4800 50  0001 C CNN
+F 1 "+36V" H 10115 5123 50  0000 C CNN
+F 2 "" H 10100 4950 50  0001 C CNN
+F 3 "" H 10100 4950 50  0001 C CNN
+	1    10100 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60A5E3A7
+P 5200 3125
+F 0 "#PWR?" H 5200 2975 50  0001 C CNN
+F 1 "+5V" H 5215 3298 50  0000 C CNN
+F 2 "" H 5200 3125 50  0001 C CNN
+F 3 "" H 5200 3125 50  0001 C CNN
+	1    5200 3125
+	1    0    0    -1  
+$EndComp
+Text Notes 2450 2925 0    50   ~ 0
+12V-16V
+Text Notes 1850 4750 0    50   ~ 0
+12V-16V
+Text HLabel 10800 5075 2    50   Input ~ 0
++V_SIPM
+Wire Wire Line
+	10800 5075 10650 5075
+Wire Wire Line
+	10650 5075 10650 4975
+$Comp
+L power:+36V #PWR?
+U 1 1 60AEC418
+P 10650 4975
+F 0 "#PWR?" H 10650 4825 50  0001 C CNN
+F 1 "+36V" H 10665 5148 50  0000 C CNN
+F 2 "" H 10650 4975 50  0001 C CNN
+F 3 "" H 10650 4975 50  0001 C CNN
+	1    10650 4975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2125 4975 2600 4975
+Text Label 2725 5525 2    50   ~ 0
+PWR_EN
+Wire Wire Line
+	6650 1800 6500 1800
+Wire Wire Line
+	6500 1800 6500 1725
+Connection ~ 6650 1800
+$Comp
+L power:+5V #PWR?
+U 1 1 60B701D5
+P 6500 1725
+F 0 "#PWR?" H 6500 1575 50  0001 C CNN
+F 1 "+5V" H 6515 1898 50  0000 C CNN
+F 2 "" H 6500 1725 50  0001 C CNN
+F 3 "" H 6500 1725 50  0001 C CNN
+	1    6500 1725
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

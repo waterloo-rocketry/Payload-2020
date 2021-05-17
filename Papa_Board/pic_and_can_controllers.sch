@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -75,30 +75,8 @@ Text Label 9550 4550 2    50   ~ 0
 MCP_RX
 Text HLabel 1750 1800 0    50   Input ~ 0
 SLEEP_5V
-$Comp
-L power:+5V #PWR041
-U 1 1 60A1F978
-P 2000 1800
-F 0 "#PWR041" H 2000 1650 50  0001 C CNN
-F 1 "+5V" H 2015 1973 50  0000 C CNN
-F 2 "" H 2000 1800 50  0001 C CNN
-F 3 "" H 2000 1800 50  0001 C CNN
-	1    2000 1800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1750 1800 2000 1800
-$Comp
-L power:+5V #PWR050
-U 1 1 60A22FBE
-P 8500 2250
-F 0 "#PWR050" H 8500 2100 50  0001 C CNN
-F 1 "+5V" H 8515 2423 50  0000 C CNN
-F 2 "" H 8500 2250 50  0001 C CNN
-F 3 "" H 8500 2250 50  0001 C CNN
-	1    8500 2250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8500 2250 8500 2400
 Wire Wire Line
@@ -130,17 +108,6 @@ F 1 "0.1uF" H 8592 4955 50  0000 L CNN
 F 2 "" H 8500 5000 50  0001 C CNN
 F 3 "~" H 8500 5000 50  0001 C CNN
 	1    8500 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR052
-U 1 1 60A2F3BB
-P 8500 4100
-F 0 "#PWR052" H 8500 3950 50  0001 C CNN
-F 1 "+5V" H 8515 4273 50  0000 C CNN
-F 2 "" H 8500 4100 50  0001 C CNN
-F 3 "" H 8500 4100 50  0001 C CNN
-	1    8500 4100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -276,17 +243,6 @@ Wire Wire Line
 Wire Wire Line
 	1950 6550 1750 6550
 $Comp
-L power:+5V #PWR039
-U 1 1 5FF62678
-P 1500 3750
-F 0 "#PWR039" H 1500 3600 50  0001 C CNN
-F 1 "+5V" H 1515 3923 50  0000 C CNN
-F 2 "" H 1500 3750 50  0001 C CNN
-F 3 "" H 1500 3750 50  0001 C CNN
-	1    1500 3750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_Small R10
 U 1 1 5FF61B48
 P 1500 3950
@@ -326,24 +282,11 @@ Connection ~ 2400 6700
 Wire Wire Line
 	2400 6400 2800 6400
 Connection ~ 2400 6400
-$Comp
-L power:+5V #PWR044
-U 1 1 60A5680E
-P 3500 3800
-F 0 "#PWR044" H 3500 3650 50  0001 C CNN
-F 1 "+5V" H 3515 3973 50  0000 C CNN
-F 2 "" H 3500 3800 50  0001 C CNN
-F 3 "" H 3500 3800 50  0001 C CNN
-	1    3500 3800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3200 4150 3500 4150
 Wire Wire Line
 	3500 4150 3500 3950
 Connection ~ 3500 3950
-Wire Wire Line
-	3500 3950 3500 3800
 Text HLabel 4250 4350 2    50   Input ~ 0
 ICSPCLK
 Wire Wire Line
@@ -409,17 +352,6 @@ Text Label 3200 5150 0    50   ~ 0
 CAN_INT
 Wire Wire Line
 	7750 5200 7600 5200
-$Comp
-L power:+5V #PWR049
-U 1 1 60AAB236
-P 7600 4200
-F 0 "#PWR049" H 7600 4050 50  0001 C CNN
-F 1 "+5V" H 7615 4373 50  0000 C CNN
-F 2 "" H 7600 4200 50  0001 C CNN
-F 3 "" H 7600 4200 50  0001 C CNN
-	1    7600 4200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7600 4700 7600 5200
 Wire Wire Line
@@ -475,31 +407,31 @@ Connection ~ 8500 2900
 Wire Wire Line
 	8500 2400 8500 2550
 Connection ~ 8500 2400
-Text HLabel 4450 7050 3    50   Input ~ 0
+Text HLabel 10650 5700 2    50   Input ~ 0
 MOSI
-Text HLabel 4650 7050 3    50   Input ~ 0
+Text HLabel 10650 5900 2    50   Input ~ 0
 MISO
-Text HLabel 4850 7050 3    50   Input ~ 0
+Text HLabel 10650 6100 2    50   Input ~ 0
 CS
-Text HLabel 5025 7050 3    50   Input ~ 0
+Text HLabel 10650 6275 2    50   Input ~ 0
 SCK
-Text Label 4850 6875 1    50   ~ 0
+Text Label 10475 6100 2    50   ~ 0
 CS
-Text Label 4650 6875 1    50   ~ 0
+Text Label 10475 5900 2    50   ~ 0
 MISO
-Text Label 4450 6875 1    50   ~ 0
+Text Label 10475 5700 2    50   ~ 0
 MOSI
-Text Label 5025 6875 1    50   ~ 0
+Text Label 10475 6275 2    50   ~ 0
 SCK
 Wire Wire Line
-	4450 6875 4450 7050
+	10475 5700 10650 5700
 Wire Wire Line
-	4650 6875 4650 7050
+	10475 5900 10650 5900
 Wire Wire Line
-	4850 6875 4850 7050
+	10475 6100 10650 6100
 Wire Wire Line
-	5025 6875 5025 7050
-Text Notes 4375 6600 0    50   ~ 0
+	10475 6275 10650 6275
+Text Notes 10125 6000 2    50   ~ 0
 To logger board\n
 Text GLabel 3200 5250 2    50   Input ~ 0
 CURR_AMP
@@ -551,17 +483,6 @@ Text Label 6475 4900 0    50   ~ 0
 MISO
 Text Label 6475 5000 0    50   ~ 0
 MOSI
-$Comp
-L power:+5V #PWR047
-U 1 1 60A8EC0D
-P 6850 4200
-F 0 "#PWR047" H 6850 4050 50  0001 C CNN
-F 1 "+5V" H 6865 4373 50  0000 C CNN
-F 2 "" H 6850 4200 50  0001 C CNN
-F 3 "" H 6850 4200 50  0001 C CNN
-	1    6850 4200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6350 4600 6850 4600
 Wire Wire Line
@@ -608,4 +529,20 @@ F 3 "~" H 7100 4500 50  0001 C CNN
 	1    7100 4500
 	1    0    0    -1  
 $EndComp
+Text Label 2000 1800 0    50   ~ 0
+5V_SLEEP
+Text Label 1500 3750 0    50   ~ 0
+5V_SLEEP
+Text Label 3500 3600 0    50   ~ 0
+5V_SLEEP
+Text Label 6850 4200 0    50   ~ 0
+5V_SLEEP
+Wire Wire Line
+	3500 3600 3500 3950
+Text Label 7600 4200 0    50   ~ 0
+5V_SLEEP
+Text Label 8500 4100 0    50   ~ 0
+5V_SLEEP
+Text Label 8500 2250 0    50   ~ 0
+5V_SLEEP
 $EndSCHEMATC
