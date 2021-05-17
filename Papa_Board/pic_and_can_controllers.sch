@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -18,18 +18,18 @@ L Interface_CAN_LIN:MCP2562-E-SN U7
 U 1 1 5FF313E1
 P 10050 4650
 F 0 "U7" H 10050 5231 50  0000 C CNN
-F 1 "MCP2562-E-SN" H 10050 5140 50  0000 C CNN
+F 1 "MCP2562-E/SN" H 10050 5140 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 10050 4150 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf" H 10050 4650 50  0001 C CNN
 	1    10050 4650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Interface_CAN_LIN:MCP2562-E-SN U6
+L Interface_CAN_LIN:MCP2562-E-SN U10
 U 1 1 5FF3D87D
 P 10050 2800
-F 0 "U6" H 10050 3381 50  0000 C CNN
-F 1 "MCP2562-E-SN" H 10050 3290 50  0000 C CNN
+F 0 "U10" H 10050 3381 50  0000 C CNN
+F 1 "MCP2562-E/SN" H 10050 3290 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 10050 2300 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf" H 10050 2800 50  0001 C CNN
 	1    10050 2800
@@ -47,10 +47,10 @@ F 3 "" H 8500 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C13
+L Device:C_Small C14
 U 1 1 5FF3D889
 P 8500 3150
-F 0 "C13" H 8592 3196 50  0000 L CNN
+F 0 "C14" H 8592 3196 50  0000 L CNN
 F 1 "0.1uF" H 8592 3105 50  0000 L CNN
 F 2 "" H 8500 3150 50  0001 C CNN
 F 3 "~" H 8500 3150 50  0001 C CNN
@@ -61,8 +61,6 @@ Wire Wire Line
 	9550 2900 8500 2900
 Wire Wire Line
 	10050 2400 8500 2400
-Wire Wire Line
-	8500 2400 8500 2900
 Text HLabel 10550 4550 2    50   Input ~ 0
 CANH_ROCKET
 Text HLabel 10550 4750 2    50   Input ~ 0
@@ -77,21 +75,6 @@ Text Label 9550 4550 2    50   ~ 0
 MCP_RX
 Text HLabel 1750 1800 0    50   Input ~ 0
 SLEEP_5V
-Text HLabel 1750 1950 0    50   Input ~ 0
-GND
-$Comp
-L power:GND #PWR042
-U 1 1 60A1E3C5
-P 2000 1950
-F 0 "#PWR042" H 2000 1700 50  0001 C CNN
-F 1 "GND" H 2005 1777 50  0000 C CNN
-F 2 "" H 2000 1950 50  0001 C CNN
-F 3 "" H 2000 1950 50  0001 C CNN
-	1    2000 1950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1750 1950 2000 1950
 $Comp
 L power:+5V #PWR041
 U 1 1 60A1F978
@@ -116,7 +99,6 @@ F 3 "" H 8500 2250 50  0001 C CNN
 	1    8500 2250
 	1    0    0    -1  
 $EndComp
-Connection ~ 8500 2400
 Wire Wire Line
 	8500 2250 8500 2400
 Wire Wire Line
@@ -128,7 +110,6 @@ Wire Wire Line
 Connection ~ 8500 3350
 Wire Wire Line
 	8500 3050 8500 2900
-Connection ~ 8500 2900
 $Comp
 L power:GND #PWR053
 U 1 1 60A2F3AC
@@ -141,18 +122,16 @@ F 3 "" H 8500 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C14
+L Device:C_Small C16
 U 1 1 60A2F3B2
 P 8500 5000
-F 0 "C14" H 8592 5046 50  0000 L CNN
+F 0 "C16" H 8592 5046 50  0000 L CNN
 F 1 "0.1uF" H 8592 4955 50  0000 L CNN
 F 2 "" H 8500 5000 50  0001 C CNN
 F 3 "~" H 8500 5000 50  0001 C CNN
 	1    8500 5000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8500 4250 8500 4750
 $Comp
 L power:+5V #PWR052
 U 1 1 60A2F3BB
@@ -164,7 +143,6 @@ F 3 "" H 8500 4100 50  0001 C CNN
 	1    8500 4100
 	1    0    0    -1  
 $EndComp
-Connection ~ 8500 4250
 Wire Wire Line
 	8500 4100 8500 4250
 Wire Wire Line
@@ -174,7 +152,6 @@ Wire Wire Line
 Connection ~ 8500 5200
 Wire Wire Line
 	8500 4900 8500 4750
-Connection ~ 8500 4750
 Wire Wire Line
 	8500 4750 9550 4750
 Wire Wire Line
@@ -253,7 +230,7 @@ L Device:Crystal Y1
 U 1 1 5FF7051F
 P 2400 6550
 F 0 "Y1" V 2354 6681 50  0000 L CNN
-F 1 "Crystal" V 2445 6681 50  0000 L CNN
+F 1 "12mHz" V 2445 6681 50  0000 L CNN
 F 2 "" H 2400 6550 50  0001 C CNN
 F 3 "~" H 2400 6550 50  0001 C CNN
 	1    2400 6550
@@ -404,6 +381,129 @@ Wire Wire Line
 	4000 4000 4300 4000
 Wire Wire Line
 	4150 4100 4300 4100
+Text Label 3200 5050 0    50   ~ 0
+CLKOUT
+$Comp
+L power:GND #PWR043
+U 1 1 60A8AF8F
+P 3400 5500
+F 0 "#PWR043" H 3400 5250 50  0001 C CNN
+F 1 "GND" H 3405 5327 50  0000 C CNN
+F 2 "" H 3400 5500 50  0001 C CNN
+F 3 "" H 3400 5500 50  0001 C CNN
+	1    3400 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 5450 3400 5450
+Wire Wire Line
+	3400 5450 3400 5500
+Wire Wire Line
+	3200 5350 3400 5350
+Wire Wire Line
+	3400 5350 3400 5450
+Connection ~ 3400 5450
+Text Label 7750 5200 0    50   ~ 0
+CAN_INT
+Text Label 3200 5150 0    50   ~ 0
+CAN_INT
+Wire Wire Line
+	7750 5200 7600 5200
+$Comp
+L power:+5V #PWR049
+U 1 1 60AAB236
+P 7600 4200
+F 0 "#PWR049" H 7600 4050 50  0001 C CNN
+F 1 "+5V" H 7615 4373 50  0000 C CNN
+F 2 "" H 7600 4200 50  0001 C CNN
+F 3 "" H 7600 4200 50  0001 C CNN
+	1    7600 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4700 7600 5200
+Wire Wire Line
+	7600 4400 7600 4200
+$Comp
+L Device:R_US Rpullup
+U 1 1 60B29379
+P 7600 4550
+F 0 "Rpullup" H 7668 4596 50  0000 L CNN
+F 1 "10k" H 7668 4505 50  0000 L CNN
+F 2 "" V 7640 4540 50  0001 C CNN
+F 3 "~" H 7600 4550 50  0001 C CNN
+	1    7600 4550
+	1    0    0    -1  
+$EndComp
+Text HLabel 10550 2700 2    50   Input ~ 0
+CANH_PAYLOAD
+Text HLabel 10550 2900 2    50   Input ~ 0
+CANL_PAYLOAD
+Text HLabel 1750 5450 0    50   Input ~ 0
+PWR_ON
+$Comp
+L Device:C_Small C15
+U 1 1 60A8AC1B
+P 8500 4475
+F 0 "C15" H 8592 4521 50  0000 L CNN
+F 1 "0.1uF" H 8592 4430 50  0000 L CNN
+F 2 "" H 8500 4475 50  0001 C CNN
+F 3 "~" H 8500 4475 50  0001 C CNN
+	1    8500 4475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 4375 8500 4250
+Connection ~ 8500 4250
+Wire Wire Line
+	8500 4575 8500 4750
+Connection ~ 8500 4750
+$Comp
+L Device:C_Small C13
+U 1 1 60A938E6
+P 8500 2650
+F 0 "C13" H 8592 2696 50  0000 L CNN
+F 1 "0.1uF" H 8592 2605 50  0000 L CNN
+F 2 "" H 8500 2650 50  0001 C CNN
+F 3 "~" H 8500 2650 50  0001 C CNN
+	1    8500 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 2750 8500 2900
+Connection ~ 8500 2900
+Wire Wire Line
+	8500 2400 8500 2550
+Connection ~ 8500 2400
+Text HLabel 4450 7050 3    50   Input ~ 0
+MOSI
+Text HLabel 4650 7050 3    50   Input ~ 0
+MISO
+Text HLabel 4850 7050 3    50   Input ~ 0
+CS
+Text HLabel 5025 7050 3    50   Input ~ 0
+SCK
+Text Label 4850 6875 1    50   ~ 0
+CS
+Text Label 4650 6875 1    50   ~ 0
+MISO
+Text Label 4450 6875 1    50   ~ 0
+MOSI
+Text Label 5025 6875 1    50   ~ 0
+SCK
+Wire Wire Line
+	4450 6875 4450 7050
+Wire Wire Line
+	4650 6875 4650 7050
+Wire Wire Line
+	4850 6875 4850 7050
+Wire Wire Line
+	5025 6875 5025 7050
+Text Notes 4375 6600 0    50   ~ 0
+To logger board\n
+Text GLabel 3200 5250 2    50   Input ~ 0
+CURR_AMP
+Connection ~ 7600 5200
 $Comp
 L payload2020_base_board-rescue:MCP2515-canhw U9
 U 1 1 60A7DEA5
@@ -411,7 +511,7 @@ P 5800 4800
 F 0 "U9" H 5800 5265 50  0000 C CNN
 F 1 "MCP2515" H 5800 5174 50  0000 C CNN
 F 2 "" H 5750 4800 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001801H.pdf" H 5750 4800 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP2515-Stand-Alone-CAN-Controller-with-SPI-20001801J.pdf" H 5750 4800 50  0001 C CNN
 	1    5800 4800
 	1    0    0    -1  
 $EndComp
@@ -443,39 +543,13 @@ NoConn ~ 6350 5400
 NoConn ~ 6350 5300
 Text Label 5250 5300 2    50   ~ 0
 CLKOUT
-Text Label 3200 5050 0    50   ~ 0
-CLKOUT
-$Comp
-L power:GND #PWR043
-U 1 1 60A8AF8F
-P 3400 5500
-F 0 "#PWR043" H 3400 5250 50  0001 C CNN
-F 1 "GND" H 3405 5327 50  0000 C CNN
-F 2 "" H 3400 5500 50  0001 C CNN
-F 3 "" H 3400 5500 50  0001 C CNN
-	1    3400 5500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3200 5450 3400 5450
-Wire Wire Line
-	3400 5450 3400 5500
-Wire Wire Line
-	3200 5350 3400 5350
-Wire Wire Line
-	3400 5350 3400 5450
-Connection ~ 3400 5450
-Text Label 7750 5200 0    50   ~ 0
-CAN_INT
-Text Label 3200 5150 0    50   ~ 0
-CAN_INT
-Text Label 6350 5100 0    50   ~ 0
+Text Label 6475 5100 0    50   ~ 0
 SCK
-Text Label 6350 4800 0    50   ~ 0
+Text Label 6475 4800 0    50   ~ 0
 CS
-Text Label 6350 4900 0    50   ~ 0
+Text Label 6475 4900 0    50   ~ 0
 MISO
-Text Label 6350 5000 0    50   ~ 0
+Text Label 6475 5000 0    50   ~ 0
 MOSI
 $Comp
 L power:+5V #PWR047
@@ -491,23 +565,27 @@ $EndComp
 Wire Wire Line
 	6350 4600 6850 4600
 Wire Wire Line
-	6850 4400 6850 4600
-Wire Wire Line
 	6350 4700 6850 4700
+Wire Wire Line
+	7600 5200 6350 5200
+Wire Wire Line
+	6350 4800 6475 4800
+Wire Wire Line
+	6350 4900 6475 4900
+Wire Wire Line
+	6350 5000 6475 5000
+Wire Wire Line
+	6350 5100 6475 5100
+Wire Wire Line
+	6850 4400 6850 4600
 Wire Wire Line
 	6850 4700 6850 4600
 Connection ~ 6850 4600
-$Comp
-L Device:C_Small C12
-U 1 1 60A93A28
-P 7100 4500
-F 0 "C12" H 7192 4546 50  0000 L CNN
-F 1 "0.1uF" H 7192 4455 50  0000 L CNN
-F 2 "" H 7100 4500 50  0001 C CNN
-F 3 "~" H 7100 4500 50  0001 C CNN
-	1    7100 4500
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	6850 4200 6850 4400
+Connection ~ 6850 4400
+Wire Wire Line
+	6850 4400 7100 4400
 $Comp
 L power:GND #PWR048
 U 1 1 60A93F24
@@ -519,44 +597,15 @@ F 3 "" H 7100 4600 50  0001 C CNN
 	1    7100 4600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6850 4400 7100 4400
-Connection ~ 6850 4400
-Wire Wire Line
-	7750 5200 7600 5200
-Connection ~ 7600 5200
-Wire Wire Line
-	7600 5200 6350 5200
 $Comp
-L power:+5V #PWR049
-U 1 1 60AAB236
-P 7600 4200
-F 0 "#PWR049" H 7600 4050 50  0001 C CNN
-F 1 "+5V" H 7615 4373 50  0000 C CNN
-F 2 "" H 7600 4200 50  0001 C CNN
-F 3 "" H 7600 4200 50  0001 C CNN
-	1    7600 4200
+L Device:C_Small C12
+U 1 1 60A93A28
+P 7100 4500
+F 0 "C12" H 7192 4546 50  0000 L CNN
+F 1 "0.1uF" H 7192 4455 50  0000 L CNN
+F 2 "" H 7100 4500 50  0001 C CNN
+F 3 "~" H 7100 4500 50  0001 C CNN
+	1    7100 4500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6850 4200 6850 4400
-Wire Wire Line
-	7600 4700 7600 5200
-Wire Wire Line
-	7600 4400 7600 4200
-$Comp
-L Device:R_US R?
-U 1 1 60B29379
-P 7600 4550
-F 0 "R?" H 7668 4596 50  0000 L CNN
-F 1 "10k" H 7668 4505 50  0000 L CNN
-F 2 "" V 7640 4540 50  0001 C CNN
-F 3 "~" H 7600 4550 50  0001 C CNN
-	1    7600 4550
-	1    0    0    -1  
-$EndComp
-Text HLabel 10550 2700 2    50   Input ~ 0
-CANH_PAYLOAD
-Text HLabel 10550 2900 2    50   Input ~ 0
-CANL_PAYLOAD
 $EndSCHEMATC
