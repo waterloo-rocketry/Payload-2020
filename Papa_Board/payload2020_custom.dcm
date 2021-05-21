@@ -14,6 +14,10 @@ $CMP LM5122MH
 F https://www.ti.com/lit/ds/symlink/lm5122.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1620792952877
 $ENDCMP
 #
+$CMP LT3014IS5#TRMPBF
+F https://www.analog.com/media/en/technical-documentation/data-sheets/3014fd.pdf
+$ENDCMP
+#
 $CMP TL783CKCSE3
 F https://www.ti.com/lit/ds/symlink/tl783.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1620796149408
 $ENDCMP

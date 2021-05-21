@@ -240,12 +240,12 @@ $EndComp
 $Comp
 L payload2020_custom:+37V #PWR026
 U 1 1 60AC1D74
-P 7675 4925
-F 0 "#PWR026" H 7675 4925 50  0001 C CNN
-F 1 "+37V" H 7675 5025 50  0000 C CNN
-F 2 "" H 7675 4925 50  0001 C CNN
-F 3 "" H 7675 4925 50  0001 C CNN
-	1    7675 4925
+P 7450 5175
+F 0 "#PWR026" H 7450 5175 50  0001 C CNN
+F 1 "+37V" H 7450 5275 50  0000 C CNN
+F 2 "" H 7450 5175 50  0001 C CNN
+F 3 "" H 7450 5175 50  0001 C CNN
+	1    7450 5175
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -303,7 +303,7 @@ P 4100 3275
 F 0 "U4" H 4100 3740 50  0000 C CNN
 F 1 "TPSM84205EAB" H 4100 3649 50  0000 C CNN
 F 2 "" H 4100 3275 50  0001 C CNN
-F 3 "" H 4100 3275 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tpsm84203.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1621345776149" H 4100 3275 50  0001 C CNN
 	1    4100 3275
 	1    0    0    -1  
 $EndComp
@@ -347,11 +347,6 @@ Text Notes 5100 975  2    50   ~ 0
 1uF capacitors as per datasheet directly (no calculations)\nLDK320ADU120R is a 12V fixed-voltage regulator.\nMax Iout rating: 0.2A\n\n
 Text Notes 2700 1100 0    50   ~ 0
 12V-16V
-Connection ~ 8975 5125
-Wire Wire Line
-	10100 4950 10100 5125
-Wire Wire Line
-	8975 5125 10100 5125
 Connection ~ 5350 4975
 Wire Wire Line
 	5350 4975 5600 4975
@@ -592,75 +587,10 @@ Text Notes 2375 925  0    69   ~ 0
 DNP - Do not place
 Text Notes 1275 4325 0    50   ~ 0
 TPS61175 is a boost converter.\nMax Iout rating: 3A\nValues are taken from WEBENCH power designer\nhttps://webench.ti.com/appinfo/webench/scripts/SDP.cgi?ID=72ECE7EF0AA4EE07
-Text Notes 7875 4750 0    79   ~ 0
-TL783CKCSE3 is a low dropout regulator.\nVo = 1.25(1+R2/R1)\nIout = 0.7A
+Text Notes 7450 4850 0    79   ~ 0
+LT3014IS5#TRMPBF is a low dropout regulator.\nVo = 1.22(1+R8/R7)\nIout = 0.02A
 Wire Wire Line
-	7675 4975 7675 5125
-$Comp
-L Device:R_Small_US R?
-U 1 1 6099D5B1
-P 8975 5625
-AR Path="/60971980/6099D5B1" Ref="R?"  Part="1" 
-AR Path="/5E13F8E9/6099D5B1" Ref="R9"  Part="1" 
-F 0 "R9" H 9043 5671 50  0000 L CNN
-F 1 "278k" H 9043 5580 50  0000 L CNN
-F 2 "" H 8975 5625 50  0001 C CNN
-F 3 "~" H 8975 5625 50  0001 C CNN
-	1    8975 5625
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 6099D5AB
-P 8975 5725
-AR Path="/60971980/6099D5AB" Ref="#PWR?"  Part="1" 
-AR Path="/5E13F8E9/6099D5AB" Ref="#PWR037"  Part="1" 
-F 0 "#PWR037" H 8975 5475 50  0001 C CNN
-F 1 "GND" H 8980 5552 50  0000 C CNN
-F 2 "" H 8975 5725 50  0001 C CNN
-F 3 "" H 8975 5725 50  0001 C CNN
-	1    8975 5725
-	1    0    0    -1  
-$EndComp
-Connection ~ 8975 5475
-Wire Wire Line
-	8975 5475 8975 5525
-Wire Wire Line
-	8975 5225 8975 5125
-$Comp
-L Device:R_Small_US R?
-U 1 1 6099D5A2
-P 8975 5325
-AR Path="/60971980/6099D5A2" Ref="R?"  Part="1" 
-AR Path="/5E13F8E9/6099D5A2" Ref="R8"  Part="1" 
-F 0 "R8" H 9043 5371 50  0000 L CNN
-F 1 "10k" H 9043 5280 50  0000 L CNN
-F 2 "" H 8975 5325 50  0001 C CNN
-F 3 "~" H 8975 5325 50  0001 C CNN
-	1    8975 5325
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8975 5475 8975 5425
-Wire Wire Line
-	8375 5475 8975 5475
-Wire Wire Line
-	8775 5125 8975 5125
-Wire Wire Line
-	7975 5125 7675 5125
-$Comp
-L payload2020_custom:TL783CKCSE3 U?
-U 1 1 6099D590
-P 8375 5225
-AR Path="/60971980/6099D590" Ref="U?"  Part="1" 
-AR Path="/5E13F8E9/6099D590" Ref="U5"  Part="1" 
-F 0 "U5" H 8375 5590 50  0000 C CNN
-F 1 "TL783CKCSE3" H 8375 5499 50  0000 C CNN
-F 2 "" H 7875 5325 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/tl783.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1620858685046" H 7875 5325 50  0001 C CNN
-	1    8375 5225
-	1    0    0    -1  
-$EndComp
+	7450 5225 7450 5375
 Wire Wire Line
 	2950 2025 4250 2025
 Text Notes 5225 2850 2    50   ~ 0
@@ -749,10 +679,10 @@ Wire Wire Line
 Text Notes 9050 2975 0    50   ~ 0
 AP2114HA-3.3 is a 3.3V LDO\nIout = 600mA
 $Comp
-L power:+BATT #PWR?
+L power:+BATT #PWR024
 U 1 1 60C179CD
 P 2625 3125
-F 0 "#PWR?" H 2625 2975 50  0001 C CNN
+F 0 "#PWR024" H 2625 2975 50  0001 C CNN
 F 1 "+BATT" H 2640 3298 50  0000 C CNN
 F 2 "" H 2625 3125 50  0001 C CNN
 F 3 "" H 2625 3125 50  0001 C CNN
@@ -760,10 +690,10 @@ F 3 "" H 2625 3125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+BATT #PWR?
+L power:+BATT #PWR025
 U 1 1 60C17E1E
 P 2850 1325
-F 0 "#PWR?" H 2850 1175 50  0001 C CNN
+F 0 "#PWR025" H 2850 1175 50  0001 C CNN
 F 1 "+BATT" H 2865 1498 50  0000 C CNN
 F 2 "" H 2850 1325 50  0001 C CNN
 F 3 "" H 2850 1325 50  0001 C CNN
@@ -771,10 +701,10 @@ F 3 "" H 2850 1325 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+BATT #PWR?
+L power:+BATT #PWR022
 U 1 1 60C2683B
 P 2000 4975
-F 0 "#PWR?" H 2000 4825 50  0001 C CNN
+F 0 "#PWR022" H 2000 4825 50  0001 C CNN
 F 1 "+BATT" H 2015 5148 50  0000 C CNN
 F 2 "" H 2000 4975 50  0001 C CNN
 F 3 "" H 2000 4975 50  0001 C CNN
@@ -782,10 +712,10 @@ F 3 "" H 2000 4975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR028
 U 1 1 60C4F433
 P 3125 6475
-F 0 "#PWR?" H 3125 6225 50  0001 C CNN
+F 0 "#PWR028" H 3125 6225 50  0001 C CNN
 F 1 "GND" H 3130 6302 50  0000 C CNN
 F 2 "" H 3125 6475 50  0001 C CNN
 F 3 "" H 3125 6475 50  0001 C CNN
@@ -793,10 +723,10 @@ F 3 "" H 3125 6475 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR037
 U 1 1 60A50D23
 P 5225 1325
-F 0 "#PWR?" H 5225 1175 50  0001 C CNN
+F 0 "#PWR037" H 5225 1175 50  0001 C CNN
 F 1 "+12V" H 5240 1498 50  0000 C CNN
 F 2 "" H 5225 1325 50  0001 C CNN
 F 3 "" H 5225 1325 50  0001 C CNN
@@ -807,21 +737,21 @@ Wire Wire Line
 	5225 1325 5150 1325
 Connection ~ 5150 1325
 $Comp
-L power:+36V #PWR?
+L power:+36V #PWR042
 U 1 1 60A5DE1C
-P 10100 4950
-F 0 "#PWR?" H 10100 4800 50  0001 C CNN
-F 1 "+36V" H 10115 5123 50  0000 C CNN
-F 2 "" H 10100 4950 50  0001 C CNN
-F 3 "" H 10100 4950 50  0001 C CNN
-	1    10100 4950
+P 9775 5200
+F 0 "#PWR042" H 9775 5050 50  0001 C CNN
+F 1 "+36V" H 9790 5373 50  0000 C CNN
+F 2 "" H 9775 5200 50  0001 C CNN
+F 3 "" H 9775 5200 50  0001 C CNN
+	1    9775 5200
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR029
 U 1 1 60A5E3A7
 P 5200 3125
-F 0 "#PWR?" H 5200 2975 50  0001 C CNN
+F 0 "#PWR029" H 5200 2975 50  0001 C CNN
 F 1 "+5V" H 5215 3298 50  0000 C CNN
 F 2 "" H 5200 3125 50  0001 C CNN
 F 3 "" H 5200 3125 50  0001 C CNN
@@ -832,21 +762,21 @@ Text Notes 2450 2925 0    50   ~ 0
 12V-16V
 Text Notes 1850 4750 0    50   ~ 0
 12V-16V
-Text HLabel 10800 5075 2    50   Input ~ 0
+Text HLabel 10300 5275 2    50   Input ~ 0
 +V_SIPM
 Wire Wire Line
-	10800 5075 10650 5075
+	10300 5275 10150 5275
 Wire Wire Line
-	10650 5075 10650 4975
+	10150 5275 10150 5175
 $Comp
-L power:+36V #PWR?
+L power:+36V #PWR044
 U 1 1 60AEC418
-P 10650 4975
-F 0 "#PWR?" H 10650 4825 50  0001 C CNN
-F 1 "+36V" H 10665 5148 50  0000 C CNN
-F 2 "" H 10650 4975 50  0001 C CNN
-F 3 "" H 10650 4975 50  0001 C CNN
-	1    10650 4975
+P 10150 5175
+F 0 "#PWR044" H 10150 5025 50  0001 C CNN
+F 1 "+36V" H 10165 5348 50  0000 C CNN
+F 2 "" H 10150 5175 50  0001 C CNN
+F 3 "" H 10150 5175 50  0001 C CNN
+	1    10150 5175
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -859,14 +789,126 @@ Wire Wire Line
 	6500 1800 6500 1725
 Connection ~ 6650 1800
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR039
 U 1 1 60B701D5
 P 6500 1725
-F 0 "#PWR?" H 6500 1575 50  0001 C CNN
+F 0 "#PWR039" H 6500 1575 50  0001 C CNN
 F 1 "+5V" H 6515 1898 50  0000 C CNN
 F 2 "" H 6500 1725 50  0001 C CNN
 F 3 "" H 6500 1725 50  0001 C CNN
 	1    6500 1725
 	1    0    0    -1  
 $EndComp
+$Comp
+L payload2020_custom:LT3014IS5#TRMPBF U5
+U 1 1 60A6728F
+P 8425 5475
+F 0 "U5" H 8425 5840 50  0000 C CNN
+F 1 "LT3014IS5#TRMPBF" H 8425 5749 50  0000 C CNN
+F 2 "" H 8425 5475 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/3014fd.pdf" H 8425 5475 50  0001 C CNN
+	1    8425 5475
+	1    0    0    -1  
+$EndComp
+Text Label 7975 5625 2    50   ~ 0
+PWR_EN
+Wire Wire Line
+	7450 5375 7550 5375
+Wire Wire Line
+	7550 6000 8425 6000
+Wire Wire Line
+	7550 5375 7550 5675
+Connection ~ 7550 5375
+Wire Wire Line
+	7550 5375 7975 5375
+$Comp
+L power:GND #PWR041
+U 1 1 60A89F5B
+P 8425 6000
+F 0 "#PWR041" H 8425 5750 50  0001 C CNN
+F 1 "GND" H 8430 5827 50  0000 C CNN
+F 2 "" H 8425 6000 50  0001 C CNN
+F 3 "" H 8425 6000 50  0001 C CNN
+	1    8425 6000
+	1    0    0    -1  
+$EndComp
+Connection ~ 8425 6000
+$Comp
+L Device:C_Small Cbypass1
+U 1 1 60A8A5C9
+P 7550 5775
+F 0 "Cbypass1" H 7642 5821 50  0000 L CNN
+F 1 "1u" H 7642 5730 50  0000 L CNN
+F 2 "" H 7550 5775 50  0001 C CNN
+F 3 "~" H 7550 5775 50  0001 C CNN
+	1    7550 5775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 5875 7550 6000
+Wire Wire Line
+	9775 5375 9775 5200
+Wire Wire Line
+	8425 6000 8425 5875
+Wire Wire Line
+	8875 5375 9050 5375
+Wire Wire Line
+	8425 6000 9050 6000
+Wire Wire Line
+	9050 6000 9050 5900
+Connection ~ 9050 5375
+Wire Wire Line
+	8875 5625 9050 5625
+Connection ~ 9050 5625
+Wire Wire Line
+	9050 5625 9050 5600
+$Comp
+L Device:R_Small_US R8
+U 1 1 60AA1949
+P 9050 5500
+F 0 "R8" H 9118 5546 50  0000 L CNN
+F 1 "285.1k" H 9118 5455 50  0000 L CNN
+F 2 "" H 9050 5500 50  0001 C CNN
+F 3 "~" H 9050 5500 50  0001 C CNN
+	1    9050 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 5400 9050 5375
+$Comp
+L Device:R_Small_US R7
+U 1 1 60AA23DB
+P 9050 5800
+F 0 "R7" H 9118 5846 50  0000 L CNN
+F 1 "10k" H 9118 5755 50  0000 L CNN
+F 2 "" H 9050 5800 50  0001 C CNN
+F 3 "~" H 9050 5800 50  0001 C CNN
+	1    9050 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 5700 9050 5625
+Wire Wire Line
+	9050 5375 9525 5375
+Wire Wire Line
+	9050 6000 9525 6000
+Wire Wire Line
+	9525 6000 9525 5775
+Connection ~ 9050 6000
+Connection ~ 9525 5375
+Wire Wire Line
+	9525 5375 9775 5375
+$Comp
+L Device:C_Small Cout3
+U 1 1 60AB4F5F
+P 9525 5675
+F 0 "Cout3" H 9617 5721 50  0000 L CNN
+F 1 "0.5u" H 9617 5630 50  0000 L CNN
+F 2 "" H 9525 5675 50  0001 C CNN
+F 3 "~" H 9525 5675 50  0001 C CNN
+	1    9525 5675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9525 5575 9525 5375
 $EndSCHEMATC

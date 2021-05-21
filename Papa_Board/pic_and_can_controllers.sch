@@ -357,10 +357,10 @@ Wire Wire Line
 Wire Wire Line
 	7600 4400 7600 4200
 $Comp
-L Device:R_US Rpullup
+L Device:R_US Rpullup1
 U 1 1 60B29379
 P 7600 4550
-F 0 "Rpullup" H 7668 4596 50  0000 L CNN
+F 0 "Rpullup1" H 7668 4596 50  0000 L CNN
 F 1 "10k" H 7668 4505 50  0000 L CNN
 F 2 "" V 7640 4540 50  0001 C CNN
 F 3 "~" H 7600 4550 50  0001 C CNN
@@ -529,8 +529,6 @@ F 3 "~" H 7100 4500 50  0001 C CNN
 	1    7100 4500
 	1    0    0    -1  
 $EndComp
-Text Label 2000 1800 0    50   ~ 0
-5V_SLEEP
 Text Label 1500 3750 0    50   ~ 0
 5V_SLEEP
 Text Label 3500 3600 0    50   ~ 0
@@ -544,5 +542,7 @@ Text Label 7600 4200 0    50   ~ 0
 Text Label 8500 4100 0    50   ~ 0
 5V_SLEEP
 Text Label 8500 2250 0    50   ~ 0
+5V_SLEEP
+Text Label 2000 1800 0    50   ~ 0
 5V_SLEEP
 $EndSCHEMATC
