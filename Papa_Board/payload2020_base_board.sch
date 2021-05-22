@@ -165,8 +165,6 @@ Wire Notes Line
 	2800 4650 650  4650
 Wire Notes Line
 	650  4650 650  6050
-Text HLabel 4950 1900 0    50   Input ~ 0
-+V_SIPM
 $Comp
 L Device:C C6
 U 1 1 60A44DEB
@@ -358,8 +356,6 @@ F 3 "" H 5275 1250 50  0001 C CNN
 	1    5275 1250
 	1    0    0    -1  
 $EndComp
-Text Label 4950 1900 0    50   ~ 0
-+V_SIPM
 $Sheet
 S 4000 1400 950  700 
 U 5E13F8E9
@@ -401,8 +397,6 @@ Wire Wire Line
 	8950 5075 9550 5075
 Wire Wire Line
 	8950 4875 8950 5075
-Text Label 8950 4875 2    50   ~ 0
-+V_SIPM
 Text Label 8975 5675 2    50   ~ 0
 DET6_INTERRUPT
 $Comp
@@ -728,8 +722,6 @@ F 3 "~" H 9800 3475 50  0001 C CNN
 	1    9800 3475
 	1    0    0    -1  
 $EndComp
-Text Label 9000 3075 2    50   ~ 0
-+V_SIPM
 Wire Wire Line
 	9000 3075 9000 3275
 Wire Wire Line
@@ -943,4 +935,30 @@ NoConn ~ 9450 3075
 NoConn ~ 9400 4875
 Text Notes 8625 1475 0    50   ~ 0
 Debugging LED\n
+$Comp
+L payload2020_custom:+37V #PWR?
+U 1 1 60AA4421
+P 9000 3025
+AR Path="/5E13F8E9/60AA4421" Ref="#PWR?"  Part="1" 
+AR Path="/60AA4421" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9000 3025 50  0001 C CNN
+F 1 "+37V" H 9000 3125 50  0000 C CNN
+F 2 "" H 9000 3025 50  0001 C CNN
+F 3 "" H 9000 3025 50  0001 C CNN
+	1    9000 3025
+	1    0    0    -1  
+$EndComp
+$Comp
+L payload2020_custom:+37V #PWR?
+U 1 1 60AA7FB0
+P 8950 4825
+AR Path="/5E13F8E9/60AA7FB0" Ref="#PWR?"  Part="1" 
+AR Path="/60AA7FB0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8950 4825 50  0001 C CNN
+F 1 "+37V" H 8950 4925 50  0000 C CNN
+F 2 "" H 8950 4825 50  0001 C CNN
+F 3 "" H 8950 4825 50  0001 C CNN
+	1    8950 4825
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

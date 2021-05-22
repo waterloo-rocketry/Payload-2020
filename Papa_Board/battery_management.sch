@@ -218,7 +218,7 @@ L Device:R R11
 U 1 1 60A56D34
 P 6900 1800
 F 0 "R11" V 6693 1800 50  0000 C CNN
-F 1 "62mOhm" V 6784 1800 50  0000 C CNN
+F 1 "62m" V 6784 1800 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6830 1800 50  0001 C CNN
 F 3 "~" H 6900 1800 50  0001 C CNN
 	1    6900 1800
@@ -235,17 +235,6 @@ F 1 "GND" H 7155 2777 50  0000 C CNN
 F 2 "" H 7150 2950 50  0001 C CNN
 F 3 "" H 7150 2950 50  0001 C CNN
 	1    7150 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L payload2020_custom:+37V #PWR026
-U 1 1 60AC1D74
-P 7450 5175
-F 0 "#PWR026" H 7450 5175 50  0001 C CNN
-F 1 "+37V" H 7450 5275 50  0000 C CNN
-F 2 "" H 7450 5175 50  0001 C CNN
-F 3 "" H 7450 5175 50  0001 C CNN
-	1    7450 5175
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -587,10 +576,6 @@ Text Notes 2375 925  0    69   ~ 0
 DNP - Do not place
 Text Notes 1275 4325 0    50   ~ 0
 TPS61175 is a boost converter.\nMax Iout rating: 3A\nValues are taken from WEBENCH power designer\nhttps://webench.ti.com/appinfo/webench/scripts/SDP.cgi?ID=72ECE7EF0AA4EE07
-Text Notes 7450 4850 0    79   ~ 0
-LT3014IS5#TRMPBF is a low dropout regulator.\nVo = 1.22(1+R8/R7)\nIout = 0.02A
-Wire Wire Line
-	7450 5225 7450 5375
 Wire Wire Line
 	2950 2025 4250 2025
 Text Notes 5225 2850 2    50   ~ 0
@@ -737,17 +722,6 @@ Wire Wire Line
 	5225 1325 5150 1325
 Connection ~ 5150 1325
 $Comp
-L power:+36V #PWR042
-U 1 1 60A5DE1C
-P 9775 5200
-F 0 "#PWR042" H 9775 5050 50  0001 C CNN
-F 1 "+36V" H 9790 5373 50  0000 C CNN
-F 2 "" H 9775 5200 50  0001 C CNN
-F 3 "" H 9775 5200 50  0001 C CNN
-	1    9775 5200
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR029
 U 1 1 60A5E3A7
 P 5200 3125
@@ -762,23 +736,6 @@ Text Notes 2450 2925 0    50   ~ 0
 12V-16V
 Text Notes 1850 4750 0    50   ~ 0
 12V-16V
-Text HLabel 10300 5275 2    50   Input ~ 0
-+V_SIPM
-Wire Wire Line
-	10300 5275 10150 5275
-Wire Wire Line
-	10150 5275 10150 5175
-$Comp
-L power:+36V #PWR044
-U 1 1 60AEC418
-P 10150 5175
-F 0 "#PWR044" H 10150 5025 50  0001 C CNN
-F 1 "+36V" H 10165 5348 50  0000 C CNN
-F 2 "" H 10150 5175 50  0001 C CNN
-F 3 "" H 10150 5175 50  0001 C CNN
-	1    10150 5175
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2125 4975 2600 4975
 Text Label 2725 5525 2    50   ~ 0
@@ -799,116 +756,4 @@ F 3 "" H 6500 1725 50  0001 C CNN
 	1    6500 1725
 	1    0    0    -1  
 $EndComp
-$Comp
-L payload2020_custom:LT3014IS5#TRMPBF U5
-U 1 1 60A6728F
-P 8425 5475
-F 0 "U5" H 8425 5840 50  0000 C CNN
-F 1 "LT3014IS5#TRMPBF" H 8425 5749 50  0000 C CNN
-F 2 "" H 8425 5475 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/3014fd.pdf" H 8425 5475 50  0001 C CNN
-	1    8425 5475
-	1    0    0    -1  
-$EndComp
-Text Label 7975 5625 2    50   ~ 0
-PWR_EN
-Wire Wire Line
-	7450 5375 7550 5375
-Wire Wire Line
-	7550 6000 8425 6000
-Wire Wire Line
-	7550 5375 7550 5675
-Connection ~ 7550 5375
-Wire Wire Line
-	7550 5375 7975 5375
-$Comp
-L power:GND #PWR041
-U 1 1 60A89F5B
-P 8425 6000
-F 0 "#PWR041" H 8425 5750 50  0001 C CNN
-F 1 "GND" H 8430 5827 50  0000 C CNN
-F 2 "" H 8425 6000 50  0001 C CNN
-F 3 "" H 8425 6000 50  0001 C CNN
-	1    8425 6000
-	1    0    0    -1  
-$EndComp
-Connection ~ 8425 6000
-$Comp
-L Device:C_Small Cbypass1
-U 1 1 60A8A5C9
-P 7550 5775
-F 0 "Cbypass1" H 7642 5821 50  0000 L CNN
-F 1 "1u" H 7642 5730 50  0000 L CNN
-F 2 "" H 7550 5775 50  0001 C CNN
-F 3 "~" H 7550 5775 50  0001 C CNN
-	1    7550 5775
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7550 5875 7550 6000
-Wire Wire Line
-	9775 5375 9775 5200
-Wire Wire Line
-	8425 6000 8425 5875
-Wire Wire Line
-	8875 5375 9050 5375
-Wire Wire Line
-	8425 6000 9050 6000
-Wire Wire Line
-	9050 6000 9050 5900
-Connection ~ 9050 5375
-Wire Wire Line
-	8875 5625 9050 5625
-Connection ~ 9050 5625
-Wire Wire Line
-	9050 5625 9050 5600
-$Comp
-L Device:R_Small_US R8
-U 1 1 60AA1949
-P 9050 5500
-F 0 "R8" H 9118 5546 50  0000 L CNN
-F 1 "285.1k" H 9118 5455 50  0000 L CNN
-F 2 "" H 9050 5500 50  0001 C CNN
-F 3 "~" H 9050 5500 50  0001 C CNN
-	1    9050 5500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9050 5400 9050 5375
-$Comp
-L Device:R_Small_US R7
-U 1 1 60AA23DB
-P 9050 5800
-F 0 "R7" H 9118 5846 50  0000 L CNN
-F 1 "10k" H 9118 5755 50  0000 L CNN
-F 2 "" H 9050 5800 50  0001 C CNN
-F 3 "~" H 9050 5800 50  0001 C CNN
-	1    9050 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9050 5700 9050 5625
-Wire Wire Line
-	9050 5375 9525 5375
-Wire Wire Line
-	9050 6000 9525 6000
-Wire Wire Line
-	9525 6000 9525 5775
-Connection ~ 9050 6000
-Connection ~ 9525 5375
-Wire Wire Line
-	9525 5375 9775 5375
-$Comp
-L Device:C_Small Cout3
-U 1 1 60AB4F5F
-P 9525 5675
-F 0 "Cout3" H 9617 5721 50  0000 L CNN
-F 1 "0.5u" H 9617 5630 50  0000 L CNN
-F 2 "" H 9525 5675 50  0001 C CNN
-F 3 "~" H 9525 5675 50  0001 C CNN
-	1    9525 5675
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9525 5575 9525 5375
 $EndSCHEMATC
