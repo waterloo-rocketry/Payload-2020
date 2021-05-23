@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -224,17 +224,6 @@ Wire Wire Line
 	2150 6700 2400 6700
 Wire Wire Line
 	1950 6550 1750 6550
-$Comp
-L payload2020_base_board-rescue:PIC18F26K83-canhw U8
-U 1 1 60A4A9BE
-P 2500 4800
-F 0 "U8" H 2475 5715 50  0000 C CNN
-F 1 "PIC18F26K83-I/SP" H 2475 5624 50  0000 C CNN
-F 2 "" H 2950 4800 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40001943A.pdf" H 2950 4800 50  0001 C CNN
-	1    2500 4800
-	1    0    0    -1  
-$EndComp
 Text HLabel 1750 4250 0    50   Input ~ 0
 DET1_ADC
 Text HLabel 1750 4350 0    50   Input ~ 0
@@ -397,17 +386,6 @@ To logger board\n
 Text GLabel 3200 5250 2    50   Input ~ 0
 CURR_AMP
 Connection ~ 7600 5200
-$Comp
-L payload2020_base_board-rescue:MCP2515-canhw U9
-U 1 1 60A7DEA5
-P 5800 4800
-F 0 "U9" H 5800 5265 50  0000 C CNN
-F 1 "MCP2515-I/P" H 5800 5174 50  0000 C CNN
-F 2 "" H 5750 4800 50  0001 C CNN
-F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP2515-Stand-Alone-CAN-Controller-with-SPI-20001801J.pdf" H 5750 4800 50  0001 C CNN
-	1    5800 4800
-	1    0    0    -1  
-$EndComp
 Text Label 5250 4700 2    50   ~ 0
 MCP_RX
 Text Label 5250 4600 2    50   ~ 0
@@ -579,6 +557,28 @@ F 1 "10k" H 1568 3905 50  0000 L CNN
 F 2 "" H 1500 3950 50  0001 C CNN
 F 3 "~" H 1500 3950 50  0001 C CNN
 	1    1500 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L payload2020_custom:MCP2515-canhw U9
+U 1 1 60AD2B0D
+P 5800 4800
+F 0 "U9" H 5800 5265 50  0000 C CNN
+F 1 "MCP2515-I/P" H 5800 5174 50  0000 C CNN
+F 2 "" H 5750 4800 50  0001 C CNN
+F 3 "" H 5750 4800 50  0001 C CNN
+	1    5800 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L payload2020_custom:PIC18F26K83-canhw U8
+U 1 1 60AD7CB1
+P 2500 4800
+F 0 "U8" H 2475 5715 50  0000 C CNN
+F 1 "PIC18F26K83-I/SP" H 2475 5624 50  0000 C CNN
+F 2 "" H 2950 4800 50  0001 C CNN
+F 3 "" H 2950 4800 50  0001 C CNN
+	1    2500 4800
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

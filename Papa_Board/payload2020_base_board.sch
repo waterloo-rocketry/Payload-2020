@@ -99,7 +99,7 @@ Wire Wire Line
 	7700 900  7850 900 
 Text Notes 1800 1300 2    50   ~ 0
 12V - 16V\n\n
-Text Label 4600 800  0    50   ~ 0
+Text Label 4775 1250 0    50   ~ 0
 PWR_EN
 Text Notes 2050 3200 2    50   ~ 0
 Connector for programming
@@ -357,50 +357,6 @@ F 3 "" H 7550 5900 50  0001 C CNN
 	1    7550 5900
 	1    0    0    -1  
 $EndComp
-Text Label 5650 4650 0    50   ~ 0
-DET3_INTERRUPT
-Text Label 5650 4350 0    50   ~ 0
-DET2_INTERRUPT
-Text Label 5650 4550 0    50   ~ 0
-DET3_ADC
-Text Label 5650 4250 0    50   ~ 0
-DET2_ADC
-Text Label 5650 3900 0    50   ~ 0
-DET1_ADC
-Text Label 5650 4000 0    50   ~ 0
-DET1_INTERRUPT
-Text Label 5650 6450 0    50   ~ 0
-SCK
-Text Label 5650 6050 0    50   ~ 0
-MOSI
-Text Label 5650 6200 0    50   ~ 0
-MISO
-Text Label 5650 6325 0    50   ~ 0
-CS
-Text HLabel 5650 6450 0    50   Input ~ 0
-SCK
-Text HLabel 5650 6325 0    50   Input ~ 0
-CS
-Text HLabel 5650 6200 0    50   Input ~ 0
-MISO
-Text HLabel 5650 6050 0    50   Input ~ 0
-MOSI
-Text Label 3700 5500 2    50   ~ 0
-CANH_ROCKET
-Text Label 5650 3550 0    50   ~ 0
-CANL_PAYLOAD
-Text Label 5650 3450 0    50   ~ 0
-CANH_PAYLOAD
-Text Label 3700 5400 2    50   ~ 0
-CANL_ROCKET
-Text Label 3700 3900 2    50   ~ 0
-~MCLR
-Text Label 3700 3700 2    50   ~ 0
-ICSPDAT
-Text Label 3700 3500 2    50   ~ 0
-ICSPCLK
-Text Label 3700 4650 2    50   ~ 0
-PWR_EN
 Text Notes 10600 2400 0    50   ~ 0
 Normal header
 NoConn ~ 10325 2025
@@ -601,18 +557,6 @@ F 3 "~" H 8225 4175 50  0001 C CNN
 	1    8225 4175
 	1    0    0    -1  
 $EndComp
-Text Label 5650 5650 0    50   ~ 0
-DET6_INTERRUPT
-Text Label 5650 5300 0    50   ~ 0
-DET5_INTERRUPT
-Text Label 5650 5550 0    50   ~ 0
-DET6_ADC
-Text Label 5650 5200 0    50   ~ 0
-DET5_ADC
-Text Label 5650 4850 0    50   ~ 0
-DET4_ADC
-Text Label 5650 4950 0    50   ~ 0
-DET4_INTERRUPT
 $Comp
 L Device:LED D2
 U 1 1 60A48C38
@@ -717,8 +661,6 @@ Wire Wire Line
 	6200 1250 6200 900 
 Wire Wire Line
 	6200 900  7100 900 
-Text Label 3700 4800 2    50   ~ 0
-5V_ALWAYS_ON
 NoConn ~ 10175 3100
 NoConn ~ 10125 4900
 Text Notes 1125 7175 0    50   ~ 0
@@ -885,9 +827,7 @@ Wire Notes Line
 	2800 650  2800 2900
 Wire Notes Line
 	650  650  650  2900
-Wire Wire Line
-	4600 900  4600 800 
-Text Label 3700 1000 2    50   ~ 0
+Text Label 3875 1400 2    50   ~ 0
 VBATT_OUT
 $Comp
 L Connector_Generic:Conn_01x05 J11
@@ -951,64 +891,23 @@ Wire Wire Line
 	9775 975  10275 975 
 Text Notes 10575 975  0    50   ~ 0
 Live Telemetry
-$Sheet
-S 3700 3200 1950 3375
-U 6016C5CD
-F0 "MCU and CAN controllers" 50
-F1 "pic_and_can_controllers.sch" 50
-F2 "CANH_ROCKET" I L 3700 5500 50 
-F3 "CANL_ROCKET" I L 3700 5400 50 
-F4 "CANH_PAYLOAD" I R 5650 3450 50 
-F5 "CANL_PAYLOAD" I R 5650 3550 50 
-F6 "PWR_ON" I L 3700 4650 50 
-F7 "SLEEP_5V" I L 3700 4800 50 
-F8 "DET6_ADC" I R 5650 5550 50 
-F9 "DET5_ADC" I R 5650 5200 50 
-F10 "DET4_ADC" I R 5650 4850 50 
-F11 "DET3_ADC" I R 5650 4550 50 
-F12 "DET6_INTERRUPT" I R 5650 5650 50 
-F13 "DET5_INTERRUPT" I R 5650 5300 50 
-F14 "DET4_INTERRUPT" I R 5650 4950 50 
-F15 "DET3_INTERRUPT" I R 5650 4650 50 
-F16 "DET2_INTERRUPT" I R 5650 4350 50 
-F17 "DET1_INTERRUPT" I R 5650 4000 50 
-F18 "ISCPDAT" I L 3700 3700 50 
-F19 "MCLR" I L 3700 3900 50 
-F20 "DET1_ADC" I R 5650 3900 50 
-F21 "DET2_ADC" I R 5650 4250 50 
-F22 "ICSPCLK" I L 3700 3500 50 
-$EndSheet
-$Sheet
-S 3675 1950 825  950 
-U 60A2C79F
-F0 "Logger board" 50
-F1 "SDcard.sch" 50
-$EndSheet
-Text Notes 3700 1800 0    50   ~ 0
+Text Notes 5575 6150 0    50   ~ 0
 Not all pins support peripheral output,\nwhich is required for MOSI, SCK,\nand CANTX. RP20 and RP35-43 are \nthe ones that support peripheral ouptut
-Text Label 3675 2725 2    50   ~ 0
+Text HLabel 5975 5575 2    50   Input ~ 0
 SCK
-Text Label 3675 2125 2    50   ~ 0
-MOSI
-Text Label 3675 2350 2    50   ~ 0
-MISO
-Text Label 3675 2550 2    50   ~ 0
+Text HLabel 5975 5450 2    50   Input ~ 0
 CS
-Text HLabel 3675 2725 2    50   Input ~ 0
-SCK
-Text HLabel 3675 2550 2    50   Input ~ 0
-CS
-Text HLabel 3675 2350 2    50   Input ~ 0
+Text HLabel 5975 5325 2    50   Input ~ 0
 MISO
-Text HLabel 3675 2125 2    50   Input ~ 0
+Text HLabel 5975 5175 2    50   Input ~ 0
 MOSI
 $Sheet
-S 3700 600  900  600 
+S 3875 1000 900  600 
 U 5E13F8E9
 F0 "battery_management" 50
 F1 "battery_management.sch" 50
-F2 "POWER_EN" I R 4600 850 50 
-F3 "VBATT_OUT" I L 3700 1000 50 
+F2 "POWER_EN" I R 4775 1250 50 
+F3 "VBATT_OUT" I L 3875 1400 50 
 $EndSheet
 $Comp
 L Device:R_Small_US R1
@@ -1100,4 +999,95 @@ Wire Wire Line
 	8800 5600 8800 5650
 Wire Wire Line
 	8800 5850 8800 5950
+$Sheet
+S 5975 5000 700  750 
+U 60A2C79F
+F0 "Logger board" 50
+F1 "SDcard.sch" 50
+$EndSheet
+$Sheet
+S 3475 2325 1950 3375
+U 6016C5CD
+F0 "MCU and CAN controllers" 50
+F1 "pic_and_can_controllers.sch" 50
+F2 "CANH_ROCKET" I L 3475 4625 50 
+F3 "CANL_ROCKET" I L 3475 4525 50 
+F4 "CANH_PAYLOAD" I R 5425 2575 50 
+F5 "CANL_PAYLOAD" I R 5425 2675 50 
+F6 "PWR_ON" I L 3475 3775 50 
+F7 "SLEEP_5V" I L 3475 3925 50 
+F8 "DET6_ADC" I R 5425 4675 50 
+F9 "DET5_ADC" I R 5425 4325 50 
+F10 "DET4_ADC" I R 5425 3975 50 
+F11 "DET3_ADC" I R 5425 3675 50 
+F12 "DET6_INTERRUPT" I R 5425 4775 50 
+F13 "DET5_INTERRUPT" I R 5425 4425 50 
+F14 "DET4_INTERRUPT" I R 5425 4075 50 
+F15 "DET3_INTERRUPT" I R 5425 3775 50 
+F16 "DET2_INTERRUPT" I R 5425 3475 50 
+F17 "DET1_INTERRUPT" I R 5425 3125 50 
+F18 "ISCPDAT" I L 3475 2825 50 
+F19 "MCLR" I L 3475 3025 50 
+F20 "DET1_ADC" I R 5425 3025 50 
+F21 "DET2_ADC" I R 5425 3375 50 
+F22 "ICSPCLK" I L 3475 2625 50 
+$EndSheet
+Text Label 3475 3925 2    50   ~ 0
+5V_ALWAYS_ON
+Text Label 5425 4075 0    50   ~ 0
+DET4_INTERRUPT
+Text Label 5425 3975 0    50   ~ 0
+DET4_ADC
+Text Label 5425 4325 0    50   ~ 0
+DET5_ADC
+Text Label 5425 4675 0    50   ~ 0
+DET6_ADC
+Text Label 5425 4425 0    50   ~ 0
+DET5_INTERRUPT
+Text Label 5425 4775 0    50   ~ 0
+DET6_INTERRUPT
+Text Label 3475 3775 2    50   ~ 0
+PWR_EN
+Text Label 3475 2625 2    50   ~ 0
+ICSPCLK
+Text Label 3475 2825 2    50   ~ 0
+ICSPDAT
+Text Label 3475 3025 2    50   ~ 0
+~MCLR
+Text Label 3475 4525 2    50   ~ 0
+CANL_ROCKET
+Text Label 5425 2575 0    50   ~ 0
+CANH_PAYLOAD
+Text Label 5425 2675 0    50   ~ 0
+CANL_PAYLOAD
+Text Label 3475 4625 2    50   ~ 0
+CANH_ROCKET
+Text HLabel 5425 5175 0    50   Input ~ 0
+MOSI
+Text HLabel 5425 5325 0    50   Input ~ 0
+MISO
+Text HLabel 5425 5450 0    50   Input ~ 0
+CS
+Text HLabel 5425 5575 0    50   Input ~ 0
+SCK
+Text Label 5425 3125 0    50   ~ 0
+DET1_INTERRUPT
+Text Label 5425 3025 0    50   ~ 0
+DET1_ADC
+Text Label 5425 3375 0    50   ~ 0
+DET2_ADC
+Text Label 5425 3675 0    50   ~ 0
+DET3_ADC
+Text Label 5425 3475 0    50   ~ 0
+DET2_INTERRUPT
+Text Label 5425 3775 0    50   ~ 0
+DET3_INTERRUPT
+Wire Wire Line
+	5425 5175 5975 5175
+Wire Wire Line
+	5425 5325 5975 5325
+Wire Wire Line
+	5425 5450 5975 5450
+Wire Wire Line
+	5425 5575 5975 5575
 $EndSCHEMATC
