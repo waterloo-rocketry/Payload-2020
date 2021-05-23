@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 3 4
 Title ""
 Date ""
 Rev ""
@@ -22,7 +22,7 @@ AR Path="/5B9D7D87/5B9D7E5B" Ref="J2"  Part="1"
 AR Path="/60A2C79F/5B9D7D87/5B9D7E5B" Ref="J9"  Part="1" 
 AR Path="/60A2C79F/5B9D7E5B" Ref="J8"  Part="1" 
 F 0 "J8" H 6550 4267 50  0000 C CNN
-F 1 "Micro_SD_Card" H 6550 4176 50  0000 C CNN
+F 1 "693072010801" H 6550 4176 50  0000 C CNN
 F 2 "canhw_footprints:microSD_Molex_WM6698CT-ND" H 7750 3850 50  0001 C CNN
 F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 6600 3550 50  0001 C CNN
 	1    6600 3550
@@ -122,25 +122,8 @@ Wire Wire Line
 Wire Wire Line
 	5500 3750 5700 3750
 NoConn ~ 7400 4150
-$Comp
-L Device:R R2
-U 1 1 5BD9041F
-P 4400 3600
-AR Path="/5B9D7D87/5BD9041F" Ref="R2"  Part="1" 
-AR Path="/5B9D8C66/5BD9041F" Ref="R6"  Part="1" 
-AR Path="/60A2C79F/5B9D7D87/5BD9041F" Ref="R15"  Part="1" 
-AR Path="/60A2C79F/5BD9041F" Ref="R12"  Part="1" 
-F 0 "R12" H 4470 3646 50  0000 L CNN
-F 1 "10k" H 4470 3555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4330 3600 50  0001 C CNN
-F 3 "~" H 4400 3600 50  0001 C CNN
-	1    4400 3600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4000 3850 4400 3850
-Wire Wire Line
-	4400 3750 4400 3850
 $Comp
 L power:+3.3V #PWR034
 U 1 1 5BD90633
@@ -159,4 +142,19 @@ $EndComp
 Connection ~ 4400 3850
 Wire Wire Line
 	4400 3850 5700 3850
+$Comp
+L Device:R_Small_US R12
+U 1 1 60B5EE71
+P 4400 3600
+F 0 "R12" H 4468 3646 50  0000 L CNN
+F 1 "10k" H 4468 3555 50  0000 L CNN
+F 2 "" H 4400 3600 50  0001 C CNN
+F 3 "~" H 4400 3600 50  0001 C CNN
+	1    4400 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3450 4400 3500
+Wire Wire Line
+	4400 3700 4400 3850
 $EndSCHEMATC
