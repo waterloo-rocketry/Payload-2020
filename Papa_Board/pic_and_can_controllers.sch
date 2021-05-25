@@ -122,26 +122,6 @@ Wire Wire Line
 	1200 4150 1500 4150
 Wire Wire Line
 	1500 4150 1750 4150
-Text HLabel 1750 4750 0    50   Input ~ 0
-DET6_ADC
-Text HLabel 1750 4650 0    50   Input ~ 0
-DET5_ADC
-Text HLabel 1750 4550 0    50   Input ~ 0
-DET4_ADC
-Text HLabel 1750 4450 0    50   Input ~ 0
-DET3_ADC
-Text HLabel 3200 4450 2    50   Input ~ 0
-DET6_INTERRUPT
-Text HLabel 3200 4550 2    50   Input ~ 0
-DET5_INTERRUPT
-Text HLabel 3200 4650 2    50   Input ~ 0
-DET4_INTERRUPT
-Text HLabel 3200 4750 2    50   Input ~ 0
-DET3_INTERRUPT
-Text HLabel 3200 4850 2    50   Input ~ 0
-DET2_INTERRUPT
-Text HLabel 3200 4950 2    50   Input ~ 0
-DET1_INTERRUPT
 Text HLabel 4250 4250 2    50   Input ~ 0
 ISCPDAT
 Text HLabel 1200 4150 0    50   Input ~ 0
@@ -224,12 +204,6 @@ Wire Wire Line
 	2150 6700 2400 6700
 Wire Wire Line
 	1950 6550 1750 6550
-Text HLabel 1750 4250 0    50   Input ~ 0
-DET1_ADC
-Text HLabel 1750 4350 0    50   Input ~ 0
-DET2_ADC
-Text Label 1750 4850 2    50   ~ 0
-OSC1
 Text Label 1750 4950 2    50   ~ 0
 OSC2
 Text Label 2800 6400 0    50   ~ 0
@@ -259,7 +233,7 @@ PIC_TX
 Text Label 1750 5150 2    50   ~ 0
 PIC_RX
 Text Label 1750 5250 2    50   ~ 0
-CS
+CS_1
 Text Label 1750 5350 2    50   ~ 0
 MOSI
 Text Label 4300 4100 0    50   ~ 0
@@ -362,11 +336,11 @@ MOSI
 Text HLabel 10650 5900 2    50   Input ~ 0
 MISO
 Text HLabel 10650 6100 2    50   Input ~ 0
-CS
+CS_2
 Text HLabel 10650 6275 2    50   Input ~ 0
 SCK
 Text Label 10475 6100 2    50   ~ 0
-CS
+CS_2
 Text Label 10475 5900 2    50   ~ 0
 MISO
 Text Label 10475 5700 2    50   ~ 0
@@ -383,8 +357,6 @@ Wire Wire Line
 	10475 6275 10650 6275
 Text Notes 10125 6000 2    50   ~ 0
 To logger board\n
-Text GLabel 3200 5250 2    50   Input ~ 0
-CURR_AMP
 Connection ~ 8300 5800
 Text Label 5250 4700 2    50   ~ 0
 MCP_RX
@@ -417,7 +389,7 @@ CLKOUT
 Text Label 7825 5100 0    50   ~ 0
 SCK
 Text Label 7825 4400 0    50   ~ 0
-CS
+CS_1
 Text Label 7825 4575 0    50   ~ 0
 MISO
 Text Label 7825 5000 0    50   ~ 0
@@ -619,4 +591,21 @@ Wire Wire Line
 	6825 4575 6825 4900
 Wire Wire Line
 	6825 4575 7825 4575
+Text GLabel 1750 4550 0    50   Input ~ 0
+BATT_CURR_AMP
+Text GLabel 1750 4650 0    50   Input ~ 0
+3V3_CURR_AMP
+Text Label 3200 5250 0    50   ~ 0
+CS_2
+NoConn ~ 1750 4250
+NoConn ~ 1750 4350
+NoConn ~ 1750 4450
+NoConn ~ 1750 4750
+NoConn ~ 1750 4850
+NoConn ~ 3200 4450
+NoConn ~ 3200 4550
+NoConn ~ 3200 4650
+NoConn ~ 3200 4750
+NoConn ~ 3200 4850
+NoConn ~ 3200 4950
 $EndSCHEMATC
