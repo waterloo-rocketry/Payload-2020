@@ -205,7 +205,6 @@ Text Notes 1150 5125 0    50   ~ 0
 Harwin connector
 Text Notes 10600 2400 0    50   ~ 0
 Normal header
-NoConn ~ 10325 2025
 Wire Wire Line
 	9625 2125 10325 2125
 Text Label 10325 2425 2    50   ~ 0
@@ -965,4 +964,19 @@ F 3 "" H 2225 6650 50  0001 C CNN
 $EndComp
 Text Notes 2100 6450 0    50   ~ 0
 12-16V
+Wire Wire Line
+	10325 2025 10150 2025
+Wire Wire Line
+	10150 2025 10150 1975
+$Comp
+L power:+12V #PWR?
+U 1 1 60B4D43D
+P 10150 1975
+F 0 "#PWR?" H 10150 1825 50  0001 C CNN
+F 1 "+12V" H 10165 2148 50  0000 C CNN
+F 2 "" H 10150 1975 50  0001 C CNN
+F 3 "" H 10150 1975 50  0001 C CNN
+	1    10150 1975
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
