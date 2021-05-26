@@ -20,9 +20,9 @@ L payload2020_custom:INA180 U2
 U 1 1 60A32560
 P 6650 2550
 F 0 "U2" H 6600 2077 50  0000 C CNN
-F 1 "INA180" H 6600 1986 50  0000 C CNN
+F 1 "INA180A4QDBVRQ1" H 6600 1986 50  0000 C CNN
 F 2 "" H 6650 2550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ina181.pdf" H 6650 2550 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/ina180.pdf?ts=1621969218968&ref_url=https%253A%252F%252Fwww.google.com%252F" H 6650 2550 50  0001 C CNN
 	1    6650 2550
 	1    0    0    -1  
 $EndComp
@@ -35,7 +35,7 @@ Wire Notes Line
 Wire Notes Line
 	7650 4700 11000 4700
 Text Notes 5300 1225 0    50   ~ 0
-62mR * I  * 200v/v = 3.3V\nImax = 266mA
+62.5mR * I  * 200v/v = 5V\nImax = 400mA
 Text Notes 6750 2900 0    50   ~ 0
 200V/V
 Connection ~ 5675 3900
@@ -131,17 +131,6 @@ F 1 "AP2114H-3.3" H 6425 4251 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 6425 4325 50  0001 C CNN
 F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 6425 4100 50  0001 C CNN
 	1    6425 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR030
-U 1 1 60A56D56
-P 6500 1900
-F 0 "#PWR030" H 6500 1750 50  0001 C CNN
-F 1 "+3.3V" H 6515 2073 50  0000 C CNN
-F 2 "" H 6500 1900 50  0001 C CNN
-F 3 "" H 6500 1900 50  0001 C CNN
-	1    6500 1900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -696,14 +685,14 @@ L payload2020_custom:INA180 U1
 U 1 1 60B89FC2
 P 3150 2250
 F 0 "U1" H 3100 1777 50  0000 C CNN
-F 1 "INA180" H 3100 1686 50  0000 C CNN
+F 1 "INA180A4QDBVRQ1" H 3100 1686 50  0000 C CNN
 F 2 "" H 3150 2250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ina181.pdf" H 3150 2250 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/ina180.pdf?ts=1621969218968&ref_url=https%253A%252F%252Fwww.google.com%252F" H 3150 2250 50  0001 C CNN
 	1    3150 2250
 	1    0    0    -1  
 $EndComp
 Text Notes 1800 925  0    50   ~ 0
-62mR * I  * 200v/v = 3.3V\nImax = 266mA
+62.5mR * I  * 200v/v = 5V\nImax = 400mA
 Text Notes 3250 2600 0    50   ~ 0
 200V/V
 Wire Wire Line
@@ -746,17 +735,6 @@ Wire Wire Line
 Wire Wire Line
 	2650 1300 2650 2150
 $Comp
-L Device:R R7
-U 1 1 60B89FE5
-P 2400 1300
-F 0 "R7" V 2193 1300 50  0000 C CNN
-F 1 "62m" V 2284 1300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2330 1300 50  0001 C CNN
-F 3 "~" H 2400 1300 50  0001 C CNN
-	1    2400 1300
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GND #PWR041
 U 1 1 60B89FEC
 P 2650 2450
@@ -792,7 +770,7 @@ F 3 "" H 2800 1200 50  0001 C CNN
 	1    2800 1200
 	1    0    0    -1  
 $EndComp
-Text Notes 1500 1000 0    50   ~ 0
+Text Notes 1500 1050 0    50   ~ 0
 12-16V
 Text Notes 2700 1000 0    50   ~ 0
 12-16V
@@ -877,7 +855,7 @@ L Device:R_Small_US R11
 U 1 1 60B4B0DF
 P 5900 1600
 F 0 "R11" V 5695 1600 50  0000 C CNN
-F 1 "62m" V 5786 1600 50  0000 C CNN
+F 1 "62.5m" V 5786 1600 50  0000 C CNN
 F 2 "" H 5900 1600 50  0001 C CNN
 F 3 "~" H 5900 1600 50  0001 C CNN
 	1    5900 1600
@@ -887,4 +865,26 @@ Wire Wire Line
 	6000 1600 6150 1600
 Wire Wire Line
 	5650 1600 5800 1600
+$Comp
+L Device:R_US R7
+U 1 1 60B0B6A2
+P 2400 1300
+F 0 "R7" V 2195 1300 50  0000 C CNN
+F 1 "62.5m" V 2286 1300 50  0000 C CNN
+F 2 "" V 2440 1290 50  0001 C CNN
+F 3 "~" H 2400 1300 50  0001 C CNN
+	1    2400 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR030
+U 1 1 60B404B6
+P 6500 1900
+F 0 "#PWR030" H 6500 1750 50  0001 C CNN
+F 1 "+5V" H 6515 2073 50  0000 C CNN
+F 2 "" H 6500 1900 50  0001 C CNN
+F 3 "" H 6500 1900 50  0001 C CNN
+	1    6500 1900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
