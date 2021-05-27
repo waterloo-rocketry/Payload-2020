@@ -1,5 +1,5 @@
 (sym_lib_table
-  (lib (name payload2020_base_board-rescue)(type Legacy)(uri ${KIPRJMOD}/payload2020_base_board-rescue.lib)(options "")(descr ""))
   (lib (name payload2020_custom)(type Legacy)(uri ${KIPRJMOD}/payload2020_custom.lib)(options "")(descr ""))
   (lib (name power_supply)(type Legacy)(uri ${KIPRJMOD}/power_supply.lib)(options "")(descr ""))
+  (lib (name payload2020_base_board-rescue)(type Legacy)(uri ${KIPRJMOD}/payload2020_base_board-rescue.lib)(options "")(descr "")(disabled))
 )

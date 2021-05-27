@@ -122,7 +122,7 @@ Wire Wire Line
 	1025 4125 1325 4125
 Wire Wire Line
 	1325 4125 1575 4125
-Text HLabel 4075 4225 2    50   Input ~ 0
+Text HLabel 3025 4225 2    50   Input ~ 0
 ISCPDAT
 Text HLabel 1025 4125 0    50   Input ~ 0
 MCLR
@@ -157,107 +157,89 @@ $EndComp
 $Comp
 L Device:Crystal Y1
 U 1 1 5FF7051F
-P 2400 6550
-F 0 "Y1" V 2354 6681 50  0000 L CNN
-F 1 "12mHz" V 2445 6681 50  0000 L CNN
-F 2 "" H 2400 6550 50  0001 C CNN
-F 3 "~" H 2400 6550 50  0001 C CNN
-	1    2400 6550
+P 2275 6325
+F 0 "Y1" V 2229 6456 50  0000 L CNN
+F 1 "12MHz" V 2320 6456 50  0000 L CNN
+F 2 "" H 2275 6325 50  0001 C CNN
+F 3 "~" H 2275 6325 50  0001 C CNN
+	1    2275 6325
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C10
 U 1 1 5FF71B41
-P 2050 6700
-F 0 "C10" V 2300 6700 50  0000 C CNN
-F 1 "26pF" V 2200 6700 50  0000 C CNN
-F 2 "" H 2050 6700 50  0001 C CNN
-F 3 "~" H 2050 6700 50  0001 C CNN
-	1    2050 6700
+P 1925 6475
+F 0 "C10" V 2175 6475 50  0000 C CNN
+F 1 "26pF" V 2075 6475 50  0000 C CNN
+F 2 "" H 1925 6475 50  0001 C CNN
+F 3 "~" H 1925 6475 50  0001 C CNN
+	1    1925 6475
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C9
 U 1 1 5FF72AD5
-P 2050 6400
-F 0 "C9" V 1821 6400 50  0000 C CNN
-F 1 "26pF" V 1912 6400 50  0000 C CNN
-F 2 "" H 2050 6400 50  0001 C CNN
-F 3 "~" H 2050 6400 50  0001 C CNN
-	1    2050 6400
+P 1925 6175
+F 0 "C9" V 1696 6175 50  0000 C CNN
+F 1 "26pF" V 1787 6175 50  0000 C CNN
+F 2 "" H 1925 6175 50  0001 C CNN
+F 3 "~" H 1925 6175 50  0001 C CNN
+	1    1925 6175
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR040
 U 1 1 5FF7588A
-P 1750 6550
-F 0 "#PWR040" H 1750 6300 50  0001 C CNN
-F 1 "GND" H 1755 6377 50  0000 C CNN
-F 2 "" H 1750 6550 50  0001 C CNN
-F 3 "" H 1750 6550 50  0001 C CNN
-	1    1750 6550
+P 1625 6325
+F 0 "#PWR040" H 1625 6075 50  0001 C CNN
+F 1 "GND" H 1630 6152 50  0000 C CNN
+F 2 "" H 1625 6325 50  0001 C CNN
+F 3 "" H 1625 6325 50  0001 C CNN
+	1    1625 6325
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 6400 2400 6400
+	2025 6175 2275 6175
 Wire Wire Line
-	2150 6700 2400 6700
+	2025 6475 2275 6475
 Wire Wire Line
-	1950 6550 1750 6550
+	1825 6325 1625 6325
 Text Label 1575 4925 2    50   ~ 0
 OSC2
-Text Label 2800 6400 0    50   ~ 0
+Text Label 2675 6175 0    50   ~ 0
 OSC1
-Text Label 2800 6700 0    50   ~ 0
+Text Label 2675 6475 0    50   ~ 0
 OSC2
 Wire Wire Line
-	2400 6700 2800 6700
-Connection ~ 2400 6700
+	2275 6475 2675 6475
+Connection ~ 2275 6475
 Wire Wire Line
-	2400 6400 2800 6400
-Connection ~ 2400 6400
+	2275 6175 2675 6175
+Connection ~ 2275 6175
 Wire Wire Line
 	3025 4125 3325 4125
 Wire Wire Line
 	3325 4125 3325 3925
 Connection ~ 3325 3925
-Text HLabel 4075 4325 2    50   Input ~ 0
+Text HLabel 3025 4325 2    50   Input ~ 0
 ICSPCLK
 Wire Wire Line
-	1950 6400 1950 6550
-Connection ~ 1950 6550
+	1825 6175 1825 6325
+Connection ~ 1825 6325
 Wire Wire Line
-	1950 6550 1950 6700
+	1825 6325 1825 6475
 Text Label 1575 5025 2    50   ~ 0
 PIC_TX
 Text Label 1575 5125 2    50   ~ 0
 PIC_RX
-Text Label 1575 5225 2    50   ~ 0
+Text Label 1575 4725 2    50   ~ 0
 CS_1
-Text Label 1575 5325 2    50   ~ 0
+Text Label 1575 5425 2    50   ~ 0
 MOSI
-Text Label 4125 4075 0    50   ~ 0
+Text Label 1575 5225 2    50   ~ 0
 MISO
-Text Label 4125 3975 0    50   ~ 0
+Text Label 1575 5325 2    50   ~ 0
 SCK
-Wire Wire Line
-	3025 4325 3975 4325
-Wire Wire Line
-	3975 4325 3975 4075
-Connection ~ 3975 4325
-Wire Wire Line
-	3975 4325 4075 4325
-Wire Wire Line
-	3025 4225 3825 4225
-Wire Wire Line
-	3825 4225 3825 3975
-Connection ~ 3825 4225
-Wire Wire Line
-	3825 4225 4075 4225
-Wire Wire Line
-	3825 3975 4125 3975
-Wire Wire Line
-	3975 4075 4125 4075
 Text Label 3025 5025 0    50   ~ 0
 CLKOUT
 $Comp
@@ -280,32 +262,15 @@ Wire Wire Line
 Wire Wire Line
 	3225 5325 3225 5425
 Connection ~ 3225 5425
-Text Label 8450 5800 0    50   ~ 0
+Text Label 6350 5200 0    50   ~ 0
 CAN_INT
 Text Label 3025 5125 0    50   ~ 0
 CAN_INT
-Wire Wire Line
-	8450 5800 8300 5800
-Wire Wire Line
-	8300 5300 8300 5800
-Wire Wire Line
-	8300 5000 8300 4800
-$Comp
-L Device:R_US R17
-U 1 1 60B29379
-P 8300 5150
-F 0 "R17" H 8368 5196 50  0000 L CNN
-F 1 "10k" H 8368 5105 50  0000 L CNN
-F 2 "" V 8340 5140 50  0001 C CNN
-F 3 "~" H 8300 5150 50  0001 C CNN
-	1    8300 5150
-	1    0    0    -1  
-$EndComp
 Text HLabel 10425 2000 2    50   Input ~ 0
 CANH_PAYLOAD
 Text HLabel 10425 2200 2    50   Input ~ 0
 CANL_PAYLOAD
-Text HLabel 1575 5425 0    50   Input ~ 0
+Text HLabel 1575 4425 0    50   Input ~ 0
 PWR_ON
 $Comp
 L Device:C_Small C15
@@ -357,16 +322,13 @@ Wire Wire Line
 	10475 6275 10650 6275
 Text Notes 10125 6000 2    50   ~ 0
 To logger board\n
-Connection ~ 8300 5800
 Text Label 5250 4700 2    50   ~ 0
 MCP_RX
 Text Label 5250 4600 2    50   ~ 0
 MCP_TX
-NoConn ~ 5250 4800
 NoConn ~ 5250 4900
 NoConn ~ 5250 5000
 NoConn ~ 5250 5100
-NoConn ~ 5250 5200
 $Comp
 L power:GND #PWR046
 U 1 1 60A86D6E
@@ -384,13 +346,13 @@ Wire Wire Line
 	5100 5400 5100 5500
 NoConn ~ 6350 5400
 NoConn ~ 6350 5300
-Text Label 5250 5300 2    50   ~ 0
+Text Label 5250 4800 2    50   ~ 0
 CLKOUT
 Text Label 7825 5100 0    50   ~ 0
 SCK
 Text Label 7825 4400 0    50   ~ 0
 CS_1
-Text Label 7825 4575 0    50   ~ 0
+Text Label 7825 4900 0    50   ~ 0
 MISO
 Text Label 7825 5000 0    50   ~ 0
 MOSI
@@ -436,13 +398,9 @@ Text Label 6925 3450 0    50   ~ 0
 5V_SLEEP
 Wire Wire Line
 	3325 3575 3325 3925
-Text Label 8300 4800 0    50   ~ 0
-5V_SLEEP
 Text Label 8375 3400 2    50   ~ 0
 5V_SLEEP
 Text Label 8375 1550 2    50   ~ 0
-5V_SLEEP
-Text Label 2000 1800 0    50   ~ 0
 5V_SLEEP
 Connection ~ 8775 1700
 Wire Wire Line
@@ -537,7 +495,7 @@ P 5800 4800
 F 0 "U5" H 5800 5265 50  0000 C CNN
 F 1 "MCP2515-I/P" H 5800 5174 50  0000 C CNN
 F 2 "" H 5750 4800 50  0001 C CNN
-F 3 "" H 5750 4800 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP2515-Family-Data-Sheet-DS20001801K.pdf" H 5750 4800 50  0001 C CNN
 	1    5800 4800
 	1    0    0    -1  
 $EndComp
@@ -550,15 +508,9 @@ Wire Wire Line
 Wire Wire Line
 	6425 4700 6350 4700
 Wire Wire Line
-	6350 5200 6525 5200
-Wire Wire Line
-	6525 5200 6525 5800
-Wire Wire Line
 	6700 4800 6700 4400
 Wire Wire Line
 	6350 4800 6700 4800
-Wire Wire Line
-	6525 5800 8300 5800
 $Comp
 L Device:R_Small_US R24
 U 1 1 60ADF464
@@ -585,23 +537,12 @@ Wire Wire Line
 	6350 5000 7825 5000
 Wire Wire Line
 	6350 5100 7825 5100
-Wire Wire Line
-	6825 4900 6350 4900
-Wire Wire Line
-	6825 4575 6825 4900
-Wire Wire Line
-	6825 4575 7825 4575
-Text GLabel 1575 4525 0    50   Input ~ 0
+Text GLabel 1575 4225 0    50   Input ~ 0
 BATT_CURR_AMP
-Text GLabel 1575 4625 0    50   Input ~ 0
+Text GLabel 1575 4325 0    50   Input ~ 0
 3V3_CURR_AMP
-Text Label 3025 5225 0    50   ~ 0
+Text Label 1575 4625 2    50   ~ 0
 CS_2
-NoConn ~ 1575 4225
-NoConn ~ 1575 4325
-NoConn ~ 1575 4425
-NoConn ~ 1575 4725
-NoConn ~ 1575 4825
 NoConn ~ 3025 4425
 NoConn ~ 3025 4725
 NoConn ~ 3025 4825
@@ -626,7 +567,7 @@ P 3475 4825
 AR Path="/60ADFB5C" Ref="R?"  Part="1" 
 AR Path="/6016C5CD/60ADFB5C" Ref="R4"  Part="1" 
 F 0 "R4" H 3543 4871 50  0000 L CNN
-F 1 "10k" H 3543 4780 50  0000 L CNN
+F 1 "330" H 3543 4780 50  0000 L CNN
 F 2 "" H 3475 4825 50  0001 C CNN
 F 3 "~" H 3475 4825 50  0001 C CNN
 	1    3475 4825
@@ -675,7 +616,7 @@ P 4475 4850
 AR Path="/60AEEF52" Ref="R?"  Part="1" 
 AR Path="/6016C5CD/60AEEF52" Ref="R5"  Part="1" 
 F 0 "R5" H 4543 4896 50  0000 L CNN
-F 1 "10k" H 4543 4805 50  0000 L CNN
+F 1 "330" H 4543 4805 50  0000 L CNN
 F 2 "" H 4475 4850 50  0001 C CNN
 F 3 "~" H 4475 4850 50  0001 C CNN
 	1    4475 4850
@@ -702,4 +643,81 @@ Wire Wire Line
 	3025 4525 4475 4525
 Wire Wire Line
 	4475 4525 4475 4750
+Text Label 1575 4825 2    50   ~ 0
+OSC1
+$Comp
+L Device:Crystal Y2
+U 1 1 60B1FA37
+P 5825 6325
+F 0 "Y2" V 5779 6456 50  0000 L CNN
+F 1 "8 MHz" V 5870 6456 50  0000 L CNN
+F 2 "" H 5825 6325 50  0001 C CNN
+F 3 "~" H 5825 6325 50  0001 C CNN
+	1    5825 6325
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 60B1FA3D
+P 5475 6475
+F 0 "C2" V 5725 6475 50  0000 C CNN
+F 1 "22p" V 5625 6475 50  0000 C CNN
+F 2 "" H 5475 6475 50  0001 C CNN
+F 3 "~" H 5475 6475 50  0001 C CNN
+	1    5475 6475
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 60B1FA43
+P 5475 6175
+F 0 "C1" V 5246 6175 50  0000 C CNN
+F 1 "22p" V 5337 6175 50  0000 C CNN
+F 2 "" H 5475 6175 50  0001 C CNN
+F 3 "~" H 5475 6175 50  0001 C CNN
+	1    5475 6175
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 60B1FA49
+P 5175 6325
+F 0 "#PWR021" H 5175 6075 50  0001 C CNN
+F 1 "GND" H 5180 6152 50  0000 C CNN
+F 2 "" H 5175 6325 50  0001 C CNN
+F 3 "" H 5175 6325 50  0001 C CNN
+	1    5175 6325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5575 6175 5825 6175
+Wire Wire Line
+	5575 6475 5825 6475
+Wire Wire Line
+	5375 6325 5175 6325
+Text Label 6225 6175 0    50   ~ 0
+OSC3
+Text Label 6225 6475 0    50   ~ 0
+OSC4
+Wire Wire Line
+	5825 6475 6225 6475
+Connection ~ 5825 6475
+Wire Wire Line
+	5825 6175 6225 6175
+Connection ~ 5825 6175
+Wire Wire Line
+	5375 6175 5375 6325
+Connection ~ 5375 6325
+Wire Wire Line
+	5375 6325 5375 6475
+Text Label 5250 5200 2    50   ~ 0
+OSC3
+Text Label 5250 5300 2    50   ~ 0
+OSC4
+NoConn ~ 1575 4525
+NoConn ~ 3025 5225
+Text Label 2000 1800 0    50   ~ 0
+5V_SLEEP
+Wire Wire Line
+	6350 4900 7825 4900
 $EndSCHEMATC
