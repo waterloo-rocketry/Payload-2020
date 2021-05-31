@@ -435,17 +435,6 @@ F 3 "~" H 1675 3775 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L payload2020_base_board-rescue:PIC18F26K83-canhw U8
-U 1 1 60AD7CB1
-P 3175 4650
-F 0 "U8" H 3150 5565 50  0000 C CNN
-F 1 "PIC18F26K83-I/SP" H 3150 5474 50  0000 C CNN
-F 2 "" H 3625 4650 50  0001 C CNN
-F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18(L)F2526K83-Data-Sheet-DS40001943C.pdf" H 3625 4650 50  0001 C CNN
-	1    3175 4650
-	1    0    0    -1  
-$EndComp
-$Comp
 L payload2020_custom:MCP2515-canhw U5
 U 1 1 60ABFA75
 P 8100 4525
@@ -777,8 +766,6 @@ F 3 "~" H 2125 4000 50  0001 C CNN
 	1    2125 4000
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2225 4000 2425 4000
 $Comp
 L Device:C C3
 U 1 1 60BB6750
@@ -803,4 +790,17 @@ F 3 "" H 1675 4600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1675 4000 1675 4300
+$Comp
+L payload2020_custom:PIC18F26K83-canhw U8
+U 1 1 60B48A2A
+P 3175 4650
+F 0 "U8" H 3150 5565 50  0000 C CNN
+F 1 "PIC18F26K83-I/SP" H 3150 5474 50  0000 C CNN
+F 2 "" H 3625 4650 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18(L)F2526K83-Data-Sheet-DS40001943C.pdf" H 3625 4650 50  0001 C CNN
+	1    3175 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2225 4000 2425 4000
 $EndSCHEMATC
