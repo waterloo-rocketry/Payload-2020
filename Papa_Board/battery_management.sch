@@ -729,10 +729,10 @@ Text GLabel 3550 2325 2    50   Input ~ 0
 BATT_CURR_AMP
 Text HLabel 1750 1175 0    50   Input ~ 0
 VBATT_OUT
-Text Label 7300 3700 0    50   ~ 0
+Text Label 7300 3900 0    50   ~ 0
 3V3_OUT
 Wire Wire Line
-	7300 3900 7300 3700
+	7300 3900 7300 3825
 Wire Wire Line
 	6725 3900 7025 3900
 Connection ~ 7025 3900
@@ -920,4 +920,15 @@ Wire Wire Line
 	1950 3650 2750 3650
 Wire Wire Line
 	3125 4000 3125 4275
+$Comp
+L power:+3.3V #PWR010
+U 1 1 60BC98D5
+P 7300 3825
+F 0 "#PWR010" H 7300 3675 50  0001 C CNN
+F 1 "+3.3V" H 7315 3998 50  0000 C CNN
+F 2 "" H 7300 3825 50  0001 C CNN
+F 3 "" H 7300 3825 50  0001 C CNN
+	1    7300 3825
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
