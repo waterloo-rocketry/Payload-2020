@@ -74,7 +74,7 @@ MCP_TX
 Text Label 9500 1850 2    50   ~ 0
 MCP_RX
 Text HLabel 1750 1800 0    50   Input ~ 0
-SLEEP_5V
+5V_ALWAYS_ON
 Wire Wire Line
 	1750 1800 2000 1800
 Wire Wire Line
@@ -349,16 +349,8 @@ Text Label 9800 4625 0    50   ~ 0
 MISO
 Text Label 9800 4725 0    50   ~ 0
 MOSI
-Text Label 1675 3575 0    50   ~ 0
-5V_SLEEP
-Text Label 4175 3450 0    50   ~ 0
-5V_SLEEP
 Wire Wire Line
 	4175 3450 4175 3800
-Text Label 8450 1400 2    50   ~ 0
-5V_SLEEP
-Text Label 5000 1250 2    50   ~ 0
-5V_SLEEP
 Connection ~ 5400 1400
 Wire Wire Line
 	5400 1400 5000 1400
@@ -472,15 +464,12 @@ Wire Wire Line
 	9500 4025 9500 4125
 Wire Wire Line
 	9500 4125 9775 4125
-Text Label 9500 3775 0    50   ~ 0
-5V_SLEEP
 Text GLabel 2425 4100 0    50   Input ~ 0
 BATT_CURR_AMP
 Text GLabel 2425 4200 0    50   Input ~ 0
 3V3_CURR_AMP
 Text Label 2425 4500 2    50   ~ 0
 CS_2
-NoConn ~ 3875 4300
 NoConn ~ 3875 4700
 NoConn ~ 3875 4800
 $Comp
@@ -524,7 +513,7 @@ F 3 "" H 5050 5350 50  0001 C CNN
 	1    5050 5350
 	1    0    0    -1  
 $EndComp
-Text Notes 4650 4400 0    50   ~ 0
+Text Notes 5950 5100 0    50   ~ 0
 Debugging LEDs\nVs = 5V\n
 Wire Wire Line
 	5050 4500 5050 4600
@@ -644,10 +633,9 @@ Text Label 7550 4925 2    50   ~ 0
 OSC3
 Text Label 7550 5025 2    50   ~ 0
 OSC4
-NoConn ~ 2425 4400
 NoConn ~ 3875 5100
 Text Label 2000 1800 0    50   ~ 0
-5V_SLEEP
+5V_ALWAYS_ON
 Wire Wire Line
 	5875 4400 5875 5200
 Wire Wire Line
@@ -677,8 +665,6 @@ F 3 "~" H 9175 3475 50  0001 C CNN
 	1    9175 3475
 	1    0    0    -1  
 $EndComp
-Text Label 8925 3175 0    50   ~ 0
-5V_SLEEP
 Wire Wire Line
 	8725 3675 8925 3675
 Wire Wire Line
@@ -803,4 +789,21 @@ F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18(L)F2526K83-Data-Shee
 $EndComp
 Wire Wire Line
 	2225 4000 2425 4000
+Text GLabel 3875 4300 2    50   Input ~ 0
+MAMA_PWR_EN
+NoConn ~ 2425 4400
+Text Notes 4500 4325 0    50   ~ 0
+Mama board power is on when MAMA_PWR_EN is low
+Text Label 1675 3575 0    50   ~ 0
+5V_ALWAYS_ON
+Text Label 4175 3450 0    50   ~ 0
+5V_ALWAYS_ON
+Text Label 5000 1250 2    50   ~ 0
+5V_ALWAYS_ON
+Text Label 8450 1400 2    50   ~ 0
+5V_ALWAYS_ON
+Text Label 8925 3175 0    50   ~ 0
+5V_ALWAYS_ON
+Text Label 9500 3775 0    50   ~ 0
+5V_ALWAYS_ON
 $EndSCHEMATC
