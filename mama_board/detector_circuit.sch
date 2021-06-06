@@ -1600,4 +1600,5 @@ Wire Wire Line
 	7750 4100 7750 4400
 Connection ~ 7750 4100
 Connection ~ 9650 2050
+Connection ~ 3500 2950
 $EndSCHEMATC
