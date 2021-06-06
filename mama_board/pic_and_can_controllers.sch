@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -204,8 +204,6 @@ Text Label 2775 4700 2    50   ~ 0
 MISO
 Text Label 2775 4800 2    50   ~ 0
 SCK
-Text Label 4225 4500 0    50   ~ 0
-CLKOUT
 $Comp
 L power:GND #PWR043
 U 1 1 60A8AF8F
@@ -230,8 +228,6 @@ Wire Wire Line
 Wire Wire Line
 	4425 4800 4425 4900
 Connection ~ 4425 4900
-Text Label 4225 4600 0    50   ~ 0
-CAN_INT
 $Comp
 L Device:C_Small C13
 U 1 1 60A938E6
@@ -253,11 +249,11 @@ MOSI
 Text HLabel 10650 5900 2    50   Input ~ 0
 MISO
 Text HLabel 10650 6100 2    50   Input ~ 0
-CS_2
+CS
 Text HLabel 10650 6275 2    50   Input ~ 0
 SCK
 Text Label 10475 6100 2    50   ~ 0
-CS_2
+CS
 Text Label 10475 5900 2    50   ~ 0
 MISO
 Text Label 10475 5700 2    50   ~ 0
@@ -634,8 +630,6 @@ F 3 "" H 8400 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 4225 3900
-NoConn ~ 4225 4000
-NoConn ~ 4225 4100
 NoConn ~ 2775 3900
 $Comp
 L Connector:Conn_01x05_Female J1
@@ -711,7 +705,6 @@ DET_ADC
 Text HLabel 2775 3800 0    50   Input ~ 0
 DET_INTERRUPT
 NoConn ~ 2775 4100
-NoConn ~ 2775 4200
 Text Label 1600 3600 2    50   ~ 0
 MCLR
 $Comp
@@ -766,4 +759,8 @@ Wire Wire Line
 	1700 2200 2050 2200
 Wire Wire Line
 	1700 2400 2400 2400
+Text Label 2775 4200 2    50   ~ 0
+CS
+NoConn ~ 4225 4600
+NoConn ~ 4225 4500
 $EndSCHEMATC
