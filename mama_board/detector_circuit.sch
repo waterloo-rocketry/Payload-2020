@@ -53,7 +53,7 @@ Wire Wire Line
 Wire Wire Line
 	8100 4100 8100 3950
 Text Label 7300 5500 2    50   ~ 0
-ADC_OUT
+DET_ADC
 Text Label 7300 5650 2    50   ~ 0
 INTERUPT_OUT
 Wire Wire Line
@@ -855,7 +855,7 @@ $EndComp
 Text Label 1775 5750 2    50   ~ 0
 ADC_OUT
 Text Label 10200 2800 0    50   ~ 0
-ADC_OUT
+DET_ADC
 Text Label 2875 5750 0    50   ~ 0
 INTERUPT_OUT
 Wire Wire Line
@@ -895,11 +895,6 @@ Wire Wire Line
 Connection ~ 3500 3550
 Wire Wire Line
 	4500 3550 4750 3550
-Wire Wire Line
-	6050 2950 6650 2950
-Connection ~ 6050 2950
-Wire Wire Line
-	5950 2950 6050 2950
 Wire Wire Line
 	5950 2950 5750 2950
 Connection ~ 5950 2950
@@ -944,18 +939,18 @@ $EndComp
 $Comp
 L Connector:TestPoint TP4
 U 1 1 609F56D6
-P 6050 2950
+P 5950 2350
 AR Path="/609B2504/609F56D6" Ref="TP4"  Part="1" 
 AR Path="/60A2E32E/609F56D6" Ref="TP10"  Part="1" 
 AR Path="/60A2EDF1/609F56D6" Ref="TP16"  Part="1" 
 AR Path="/60A2F85E/609F56D6" Ref="TP?"  Part="1" 
 AR Path="/609F56D6" Ref="TP16"  Part="1" 
-F 0 "TP16" H 6108 3068 50  0000 L CNN
-F 1 "TestPoint" H 6108 2977 50  0000 L CNN
-F 2 "" H 6250 2950 50  0001 C CNN
-F 3 "~" H 6250 2950 50  0001 C CNN
-	1    6050 2950
-	1    0    0    -1  
+F 0 "TP16" H 6008 2468 50  0000 L CNN
+F 1 "TestPoint" H 6008 2377 50  0000 L CNN
+F 2 "" H 6150 2350 50  0001 C CNN
+F 3 "~" H 6150 2350 50  0001 C CNN
+	1    5950 2350
+	0    1    1    0   
 $EndComp
 $Comp
 L Connector:TestPoint TP3
@@ -1311,7 +1306,7 @@ $EndComp
 Wire Wire Line
 	8100 3600 8100 3650
 Wire Wire Line
-	5950 1900 5950 2950
+	5950 1900 5950 2350
 Connection ~ 5950 1900
 Wire Wire Line
 	5650 1900 5950 1900
@@ -1601,4 +1596,31 @@ Wire Wire Line
 Connection ~ 7750 4100
 Connection ~ 9650 2050
 Connection ~ 3500 2950
+Text Notes 5150 600  0    50   ~ 0
+Amplifier
+$Comp
+L Device:Jumper JP?
+U 1 1 60BE0532
+P 5950 3250
+AR Path="/609B2504/60BE0532" Ref="JP?"  Part="1" 
+AR Path="/60A2E32E/60BE0532" Ref="JP?"  Part="1" 
+AR Path="/60A2EDF1/60BE0532" Ref="JP?"  Part="1" 
+AR Path="/60A2F85E/60BE0532" Ref="JP?"  Part="1" 
+AR Path="/60BE0532" Ref="JP?"  Part="1" 
+F 0 "JP?" V 5904 3377 50  0000 L CNN
+F 1 "Jumper" V 5800 3350 50  0000 L CNN
+F 2 "" H 5950 3250 50  0001 C CNN
+F 3 "~" H 5950 3250 50  0001 C CNN
+	1    5950 3250
+	0    1    1    0   
+$EndComp
+Connection ~ 5950 2350
+Wire Wire Line
+	5950 2350 5950 2950
+Wire Wire Line
+	5950 3550 6400 3550
+Wire Wire Line
+	6400 3550 6400 2950
+Wire Wire Line
+	6400 2950 6650 2950
 $EndSCHEMATC
