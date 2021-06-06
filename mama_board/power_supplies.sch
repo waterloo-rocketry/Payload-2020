@@ -99,18 +99,18 @@ F 3 "~" H 8000 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L detector_circuit-rescue:+4.7V-payload2020_custom #U04
+L payload2020_custom2:+4.7V #U04
 U 1 1 60B9FE04
-P 9700 2575
+P 9700 2550
 AR Path="/60B9C4D3/60B9FE04" Ref="#U04"  Part="1" 
 AR Path="/60BBD477/60B9FE04" Ref="U?"  Part="1" 
 AR Path="/60BC18C5/60B9FE04" Ref="U?"  Part="1" 
 AR Path="/60B9FE04" Ref="U04"  Part="1" 
-F 0 "#U04" H 9700 2700 50  0001 C CNN
-F 1 "+4.7V" H 9600 2675 50  0000 L CNN
-F 2 "" H 9700 2575 50  0001 C CNN
-F 3 "" H 9700 2575 50  0001 C CNN
-	1    9700 2575
+F 0 "#U04" H 9700 2675 50  0001 C CNN
+F 1 "+4.7V" H 9600 2650 50  0000 L CNN
+F 2 "" H 9700 2550 50  0001 C CNN
+F 3 "" H 9700 2550 50  0001 C CNN
+	1    9700 2550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -204,7 +204,7 @@ Wire Wire Line
 Wire Wire Line
 	9700 3300 9700 3250
 $Comp
-L detector_circuit-rescue:LT3014IS5#TRMPBF-payload2020_custom U3
+L payload2020_custom:LT3014IS5#TRMPBF U3
 U 1 1 60BC470C
 P 8800 4500
 AR Path="/60B9C4D3/60BC470C" Ref="U3"  Part="1" 
@@ -221,7 +221,7 @@ F 3 "" H 8800 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L detector_circuit-rescue:+37V-payload2020_custom #U01
+L payload2020_custom:+37V #U01
 U 1 1 60BC470D
 P 7750 4200
 AR Path="/60B9C4D3/60BC470D" Ref="#U01"  Part="1" 
@@ -444,7 +444,7 @@ Wire Notes Line
 Wire Notes Line
 	7300 1550 7300 6150
 $Comp
-L detector_circuit-rescue:TPS61175QPWPRQ1-payload2020_custom U6
+L payload2020_custom:TPS61175QPWPRQ1 U6
 U 1 1 60C17788
 P 2700 6000
 AR Path="/609B2504/60B9C4D3/60C17788" Ref="U6"  Part="1" 
@@ -467,7 +467,7 @@ AR Path="/60A2E32E/60B9C4D3/60C198CE" Ref="C7"  Part="1"
 AR Path="/60A2EDF1/60B9C4D3/60C198CE" Ref="C7"  Part="1" 
 AR Path="/60B9C4D3/60C198CE" Ref="C7"  Part="1" 
 F 0 "C7" H 1315 6046 50  0000 L CNN
-F 1 "C" H 1315 5955 50  0000 L CNN
+F 1 "10u" H 1315 5955 50  0000 L CNN
 F 2 "" H 1238 5850 50  0001 C CNN
 F 3 "~" H 1200 6000 50  0001 C CNN
 	1    1200 6000
@@ -557,7 +557,7 @@ AR Path="/60A2E32E/60B9C4D3/60C1D34A" Ref="R15"  Part="1"
 AR Path="/60A2EDF1/60B9C4D3/60C1D34A" Ref="R15"  Part="1" 
 AR Path="/60B9C4D3/60C1D34A" Ref="R15"  Part="1" 
 F 0 "R15" H 4420 6446 50  0000 L CNN
-F 1 "470" H 4420 6355 50  0000 L CNN
+F 1 "16.2k" H 4420 6355 50  0000 L CNN
 F 2 "" V 4280 6400 50  0001 C CNN
 F 3 "~" H 4350 6400 50  0001 C CNN
 	1    4350 6400
@@ -572,7 +572,7 @@ AR Path="/60A2E32E/60B9C4D3/60C1DC3F" Ref="R14"  Part="1"
 AR Path="/60A2EDF1/60B9C4D3/60C1DC3F" Ref="R14"  Part="1" 
 AR Path="/60B9C4D3/60C1DC3F" Ref="R14"  Part="1" 
 F 0 "R14" H 4420 5496 50  0000 L CNN
-F 1 "470" H 4420 5405 50  0000 L CNN
+F 1 "470k" H 4420 5405 50  0000 L CNN
 F 2 "" V 4280 5450 50  0001 C CNN
 F 3 "~" H 4350 5450 50  0001 C CNN
 	1    4350 5450
@@ -617,7 +617,7 @@ AR Path="/60A2E32E/60B9C4D3/60C1FDA2" Ref="R11"  Part="1"
 AR Path="/60A2EDF1/60B9C4D3/60C1FDA2" Ref="R11"  Part="1" 
 AR Path="/60B9C4D3/60C1FDA2" Ref="R11"  Part="1" 
 F 0 "R11" H 1720 6496 50  0000 L CNN
-F 1 "R" H 1720 6405 50  0000 L CNN
+F 1 "86.6k" H 1720 6405 50  0000 L CNN
 F 2 "" V 1580 6450 50  0001 C CNN
 F 3 "~" H 1650 6450 50  0001 C CNN
 	1    1650 6450
@@ -900,9 +900,9 @@ Wire Wire Line
 Connection ~ 4850 5150
 Connection ~ 4850 6750
 $Comp
-L detector_circuit-rescue:+37V-payload2020_custom #U0101
+L payload2020_custom2:+37V #U0101
 U 1 1 60D039ED
-P 5250 5050
+P 5250 5000
 AR Path="/60B9C4D3/60D039ED" Ref="#U0101"  Part="1" 
 AR Path="/60BBD477/60D039ED" Ref="U?"  Part="1" 
 AR Path="/60BC18C5/60D039ED" Ref="U?"  Part="1" 
@@ -910,11 +910,11 @@ AR Path="/609B2504/60B9C4D3/60D039ED" Ref="U?"  Part="1"
 AR Path="/60A2E32E/60B9C4D3/60D039ED" Ref="U?"  Part="1" 
 AR Path="/60A2EDF1/60B9C4D3/60D039ED" Ref="U?"  Part="1" 
 AR Path="/60D039ED" Ref="#U0101"  Part="1" 
-F 0 "#U0101" H 5250 5175 50  0001 C CNN
-F 1 "+37V" H 5150 5200 50  0000 L CNN
-F 2 "" H 5250 5050 50  0001 C CNN
-F 3 "" H 5250 5050 50  0001 C CNN
-	1    5250 5050
+F 0 "#U0101" H 5250 5125 50  0001 C CNN
+F 1 "+37V" H 5150 5150 50  0000 L CNN
+F 2 "" H 5250 5000 50  0001 C CNN
+F 3 "" H 5250 5000 50  0001 C CNN
+	1    5250 5000
 	1    0    0    -1  
 $EndComp
 Connection ~ 5250 5150
@@ -929,7 +929,7 @@ TPS61175 is a boost converter.\nMax Iout rating: 3A\nValues are taken from WEBEN
 Text Notes 1750 4700 0    50   ~ 0
 PDF version:\nhttps://drive.google.com/file/d/1ktwurgh3BjmDxpc3J00zTu8lIix18m34/view?usp=sharing
 $Comp
-L detector_circuit-rescue:TPSM84205EAB-payload2020_custom U1
+L payload2020_custom:TPSM84205EAB U1
 U 1 1 60D0A60D
 P 3900 1300
 F 0 "U1" H 3900 1615 50  0000 C CNN
@@ -1231,7 +1231,7 @@ AR Path="/60A2E32E/60B9C4D3/60C27016" Ref="F1"  Part="1"
 AR Path="/60A2EDF1/60B9C4D3/60C27016" Ref="F1"  Part="1" 
 AR Path="/60B9C4D3/60C27016" Ref="F1"  Part="1" 
 F 0 "F1" H 860 5346 50  0000 L CNN
-F 1 "Fuse" H 860 5255 50  0000 L CNN
+F 1 "400ma" H 860 5255 50  0000 L CNN
 F 2 "" V 730 5300 50  0001 C CNN
 F 3 "~" H 800 5300 50  0001 C CNN
 	1    800  5300
@@ -1248,7 +1248,7 @@ AR Path="/60A2E32E/60B9C4D3/60C27679" Ref="F2"  Part="1"
 AR Path="/60A2EDF1/60B9C4D3/60C27679" Ref="F2"  Part="1" 
 AR Path="/60B9C4D3/60C27679" Ref="F2"  Part="1" 
 F 0 "F2" H 1260 5346 50  0000 L CNN
-F 1 "Fuse" H 1260 5255 50  0000 L CNN
+F 1 "400ma" H 1260 5255 50  0000 L CNN
 F 2 "" V 1130 5300 50  0001 C CNN
 F 3 "~" H 1200 5300 50  0001 C CNN
 	1    1200 5300
