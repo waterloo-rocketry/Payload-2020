@@ -18,6 +18,10 @@ $CMP LT3014IS5#TRMPBF
 F https://www.analog.com/media/en/technical-documentation/data-sheets/3014fd.pdf
 $ENDCMP
 #
+$CMP PIC18F26K83-canhw
+F https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18(L)F2526K83-Data-Sheet-DS40001943C.pdf
+$ENDCMP
+#
 $CMP TL783CKCSE3
 F https://www.ti.com/lit/ds/symlink/tl783.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1620796149408
 $ENDCMP
