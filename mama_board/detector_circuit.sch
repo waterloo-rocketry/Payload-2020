@@ -58,9 +58,8 @@ Text Label 7300 5650 2    50   ~ 0
 INTERUPT_OUT
 Wire Wire Line
 	2575 5750 2875 5750
-Connection ~ 9650 2050
 $Comp
-L detector_circuit-rescue:+4.7V-payload2020_custom #U09
+L payload2020_custom2:+4.7V #U09
 U 1 1 60DCE26C
 P 9650 1975
 F 0 "#U09" H 9650 2150 50  0001 C CNN
@@ -71,7 +70,7 @@ F 3 "" H 9650 1975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L detector_circuit-rescue:+4.7V-payload2020_custom #U015
+L payload2020_custom2:+4.7V #U015
 U 1 1 60DCD94B
 P 9700 3425
 F 0 "#U015" H 9700 3600 50  0001 C CNN
@@ -212,7 +211,6 @@ Wire Wire Line
 	3925 2850 3500 2850
 Wire Wire Line
 	3500 2425 3500 2850
-Connection ~ 3500 2950
 Connection ~ 3500 2425
 $Comp
 L Device:Jumper JP?
@@ -884,8 +882,6 @@ F 3 "~" H 5500 3850 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	10600 550  10600 4450
-Text Notes 4725 750  0    50   ~ 0
-Transimpedance Amplifier:\nGain = 3.3 output peak approx. 2.5V\nLow-pass cutoff = 1Mhz\n
 Connection ~ 2450 2850
 Wire Wire Line
 	1650 2850 1775 2850
@@ -1487,7 +1483,7 @@ Wire Wire Line
 Wire Wire Line
 	900  2350 900  2600
 $Comp
-L detector_circuit-rescue:Broadcom_sipm-payload2020_custom U3
+L payload2020_custom2:Broadcom_sipm U3
 U 1 1 609BB185
 P 1200 2650
 AR Path="/609B2504/609BB185" Ref="U3"  Part="1" 
@@ -1496,7 +1492,7 @@ AR Path="/60A2EDF1/609BB185" Ref="U11"  Part="1"
 AR Path="/60A2F85E/609BB185" Ref="U?"  Part="1" 
 AR Path="/609BB185" Ref="U11"  Part="1" 
 F 0 "U11" H 1225 2925 50  0000 C CNN
-F 1 "Broadcom_sipm" H 1225 2834 50  0000 C CNN
+F 1 "+4.7V" H 1225 2834 50  0000 C CNN
 F 2 "" H 1200 2650 50  0001 C CNN
 F 3 "" H 1200 2650 50  0001 C CNN
 	1    1200 2650
@@ -1539,7 +1535,7 @@ F 3 "" H 8100 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L detector_circuit-rescue:LTC6269-payload2020_custom U5
+L payload2020_custom2:LTC6269 U5
 U 1 1 609B934B
 P 7350 1700
 AR Path="/609B2504/609B934B" Ref="U5"  Part="1" 
@@ -1555,7 +1551,7 @@ F 3 "" H 7550 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L detector_circuit-rescue:LTC6269-payload2020_custom U4
+L payload2020_custom2:LTC6269 U4
 U 1 1 609B828F
 P 3500 1850
 AR Path="/609B2504/609B828F" Ref="U4"  Part="1" 
@@ -1600,4 +1596,7 @@ Wire Notes Line
 	7400 3750 7400 4250
 Wire Notes Line
 	7400 3750 7700 3750
+Wire Wire Line
+	7750 4100 7750 4400
+Connection ~ 7750 4100
 $EndSCHEMATC
