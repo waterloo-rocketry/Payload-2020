@@ -57,20 +57,20 @@ $EndComp
 $Comp
 L Device:Jumper JP2
 U 1 1 6098E494
-P 7500 2350
-F 0 "JP2" H 7250 2450 50  0000 L CNN
-F 1 "Jumper" H 7600 2450 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7500 2350 50  0001 C CNN
-F 3 "~" H 7500 2350 50  0001 C CNN
-	1    7500 2350
+P 7550 2150
+F 0 "JP2" H 7300 2250 50  0000 L CNN
+F 1 "Jumper" H 7650 2250 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7550 2150 50  0001 C CNN
+F 3 "~" H 7550 2150 50  0001 C CNN
+	1    7550 2150
 	1    0    0    -1  
 $EndComp
 Text Notes 6300 675  0    50   ~ 0
 System Sleep Control
-Text Label 7950 2350 0    50   ~ 0
+Text Label 8000 2150 0    50   ~ 0
 5V_ALWAYS_ON
 Wire Wire Line
-	7800 2350 7950 2350
+	7850 2150 8000 2150
 Text Notes 1800 1300 2    50   ~ 0
 12V - 16V\n\n
 Text Label 4750 1250 0    50   ~ 0
@@ -189,7 +189,7 @@ $EndComp
 Text Notes 10300 3750 0    50   ~ 0
 Mama_Board_1
 Wire Wire Line
-	6300 2350 7200 2350
+	6350 2150 7250 2150
 $Comp
 L payload2020_custom:+37V #PWR?
 U 1 1 60AA4421
@@ -471,17 +471,17 @@ F 3 "" H 9800 2100 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	6150 575  6150 2600
-Text Notes 6825 2500 0    50   ~ 0
+Text Notes 6875 2300 0    50   ~ 0
 Voltage supply for MCU and CAN controllers\n
 $Comp
 L power:+5V #PWR065
 U 1 1 60C58399
-P 6300 2350
-F 0 "#PWR065" H 6300 2200 50  0001 C CNN
-F 1 "+5V" H 6315 2523 50  0000 C CNN
-F 2 "" H 6300 2350 50  0001 C CNN
-F 3 "" H 6300 2350 50  0001 C CNN
-	1    6300 2350
+P 6350 2150
+F 0 "#PWR065" H 6350 2000 50  0001 C CNN
+F 1 "+5V" H 6365 2323 50  0000 C CNN
+F 2 "" H 6350 2150 50  0001 C CNN
+F 3 "" H 6350 2150 50  0001 C CNN
+	1    6350 2150
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -516,17 +516,6 @@ Text Label 9250 3550 0    50   ~ 0
 5V_OUT
 Text Label 9350 4750 0    50   ~ 0
 5V_OUT
-$Comp
-L power:GND #PWR066
-U 1 1 60CAF05F
-P 7450 1900
-F 0 "#PWR066" H 7450 1650 50  0001 C CNN
-F 1 "GND" H 7455 1727 50  0000 C CNN
-F 2 "" H 7450 1900 50  0001 C CNN
-F 3 "" H 7450 1900 50  0001 C CNN
-	1    7450 1900
-	1    0    0    -1  
-$EndComp
 Text Label 7450 800  2    50   ~ 0
 5V_ALWAYS_ON
 $Comp
@@ -586,26 +575,10 @@ F3 "MISO" I L 5850 5350 50
 F4 "CS" I L 5850 5500 50 
 F5 "SCK" I L 5850 5600 50 
 $EndSheet
-$Comp
-L Device:R_Small_US R25
-U 1 1 60B9A005
-P 7450 1750
-F 0 "R25" H 7518 1796 50  0000 L CNN
-F 1 "2000k" H 7518 1705 50  0000 L CNN
-F 2 "" H 7450 1750 50  0001 C CNN
-F 3 "~" H 7450 1750 50  0001 C CNN
-	1    7450 1750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7450 1900 7450 1850
 Wire Wire Line
 	7450 1550 7450 1600
 Wire Wire Line
 	7450 1600 7850 1600
-Connection ~ 7450 1600
-Wire Wire Line
-	7450 1600 7450 1650
 Wire Wire Line
 	8450 1600 8550 1600
 Wire Wire Line
