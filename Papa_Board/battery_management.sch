@@ -24,12 +24,12 @@ Text Notes 6850 2900 0    50   ~ 0
 $Comp
 L power:GND #PWR036
 U 1 1 60A56D78
-P 6450 4350
-F 0 "#PWR036" H 6450 4100 50  0001 C CNN
-F 1 "GND" H 6450 4200 50  0000 C CNN
-F 2 "" H 6450 4350 50  0001 C CNN
-F 3 "" H 6450 4350 50  0001 C CNN
-	1    6450 4350
+P 6400 4350
+F 0 "#PWR036" H 6400 4100 50  0001 C CNN
+F 1 "GND" H 6400 4200 50  0000 C CNN
+F 2 "" H 6400 4350 50  0001 C CNN
+F 3 "" H 6400 4350 50  0001 C CNN
+	1    6400 4350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -275,7 +275,7 @@ F 3 "~" H 1950 3950 50  0001 C CNN
 	1    1950 3950
 	1    0    0    -1  
 $EndComp
-Text Notes 5950 3600 0    50   ~ 0
+Text Notes 5650 3550 0    50   ~ 0
 AP2114H-3.3TRG1 is a 3.3V LDO\nIout = 600mA
 $Comp
 L power:+BATT #PWR024
@@ -490,17 +490,6 @@ F 3 "" H 5550 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:AP2112K-3.3 U11
-U 1 1 60A56D5C
-P 6450 4000
-F 0 "U11" H 6450 4350 50  0000 C CNN
-F 1 "AP2114H-3.3TRG1" H 6450 4250 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 6450 4325 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 6450 4100 50  0001 C CNN
-	1    6450 4000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C8
 U 1 1 607E4B2D
 P 3950 3950
@@ -629,17 +618,8 @@ Wire Wire Line
 Wire Wire Line
 	5550 3900 5700 3900
 Wire Wire Line
-	6150 4000 6050 4000
-Wire Wire Line
-	6050 4000 6050 3900
-Connection ~ 6050 3900
-Wire Wire Line
-	6050 3900 6150 3900
-Wire Wire Line
 	5700 4000 5700 3900
 Connection ~ 5700 3900
-Wire Wire Line
-	5700 3900 6050 3900
 Wire Wire Line
 	7000 2000 7100 2000
 Wire Wire Line
@@ -924,12 +904,25 @@ $EndComp
 Wire Wire Line
 	5700 4300 5700 4350
 Wire Wire Line
-	5700 4350 6450 4350
+	5700 4350 6400 4350
 Wire Wire Line
 	7000 4350 7000 4250
-Connection ~ 6450 4350
+Connection ~ 6400 4350
 Wire Wire Line
-	6450 4300 6450 4350
+	5700 3900 6025 3900
+$Comp
+L payload2020_custom:AP2114H-3.3TRG1 U9
+U 1 1 60C292B1
+P 6400 3850
+F 0 "U9" H 6387 4090 50  0000 C CNN
+F 1 "AP2114H-3.3TRG1" H 6387 3999 50  0000 C CNN
+F 2 "" H 6400 3850 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2114.pdf" H 6400 3850 50  0001 C CNN
+	1    6400 3850
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	6450 4350 7000 4350
+	6400 4300 6400 4350
+Wire Wire Line
+	6400 4350 7000 4350
 $EndSCHEMATC

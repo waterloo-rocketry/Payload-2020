@@ -1,5 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP AP2114H-3.3TRG1
+F https://www.diodes.com/assets/Datasheets/AP2114.pdf
+$ENDCMP
+#
 $CMP INA180
 D Bidirectional, Low- and High-Side Voltage Output, Current-Sense Amplifier, SOT-23-6
 K current monitor shunt sensor bidirectional
