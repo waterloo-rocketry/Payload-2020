@@ -1530,7 +1530,7 @@ F 3 "" H 8100 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L payload2020_custom2:LTC6269 U5
+L payload2020_custom:LTC6269 U5
 U 1 1 609B934B
 P 7350 1700
 AR Path="/609B2504/609B934B" Ref="U5"  Part="1" 
@@ -1546,7 +1546,7 @@ F 3 "" H 7550 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L payload2020_custom2:LTC6269 U4
+L payload2020_custom:LTC6269 U4
 U 1 1 609B828F
 P 3500 1850
 AR Path="/609B2504/609B828F" Ref="U4"  Part="1" 
@@ -1576,7 +1576,7 @@ AR Path="/60A2F85E/60C7B25B" Ref="D?"  Part="1"
 AR Path="/60C7B25B" Ref="D2"  Part="1" 
 F 0 "D2" H 7500 3884 50  0000 C CNN
 F 1 "CUS08F30H3FCT-ND" H 7500 3975 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-323" H 7500 4100 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 7500 4100 50  0001 C CNN
 F 3 "~" H 7500 4100 50  0001 C CNN
 	1    7500 4100
 	-1   0    0    1   
