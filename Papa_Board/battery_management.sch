@@ -139,11 +139,8 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/PMEG6010CEH_PMEG6010CEJ.pd
 $EndComp
 Wire Wire Line
 	1950 4050 1950 4250
-Connection ~ 1950 3650
 Wire Wire Line
 	1950 3650 1950 3850
-Wire Wire Line
-	1650 3650 1950 3650
 Text Notes 10500 5000 2    50   ~ 0
 1uF capacitors as per datasheet directly (no calculations)\nLDK320ADU120R is a 12V fixed-voltage regulator.\nMax Iout rating: 0.2A\n\n
 Text Notes 8100 5200 0    50   ~ 0
@@ -156,7 +153,7 @@ U 1 1 60A4389F
 P 4850 6500
 F 0 "C26" H 4965 6546 50  0000 L CNN
 F 1 "10u" H 4965 6455 50  0000 L CNN
-F 2 "" H 4888 6350 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4888 6350 50  0001 C CNN
 F 3 "~" H 4850 6500 50  0001 C CNN
 	1    4850 6500
 	1    0    0    -1  
@@ -189,7 +186,7 @@ U 1 1 60A1F874
 P 3200 6850
 F 0 "C23" H 3250 6750 50  0000 L CNN
 F 1 "47n" H 3250 6650 50  0000 L CNN
-F 2 "" H 3238 6700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3238 6700 50  0001 C CNN
 F 3 "~" H 3200 6850 50  0001 C CNN
 	1    3200 6850
 	1    0    0    -1  
@@ -200,7 +197,7 @@ U 1 1 60A1F3F9
 P 3550 6850
 F 0 "C24" H 3650 6900 50  0000 L CNN
 F 1 "1.5n" H 3650 6800 50  0000 L CNN
-F 2 "" H 3588 6700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3588 6700 50  0001 C CNN
 F 3 "~" H 3550 6850 50  0001 C CNN
 	1    3550 6850
 	1    0    0    -1  
@@ -237,7 +234,7 @@ U 1 1 608D5E4B
 P 10550 5750
 F 0 "C28" H 10650 5800 50  0000 L CNN
 F 1 "1u" H 10650 5700 50  0000 L CNN
-F 2 "" H 10588 5600 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10588 5600 50  0001 C CNN
 F 3 "~" H 10550 5750 50  0001 C CNN
 	1    10550 5750
 	1    0    0    -1  
@@ -259,7 +256,7 @@ U 1 1 608D3345
 P 8350 5800
 F 0 "C27" H 8450 5850 50  0000 L CNN
 F 1 "1u" H 8450 5750 50  0000 L CNN
-F 2 "" H 8388 5650 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8388 5650 50  0001 C CNN
 F 3 "~" H 8350 5800 50  0001 C CNN
 	1    8350 5800
 	1    0    0    -1  
@@ -270,7 +267,7 @@ U 1 1 607D9E7F
 P 1950 3950
 F 0 "C7" H 2050 4000 50  0000 L CNN
 F 1 "10uF" H 2050 3900 50  0000 L CNN
-F 2 "" H 1950 3950 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1950 3950 50  0001 C CNN
 F 3 "~" H 1950 3950 50  0001 C CNN
 	1    1950 3950
 	1    0    0    -1  
@@ -436,7 +433,7 @@ U 1 1 60AA3D44
 P 1600 6550
 F 0 "C22" H 1700 6600 50  0000 L CNN
 F 1 "10u" H 1700 6500 50  0000 L CNN
-F 2 "" H 1600 6550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1600 6550 50  0001 C CNN
 F 3 "~" H 1600 6550 50  0001 C CNN
 	1    1600 6550
 	1    0    0    -1  
@@ -447,7 +444,7 @@ U 1 1 60AB614E
 P 4500 6500
 F 0 "C25" H 4615 6546 50  0000 L CNN
 F 1 "10u" H 4615 6455 50  0000 L CNN
-F 2 "" H 4538 6350 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4538 6350 50  0001 C CNN
 F 3 "~" H 4500 6500 50  0001 C CNN
 	1    4500 6500
 	1    0    0    -1  
@@ -495,7 +492,7 @@ U 1 1 607E4B2D
 P 3950 3950
 F 0 "C8" H 4050 4000 50  0000 L CNN
 F 1 "100uF" H 4050 3900 50  0000 L CNN
-F 2 "" H 3950 3950 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3950 3950 50  0001 C CNN
 F 3 "~" H 3950 3950 50  0001 C CNN
 	1    3950 3950
 	1    0    0    -1  
@@ -538,9 +535,11 @@ POWER_EN
 Text Notes 2150 3350 0    50   ~ 0
 TPSM84205EAB is a 5V regulator.\nIout = 1.5A
 $Comp
-L payload2020_custom:LDK320ADU120R U3
+L payload2020_base_board-rescue:LDK320ADU120R-payload2020_custom U3
 U 1 1 608D1C19
 P 9650 5700
+AR Path="/608D1C19" Ref="U3"  Part="1" 
+AR Path="/5E13F8E9/608D1C19" Ref="U3"  Part="1" 
 F 0 "U3" H 9650 6350 50  0000 C CNN
 F 1 "LDK320ADU120R" H 9650 6250 50  0000 C CNN
 F 2 "" H 9650 5700 50  0001 C CNN
@@ -725,8 +724,6 @@ Connection ~ 3150 1750
 Wire Wire Line
 	3150 1750 3300 1750
 Wire Wire Line
-	1950 3650 2800 3650
-Wire Wire Line
 	1950 4250 3150 4250
 Wire Wire Line
 	3150 4250 3150 4000
@@ -737,12 +734,9 @@ Wire Wire Line
 	3150 4250 3150 4350
 Connection ~ 3150 4250
 Wire Wire Line
-	3500 3650 3950 3650
-Wire Wire Line
 	4250 3650 4250 3550
 Wire Wire Line
 	3950 3650 3950 3850
-Connection ~ 3950 3650
 Wire Wire Line
 	3950 3650 4250 3650
 Wire Wire Line
@@ -891,7 +885,7 @@ Connection ~ 4500 7250
 Wire Wire Line
 	4500 7250 4850 7250
 $Comp
-L payload2020_custom:TPSM84205EAB U4
+L payload2020_base_board-rescue:TPSM84205EAB-payload2020_custom U4
 U 1 1 60CD67B7
 P 3150 3700
 F 0 "U4" H 3150 4015 50  0000 C CNN
@@ -925,4 +919,12 @@ Wire Wire Line
 	6400 4300 6400 4350
 Wire Wire Line
 	6400 4350 7000 4350
+Connection ~ 3950 3650
+Wire Wire Line
+	3525 3650 3950 3650
+Wire Wire Line
+	1650 3650 1950 3650
+Connection ~ 1950 3650
+Wire Wire Line
+	1950 3650 2775 3650
 $EndSCHEMATC
