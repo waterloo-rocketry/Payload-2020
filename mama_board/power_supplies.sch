@@ -661,7 +661,7 @@ L Connector:Conn_01x02_Female J5
 U 1 1 60CBE082
 P 1300 2000
 F 0 "J5" H 1192 1675 50  0000 C CNN
-F 1 "Conn_01x02_Female" H 1192 1766 50  0000 C CNN
+F 1 "BATT_3" H 1192 1766 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1300 2000 50  0001 C CNN
 F 3 "~" H 1300 2000 50  0001 C CNN
 	1    1300 2000
@@ -672,7 +672,7 @@ L Connector:Conn_01x02_Female J6
 U 1 1 60CBF78D
 P 1300 2400
 F 0 "J6" H 1192 2075 50  0000 C CNN
-F 1 "Conn_01x02_Female" H 1192 2166 50  0000 C CNN
+F 1 "BATT_4" H 1192 2166 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1300 2400 50  0001 C CNN
 F 3 "~" H 1300 2400 50  0001 C CNN
 	1    1300 2400
@@ -716,7 +716,7 @@ L Connector:Conn_01x02_Female J4
 U 1 1 60CC1326
 P 1300 1600
 F 0 "J4" H 1192 1275 50  0000 C CNN
-F 1 "Conn_01x02_Female" H 1192 1366 50  0000 C CNN
+F 1 "BATT_2" H 1192 1366 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1300 1600 50  0001 C CNN
 F 3 "~" H 1300 1600 50  0001 C CNN
 	1    1300 1600
@@ -727,8 +727,8 @@ L Connector:Conn_01x02_Female J3
 U 1 1 60CC202F
 P 1300 1200
 F 0 "J3" H 1192 875 50  0000 C CNN
-F 1 "Conn_01x02_Female" H 1192 966 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1300 1200 50  0001 C CNN
+F 1 "BATT_1" H 1192 966 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical" H 1300 1200 50  0001 C CNN
 F 3 "~" H 1300 1200 50  0001 C CNN
 	1    1300 1200
 	-1   0    0    1   
@@ -885,7 +885,7 @@ Wire Wire Line
 Connection ~ 4850 5150
 Connection ~ 4850 6750
 $Comp
-L payload2020_custom2:+37V #U0101
+L payload2020_custom:+37V #U0101
 U 1 1 60D039ED
 P 5250 5000
 AR Path="/60B9C4D3/60D039ED" Ref="#U0101"  Part="1" 
@@ -1171,7 +1171,7 @@ L Connector:Conn_01x03_Female J7
 U 1 1 60CCAE2F
 P 1300 3250
 F 0 "J7" H 1500 2950 50  0000 C CNN
-F 1 "TESTING CONNECTOR" H 1500 3050 50  0000 C CNN
+F 1 "TEST_CONN" H 1500 3050 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1300 3250 50  0001 C CNN
 F 3 "~" H 1300 3250 50  0001 C CNN
 	1    1300 3250
