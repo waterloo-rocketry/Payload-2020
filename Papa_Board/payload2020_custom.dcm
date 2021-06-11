@@ -14,6 +14,10 @@ $CMP LDK320ADU120R
 F https://www.st.com/resource/en/datasheet/ldk320.pdf
 $ENDCMP
 #
+$CMP LM22678TJ-5.0
+F https://www.ti.com/lit/ds/symlink/lm22678.pdf?ts=1623378931589&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FLM22678
+$ENDCMP
+#
 $CMP LM5122MH
 F https://www.ti.com/lit/ds/symlink/lm5122.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1620792952877
 $ENDCMP
