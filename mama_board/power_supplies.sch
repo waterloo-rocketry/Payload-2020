@@ -99,7 +99,7 @@ F 3 "~" H 8000 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L payload2020_custom2:+4.7V #U04
+L payload2020_custom:+4.7V #U04
 U 1 1 60B9FE04
 P 9700 2550
 AR Path="/60B9C4D3/60B9FE04" Ref="#U04"  Part="1" 
@@ -1030,17 +1030,6 @@ Wire Wire Line
 Wire Wire Line
 	3900 1900 4650 1900
 $Comp
-L Regulator_Linear:AP2112K-3.3 U4
-U 1 1 60D369A2
-P 3950 2600
-F 0 "U4" H 3950 2942 50  0000 C CNN
-F 1 "AP2114H-3.3TRG1" H 3950 2851 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3950 2925 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 3950 2700 50  0001 C CNN
-	1    3950 2600
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR?
 U 1 1 60D37EB8
 P 3050 2400
@@ -1055,8 +1044,6 @@ F 3 "" H 3050 2400 50  0001 C CNN
 	1    3050 2400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3650 2500 3500 2500
 Wire Wire Line
 	3050 2500 3050 2400
 $Comp
@@ -1104,8 +1091,6 @@ F 3 "~" H 4500 2750 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4250 2500 4500 2500
-Wire Wire Line
 	4500 2500 4500 2600
 Wire Wire Line
 	4500 2500 4850 2500
@@ -1123,7 +1108,6 @@ Wire Wire Line
 	3950 3100 3200 3100
 Wire Wire Line
 	3200 2600 3200 2500
-Connection ~ 3200 2500
 Wire Wire Line
 	3200 2500 3050 2500
 Wire Wire Line
@@ -1132,13 +1116,6 @@ Wire Wire Line
 	9350 2950 9350 2900
 Wire Wire Line
 	9350 2900 9100 2900
-Wire Wire Line
-	3650 2600 3500 2600
-Wire Wire Line
-	3500 2600 3500 2500
-Connection ~ 3500 2500
-Wire Wire Line
-	3500 2500 3200 2500
 Wire Wire Line
 	9250 4650 9250 4700
 Wire Wire Line
@@ -1206,10 +1183,10 @@ F 3 "~" H 1300 3250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:Fuse F?
+L Device:Fuse F1
 U 1 1 60CE5269
 P 2150 3250
-F 0 "F?" V 1953 3250 50  0000 C CNN
+F 0 "F1" V 1953 3250 50  0000 C CNN
 F 1 "400ma" V 2044 3250 50  0000 C CNN
 F 2 "" V 2080 3250 50  0001 C CNN
 F 3 "~" H 2150 3250 50  0001 C CNN
@@ -1217,10 +1194,10 @@ F 3 "~" H 2150 3250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR0123
 U 1 1 60CE6386
 P 2450 3150
-F 0 "#PWR?" H 2450 3000 50  0001 C CNN
+F 0 "#PWR0123" H 2450 3000 50  0001 C CNN
 F 1 "+12V" H 2465 3323 50  0000 C CNN
 F 2 "" H 2450 3150 50  0001 C CNN
 F 3 "" H 2450 3150 50  0001 C CNN
@@ -1234,10 +1211,10 @@ Wire Wire Line
 Wire Wire Line
 	2000 3250 1500 3250
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR0124
 U 1 1 60CF5BAA
 P 1200 5050
-F 0 "#PWR?" H 1200 4900 50  0001 C CNN
+F 0 "#PWR0124" H 1200 4900 50  0001 C CNN
 F 1 "+12V" H 1215 5223 50  0000 C CNN
 F 2 "" H 1200 5050 50  0001 C CNN
 F 3 "" H 1200 5050 50  0001 C CNN
@@ -1245,10 +1222,10 @@ F 3 "" H 1200 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper:Jumper_3_Bridged12 JP?
+L Jumper:Jumper_3_Bridged12 JP2
 U 1 1 60C033D0
 P 950 5250
-F 0 "JP?" H 950 5363 50  0000 C CNN
+F 0 "JP2" H 950 5363 50  0000 C CNN
 F 1 "Jumper_3_Bridged12" H 950 5363 50  0001 C CNN
 F 2 "" H 950 5250 50  0001 C CNN
 F 3 "~" H 950 5250 50  0001 C CNN
@@ -1271,4 +1248,20 @@ Wire Notes Line
 	2800 3500 2800 2100
 Text Notes 2850 3400 0    50   ~ 0
 Do Not Place - for SD card
+$Comp
+L payload2020_custom:AP2114H-3.3TRG1 U?
+U 1 1 60C70EBF
+P 3950 2450
+F 0 "U?" H 3937 2690 50  0000 C CNN
+F 1 "AP2114H-3.3TRG1" H 3937 2599 50  0000 C CNN
+F 2 "" H 3950 2450 50  0001 C CNN
+F 3 "" H 3950 2450 50  0001 C CNN
+	1    3950 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 2500 4500 2500
+Wire Wire Line
+	3200 2500 3575 2500
+Connection ~ 3200 2500
 $EndSCHEMATC
