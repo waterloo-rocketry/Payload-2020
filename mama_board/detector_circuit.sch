@@ -780,7 +780,7 @@ F 3 "" H 5500 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 1800 5750 2    50   ~ 0
-ADC_OUT
+DET_ADC
 Text Label 10200 2800 0    50   ~ 0
 DET_ADC
 Text Label 3250 5750 0    50   ~ 0
