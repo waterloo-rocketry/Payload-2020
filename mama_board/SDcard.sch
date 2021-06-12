@@ -135,7 +135,6 @@ Wire Wire Line
 	7650 4250 7650 4050
 Wire Wire Line
 	7650 4050 7850 4050
-NoConn ~ 9550 4450
 $Comp
 L power:+3.3V #PWR034
 U 1 1 5BD90633
@@ -441,4 +440,19 @@ F 3 "" H 5200 4800 50  0001 C CNN
 	1    5200 4800
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60D4E4BB
+P 9700 4550
+F 0 "#PWR?" H 9700 4300 50  0001 C CNN
+F 1 "GND" H 9705 4377 50  0000 C CNN
+F 2 "" H 9700 4550 50  0001 C CNN
+F 3 "" H 9700 4550 50  0001 C CNN
+	1    9700 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 4450 9700 4450
+Wire Wire Line
+	9700 4450 9700 4550
 $EndSCHEMATC
