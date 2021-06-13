@@ -23,7 +23,7 @@ AR Path="/60A2C79F/5B9D7D87/5B9D7E5B" Ref="J9"  Part="1"
 AR Path="/60A2C79F/5B9D7E5B" Ref="J8"  Part="1" 
 F 0 "J8" H 8700 4567 50  0000 C CNN
 F 1 "693072010801" H 8700 4476 50  0000 C CNN
-F 2 "canhw_footprints:microSD_Molex_WM6698CT-ND" H 9900 4150 50  0001 C CNN
+F 2 "Payload2020_custom:microSD_Molex_WM6698CT-ND" H 9900 4150 50  0001 C CNN
 F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 8750 3850 50  0001 C CNN
 	1    8750 3850
 	1    0    0    -1  
@@ -59,7 +59,7 @@ AR Path="/60A2C79F/5B9D7D87/5B9D8023" Ref="C26"  Part="1"
 AR Path="/60A2C79F/5B9D8023" Ref="C20"  Part="1" 
 F 0 "C20" V 7148 3250 50  0000 C CNN
 F 1 "4.7uF" V 7239 3250 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7438 3100 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 7438 3100 50  0001 C CNN
 F 3 "~" H 7400 3250 50  0001 C CNN
 	1    7400 3250
 	0    1    1    0   

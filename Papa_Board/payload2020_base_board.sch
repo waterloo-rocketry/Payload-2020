@@ -149,17 +149,6 @@ Text Label 10300 2600 2    50   ~ 0
 CANL_PAYLOAD
 Text Label 10300 2500 2    50   ~ 0
 CANH_PAYLOAD
-$Comp
-L Connector_Generic:Conn_01x05 J4
-U 1 1 6000B832
-P 10500 2400
-F 0 "J4" H 10600 2450 50  0000 L CNN
-F 1 "Conn_01x05" H 10600 2350 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 10500 2400 50  0001 C CNN
-F 3 "~" H 10500 2400 50  0001 C CNN
-	1    10500 2400
-	1    0    0    -1  
-$EndComp
 Text Notes 10575 2200 0    50   ~ 0
 \nMinisensor
 $Comp
@@ -690,4 +679,15 @@ F 3 "" H 2000 3350 50  0001 C CNN
 $EndComp
 Text Notes 10600 1350 0    50   ~ 0
 Normal header
+$Comp
+L Connector_Generic:Conn_01x05 J4
+U 1 1 6000B832
+P 10500 2400
+F 0 "J4" H 10600 2450 50  0000 L CNN
+F 1 "Conn_01x05" H 10600 2350 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 10500 2400 50  0001 C CNN
+F 3 "~" H 10500 2400 50  0001 C CNN
+	1    10500 2400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

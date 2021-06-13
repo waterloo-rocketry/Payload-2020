@@ -1,4 +1,4 @@
-19080928548729994
+19092293825329108
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -72568,6 +72568,55 @@ TO-264-5 Vertical RM 3.81mm
 0
 5
 5
+Payload2020_custom
+732-3880-1-ND
+
+
+0
+2
+2
+Payload2020_custom
+Adafruit_Connector
+
+
+0
+8
+8
+Payload2020_custom
+CR54NP-330LC
+
+
+0
+2
+2
+Payload2020_custom
+C_0805_HandSoldering
+Capacitor SMD 0805, hand soldering
+capacitor 0805
+0
+2
+2
+Payload2020_custom
+TPS61175_Q1_Footprint
+
+
+0
+15
+15
+Payload2020_custom
+connector_Harwin_M80-5000642
+
+
+0
+6
+6
+Payload2020_custom
+microSD_Molex_WM6698CT-ND
+http://katalog.we-online.de/em/datasheet/693072010801.pdf
+Micro SD Wuerth Wurth Würth
+0
+12
+9
 Potentiometer_SMD
 Potentiometer_ACP_CA6-VSMD_Vertical
 Potentiometer, vertical, ACP CA6-VSMD, http://www.acptechnologies.com/wp-content/uploads/2017/06/01-ACP-CA6.pdf
