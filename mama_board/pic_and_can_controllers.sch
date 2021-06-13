@@ -257,7 +257,7 @@ CS
 Text Label 10475 5900 2    50   ~ 0
 MISO
 Text Label 10475 5700 2    50   ~ 0
-MOSI
+ASLJK;DF
 Text Label 10475 6275 2    50   ~ 0
 SCK
 Wire Wire Line

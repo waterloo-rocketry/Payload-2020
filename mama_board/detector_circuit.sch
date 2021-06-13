@@ -28,8 +28,6 @@ $EndSheet
 Text Notes 850  7500 0    197  ~ 0
 ALL RESISTORS AND CAPS W/VALUE "0" \nARE DO NOT PLACE
 Wire Wire Line
-	8775 3600 8775 4400
-Wire Wire Line
 	8100 4100 8100 3950
 Text Label 7300 5500 2    50   ~ 0
 DET_ADC
@@ -213,87 +211,6 @@ Wire Wire Line
 	8900 2950 8775 2950
 Wire Wire Line
 	8775 3600 8775 2950
-Connection ~ 8775 3600
-Wire Wire Line
-	7750 4400 8125 4400
-Wire Wire Line
-	8525 4400 8775 4400
-Connection ~ 8525 4400
-Wire Wire Line
-	8525 4450 8525 4400
-Wire Wire Line
-	8125 4400 8525 4400
-Connection ~ 8125 4400
-Wire Wire Line
-	8525 4750 8525 4900
-$Comp
-L power:GND #PWR?
-U 1 1 60C35181
-P 8525 4900
-AR Path="/609B2504/60C35181" Ref="#PWR?"  Part="1" 
-AR Path="/60A2E32E/60C35181" Ref="#PWR?"  Part="1" 
-AR Path="/60A2EDF1/60C35181" Ref="#PWR?"  Part="1" 
-AR Path="/60A2F85E/60C35181" Ref="#PWR?"  Part="1" 
-AR Path="/60C35181" Ref="#PWR0105"  Part="1" 
-F 0 "#PWR0105" H 8525 4650 50  0001 C CNN
-F 1 "GND" H 8530 4727 50  0000 C CNN
-F 2 "" H 8525 4900 50  0001 C CNN
-F 3 "" H 8525 4900 50  0001 C CNN
-	1    8525 4900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8125 4750 8125 4900
-Wire Wire Line
-	8125 4400 8125 4450
-$Comp
-L Device:R R?
-U 1 1 60C35179
-P 8525 4600
-AR Path="/609B2504/60C35179" Ref="R?"  Part="1" 
-AR Path="/60A2E32E/60C35179" Ref="R?"  Part="1" 
-AR Path="/60A2EDF1/60C35179" Ref="R?"  Part="1" 
-AR Path="/60A2F85E/60C35179" Ref="R?"  Part="1" 
-AR Path="/60C35179" Ref="R39"  Part="1" 
-F 0 "R39" H 8595 4646 50  0000 L CNN
-F 1 "0" H 8595 4555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8455 4600 50  0001 C CNN
-F 3 "~" H 8525 4600 50  0001 C CNN
-	1    8525 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 60C35173
-P 8125 4600
-AR Path="/609B2504/60C35173" Ref="C?"  Part="1" 
-AR Path="/60A2E32E/60C35173" Ref="C?"  Part="1" 
-AR Path="/60A2EDF1/60C35173" Ref="C?"  Part="1" 
-AR Path="/60A2F85E/60C35173" Ref="C?"  Part="1" 
-AR Path="/60C35173" Ref="C19"  Part="1" 
-F 0 "C19" H 8240 4646 50  0000 L CNN
-F 1 "0" H 8240 4555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8163 4450 50  0001 C CNN
-F 3 "~" H 8125 4600 50  0001 C CNN
-	1    8125 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 60C3516D
-P 8125 4900
-AR Path="/609B2504/60C3516D" Ref="#PWR?"  Part="1" 
-AR Path="/60A2E32E/60C3516D" Ref="#PWR?"  Part="1" 
-AR Path="/60A2EDF1/60C3516D" Ref="#PWR?"  Part="1" 
-AR Path="/60A2F85E/60C3516D" Ref="#PWR?"  Part="1" 
-AR Path="/60C3516D" Ref="#PWR0104"  Part="1" 
-F 0 "#PWR0104" H 8125 4650 50  0001 C CNN
-F 1 "GND" H 8130 4727 50  0000 C CNN
-F 2 "" H 8125 4900 50  0001 C CNN
-F 3 "" H 8125 4900 50  0001 C CNN
-	1    8125 4900
-	1    0    0    -1  
-$EndComp
 Connection ~ 7350 3600
 Wire Wire Line
 	4750 3550 4750 4475
@@ -987,8 +904,6 @@ Text Notes 825  675  0    50   ~ 0
 Filter frequency cutoff equation:\n1/(2*pi*R*C)
 Text Notes 2125 750  0    50   ~ 0
 Transimpedance Amplifier:\nGain = 150, output peak approx. 1V\nLow-pass cutoff = 1Mhz\n
-Wire Notes Line
-	2250 775  2250 4675
 Wire Wire Line
 	5050 1900 5350 1900
 Wire Wire Line
@@ -1160,22 +1075,6 @@ Wire Wire Line
 Connection ~ 8100 3600
 Wire Wire Line
 	8500 3950 8500 4100
-$Comp
-L power:GND #PWR0131
-U 1 1 609E381F
-P 8500 4100
-AR Path="/609B2504/609E381F" Ref="#PWR0131"  Part="1" 
-AR Path="/60A2E32E/609E381F" Ref="#PWR053"  Part="1" 
-AR Path="/60A2EDF1/609E381F" Ref="#PWR077"  Part="1" 
-AR Path="/60A2F85E/609E381F" Ref="#PWR?"  Part="1" 
-AR Path="/609E381F" Ref="#PWR0119"  Part="1" 
-F 0 "#PWR0119" H 8500 3850 50  0001 C CNN
-F 1 "GND" H 8505 3927 50  0000 C CNN
-F 2 "" H 8500 4100 50  0001 C CNN
-F 3 "" H 8500 4100 50  0001 C CNN
-	1    8500 4100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8100 3600 8100 3650
 Wire Wire Line
@@ -1369,22 +1268,6 @@ F 3 "" H 2550 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0125
-U 1 1 609B9F7A
-P 8100 4100
-AR Path="/609B2504/609B9F7A" Ref="#PWR0125"  Part="1" 
-AR Path="/60A2E32E/609B9F7A" Ref="#PWR050"  Part="1" 
-AR Path="/60A2EDF1/609B9F7A" Ref="#PWR074"  Part="1" 
-AR Path="/60A2F85E/609B9F7A" Ref="#PWR?"  Part="1" 
-AR Path="/609B9F7A" Ref="#PWR077"  Part="1" 
-F 0 "#PWR077" H 8100 3850 50  0001 C CNN
-F 1 "GND" H 8105 3927 50  0000 C CNN
-F 2 "" H 8100 4100 50  0001 C CNN
-F 3 "" H 8100 4100 50  0001 C CNN
-	1    8100 4100
-	1    0    0    -1  
-$EndComp
-$Comp
 L payload2020_custom:LTC6269 U5
 U 1 1 609B934B
 P 7350 1700
@@ -1446,9 +1329,6 @@ Wire Notes Line
 	7400 3750 7400 4250
 Wire Notes Line
 	7400 3750 7700 3750
-Wire Wire Line
-	7750 4100 7750 4400
-Connection ~ 7750 4100
 Connection ~ 9650 2050
 Connection ~ 3500 2950
 Text Notes 5150 600  0    50   ~ 0
@@ -1574,4 +1454,124 @@ Connection ~ 2300 5150
 Wire Wire Line
 	2400 5150 2650 5150
 Connection ~ 2400 5150
+Wire Notes Line
+	2250 775  2250 4675
+Connection ~ 7750 4100
+Connection ~ 8775 3600
+Wire Wire Line
+	7750 4100 7750 4400
+$Comp
+L power:GND #PWR0125
+U 1 1 609B9F7A
+P 8100 4100
+AR Path="/609B2504/609B9F7A" Ref="#PWR0125"  Part="1" 
+AR Path="/60A2E32E/609B9F7A" Ref="#PWR050"  Part="1" 
+AR Path="/60A2EDF1/609B9F7A" Ref="#PWR074"  Part="1" 
+AR Path="/60A2F85E/609B9F7A" Ref="#PWR?"  Part="1" 
+AR Path="/609B9F7A" Ref="#PWR077"  Part="1" 
+F 0 "#PWR077" H 8100 3850 50  0001 C CNN
+F 1 "GND" H 8105 3927 50  0000 C CNN
+F 2 "" H 8100 4100 50  0001 C CNN
+F 3 "" H 8100 4100 50  0001 C CNN
+	1    8100 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0131
+U 1 1 609E381F
+P 8500 4100
+AR Path="/609B2504/609E381F" Ref="#PWR0131"  Part="1" 
+AR Path="/60A2E32E/609E381F" Ref="#PWR053"  Part="1" 
+AR Path="/60A2EDF1/609E381F" Ref="#PWR077"  Part="1" 
+AR Path="/60A2F85E/609E381F" Ref="#PWR?"  Part="1" 
+AR Path="/609E381F" Ref="#PWR0119"  Part="1" 
+F 0 "#PWR0119" H 8500 3850 50  0001 C CNN
+F 1 "GND" H 8505 3927 50  0000 C CNN
+F 2 "" H 8500 4100 50  0001 C CNN
+F 3 "" H 8500 4100 50  0001 C CNN
+	1    8500 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60C3516D
+P 8125 4900
+AR Path="/609B2504/60C3516D" Ref="#PWR?"  Part="1" 
+AR Path="/60A2E32E/60C3516D" Ref="#PWR?"  Part="1" 
+AR Path="/60A2EDF1/60C3516D" Ref="#PWR?"  Part="1" 
+AR Path="/60A2F85E/60C3516D" Ref="#PWR?"  Part="1" 
+AR Path="/60C3516D" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 8125 4650 50  0001 C CNN
+F 1 "GND" H 8130 4727 50  0000 C CNN
+F 2 "" H 8125 4900 50  0001 C CNN
+F 3 "" H 8125 4900 50  0001 C CNN
+	1    8125 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60C35173
+P 8125 4600
+AR Path="/609B2504/60C35173" Ref="C?"  Part="1" 
+AR Path="/60A2E32E/60C35173" Ref="C?"  Part="1" 
+AR Path="/60A2EDF1/60C35173" Ref="C?"  Part="1" 
+AR Path="/60A2F85E/60C35173" Ref="C?"  Part="1" 
+AR Path="/60C35173" Ref="C19"  Part="1" 
+F 0 "C19" H 8240 4646 50  0000 L CNN
+F 1 "0" H 8240 4555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8163 4450 50  0001 C CNN
+F 3 "~" H 8125 4600 50  0001 C CNN
+	1    8125 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60C35179
+P 8525 4600
+AR Path="/609B2504/60C35179" Ref="R?"  Part="1" 
+AR Path="/60A2E32E/60C35179" Ref="R?"  Part="1" 
+AR Path="/60A2EDF1/60C35179" Ref="R?"  Part="1" 
+AR Path="/60A2F85E/60C35179" Ref="R?"  Part="1" 
+AR Path="/60C35179" Ref="R39"  Part="1" 
+F 0 "R39" H 8595 4646 50  0000 L CNN
+F 1 "0" H 8595 4555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8455 4600 50  0001 C CNN
+F 3 "~" H 8525 4600 50  0001 C CNN
+	1    8525 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8125 4400 8125 4450
+Wire Wire Line
+	8125 4750 8125 4900
+$Comp
+L power:GND #PWR?
+U 1 1 60C35181
+P 8525 4900
+AR Path="/609B2504/60C35181" Ref="#PWR?"  Part="1" 
+AR Path="/60A2E32E/60C35181" Ref="#PWR?"  Part="1" 
+AR Path="/60A2EDF1/60C35181" Ref="#PWR?"  Part="1" 
+AR Path="/60A2F85E/60C35181" Ref="#PWR?"  Part="1" 
+AR Path="/60C35181" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 8525 4650 50  0001 C CNN
+F 1 "GND" H 8530 4727 50  0000 C CNN
+F 2 "" H 8525 4900 50  0001 C CNN
+F 3 "" H 8525 4900 50  0001 C CNN
+	1    8525 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8525 4750 8525 4900
+Connection ~ 8125 4400
+Wire Wire Line
+	8125 4400 8525 4400
+Wire Wire Line
+	8525 4450 8525 4400
+Connection ~ 8525 4400
+Wire Wire Line
+	8525 4400 8775 4400
+Wire Wire Line
+	7750 4400 8125 4400
+Wire Wire Line
+	8775 3600 8775 4400
 $EndSCHEMATC
