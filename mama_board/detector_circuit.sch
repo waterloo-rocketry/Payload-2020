@@ -127,22 +127,6 @@ F 3 "~" H 750 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 60C95EF3
-P 750 5650
-AR Path="/609B2504/60C95EF3" Ref="#PWR?"  Part="1" 
-AR Path="/60A2E32E/60C95EF3" Ref="#PWR?"  Part="1" 
-AR Path="/60A2EDF1/60C95EF3" Ref="#PWR?"  Part="1" 
-AR Path="/60A2F85E/60C95EF3" Ref="#PWR?"  Part="1" 
-AR Path="/60C95EF3" Ref="#PWR0107"  Part="1" 
-F 0 "#PWR0107" H 750 5500 50  0001 C CNN
-F 1 "+5V" H 765 5823 50  0000 C CNN
-F 2 "" H 750 5650 50  0001 C CNN
-F 3 "" H 750 5650 50  0001 C CNN
-	1    750  5650
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 60C95EED
 P 750 6250
@@ -492,21 +476,6 @@ F0 "Power Supplies" 50
 F1 "power_supplies.sch" 50
 $EndSheet
 $Comp
-L power:+5V #PWR037
-U 1 1 60AF9823
-P 2600 6200
-AR Path="/609B2504/60AF9823" Ref="#PWR037"  Part="1" 
-AR Path="/60A2E32E/60AF9823" Ref="#PWR0147"  Part="1" 
-AR Path="/60A2EDF1/60AF9823" Ref="#PWR085"  Part="1" 
-AR Path="/60AF9823" Ref="#PWR085"  Part="1" 
-F 0 "#PWR085" H 2600 6050 50  0001 C CNN
-F 1 "+5V" H 2615 6373 50  0000 C CNN
-F 2 "" H 2600 6200 50  0001 C CNN
-F 3 "" H 2600 6200 50  0001 C CNN
-	1    2600 6200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C19
 U 1 1 60AF5442
 P 2600 6350
@@ -595,91 +564,8 @@ Wire Wire Line
 	10050 2050 10050 2600
 Wire Wire Line
 	9650 2050 10050 2050
-$Comp
-L power:GND #PWR033
-U 1 1 60AC2D05
-P 9650 2350
-AR Path="/609B2504/60AC2D05" Ref="#PWR033"  Part="1" 
-AR Path="/60A2E32E/60AC2D05" Ref="#PWR0144"  Part="1" 
-AR Path="/60A2EDF1/60AC2D05" Ref="#PWR081"  Part="1" 
-AR Path="/60AC2D05" Ref="#PWR081"  Part="1" 
-F 0 "#PWR081" H 9650 2100 50  0001 C CNN
-F 1 "GND" H 9655 2177 50  0000 C CNN
-F 2 "" H 9650 2350 50  0001 C CNN
-F 3 "" H 9650 2350 50  0001 C CNN
-	1    9650 2350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C16
-U 1 1 60AC2CF9
-P 9650 2200
-AR Path="/609B2504/60AC2CF9" Ref="C16"  Part="1" 
-AR Path="/60A2E32E/60AC2CF9" Ref="C27"  Part="1" 
-AR Path="/60A2EDF1/60AC2CF9" Ref="C38"  Part="1" 
-AR Path="/60A2F85E/60AC2CF9" Ref="C?"  Part="1" 
-AR Path="/60AC2CF9" Ref="C38"  Part="1" 
-F 0 "C38" H 9765 2246 50  0000 L CNN
-F 1 "0.1u" H 9765 2155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9688 2050 50  0001 C CNN
-F 3 "~" H 9650 2200 50  0001 C CNN
-	1    9650 2200
-	1    0    0    -1  
-$EndComp
-Connection ~ 5450 2150
 Wire Wire Line
 	5850 2750 5750 2750
-Wire Wire Line
-	5850 2150 5850 2750
-Wire Wire Line
-	5450 2150 5850 2150
-$Comp
-L power:GND #PWR029
-U 1 1 60AB9BD7
-P 5450 2450
-AR Path="/609B2504/60AB9BD7" Ref="#PWR029"  Part="1" 
-AR Path="/60A2E32E/60AB9BD7" Ref="#PWR047"  Part="1" 
-AR Path="/60A2EDF1/60AB9BD7" Ref="#PWR071"  Part="1" 
-AR Path="/60AB9BD7" Ref="#PWR071"  Part="1" 
-F 0 "#PWR071" H 5450 2200 50  0001 C CNN
-F 1 "GND" H 5455 2277 50  0000 C CNN
-F 2 "" H 5450 2450 50  0001 C CNN
-F 3 "" H 5450 2450 50  0001 C CNN
-	1    5450 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR028
-U 1 1 60AB9BD0
-P 5450 2150
-AR Path="/609B2504/60AB9BD0" Ref="#PWR028"  Part="1" 
-AR Path="/60A2E32E/60AB9BD0" Ref="#PWR046"  Part="1" 
-AR Path="/60A2EDF1/60AB9BD0" Ref="#PWR070"  Part="1" 
-AR Path="/60A2F85E/60AB9BD0" Ref="#PWR?"  Part="1" 
-AR Path="/60AB9BD0" Ref="#PWR0120"  Part="1" 
-F 0 "#PWR0120" H 5450 2000 50  0001 C CNN
-F 1 "+5V" H 5465 2323 50  0000 C CNN
-F 2 "" H 5450 2150 50  0001 C CNN
-F 3 "" H 5450 2150 50  0001 C CNN
-	1    5450 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C12
-U 1 1 60AB9BCA
-P 5450 2300
-AR Path="/609B2504/60AB9BCA" Ref="C12"  Part="1" 
-AR Path="/60A2E32E/60AB9BCA" Ref="C23"  Part="1" 
-AR Path="/60A2EDF1/60AB9BCA" Ref="C34"  Part="1" 
-AR Path="/60A2F85E/60AB9BCA" Ref="C?"  Part="1" 
-AR Path="/60AB9BCA" Ref="C34"  Part="1" 
-F 0 "C34" H 5565 2346 50  0000 L CNN
-F 1 "0.1u" H 5565 2255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5488 2150 50  0001 C CNN
-F 3 "~" H 5450 2300 50  0001 C CNN
-	1    5450 2300
-	1    0    0    -1  
-$EndComp
 Connection ~ 5500 4000
 $Comp
 L power:GND #PWR031
@@ -696,8 +582,6 @@ F 3 "" H 5500 4000 50  0001 C CNN
 	1    5500 4000
 	1    0    0    -1  
 $EndComp
-Text Label 1800 5750 2    50   ~ 0
-DET_ADC
 Text Label 10200 2800 0    50   ~ 0
 DET_ADC
 Text Label 3250 5750 0    50   ~ 0
@@ -970,22 +854,6 @@ F 3 "~" H 1100 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0135
-U 1 1 609FA945
-P 1100 5650
-AR Path="/609B2504/609FA945" Ref="#PWR0135"  Part="1" 
-AR Path="/60A2E32E/609FA945" Ref="#PWR0140"  Part="1" 
-AR Path="/60A2EDF1/609FA945" Ref="#PWR075"  Part="1" 
-AR Path="/60A2F85E/609FA945" Ref="#PWR?"  Part="1" 
-AR Path="/609FA945" Ref="#PWR075"  Part="1" 
-F 0 "#PWR075" H 1100 5500 50  0001 C CNN
-F 1 "+5V" H 1115 5823 50  0000 C CNN
-F 2 "" H 1100 5650 50  0001 C CNN
-F 3 "" H 1100 5650 50  0001 C CNN
-	1    1100 5650
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0134
 U 1 1 609FA2E5
 P 1100 6250
@@ -999,22 +867,6 @@ F 1 "GND" H 1105 6077 50  0000 C CNN
 F 2 "" H 1100 6250 50  0001 C CNN
 F 3 "" H 1100 6250 50  0001 C CNN
 	1    1100 6250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0133
-U 1 1 609F6F23
-P 2300 5150
-AR Path="/609B2504/609F6F23" Ref="#PWR0133"  Part="1" 
-AR Path="/60A2E32E/609F6F23" Ref="#PWR0139"  Part="1" 
-AR Path="/60A2EDF1/609F6F23" Ref="#PWR079"  Part="1" 
-AR Path="/60A2F85E/609F6F23" Ref="#PWR?"  Part="1" 
-AR Path="/609F6F23" Ref="#PWR079"  Part="1" 
-F 0 "#PWR079" H 2300 5000 50  0001 C CNN
-F 1 "+5V" H 2315 5323 50  0000 C CNN
-F 2 "" H 2300 5150 50  0001 C CNN
-F 3 "" H 2300 5150 50  0001 C CNN
-	1    2300 5150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1329,7 +1181,6 @@ Wire Notes Line
 	7400 3750 7400 4250
 Wire Notes Line
 	7400 3750 7700 3750
-Connection ~ 9650 2050
 Connection ~ 3500 2950
 Text Notes 5150 600  0    50   ~ 0
 Amplifier
@@ -1445,12 +1296,7 @@ Wire Wire Line
 Wire Wire Line
 	2200 5550 2200 5150
 Wire Wire Line
-	2200 5150 2300 5150
-Wire Wire Line
-	2300 5150 2400 5150
-Wire Wire Line
 	2400 5150 2400 5550
-Connection ~ 2300 5150
 Wire Wire Line
 	2400 5150 2650 5150
 Connection ~ 2400 5150
@@ -1574,4 +1420,151 @@ Wire Wire Line
 	7750 4400 8125 4400
 Wire Wire Line
 	8775 3600 8775 4400
+$Comp
+L payload2020_custom:+4.7V #U0102
+U 1 1 60C79086
+P 5450 2150
+F 0 "#U0102" H 5450 2325 50  0001 C CNN
+F 1 "+4.7V" H 5325 2225 50  0000 L CNN
+F 2 "" H 5450 2150 50  0001 C CNN
+F 3 "" H 5450 2150 50  0001 C CNN
+	1    5450 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2250 5450 2500
+Wire Wire Line
+	5450 2500 5850 2500
+Wire Wire Line
+	5850 2500 5850 2750
+$Comp
+L payload2020_custom:+4.7V #U0103
+U 1 1 60C7FDAB
+P 2400 5050
+F 0 "#U0103" H 2400 5225 50  0001 C CNN
+F 1 "+4.7V" H 2275 5125 50  0000 L CNN
+F 2 "" H 2400 5050 50  0001 C CNN
+F 3 "" H 2400 5050 50  0001 C CNN
+	1    2400 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 5150 2400 5150
+$Comp
+L payload2020_custom:+4.7V #U0104
+U 1 1 60C80D5E
+P 2600 6100
+F 0 "#U0104" H 2600 6275 50  0001 C CNN
+F 1 "+4.7V" H 2475 6175 50  0000 L CNN
+F 2 "" H 2600 6100 50  0001 C CNN
+F 3 "" H 2600 6100 50  0001 C CNN
+	1    2600 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L payload2020_custom:+4.7V #U0105
+U 1 1 60C8170A
+P 1100 5550
+F 0 "#U0105" H 1100 5725 50  0001 C CNN
+F 1 "+4.7V" H 975 5625 50  0000 L CNN
+F 2 "" H 1100 5550 50  0001 C CNN
+F 3 "" H 1100 5550 50  0001 C CNN
+	1    1100 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L payload2020_custom:+4.7V #U0106
+U 1 1 60C81EBA
+P 750 5550
+F 0 "#U0106" H 750 5725 50  0001 C CNN
+F 1 "+4.7V" H 625 5625 50  0000 L CNN
+F 2 "" H 750 5550 50  0001 C CNN
+F 3 "" H 750 5550 50  0001 C CNN
+	1    750  5550
+	1    0    0    -1  
+$EndComp
+Text Label 6400 3550 0    50   ~ 0
+AMP_OUT
+Text Label 900  4000 2    50   ~ 0
+AMP_OUT
+Wire Wire Line
+	1150 4450 1150 4300
+Wire Wire Line
+	1550 4300 1550 4450
+$Comp
+L Device:R R?
+U 1 1 60C84001
+P 1550 4150
+AR Path="/609B2504/60C84001" Ref="R?"  Part="1" 
+AR Path="/60A2E32E/60C84001" Ref="R?"  Part="1" 
+AR Path="/60A2EDF1/60C84001" Ref="R?"  Part="1" 
+AR Path="/60A2F85E/60C84001" Ref="R?"  Part="1" 
+AR Path="/60C84001" Ref="R42"  Part="1" 
+F 0 "R42" H 1620 4196 50  0000 L CNN
+F 1 "1M" H 1620 4105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1480 4150 50  0001 C CNN
+F 3 "~" H 1550 4150 50  0001 C CNN
+	1    1550 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60C84007
+P 1150 4150
+AR Path="/609B2504/60C84007" Ref="C?"  Part="1" 
+AR Path="/60A2E32E/60C84007" Ref="C?"  Part="1" 
+AR Path="/60A2EDF1/60C84007" Ref="C?"  Part="1" 
+AR Path="/60A2F85E/60C84007" Ref="C?"  Part="1" 
+AR Path="/60C84007" Ref="C27"  Part="1" 
+F 0 "C27" H 1265 4196 50  0000 L CNN
+F 1 "2.2n" H 1265 4105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1188 4000 50  0001 C CNN
+F 3 "~" H 1150 4150 50  0001 C CNN
+	1    1150 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60C8400D
+P 1150 4450
+AR Path="/609B2504/60C8400D" Ref="#PWR?"  Part="1" 
+AR Path="/60A2E32E/60C8400D" Ref="#PWR?"  Part="1" 
+AR Path="/60A2EDF1/60C8400D" Ref="#PWR?"  Part="1" 
+AR Path="/60A2F85E/60C8400D" Ref="#PWR?"  Part="1" 
+AR Path="/60C8400D" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 1150 4200 50  0001 C CNN
+F 1 "GND" H 1155 4277 50  0000 C CNN
+F 2 "" H 1150 4450 50  0001 C CNN
+F 3 "" H 1150 4450 50  0001 C CNN
+	1    1150 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60C84013
+P 1550 4450
+AR Path="/609B2504/60C84013" Ref="#PWR?"  Part="1" 
+AR Path="/60A2E32E/60C84013" Ref="#PWR?"  Part="1" 
+AR Path="/60A2EDF1/60C84013" Ref="#PWR?"  Part="1" 
+AR Path="/60A2F85E/60C84013" Ref="#PWR?"  Part="1" 
+AR Path="/60C84013" Ref="#PWR0114"  Part="1" 
+F 0 "#PWR0114" H 1550 4200 50  0001 C CNN
+F 1 "GND" H 1555 4277 50  0000 C CNN
+F 2 "" H 1550 4450 50  0001 C CNN
+F 3 "" H 1550 4450 50  0001 C CNN
+	1    1550 4450
+	1    0    0    -1  
+$EndComp
+Text Label 1850 4000 0    50   ~ 0
+COMP_IN
+Wire Wire Line
+	1850 4000 1550 4000
+Connection ~ 1150 4000
+Wire Wire Line
+	1150 4000 900  4000
+Connection ~ 1550 4000
+Wire Wire Line
+	1550 4000 1150 4000
+Text Label 1800 5750 2    50   ~ 0
+COMP_IN
 $EndSCHEMATC
