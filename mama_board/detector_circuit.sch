@@ -465,21 +465,6 @@ F0 "Power Supplies" 50
 F1 "power_supplies.sch" 50
 $EndSheet
 $Comp
-L Device:C C19
-U 1 1 60AF5442
-P 2600 6350
-AR Path="/609B2504/60AF5442" Ref="C19"  Part="1" 
-AR Path="/60A2E32E/60AF5442" Ref="C30"  Part="1" 
-AR Path="/60A2EDF1/60AF5442" Ref="C41"  Part="1" 
-AR Path="/60AF5442" Ref="C41"  Part="1" 
-F 0 "C41" H 2715 6396 50  0000 L CNN
-F 1 "0.1u" H 2715 6305 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2638 6200 50  0001 C CNN
-F 3 "~" H 2600 6350 50  0001 C CNN
-	1    2600 6350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C18
 U 1 1 60AD34A1
 P 2650 5300
@@ -1259,8 +1244,6 @@ Wire Wire Line
 Wire Wire Line
 	2300 6150 2300 6500
 Connection ~ 2300 6500
-Wire Wire Line
-	2300 6500 2600 6500
 NoConn ~ 2600 5950
 Wire Wire Line
 	2600 5750 3000 5750
@@ -1437,17 +1420,6 @@ F 3 "" H 2400 5150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2200 5150 2400 5150
-$Comp
-L payload2020_custom:+4.7V #U0104
-U 1 1 60C80D5E
-P 2600 6200
-F 0 "#U0104" H 2600 6375 50  0001 C CNN
-F 1 "+4.7V" H 2450 6350 50  0000 L CNN
-F 2 "" H 2600 6200 50  0001 C CNN
-F 3 "" H 2600 6200 50  0001 C CNN
-	1    2600 6200
-	1    0    0    -1  
-$EndComp
 $Comp
 L payload2020_custom:+4.7V #U0105
 U 1 1 60C8170A
