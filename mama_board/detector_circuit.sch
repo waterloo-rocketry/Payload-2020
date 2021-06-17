@@ -131,13 +131,6 @@ F 3 "" H 750 6250 50  0001 C CNN
 	1    750  6250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3500 2850 3500 2950
-Connection ~ 3500 2850
-Wire Wire Line
-	3925 2850 3500 2850
-Wire Wire Line
-	3500 2425 3500 2850
 Connection ~ 3500 2425
 $Comp
 L Device:Jumper JP?
@@ -644,22 +637,6 @@ F 1 "FILTER" H 4908 3577 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5050 3550 50  0001 C CNN
 F 3 "~" H 5050 3550 50  0001 C CNN
 	1    4850 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP2
-U 1 1 609F4C29
-P 3925 2850
-AR Path="/609B2504/609F4C29" Ref="TP2"  Part="1" 
-AR Path="/60A2E32E/609F4C29" Ref="TP8"  Part="1" 
-AR Path="/60A2EDF1/609F4C29" Ref="TP14"  Part="1" 
-AR Path="/60A2F85E/609F4C29" Ref="TP?"  Part="1" 
-AR Path="/609F4C29" Ref="TP14"  Part="1" 
-F 0 "TP14" H 3675 2975 50  0000 L CNN
-F 1 "TRANS_OUT" H 3550 2900 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4125 2850 50  0001 C CNN
-F 3 "~" H 4125 2850 50  0001 C CNN
-	1    3925 2850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1539,4 +1516,6 @@ F 3 "" H 5500 3650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9650 2050 10050 2050
+Wire Wire Line
+	3500 2425 3500 2950
 $EndSCHEMATC
