@@ -933,17 +933,6 @@ Text Notes 3400 4600 0    50   ~ 0
 B230A-13-F
 Wire Wire Line
 	3350 3500 3700 3500
-$Comp
-L payload2020_custom:+5.3V #U04
-U 1 1 60D67D41
-P 4600 3750
-F 0 "#U04" H 4600 3925 50  0001 C CNN
-F 1 "+5.3V" H 4450 3800 50  0000 L CNN
-F 2 "" H 4600 3750 50  0001 C CNN
-F 3 "" H 4600 3750 50  0001 C CNN
-	1    4600 3750
-	1    0    0    -1  
-$EndComp
 Text Notes 3600 4250 0    50   ~ 0
 7443551181
 Text Notes 1025 3200 0    51   ~ 0
@@ -978,39 +967,6 @@ Wire Wire Line
 Connection ~ 5700 3900
 Wire Wire Line
 	5700 3900 5550 3900
-$Comp
-L payload2020_custom:+5.3V #U07
-U 1 1 60E87A2F
-P 3500 1450
-F 0 "#U07" H 3500 1625 50  0001 C CNN
-F 1 "+5.3V" H 3350 1500 50  0000 L CNN
-F 2 "" H 3500 1450 50  0001 C CNN
-F 3 "" H 3500 1450 50  0001 C CNN
-	1    3500 1450
-	1    0    0    -1  
-$EndComp
-$Comp
-L payload2020_custom:+5.3V #U09
-U 1 1 60E95046
-P 6600 1800
-F 0 "#U09" H 6600 1975 50  0001 C CNN
-F 1 "+5.3V" H 6450 1850 50  0000 L CNN
-F 2 "" H 6600 1800 50  0001 C CNN
-F 3 "" H 6600 1800 50  0001 C CNN
-	1    6600 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L payload2020_custom:+5.3V #U08
-U 1 1 60E9C05C
-P 5550 3700
-F 0 "#U08" H 5550 3875 50  0001 C CNN
-F 1 "+5.3V" H 5400 3750 50  0000 L CNN
-F 2 "" H 5550 3700 50  0001 C CNN
-F 3 "" H 5550 3700 50  0001 C CNN
-	1    5550 3700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6800 3900 7000 3900
 Wire Wire Line
@@ -1058,4 +1014,16 @@ Wire Wire Line
 Wire Wire Line
 	4100 7450 4500 7450
 Connection ~ 4100 7450
+Text Label 4600 3850 0    50   ~ 0
++5.3V
+Text Label 3500 1550 2    50   ~ 0
++5.3V
+Text Label 6600 1900 2    50   ~ 0
++5.3V
+Text Label 5550 3800 2    50   ~ 0
++5.3V
+Text HLabel 10900 3950 2    50   Input ~ 0
++5.3V
+Text Label 10900 3950 2    50   ~ 0
++5.3V
 $EndSCHEMATC

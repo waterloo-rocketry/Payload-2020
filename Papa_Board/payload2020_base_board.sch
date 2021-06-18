@@ -339,6 +339,7 @@ F0 "battery_management" 50
 F1 "battery_management.sch" 50
 F2 "POWER_EN" I R 4750 1250 50 
 F3 "VBATT_OUT" I L 3850 1400 50 
+F4 "+5.3V" I R 4750 1400 50 
 $EndSheet
 Text Label 3500 4000 2    50   ~ 0
 5V3_ALWAYS_ON
@@ -445,6 +446,7 @@ F2 "MOSI" I L 5850 5200 50
 F3 "MISO" I L 5850 5350 50 
 F4 "CS" I L 5850 5500 50 
 F5 "SCK" I L 5850 5600 50 
+F6 "+5.3V" I L 5850 5050 50 
 $EndSheet
 Wire Wire Line
 	7450 1550 7450 1600
@@ -520,19 +522,6 @@ Wire Wire Line
 	1100 1300 1400 1300
 Wire Wire Line
 	1400 3700 2000 3700
-$Comp
-L payload2020_custom:+5.3V #U?
-U 1 1 60DBD514
-P 6350 2050
-AR Path="/5E13F8E9/60DBD514" Ref="#U?"  Part="1" 
-AR Path="/60DBD514" Ref="#U01"  Part="1" 
-F 0 "#U01" H 6350 2225 50  0001 C CNN
-F 1 "+5.3V" H 6200 2100 50  0000 L CNN
-F 2 "" H 6350 2050 50  0001 C CNN
-F 3 "" H 6350 2050 50  0001 C CNN
-	1    6350 2050
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	9000 2600 9000 550 
 Wire Notes Line
@@ -623,32 +612,6 @@ Wire Wire Line
 	9500 5050 9500 5200
 Wire Wire Line
 	8950 4950 9650 4950
-$Comp
-L payload2020_custom:+5.3V #U?
-U 1 1 60DE6904
-P 9600 2000
-AR Path="/5E13F8E9/60DE6904" Ref="#U?"  Part="1" 
-AR Path="/60DE6904" Ref="#U06"  Part="1" 
-F 0 "#U06" H 9600 2175 50  0001 C CNN
-F 1 "+5.3V" H 9450 2050 50  0000 L CNN
-F 2 "" H 9600 2000 50  0001 C CNN
-F 3 "" H 9600 2000 50  0001 C CNN
-	1    9600 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L payload2020_custom:+5.3V #U?
-U 1 1 60DE8151
-P 9550 750
-AR Path="/5E13F8E9/60DE8151" Ref="#U?"  Part="1" 
-AR Path="/60DE8151" Ref="#U05"  Part="1" 
-F 0 "#U05" H 9550 925 50  0001 C CNN
-F 1 "+5.3V" H 9400 800 50  0000 L CNN
-F 2 "" H 9550 750 50  0001 C CNN
-F 3 "" H 9550 750 50  0001 C CNN
-	1    9550 750 
-	1    0    0    -1  
-$EndComp
 Text Label 9250 3550 0    50   ~ 0
 5.3V_OUT
 Text Label 9250 4750 0    50   ~ 0
@@ -664,19 +627,6 @@ F 3 "" H 1400 1300 50  0001 C CNN
 	1    1400 1300
 	1    0    0    -1  
 $EndComp
-$Comp
-L payload2020_custom:+5.3V #U?
-U 1 1 60C3DF2B
-P 2000 3350
-AR Path="/5E13F8E9/60C3DF2B" Ref="#U?"  Part="1" 
-AR Path="/60C3DF2B" Ref="#U02"  Part="1" 
-F 0 "#U02" H 2000 3525 50  0001 C CNN
-F 1 "+5.3V" H 1850 3400 50  0000 L CNN
-F 2 "" H 2000 3350 50  0001 C CNN
-F 3 "" H 2000 3350 50  0001 C CNN
-	1    2000 3350
-	1    0    0    -1  
-$EndComp
 Text Notes 10600 1350 0    50   ~ 0
 Normal header
 $Comp
@@ -690,4 +640,16 @@ F 3 "~" H 10500 2400 50  0001 C CNN
 	1    10500 2400
 	1    0    0    -1  
 $EndComp
+Text Label 6350 2150 2    50   ~ 0
++5.3V
+Text Label 9600 2100 2    50   ~ 0
++5.3V
+Text Label 9550 850  2    50   ~ 0
++5.3V
+Text Label 2000 3450 0    50   ~ 0
++5.3V
+Text Label 4750 1400 0    50   ~ 0
++5.3V
+Text Label 5850 5050 2    50   ~ 0
++5.3V
 $EndSCHEMATC
