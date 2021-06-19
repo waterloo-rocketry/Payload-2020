@@ -103,6 +103,11 @@ static void interrupt interrupt_handler() {
     if (PIR5) {
         can_handle_interrupt();
     }
+    
+    if(pin interrupt 1)
+    {
+        pin interrupt handler
+    }
 
     // Timer0 has overflowed - update millis() function
     // This happens approximately every 500us
@@ -111,6 +116,21 @@ static void interrupt interrupt_handler() {
         PIR3bits.TMR0IF = 0;
     }
 }
+
+
+
+pin_interrupt_handler(boardnum)
+{
+    
+    adc (value)
+    //calculations
+    
+    
+}
+
+
+
+
 
 //CHANGE FOR PAPABAORD
 static void can_msg_handler(const can_msg_t *msg) {
@@ -132,13 +152,6 @@ static void can_msg_handler(const can_msg_t *msg) {
             get_radi_info(msg, &board_num, &radi_int_value, &radi_deci_value);
             radi_timestamp = get_timestamp(msg);
             log_sd_card(radi_timestamp, board_num, radi_int_value, radi_deci_value);
-            break;
-            
-        case 1: //SUPPOSE TO BE go to sleep case not 1
-            enter_idle();
-            break;
-        
-        case 2: //SUPPOSE TO BE wake up so don't have to do anything bec the device wakes up from any interrupt
             break;
             
         // all the other ones - do nothing
