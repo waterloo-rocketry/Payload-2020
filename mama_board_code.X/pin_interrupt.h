@@ -8,16 +8,7 @@
 #ifndef PIN_INTERRUPT_H
 #define	PIN_INTERRUPT_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
 
-
-
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif	/* PIN_INTERRUPT_H */
 
