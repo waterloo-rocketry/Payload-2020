@@ -73,7 +73,7 @@ Wire Wire Line
 	7850 2150 8000 2150
 Text Notes 1650 1150 2    50   ~ 0
 12V - 16V\n\n
-Text Label 4750 1250 0    50   ~ 0
+Text Label 4750 1100 0    50   ~ 0
 PWR_EN
 Text Notes 2050 3200 2    50   ~ 0
 Connector for programming
@@ -166,19 +166,6 @@ Text Notes 10300 3750 0    50   ~ 0
 Mama_Board_1
 Wire Wire Line
 	6350 2150 7250 2150
-$Comp
-L payload2020_custom:+37V #PWR?
-U 1 1 60AA4421
-P 8950 3450
-AR Path="/5E13F8E9/60AA4421" Ref="#PWR?"  Part="1" 
-AR Path="/60AA4421" Ref="#PWR011"  Part="1" 
-F 0 "#PWR011" H 8950 3450 50  0001 C CNN
-F 1 "+37V" H 8950 3550 50  0000 C CNN
-F 2 "" H 8950 3450 50  0001 C CNN
-F 3 "" H 8950 3450 50  0001 C CNN
-	1    8950 3450
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J7
 U 1 1 60B288EC
@@ -337,9 +324,10 @@ S 3850 1000 900  500
 U 5E13F8E9
 F0 "battery_management" 50
 F1 "battery_management.sch" 50
-F2 "POWER_EN" I R 4750 1250 50 
+F2 "POWER_EN" I R 4750 1100 50 
 F3 "VBATT_OUT" I L 3850 1400 50 
-F4 "+5.3V" I R 4750 1400 50 
+F4 "+5.3V" I R 4750 1250 50 
+F5 "+37V" I R 4750 1400 50 
 $EndSheet
 Text Label 3500 4000 2    50   ~ 0
 5V3_ALWAYS_ON
@@ -563,19 +551,6 @@ $EndComp
 Wire Wire Line
 	8950 3750 9650 3750
 $Comp
-L payload2020_custom:+37V #PWR?
-U 1 1 60DDEE2A
-P 8950 4650
-AR Path="/5E13F8E9/60DDEE2A" Ref="#PWR?"  Part="1" 
-AR Path="/60DDEE2A" Ref="#PWR05"  Part="1" 
-F 0 "#PWR05" H 8950 4650 50  0001 C CNN
-F 1 "+37V" H 8950 4750 50  0000 C CNN
-F 2 "" H 8950 4650 50  0001 C CNN
-F 3 "" H 8950 4650 50  0001 C CNN
-	1    8950 4650
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR09
 U 1 1 60DDEE30
 P 9500 5200
@@ -648,8 +623,14 @@ Text Label 9550 850  2    50   ~ 0
 +5.3V
 Text Label 2000 3450 0    50   ~ 0
 +5.3V
-Text Label 4750 1400 0    50   ~ 0
+Text Label 4750 1250 0    50   ~ 0
 +5.3V
 Text Label 5850 5050 2    50   ~ 0
 +5.3V
+Text Label 4750 1400 0    50   ~ 0
++37V
+Text Label 8950 3500 2    50   ~ 0
++37V
+Text Label 8950 4700 2    50   ~ 0
++37V
 $EndSCHEMATC

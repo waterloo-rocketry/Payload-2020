@@ -90,17 +90,6 @@ F 3 "" H 6250 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L payload2020_custom:+37V #PWR?01
-U 1 1 60ABA561
-P 4700 5950
-F 0 "#PWR?01" H 4700 5950 50  0001 C CNN
-F 1 "+37V" H 4700 6050 50  0000 C CNN
-F 2 "" H 4700 5950 50  0001 C CNN
-F 3 "" H 4700 5950 50  0001 C CNN
-	1    4700 5950
-	1    0    0    -1  
-$EndComp
-$Comp
 L payload2020_custom:TPS61175QPWPRQ1 U6
 U 1 1 60B4551D
 P 2250 6650
@@ -1026,4 +1015,12 @@ Text HLabel 10900 3950 2    50   Input ~ 0
 +5.3V
 Text Label 10900 3950 2    50   ~ 0
 +5.3V
+Wire Wire Line
+	4700 5850 4700 6000
+Text Label 4700 5850 0    50   ~ 0
++37V
+Text HLabel 10900 4100 2    50   Input ~ 0
++37V
+Text Label 10900 4100 2    50   ~ 0
++37V
 $EndSCHEMATC
