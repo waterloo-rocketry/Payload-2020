@@ -22,8 +22,8 @@ F2 "MOSI" I R 8900 5500 50
 F3 "MISO" I R 8900 5650 50 
 F4 "SCK" I R 8900 5950 50 
 F5 "DET_ADC" I L 7300 5500 50 
-F6 "DET_INTERRUPT" I L 7300 5650 50 
-F7 "CS" I R 8900 5800 50 
+F6 "CS" I R 8900 5800 50 
+F7 "INTERRUPT" I L 7300 5650 50 
 $EndSheet
 Text Notes 850  7500 0    197  ~ 0
 ALL RESISTORS AND CAPS W/VALUE "0" \nARE DO NOT PLACE
@@ -608,22 +608,6 @@ F 3 "~" H 1600 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP4
-U 1 1 609F56D6
-P 5950 2350
-AR Path="/609B2504/609F56D6" Ref="TP4"  Part="1" 
-AR Path="/60A2E32E/609F56D6" Ref="TP10"  Part="1" 
-AR Path="/60A2EDF1/609F56D6" Ref="TP16"  Part="1" 
-AR Path="/60A2F85E/609F56D6" Ref="TP?"  Part="1" 
-AR Path="/609F56D6" Ref="TP16"  Part="1" 
-F 0 "TP16" H 6008 2468 50  0000 L CNN
-F 1 "AMP_OUT" H 6008 2377 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6150 2350 50  0001 C CNN
-F 3 "~" H 6150 2350 50  0001 C CNN
-	1    5950 2350
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:TestPoint TP3
 U 1 1 609F51E8
 P 4850 3550
@@ -878,8 +862,6 @@ Wire Wire Line
 	8500 3950 8500 4100
 Wire Wire Line
 	8100 3600 8100 3650
-Wire Wire Line
-	5950 1900 5950 2350
 Connection ~ 5950 1900
 Wire Wire Line
 	5650 1900 5950 1900
@@ -1149,9 +1131,6 @@ F 3 "~" H 5950 3250 50  0001 C CNN
 	1    5950 3250
 	0    1    1    0   
 $EndComp
-Connection ~ 5950 2350
-Wire Wire Line
-	5950 2350 5950 2950
 Wire Wire Line
 	5950 3550 6400 3550
 Wire Wire Line
@@ -1518,4 +1497,6 @@ Wire Wire Line
 	9650 2050 10050 2050
 Wire Wire Line
 	3500 2425 3500 2950
+Wire Wire Line
+	5950 1900 5950 2950
 $EndSCHEMATC
