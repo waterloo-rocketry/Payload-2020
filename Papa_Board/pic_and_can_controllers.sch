@@ -50,14 +50,6 @@ Text HLabel 10300 1900 2    50   Input ~ 0
 CANH_ROCKET
 Text HLabel 10300 2100 2    50   Input ~ 0
 CANL_ROCKET
-Text Label 4600 1700 2    50   ~ 0
-PIC_TX
-Text Label 4600 1800 2    50   ~ 0
-PIC_RX
-Text Label 8700 1800 2    50   ~ 0
-MCP_TX
-Text Label 8700 1900 2    50   ~ 0
-MCP_RX
 Text HLabel 1750 1800 0    50   Input ~ 0
 5V3_ALWAYS_ON
 Wire Wire Line
@@ -199,7 +191,7 @@ Text Label 2450 4900 2    50   ~ 0
 PIC_TX
 Text Label 2450 5000 2    50   ~ 0
 PIC_RX
-Text Label 2450 4600 2    50   ~ 0
+Text Label 2450 4500 2    50   ~ 0
 CS_1
 Text Label 2450 5300 2    50   ~ 0
 MOSI
@@ -746,7 +738,7 @@ Wire Wire Line
 Wire Wire Line
 	8950 3800 8950 3700
 Connection ~ 8950 3700
-Text Label 2450 4500 2    50   ~ 0
+Text Label 2450 4600 2    50   ~ 0
 CS_2
 $Comp
 L payload2020_custom:PIC18F26K83-canhw U8
@@ -823,4 +815,12 @@ F 3 "~" H 7650 6150 50  0001 C CNN
 	1    7650 6150
 	0    1    1    0   
 $EndComp
+Text Label 8700 1900 2    50   ~ 0
+MCP_RX
+Text Label 8700 1800 2    50   ~ 0
+MCP_TX
+Text Label 4600 1800 2    50   ~ 0
+PIC_RX
+Text Label 4600 1700 2    50   ~ 0
+PIC_TX
 $EndSCHEMATC

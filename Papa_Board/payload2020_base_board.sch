@@ -101,8 +101,6 @@ Wire Notes Line
 	2800 4650 650  4650
 Wire Notes Line
 	650  4650 650  6050
-Text Label 1800 5650 0    50   ~ 0
-CANL_ROCKET
 Wire Wire Line
 	1400 3600 1700 3600
 Wire Wire Line
@@ -145,10 +143,6 @@ Text Notes 1150 5150 0    50   ~ 0
 Harwin connector
 Text Notes 10600 2550 0    50   ~ 0
 Normal header
-Text Label 10300 2600 2    50   ~ 0
-CANL_PAYLOAD
-Text Label 10300 2500 2    50   ~ 0
-CANH_PAYLOAD
 Text Notes 10575 2200 0    50   ~ 0
 \nMinisensor
 $Comp
@@ -300,10 +294,6 @@ F 3 "~" H 10500 1200 50  0001 C CNN
 	1    10500 1200
 	1    0    0    -1  
 $EndComp
-Text Label 10300 1400 2    50   ~ 0
-CANL_PAYLOAD
-Text Label 10300 1300 2    50   ~ 0
-CANH_PAYLOAD
 $Comp
 L power:+3V3 #PWR059
 U 1 1 60C56062
@@ -339,10 +329,6 @@ Text Label 3500 2900 2    50   ~ 0
 ICSPDAT
 Text Label 3500 3100 2    50   ~ 0
 ~MCLR
-Text Label 3500 4600 2    50   ~ 0
-CANL_ROCKET
-Text Label 3500 4700 2    50   ~ 0
-CANH_ROCKET
 Text Label 5450 2750 0    50   ~ 0
 CANL_PAYLOAD
 Text Label 5450 2650 0    50   ~ 0
@@ -468,8 +454,6 @@ Wire Wire Line
 	9650 3850 9500 3850
 Wire Wire Line
 	9500 3850 9500 4000
-Text Label 1800 5550 0    50   ~ 0
-CANH_ROCKET
 Wire Wire Line
 	1800 5450 2450 5450
 Wire Wire Line
@@ -633,4 +617,20 @@ Text Label 8950 3500 2    50   ~ 0
 +37V
 Text Label 8950 4700 2    50   ~ 0
 +37V
+Text Label 3500 4700 2    50   ~ 0
+CANH_ROCKET
+Text Label 3500 4600 2    50   ~ 0
+CANL_ROCKET
+Text Label 1800 5650 0    50   ~ 0
+CANL_ROCKET
+Text Label 1800 5550 0    50   ~ 0
+CANH_ROCKET
+Text Label 10300 2600 2    50   ~ 0
+CANL_PAYLOAD
+Text Label 10300 2500 2    50   ~ 0
+CANH_PAYLOAD
+Text Label 10300 1400 2    50   ~ 0
+CANL_PAYLOAD
+Text Label 10300 1300 2    50   ~ 0
+CANH_PAYLOAD
 $EndSCHEMATC
