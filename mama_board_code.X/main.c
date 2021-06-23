@@ -13,10 +13,7 @@
 #include "mcc_generated_files/adcc.h"
 #include "mcc_generated_files/pin_manager.h"
 
-#include "power_saving.h"
 #include "timer.h"
-#include "led.h"
-#include "sd_card.h"
 
 #include <xc.h>
 
