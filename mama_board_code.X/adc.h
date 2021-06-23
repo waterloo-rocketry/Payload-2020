@@ -28,4 +28,7 @@ void adc_calculation(uint16_t adc_value, uint8_t &radi_int, uint8_t &radi_dec);
   */
 uint16_t get_adc_value();
 
+// Interrupt handler for when the adc conversion is complete
+void adc_interrupt_handler();
+
 #endif	/* ADC_H */
