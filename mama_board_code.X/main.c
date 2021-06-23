@@ -8,11 +8,6 @@
 #include "canlib/util/timing_util.h"
 #include "canlib/util/can_tx_buffer.h"
 
-//include papaboard ones
-#include "mcc_generated_files/mcc.h"
-#include "mcc_generated_files/adcc.h"
-#include "mcc_generated_files/pin_manager.h"
-
 #include "timer.h"
 
 #include <xc.h>
