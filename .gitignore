@@ -25,7 +25,6 @@ _autosave-*
 *.ses
 
 # Exported BOM files
-*.xml
 *.csv
 
 # Debug/Binary files
@@ -39,3 +38,7 @@ Debug
 # .ioc only has the I/O config, no compilation dependency info
 .settings
 .mxproject
+
+#Code Files
+build/
+dist/
