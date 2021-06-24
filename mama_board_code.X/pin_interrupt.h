@@ -1,12 +1,7 @@
-* 
- * File:   pin_interrupt.h
- * Author: Chris
- *
- * Created on June 18, 2021, 8:54 PM
- */
-
 #ifndef PIN_INTERRUPT_H
 #define	PIN_INTERRUPT_H
+
+#include "adc.h"
 
 // Pin interrupt to trigger the adc init function
 void pin_interrupt_init();

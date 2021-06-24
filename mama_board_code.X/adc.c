@@ -44,20 +44,12 @@ void adc_calculation(uint16_t adc_value, uint8_t &radi_int, uint8_t radi_dec)
     
 }
 
-void get_adc_value()
+uint16_t get_adc_value()
 {
+    // If your curious, the turning on of the adc occurs at the pin_interrupt handler
+    uint16_t adc_result = (ADRESH << 8) | ADRESL;
     
-    ADCON0bits.ON = 1; //Turn on adc
-    ADCON0bits.GO = 1; //Start conversion
-    
-    
-    
-    ADCON0bits.ON = 0;  //Turn off adc
-    
-}
+    ADCON0bits.ON = 0; //Turn off adc BUT FOR WHICH PORT?
 
-void adc_interrupt_handler()
-{
-    
-    
+    return adc_result;
 }
