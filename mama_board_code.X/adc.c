@@ -13,6 +13,8 @@ void adc_init()
     ANSELAbits.ANSELA0 = 1; //Analog
     ANSELAbits.ANSELA1 = 1;
     ANSELAbits.ANSELA2 = 1;
+    
+    // ADPCH = something??
 
     ADCON0bits.ON = 1; //ADC is enabled
     ADCON0bits.CS = 1; //Clock supplied from FRC dedicated oscillator
@@ -45,7 +47,12 @@ void adc_calculation(uint16_t adc_value, uint8_t &radi_int, uint8_t radi_dec)
 void get_adc_value()
 {
     
+    ADCON0bits.ON = 1; //Turn on adc
+    ADCON0bits.GO = 1; //Start conversion
     
+    
+    
+    ADCON0bits.ON = 0;  //Turn off adc
     
 }
 
