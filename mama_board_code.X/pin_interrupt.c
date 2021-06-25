@@ -12,6 +12,8 @@ void pin_init()
 
 void pin_interrupt_handler()
 {
+    //turn on adc
+    //start conversion
     
     
 }

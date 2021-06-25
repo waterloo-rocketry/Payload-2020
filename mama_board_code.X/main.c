@@ -96,10 +96,16 @@ static void interrupt interrupt_handler() {
         can_handle_interrupt();
     }
     
-    if(pin interrupt 1)
-    {
-        pin interrupt handler
-    }
+    //if pin 1 interrupt
+        //call pin 1 interrupt handler (pin1 parameter)
+    
+    //same for pin 2 and 3
+    
+    
+    //if conversion/calc adc pin interrupt
+        //call adc interrupt handler
+    
+    
 
     // Timer0 has overflowed - update millis() function
     // This happens approximately every 500us
@@ -108,21 +114,6 @@ static void interrupt interrupt_handler() {
         PIR3bits.TMR0IF = 0;
     }
 }
-
-
-
-pin_interrupt_handler(boardnum)
-{
-    
-    adc (value)
-    //calculations
-    
-    
-}
-
-
-
-
 
 //CHANGE FOR PAPABAORD
 static void can_msg_handler(const can_msg_t *msg) {

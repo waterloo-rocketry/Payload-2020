@@ -30,26 +30,13 @@ void adc_init()
     
 }
 
-void get_radi_values(uint8_t &radi_int, uint8_t &radi_dec)
-{
-
-
-    
-}
-
-void adc_calculation(uint16_t adc_value, uint8_t &radi_int, uint8_t radi_dec)
+void adc_interrupt_handler()
 {
     
+    //this function will have which adc was passed in so we will know the board number
+    //read the high and low result register
+    //turn off adc
+    //package in can message
+    //send in can message
     
-    
-}
-
-uint16_t get_adc_value()
-{
-    // If your curious, the turning on of the adc occurs at the pin_interrupt handler
-    uint16_t adc_result = (ADRESH << 8) | ADRESL;
-    
-    ADCON0bits.ON = 0; //Turn off adc BUT FOR WHICH PORT?
-
-    return adc_result;
 }
