@@ -331,8 +331,6 @@ Text Label 3500 3100 2    50   ~ 0
 ~MCLR
 Text Label 5450 2750 0    50   ~ 0
 CANL_PAYLOAD
-Text Label 5450 2650 0    50   ~ 0
-CANH_PAYLOAD
 $Comp
 L power:GND #PWR012
 U 1 1 60B1EA55
@@ -633,4 +631,14 @@ Text Label 10300 1400 2    50   ~ 0
 CANL_PAYLOAD
 Text Label 10300 1300 2    50   ~ 0
 CANH_PAYLOAD
+Text Label 5450 2650 0    50   ~ 0
+CANH_PAYLOAD
+Text Label 5450 2650 0    50   ~ 0
++
+Text Label 5450 2750 0    50   ~ 0
+-
+Text Label 10300 1300 0    50   ~ 0
++
+Text Label 10300 1400 0    50   ~ 0
+-
 $EndSCHEMATC
