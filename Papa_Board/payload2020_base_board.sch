@@ -633,12 +633,4 @@ Text Label 10300 1300 2    50   ~ 0
 CANH_PAYLOAD
 Text Label 5450 2650 0    50   ~ 0
 CANH_PAYLOAD
-Text Label 5450 2650 0    50   ~ 0
-+
-Text Label 5450 2750 0    50   ~ 0
--
-Text Label 10300 1300 0    50   ~ 0
-+
-Text Label 10300 1400 0    50   ~ 0
--
 $EndSCHEMATC
