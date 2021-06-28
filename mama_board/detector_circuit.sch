@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -1499,4 +1499,18 @@ Wire Wire Line
 	3500 2425 3500 2950
 Wire Wire Line
 	5950 1900 5950 2950
+$Sheet
+S 825  1875 900  575 
+U 60DABAAD
+F0 "Transimpedance Amplifier" 50
+F1 "another_transimpedance_amplifier.sch" 50
+F2 "SIPM_OUT" I L 825 2075 50 
+F3 "Filter_IN" I L 825 2275 50 
+$EndSheet
+Text Label 825  2075 2    50   ~ 0
+SIPM_OUT
+Text Label 3500 3675 2    50   ~ 0
+Filter_IN
+Text Label 825  2275 2    50   ~ 0
+Filter_IN
 $EndSCHEMATC
