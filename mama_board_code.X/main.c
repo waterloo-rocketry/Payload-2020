@@ -80,11 +80,12 @@ static void interrupt interrupt_handler() {
         can_handle_interrupt();
     }
     
-    //Interrupt flag for first pin
+    //Interrupt flag for adc pins
     if (IOCAFbits.IOCAF0 || IOCAFbits.IOCAF1 || IOCAFbits.IOCAF2 ){
         pin_interrupt_handler();
     }
     
+    //Interrupt flag for adc conversion/calc completion
     if (PIR1bits.ADIF){
         adc_interrupt_handler();
     }

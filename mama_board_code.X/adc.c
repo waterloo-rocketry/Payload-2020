@@ -23,6 +23,8 @@ void adc_init()
 
 void adc_interrupt_handler()
 {
+    PIR1bits.ADIF = 0; //Clear adc interrupt flag
+    
     uint8_t sensor_identifier = ADPCH - 8;
     
     uint8_t result_high = ADRESH;
