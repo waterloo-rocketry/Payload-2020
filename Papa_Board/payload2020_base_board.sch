@@ -54,23 +54,10 @@ F 3 "" H 1200 2600 50  0001 C CNN
 	1    1200 2600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:Jumper JP2
-U 1 1 6098E494
-P 7550 2150
-F 0 "JP2" H 7300 2250 50  0000 L CNN
-F 1 "Jumper" H 7650 2250 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7550 2150 50  0001 C CNN
-F 3 "~" H 7550 2150 50  0001 C CNN
-	1    7550 2150
-	1    0    0    -1  
-$EndComp
 Text Notes 6300 675  0    50   ~ 0
 System Sleep Control
 Text Label 8000 2150 0    50   ~ 0
 5V3_ALWAYS_ON
-Wire Wire Line
-	7850 2150 8000 2150
 Text Notes 1650 1150 2    50   ~ 0
 12V - 16V\n\n
 Text Label 4750 1100 0    50   ~ 0
@@ -158,8 +145,6 @@ F 3 "" H 9600 2500 50  0001 C CNN
 $EndComp
 Text Notes 10300 3750 0    50   ~ 0
 Mama_Board_1
-Wire Wire Line
-	6350 2150 7250 2150
 $Comp
 L Connector_Generic:Conn_01x02 J7
 U 1 1 60B288EC
@@ -362,17 +347,6 @@ Text Notes 6875 2300 0    50   ~ 0
 Voltage supply for MCU and CAN controllers\n
 Text Label 7450 800  2    50   ~ 0
 5V3_ALWAYS_ON
-$Comp
-L Device:Jumper JP1
-U 1 1 60CB7048
-P 8150 1600
-F 0 "JP1" H 7900 1700 50  0000 L CNN
-F 1 "Jumper" H 8195 1727 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8150 1600 50  0001 C CNN
-F 3 "~" H 8150 1600 50  0001 C CNN
-	1    8150 1600
-	1    0    0    -1  
-$EndComp
 Text Label 8550 1600 0    50   ~ 0
 5.3V_OUT
 $Comp
@@ -422,10 +396,6 @@ F6 "+5.3V" I L 5850 5050 50
 $EndSheet
 Wire Wire Line
 	7450 1550 7450 1600
-Wire Wire Line
-	7450 1600 7850 1600
-Wire Wire Line
-	8450 1600 8550 1600
 Wire Wire Line
 	9750 850  9750 1000
 Wire Wire Line
@@ -633,4 +603,34 @@ Text Label 10300 1300 2    50   ~ 0
 CANH_PAYLOAD
 Text Label 5450 2650 0    50   ~ 0
 CANH_PAYLOAD
+$Comp
+L Device:R_Small_US R28
+U 1 1 60E21758
+P 8150 1600
+F 0 "R28" V 7945 1600 50  0000 C CNN
+F 1 "0R" V 8036 1600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 8150 1600 50  0001 C CNN
+F 3 "~" H 8150 1600 50  0001 C CNN
+	1    8150 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8250 1600 8550 1600
+Wire Wire Line
+	7450 1600 8050 1600
+$Comp
+L Device:R_Small_US R27
+U 1 1 60E25C08
+P 7500 2150
+F 0 "R27" V 7295 2150 50  0000 C CNN
+F 1 "0R" V 7386 2150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 7500 2150 50  0001 C CNN
+F 3 "~" H 7500 2150 50  0001 C CNN
+	1    7500 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7600 2150 8000 2150
+Wire Wire Line
+	6350 2150 7400 2150
 $EndSCHEMATC
