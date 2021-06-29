@@ -8,6 +8,10 @@
 #include "canlib/util/timing_util.h"
 #include "canlib/util/can_tx_buffer.h"
 
+#include "adc.h"
+#include "led.h"
+#include "pin_interrupt.h"
+#include "sensor.h"
 #include "timer.h"
 
 #include <xc.h>
@@ -96,16 +100,10 @@ static void interrupt interrupt_handler() {
         can_handle_interrupt();
     }
     
-    //if pin 1 interrupt
-        //call pin 1 interrupt handler (pin1 parameter)
-    
-    //same for pin 2 and 3
-    
-    
-    //if conversion/calc adc pin interrupt
-        //call adc interrupt handler
-    
-    
+    //Interrupt flag for first pin
+    if (IOCAFbits.IOCAF0 || IOCAFbits.IOCAF1 || IOCAFbits.IOCAF2 ){
+        pin_interrupt_handler();
+    }
 
     // Timer0 has overflowed - update millis() function
     // This happens approximately every 500us

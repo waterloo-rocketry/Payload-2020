@@ -6,13 +6,13 @@
 void adc_init()
 {
     //THESE PINS ARE PROB DIFFERENT BASED ON SCHEMATIC
-    TRISAbits.TRISA0 = 1; //Input
-    TRISAbits.TRISA1 = 1;
-    TRISAbits.TRISA2 = 1;
+    TRISBbits.TRISB2 = 1; //Input
+    TRISBbits.TRISB1= 1;
+    TRISBbits.TRISB0 = 1;
 
-    ANSELAbits.ANSELA0 = 1; //Analog
-    ANSELAbits.ANSELA1 = 1;
-    ANSELAbits.ANSELA2 = 1;
+    ANSELBbits.ANSELB2 = 1; //Analog
+    ANSELBbits.ANSELB1 = 1;
+    ANSELBbits.ANSELB0 = 1;
     
     // ADPCH = something??
 

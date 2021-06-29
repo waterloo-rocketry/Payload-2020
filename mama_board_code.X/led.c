@@ -7,7 +7,7 @@
 void led_init()
 {
     
-    \//CHANGE PINS TO CORRECT
+    //CHANGE PINS TO CORRECT
     TRISBbits.TRISB4 = 0; // Set output
     LATBbits.LATB4 = 0; //LED off
     
