@@ -32,4 +32,7 @@ void adc_interrupt_handler()
     
     //CAN MESSAGE STUFF GOES HERE
     
+        //pack it all up in the build command
+        //put it in the queue
+    
 }
