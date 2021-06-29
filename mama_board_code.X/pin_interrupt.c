@@ -37,11 +37,12 @@ void pin_interrupt_handler()
         sensor_identifier = 2;
     }
     
-    ADPCH = 00001000 || sensor_identifier; //bitwise op
+    ADPCH = 0xb00001000 || sensor_identifier; //bitwise op
     ADCON0bits.ON = 1;
     ADCON0bits.GO = 1;
     
     //Rest of the process is handled by adc_interrupt_handler
+    //bec completion of adc conversion/calc triggers an interrupt
     
     //SHOULD THERE BE A DELAY? 
 }

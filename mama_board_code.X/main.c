@@ -23,12 +23,6 @@
 static void can_msg_handler(const can_msg_t *msg);
 static void send_status_ok(void);
 
-// Follows VALVE_STATE in message_types.h
-// SHOULD ONLY BE MODIFIED IN ISR
-volatile uint8_t board_num;
-volatile uint8_t radi_int_value;
-volatile uint8_t radi_deci_value;
-volatile uint32_t radi_timestamp;
 static uint32_t last_can_traffic_timestamp_ms = 0;
 
 //memory pool for the CAN tx buffer
@@ -48,11 +42,11 @@ int main(int argc, char** argv) {
     // Enable global interrupts
     INTCON0bits.GIE = 1;
 
-    // Set up CAN TX... Are these the same registers for papa?
+    // Set up CAN TX
     TRISC1 = 0;
     RC1PPS = 0x33;
 
-    // Set up CAN RX... Are these the same registers for papa?
+    // Set up CAN RX
     TRISC0 = 1;
     ANSELC0 = 0;
     CANRXPPS = 0x10;
@@ -67,22 +61,8 @@ int main(int argc, char** argv) {
     // loop timer
     uint32_t last_millis = millis();
     
-    bool blue_led = false;
     while (1) {
         if (millis() - last_millis > MAX_LOOP_TIME_DIFF_ms) {
-            
-            //visual heartbeat
-            if (blue_led) 
-            {
-                LED2_OFF();
-                blue_led = false;
-            }
-            else
-            {
-                LED2_ON();
-                blue_led = true;
-            }
-            
             // update our loop counter
             last_millis = millis();
         }
