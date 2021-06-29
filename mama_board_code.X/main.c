@@ -109,16 +109,10 @@ static void can_msg_handler(const can_msg_t *msg) {
     if (get_board_unique_id(msg) == BOARD_UNIQUE_ID) {
         return;
     }
-
+    
+    //DO WE EVEN NEED THIS BEC WE AINT RECIEVING ANY CAN MESSAGES I THINK
     switch (msg_type) {
 
-        case MSG_RADI_VALUE:
-            //populate data variables including timestamp
-            get_radi_info(msg, &board_num, &radi_int_value, &radi_deci_value);
-            radi_timestamp = get_timestamp(msg);
-            log_sd_card(radi_timestamp, board_num, radi_int_value, radi_deci_value);
-            break;
-            
         // all the other ones - do nothing
         case MSG_INJ_VALVE_CMD: //IS THIS NECESSARY?
         case MSG_DEBUG_MSG:
