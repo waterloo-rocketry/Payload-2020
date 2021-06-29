@@ -104,6 +104,10 @@ static void interrupt interrupt_handler() {
     if (IOCAFbits.IOCAF0 || IOCAFbits.IOCAF1 || IOCAFbits.IOCAF2 ){
         pin_interrupt_handler();
     }
+    
+    if (PIR1bits.ADIF){
+        adc_interrupt_handler();
+    }
 
     // Timer0 has overflowed - update millis() function
     // This happens approximately every 500us

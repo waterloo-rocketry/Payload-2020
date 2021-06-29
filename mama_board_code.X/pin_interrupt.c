@@ -22,7 +22,6 @@ void pin_interrupt_handler()
 {
     uint8_t sensor_identifier;
     
-    
     if (IOCAFbits.IOCAF0){
         IOCAFbits.IOCAF0 = 0; //clear flag
         sensor_identifier = 0;
@@ -40,7 +39,9 @@ void pin_interrupt_handler()
     
     ADPCH = 00001000 || sensor_identifier; //bitwise op
     ADCON0bits.ON = 1;
-    ADCON0bits.GO = 1; 
+    ADCON0bits.GO = 1;
     
-    //SHOULD THERE BE A DELAY?
+    //Rest of the process is handled by adc_interrupt_handler
+    
+    //SHOULD THERE BE A DELAY? 
 }

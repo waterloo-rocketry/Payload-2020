@@ -21,22 +21,18 @@ void adc_init()
     ADCON0bits.FM = 1; //Data is right justified
     PIE1bits.ADIE = 1; //Set interrupt enable bit
     
-    //ADCONbits.ON = 1; means adc ON
-    //ADCONbits.ON = 0; means adc OFF i think
-    
-    //ADCON0bits.GO = 1; starts the conversion
-    
-    //LOOK AT pages 660 for DIRECT CODE and basic instructions and 671
-    
 }
 
 void adc_interrupt_handler()
 {
     
-    //this function will have which adc was passed in so we will know the board number
-    //read the high and low result register
-    //turn off adc
-    //package in can message
-    //send in can message
+    uint8_t sensor_identifier = ADPCH - 8;
+    
+    uint8_t result_high = ADRESH;
+    uint8_t result_low = ADRESL;
+    
+    ADCON0bits.ON = 1;
+    
+    //CAN MESSAGE STUFF GOES HERE
     
 }
