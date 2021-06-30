@@ -1,5 +1,13 @@
 #include "adc.h"
 
+#include "canlib/can.h"
+#include "canlib/can_common.h"
+#include "canlib/pic18f26k83/pic18f26k83_can.h"
+#include "canlib/message_types.h"
+#include "canlib/util/timing_util.h"
+#include "canlib/util/can_tx_buffer.h"
+
+#include "timer.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -32,9 +40,9 @@ void adc_interrupt_handler()
     
     ADCON0bits.ON = 0; //Turn off ADC
     
+    can_msg_t radiation_msg;
+
     //CAN MESSAGE STUFF GOES HERE
-    
-        //pack it all up in the build command
-        //put it in the queue
-    
+    build_radi_info_msg(millis(), sensor_identifier, result_high, result_low, &radiation_msg);
+    txb_enqueue(&radiation_msg);
 }
