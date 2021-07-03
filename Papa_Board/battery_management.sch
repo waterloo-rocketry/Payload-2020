@@ -214,7 +214,7 @@ $EndComp
 Text Notes 7800 5050 0    69   ~ 0
 DNP - Do not place
 Text Notes 975  5425 0    50   ~ 0
-TPS61175 is a boost converter.\nMax Iout rating: 3A\nValues are taken from WEBENCH power designer\nhttps://webench.ti.com/appinfo/webench/scripts/SDP.cgi?ID=72ECE7EF0AA4EE07
+TPS61175 is a boost converter.\nMax Iout rating: 3A\nValues are taken from WEBENCH power designer\nhttps://webench.ti.com/appinfo/webench/scripts/SDP.cgi?ID=944A159EFA65DE89
 $Comp
 L Device:C C28
 U 1 1 608D5E4B
@@ -323,7 +323,7 @@ F 3 "https://www.ti.com/lit/ds/symlink/ina180.pdf?ts=1621969218968&ref_url=https
 	1    0    0    -1  
 $EndComp
 Text Notes 1050 950  0    50   ~ 0
-66.25mR * I  * 200v/v = 5V\nImax = 400mA
+66.25mR * I  * 200v/v = 5.3V\nImax = 400mA
 Text Notes 3800 2600 0    50   ~ 0
 200V/V
 $Comp
@@ -414,7 +414,7 @@ U 1 1 60B0B6A2
 P 2900 1250
 F 0 "R7" V 2700 1250 50  0000 C CNN
 F 1 "66.25mR" V 2800 1250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2940 1240 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 2940 1240 50  0001 C CNN
 F 3 "~" H 2900 1250 50  0001 C CNN
 	1    2900 1250
 	0    1    1    0   
@@ -529,17 +529,6 @@ F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 6750 2550 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/ina180.pdf?ts=1621969218968&ref_url=https%253A%252F%252Fwww.google.com%252F" H 6750 2550 50  0001 C CNN
 	1    6750 2550
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small_US R11
-U 1 1 60B4B0DF
-P 6000 1600
-F 0 "R11" V 5800 1600 50  0000 C CNN
-F 1 "66.25mR" V 5900 1600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 6000 1600 50  0001 C CNN
-F 3 "~" H 6000 1600 50  0001 C CNN
-	1    6000 1600
-	0    1    1    0   
 $EndComp
 Wire Wire Line
 	6400 1500 6400 1600
@@ -885,7 +874,7 @@ L Device:C_Small C7
 U 1 1 60D2AA75
 P 4200 4450
 F 0 "C7" H 4108 4404 50  0000 R CNN
-F 1 "56uF" H 4108 4495 50  0000 R CNN
+F 1 "100uF" H 4108 4495 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4200 4450 50  0001 C CNN
 F 3 "~" H 4200 4450 50  0001 C CNN
 	1    4200 4450
@@ -927,7 +916,7 @@ Text Notes 3600 4250 0    50   ~ 0
 Text Notes 1025 3200 0    51   ~ 0
 PDF version:\nhttps://drive.google.com/file/d/13pYM-p7NzZnNQYZXknj9P6BV4uZ4R9wv/view?usp=sharing
 Text Notes 1025 3025 0    50   ~ 0
-LM22678TJ-5.0/NOPB is a buck converter.\nIout: 1.5A\nValues are taken from WEBENCH power designer\nhttps://webench.ti.com/appinfo/webench/scripts/SDP.cgi?ID=68E5BFACDBC533EB
+LM22678TJ-5.0/NOPB is a buck converter.\nIout: 1.5A\nValues are taken from WEBENCH power designer\nhttps://webench.ti.com/appinfo/webench/scripts/SDP.cgi?ID=2053C05C03E5ECAE
 Wire Notes Line
 	5100 7750 5100 5100
 Wire Notes Line
@@ -1023,4 +1012,15 @@ Text HLabel 10900 4100 2    50   Input ~ 0
 +37V
 Text Label 10900 4100 2    50   ~ 0
 +37V
+$Comp
+L Device:R_Small_US R11
+U 1 1 60B4B0DF
+P 6000 1600
+F 0 "R11" V 5800 1600 50  0000 C CNN
+F 1 "66.25mR" V 5900 1600 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" H 6000 1600 50  0001 C CNN
+F 3 "~" H 6000 1600 50  0001 C CNN
+	1    6000 1600
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
