@@ -42,7 +42,8 @@ void adc_interrupt_handler()
     
     can_msg_t radiation_msg;
 
-    //CAN MESSAGE STUFF GOES HERE
-    build_radi_info_msg(millis(), sensor_identifier, result_high, result_low, &radiation_msg);
+    uint16_t adc_res = ((uint16_t) (result_high) << 8) | (uint16_t) (result_low);
+
+    build_radi_info_msg(millis(), sensor_identifier, adc_res, &radiation_msg);
     txb_enqueue(&radiation_msg);
 }
