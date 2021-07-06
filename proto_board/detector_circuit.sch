@@ -29,10 +29,6 @@ Text Notes 850  7500 0    197  ~ 0
 ALL RESISTORS AND CAPS W/VALUE "0" \nARE DO NOT PLACE
 Wire Wire Line
 	8100 4100 8100 3950
-Text Label 7300 5500 2    50   ~ 0
-DET_ADC
-Text Label 7300 5650 2    50   ~ 0
-INTERUPT_OUT
 $Comp
 L payload2020_custom:+4.7V #U09
 U 1 1 60DCE26C
@@ -181,7 +177,7 @@ Connection ~ 7350 3600
 Wire Wire Line
 	4750 3550 4750 4475
 Wire Wire Line
-	3500 3550 3500 4475
+	3500 3550 3500 3825
 Wire Wire Line
 	4500 4475 4750 4475
 Wire Wire Line
@@ -1112,7 +1108,6 @@ Wire Notes Line
 	7400 3750 7400 4250
 Wire Notes Line
 	7400 3750 7700 3750
-Connection ~ 3500 2950
 Text Notes 5150 600  0    50   ~ 0
 Amplifier
 $Comp
@@ -1206,8 +1201,6 @@ Wire Wire Line
 Wire Wire Line
 	3000 5600 3000 5750
 Connection ~ 3000 5750
-Wire Wire Line
-	3000 5750 3250 5750
 Wire Wire Line
 	1800 5750 2000 5750
 Wire Wire Line
@@ -1400,88 +1393,77 @@ F 3 "" H 750 5650 50  0001 C CNN
 $EndComp
 Text Label 6400 3550 0    50   ~ 0
 AMP_OUT
-Text Label 900  4000 2    50   ~ 0
-AMP_OUT
 Wire Wire Line
-	1150 4450 1150 4300
+	6675 4825 6675 4675
 Wire Wire Line
-	1550 4300 1550 4450
+	7075 4675 7075 4825
 $Comp
 L Device:R R?
 U 1 1 60C84001
-P 1550 4150
+P 7075 4525
 AR Path="/609B2504/60C84001" Ref="R?"  Part="1" 
 AR Path="/60A2E32E/60C84001" Ref="R?"  Part="1" 
 AR Path="/60A2EDF1/60C84001" Ref="R?"  Part="1" 
 AR Path="/60A2F85E/60C84001" Ref="R?"  Part="1" 
 AR Path="/60C84001" Ref="R42"  Part="1" 
-F 0 "R42" H 1620 4196 50  0000 L CNN
-F 1 "1M" H 1620 4105 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1480 4150 50  0001 C CNN
-F 3 "~" H 1550 4150 50  0001 C CNN
-	1    1550 4150
+F 0 "R42" H 7145 4571 50  0000 L CNN
+F 1 "1M" H 7145 4480 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7005 4525 50  0001 C CNN
+F 3 "~" H 7075 4525 50  0001 C CNN
+	1    7075 4525
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C?
 U 1 1 60C84007
-P 1150 4150
+P 6675 4525
 AR Path="/609B2504/60C84007" Ref="C?"  Part="1" 
 AR Path="/60A2E32E/60C84007" Ref="C?"  Part="1" 
 AR Path="/60A2EDF1/60C84007" Ref="C?"  Part="1" 
 AR Path="/60A2F85E/60C84007" Ref="C?"  Part="1" 
 AR Path="/60C84007" Ref="C27"  Part="1" 
-F 0 "C27" H 1265 4196 50  0000 L CNN
-F 1 "2.2n" H 1265 4105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1188 4000 50  0001 C CNN
-F 3 "~" H 1150 4150 50  0001 C CNN
-	1    1150 4150
+F 0 "C27" H 6790 4571 50  0000 L CNN
+F 1 "2.2n" H 6790 4480 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6713 4375 50  0001 C CNN
+F 3 "~" H 6675 4525 50  0001 C CNN
+	1    6675 4525
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 60C8400D
-P 1150 4450
+P 6675 4825
 AR Path="/609B2504/60C8400D" Ref="#PWR?"  Part="1" 
 AR Path="/60A2E32E/60C8400D" Ref="#PWR?"  Part="1" 
 AR Path="/60A2EDF1/60C8400D" Ref="#PWR?"  Part="1" 
 AR Path="/60A2F85E/60C8400D" Ref="#PWR?"  Part="1" 
 AR Path="/60C8400D" Ref="#PWR0107"  Part="1" 
-F 0 "#PWR0107" H 1150 4200 50  0001 C CNN
-F 1 "GND" H 1155 4277 50  0000 C CNN
-F 2 "" H 1150 4450 50  0001 C CNN
-F 3 "" H 1150 4450 50  0001 C CNN
-	1    1150 4450
+F 0 "#PWR0107" H 6675 4575 50  0001 C CNN
+F 1 "GND" H 6680 4652 50  0000 C CNN
+F 2 "" H 6675 4825 50  0001 C CNN
+F 3 "" H 6675 4825 50  0001 C CNN
+	1    6675 4825
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 60C84013
-P 1550 4450
+P 7075 4825
 AR Path="/609B2504/60C84013" Ref="#PWR?"  Part="1" 
 AR Path="/60A2E32E/60C84013" Ref="#PWR?"  Part="1" 
 AR Path="/60A2EDF1/60C84013" Ref="#PWR?"  Part="1" 
 AR Path="/60A2F85E/60C84013" Ref="#PWR?"  Part="1" 
 AR Path="/60C84013" Ref="#PWR0114"  Part="1" 
-F 0 "#PWR0114" H 1550 4200 50  0001 C CNN
-F 1 "GND" H 1555 4277 50  0000 C CNN
-F 2 "" H 1550 4450 50  0001 C CNN
-F 3 "" H 1550 4450 50  0001 C CNN
-	1    1550 4450
+F 0 "#PWR0114" H 7075 4575 50  0001 C CNN
+F 1 "GND" H 7080 4652 50  0000 C CNN
+F 2 "" H 7075 4825 50  0001 C CNN
+F 3 "" H 7075 4825 50  0001 C CNN
+	1    7075 4825
 	1    0    0    -1  
 $EndComp
-Text Label 1850 4000 0    50   ~ 0
-COMP_IN
+Connection ~ 6675 4375
 Wire Wire Line
-	1850 4000 1550 4000
-Connection ~ 1150 4000
-Wire Wire Line
-	1150 4000 900  4000
-Connection ~ 1550 4000
-Wire Wire Line
-	1550 4000 1150 4000
-Text Label 1800 5750 2    50   ~ 0
-COMP_IN
+	7075 4375 6675 4375
 $Comp
 L payload2020_custom:+4.7V #U08
 U 1 1 60DA9214
@@ -1507,10 +1489,49 @@ F1 "another_transimpedance_amplifier.sch" 50
 F2 "SIPM_OUT" I L 825 2075 50 
 F3 "Filter_IN" I L 825 2275 50 
 $EndSheet
-Text Label 825  2075 2    50   ~ 0
-SIPM_OUT
-Text Label 3500 3675 2    50   ~ 0
+Text Label 3500 3800 2    50   ~ 0
 Filter_IN
-Text Label 825  2275 2    50   ~ 0
-Filter_IN
+Wire Wire Line
+	3500 3825 650  3825
+Wire Wire Line
+	650  3825 650  2275
+Wire Wire Line
+	650  2275 825  2275
+Connection ~ 3500 3825
+Wire Wire Line
+	3500 3825 3500 4475
+Wire Wire Line
+	1400 1400 1400 1725
+Wire Wire Line
+	1400 1725 650  1725
+Wire Wire Line
+	650  1725 650  2075
+Wire Wire Line
+	650  2075 825  2075
+Wire Wire Line
+	10200 2800 10200 5150
+Wire Wire Line
+	10200 5150 6925 5150
+Wire Wire Line
+	6925 5150 6925 5500
+Wire Wire Line
+	6925 5500 7300 5500
+Connection ~ 10200 2800
+Wire Wire Line
+	4750 5750 4750 5125
+Wire Wire Line
+	4750 5125 6775 5125
+Wire Wire Line
+	6775 5125 6775 5650
+Wire Wire Line
+	6775 5650 7300 5650
+Wire Wire Line
+	3000 5750 4750 5750
+Wire Wire Line
+	6400 3550 6400 4375
+Wire Wire Line
+	6400 4375 6675 4375
+Connection ~ 6400 3550
+Text Label 1800 5750 2    50   ~ 0
+AMP_OUT
 $EndSCHEMATC

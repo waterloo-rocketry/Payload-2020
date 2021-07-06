@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 2 5
 Title ""
 Date ""
 Rev ""
@@ -198,8 +198,6 @@ Text Label 2775 4500 2    50   ~ 0
 PIC_TX
 Text Label 2775 4600 2    50   ~ 0
 PIC_RX
-Text Label 2775 4900 2    50   ~ 0
-MOSI
 Text Label 2775 4700 2    50   ~ 0
 MISO
 Text Label 2775 4800 2    50   ~ 0
@@ -256,12 +254,8 @@ Text Label 10475 6100 2    50   ~ 0
 CS
 Text Label 10475 5900 2    50   ~ 0
 MISO
-Text Label 10475 5700 2    50   ~ 0
-ASLJK;DF
 Text Label 10475 6275 2    50   ~ 0
 SCK
-Wire Wire Line
-	10475 5700 10650 5700
 Wire Wire Line
 	10475 5900 10650 5900
 Wire Wire Line
@@ -446,72 +440,12 @@ Wire Wire Line
 	6225 5450 6225 5550
 Text Label 2775 4300 2    50   ~ 0
 OSC1
-NoConn ~ 4225 4700
 Wire Wire Line
 	6225 4000 6225 4800
-$Comp
-L Device:R_Small_US R?
-U 1 1 60B56CD5
-P 4675 4400
-AR Path="/60B56CD5" Ref="R?"  Part="1" 
-AR Path="/6016C5CD/60B56CD5" Ref="R9"  Part="1" 
-AR Path="/60BBD477/60B56CD5" Ref="R9"  Part="1" 
-AR Path="/609B2504/60BBD477/60B56CD5" Ref="R9"  Part="1" 
-AR Path="/60A2E32E/60BBD477/60B56CD5" Ref="R9"  Part="1" 
-AR Path="/60A2EDF1/60BBD477/60B56CD5" Ref="R9"  Part="1" 
-F 0 "R9" H 4743 4446 50  0000 L CNN
-F 1 "330" H 4743 4355 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4675 4400 50  0001 C CNN
-F 3 "~" H 4675 4400 50  0001 C CNN
-	1    4675 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 60B56CCD
-P 4675 5025
-AR Path="/60B56CCD" Ref="#PWR?"  Part="1" 
-AR Path="/6016C5CD/60B56CCD" Ref="#PWR07"  Part="1" 
-AR Path="/60BBD477/60B56CCD" Ref="#PWR07"  Part="1" 
-AR Path="/609B2504/60BBD477/60B56CCD" Ref="#PWR0118"  Part="1" 
-AR Path="/60A2E32E/60BBD477/60B56CCD" Ref="#PWR0171"  Part="1" 
-AR Path="/60A2EDF1/60BBD477/60B56CCD" Ref="#PWR0211"  Part="1" 
-F 0 "#PWR07" H 4675 4775 50  0001 C CNN
-F 1 "GND" H 4680 4852 50  0000 C CNN
-F 2 "" H 4675 5025 50  0001 C CNN
-F 3 "" H 4675 5025 50  0001 C CNN
-	1    4675 5025
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 60B56CC6
-P 4675 4800
-AR Path="/60B56CC6" Ref="D?"  Part="1" 
-AR Path="/6016C5CD/60B56CC6" Ref="D5"  Part="1" 
-AR Path="/60BBD477/60B56CC6" Ref="D5"  Part="1" 
-AR Path="/609B2504/60BBD477/60B56CC6" Ref="D5"  Part="1" 
-AR Path="/60A2E32E/60BBD477/60B56CC6" Ref="D5"  Part="1" 
-AR Path="/60A2EDF1/60BBD477/60B56CC6" Ref="D5"  Part="1" 
-F 0 "D5" V 4714 4682 50  0000 R CNN
-F 1 "QBLP650-IW" V 4623 4682 50  0000 R CNN
-F 2 "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4675 4800 50  0001 C CNN
-F 3 "~" H 4675 4800 50  0001 C CNN
-	1    4675 4800
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	4225 4000 6225 4000
 Wire Wire Line
 	4225 4100 5400 4100
-Wire Wire Line
-	4225 4200 4675 4200
-Wire Wire Line
-	4675 4200 4675 4300
-Wire Wire Line
-	4675 4500 4675 4650
-Wire Wire Line
-	4675 4950 4675 5025
 Wire Wire Line
 	1600 3600 2025 3600
 Wire Wire Line
@@ -629,7 +563,6 @@ F 3 "" H 8400 3050 50  0001 C CNN
 	1    8400 3050
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4225 3900
 NoConn ~ 2775 3900
 $Comp
 L Connector:Conn_01x05_Female J1
@@ -700,29 +633,10 @@ Text Label 4225 3700 0    50   ~ 0
 ICSPDAT
 Text Label 4225 3800 0    50   ~ 0
 ICSPCLK
-Text HLabel 2775 3700 0    50   Input ~ 0
-DET_ADC
-Text HLabel 2775 3800 0    50   Input ~ 0
-DET_INTERRUPT
 NoConn ~ 2775 4100
 Text Label 1600 3600 2    50   ~ 0
 MCLR
-$Comp
-L Connector:Conn_01x05_Female J2
-U 1 1 60C05516
-P 1500 2200
-AR Path="/609B2504/60BBD477/60C05516" Ref="J2"  Part="1" 
-AR Path="/60A2E32E/60BBD477/60C05516" Ref="J2"  Part="1" 
-AR Path="/60A2EDF1/60BBD477/60C05516" Ref="J2"  Part="1" 
-AR Path="/60BBD477/60C05516" Ref="J2"  Part="1" 
-F 0 "J2" H 1392 2585 50  0000 C CNN
-F 1 "CAN Header" H 1392 2494 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 1500 2200 50  0001 C CNN
-F 3 "~" H 1500 2200 50  0001 C CNN
-	1    1500 2200
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 1700 2000
+NoConn ~ 1700 2500
 NoConn ~ 1700 2100
 Text Label 10650 3500 0    50   ~ 0
 CANH
@@ -732,9 +646,9 @@ Text Label 10650 3700 0    50   ~ 0
 CANL
 Wire Wire Line
 	10450 3700 10650 3700
-Text Label 2050 2200 0    50   ~ 0
-CANH
 Text Label 2050 2300 0    50   ~ 0
+CANH
+Text Label 2050 2200 0    50   ~ 0
 CANL
 $Comp
 L power:GND #PWR023
@@ -763,4 +677,93 @@ Text Label 2775 4200 2    50   ~ 0
 CS
 NoConn ~ 4225 4600
 NoConn ~ 4225 4500
+Wire Wire Line
+	10475 5700 10650 5700
+Text Label 10475 5700 2    50   ~ 0
+MOSI
+Text Label 2775 4900 2    50   ~ 0
+MOSI
+Wire Wire Line
+	4825 4500 4825 4650
+Wire Wire Line
+	4825 4200 4825 4300
+$Comp
+L Device:R_Small_US R?
+U 1 1 60B56CD5
+P 4825 4400
+AR Path="/60B56CD5" Ref="R?"  Part="1" 
+AR Path="/6016C5CD/60B56CD5" Ref="R9"  Part="1" 
+AR Path="/60BBD477/60B56CD5" Ref="R9"  Part="1" 
+AR Path="/609B2504/60BBD477/60B56CD5" Ref="R9"  Part="1" 
+AR Path="/60A2E32E/60BBD477/60B56CD5" Ref="R9"  Part="1" 
+AR Path="/60A2EDF1/60BBD477/60B56CD5" Ref="R9"  Part="1" 
+F 0 "R9" H 4893 4446 50  0000 L CNN
+F 1 "330" H 4893 4355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4825 4400 50  0001 C CNN
+F 3 "~" H 4825 4400 50  0001 C CNN
+	1    4825 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4825 4950 4825 5025
+$Comp
+L Device:LED D?
+U 1 1 60B56CC6
+P 4825 4800
+AR Path="/60B56CC6" Ref="D?"  Part="1" 
+AR Path="/6016C5CD/60B56CC6" Ref="D5"  Part="1" 
+AR Path="/60BBD477/60B56CC6" Ref="D5"  Part="1" 
+AR Path="/609B2504/60BBD477/60B56CC6" Ref="D5"  Part="1" 
+AR Path="/60A2E32E/60BBD477/60B56CC6" Ref="D5"  Part="1" 
+AR Path="/60A2EDF1/60BBD477/60B56CC6" Ref="D5"  Part="1" 
+F 0 "D5" V 4864 4682 50  0000 R CNN
+F 1 "QBLP650-IW" V 4773 4682 50  0000 R CNN
+F 2 "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4825 4800 50  0001 C CNN
+F 3 "~" H 4825 4800 50  0001 C CNN
+	1    4825 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60B56CCD
+P 4825 5025
+AR Path="/60B56CCD" Ref="#PWR?"  Part="1" 
+AR Path="/6016C5CD/60B56CCD" Ref="#PWR07"  Part="1" 
+AR Path="/60BBD477/60B56CCD" Ref="#PWR07"  Part="1" 
+AR Path="/609B2504/60BBD477/60B56CCD" Ref="#PWR0118"  Part="1" 
+AR Path="/60A2E32E/60BBD477/60B56CCD" Ref="#PWR0171"  Part="1" 
+AR Path="/60A2EDF1/60BBD477/60B56CCD" Ref="#PWR0211"  Part="1" 
+F 0 "#PWR07" H 4825 4775 50  0001 C CNN
+F 1 "GND" H 4830 4852 50  0000 C CNN
+F 2 "" H 4825 5025 50  0001 C CNN
+F 3 "" H 4825 5025 50  0001 C CNN
+	1    4825 5025
+	1    0    0    -1  
+$EndComp
+Text HLabel 4225 4700 2    50   Input ~ 0
+INTERRUPT
+Wire Wire Line
+	4225 4200 4825 4200
+Text HLabel 4225 3900 2    50   Input ~ 0
+DET_ADC
+NoConn ~ 2775 3800
+NoConn ~ 2775 3700
+$Comp
+L Connector:Conn_01x06_Female J10
+U 1 1 60D30F16
+P 1500 2400
+F 0 "J10" H 1392 1875 50  0000 C CNN
+F 1 "Conn_01x06_Female" H 1392 1966 50  0000 C CNN
+F 2 "canhw_footprints:connector_Harwin_M80-5000642" H 1500 2400 50  0001 C CNN
+F 3 "~" H 1500 2400 50  0001 C CNN
+	1    1500 2400
+	-1   0    0    1   
+$EndComp
+NoConn ~ 1700 2600
+Text Notes 4950 4700 0    50   ~ 0
+RED
+Text Notes 5425 4600 0    50   ~ 0
+BLUE
+Text Notes 6275 5200 0    50   ~ 0
+CLEAR
 $EndSCHEMATC
