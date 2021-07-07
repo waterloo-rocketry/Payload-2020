@@ -274,7 +274,7 @@ U 1 1 60C4E266
 P 10500 1200
 F 0 "J11" H 10600 1250 50  0000 L CNN
 F 1 "Conn_01x05" H 10600 1150 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 10500 1200 50  0001 C CNN
+F 2 "Payload2020_custom:PinHeader_2x03_P2.00mm_Vertical_Harwin_Spacing" H 10500 1200 50  0001 C CNN
 F 3 "~" H 10500 1200 50  0001 C CNN
 	1    10500 1200
 	1    0    0    -1  
@@ -633,4 +633,56 @@ Wire Wire Line
 	7600 2150 8000 2150
 Wire Wire Line
 	6350 2150 7400 2150
+$Comp
+L Device:R_Small_US R29
+U 1 1 60E4F9DC
+P 2050 2000
+F 0 "R29" H 2118 2046 50  0000 L CNN
+F 1 "30k" H 2118 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2050 2000 50  0001 C CNN
+F 3 "~" H 2050 2000 50  0001 C CNN
+	1    2050 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R30
+U 1 1 60E4FDB9
+P 2050 2400
+F 0 "R30" H 2118 2446 50  0000 L CNN
+F 1 "10k" H 2118 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2050 2400 50  0001 C CNN
+F 3 "~" H 2050 2400 50  0001 C CNN
+	1    2050 2400
+	1    0    0    -1  
+$EndComp
+Text Label 2050 1800 2    50   ~ 0
+VBATT_OUT
+Wire Wire Line
+	2050 1800 2050 1900
+Wire Wire Line
+	2050 2100 2050 2200
+$Comp
+L power:GND #PWR0104
+U 1 1 60E56D58
+P 2050 2500
+F 0 "#PWR0104" H 2050 2250 50  0001 C CNN
+F 1 "GND" H 2055 2327 50  0000 C CNN
+F 2 "" H 2050 2500 50  0001 C CNN
+F 3 "" H 2050 2500 50  0001 C CNN
+	1    2050 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2200 2350 2200
+Connection ~ 2050 2200
+Wire Wire Line
+	2050 2200 2050 2300
+Text GLabel 2350 2200 2    50   Input ~ 0
+V_SENSE
+Text Notes 1700 1700 0    50   ~ 0
+12-16V
+Text Notes 2300 2150 0    50   ~ 0
+3-4V output
+Text Notes 1800 1550 0    50   ~ 0
+Voltage Sensing\n
 $EndSCHEMATC
