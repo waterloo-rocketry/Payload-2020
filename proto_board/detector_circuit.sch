@@ -135,7 +135,7 @@ F 3 "~" H 3000 5375 50  0001 C CNN
 	1    2800 5375
 	1    0    0    -1  
 $EndComp
-Text Notes 2075 4375 0    50   ~ 0
+Text Notes 2050 4325 0    50   ~ 0
 Comparator triggers interrrupt, which informs PIC to measure analog signal
 Wire Notes Line
 	2025 4225 2025 6175
@@ -282,9 +282,6 @@ NoConn ~ 4000 5375
 Wire Wire Line
 	4000 5175 4400 5175
 Wire Wire Line
-	4400 5025 4400 5175
-Connection ~ 4400 5175
-Wire Wire Line
 	3400 5375 2800 5375
 Connection ~ 2150 5375
 Connection ~ 2500 5375
@@ -300,62 +297,25 @@ Wire Wire Line
 Wire Wire Line
 	3800 4575 4050 4575
 Connection ~ 3800 4575
-$Comp
-L payload2020_custom:+4.7V #U0103
-U 1 1 60C7FDAB
-P 3800 4575
-F 0 "#U0103" H 3800 4750 50  0001 C CNN
-F 1 "+4.7V" H 3700 4725 50  0000 L CNN
-F 2 "" H 3800 4575 50  0001 C CNN
-F 3 "" H 3800 4575 50  0001 C CNN
-	1    3800 4575
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3600 4575 3800 4575
-$Comp
-L payload2020_custom:+4.7V #U0105
-U 1 1 60C8170A
-P 2500 5075
-F 0 "#U0105" H 2500 5250 50  0001 C CNN
-F 1 "+4.7V" H 2350 5225 50  0000 L CNN
-F 2 "" H 2500 5075 50  0001 C CNN
-F 3 "" H 2500 5075 50  0001 C CNN
-	1    2500 5075
-	1    0    0    -1  
-$EndComp
-$Comp
-L payload2020_custom:+4.7V #U0106
-U 1 1 60C81EBA
-P 2150 5075
-F 0 "#U0106" H 2150 5250 50  0001 C CNN
-F 1 "+4.7V" H 2050 5225 50  0000 L CNN
-F 2 "" H 2150 5075 50  0001 C CNN
-F 3 "" H 2150 5075 50  0001 C CNN
-	1    2150 5075
-	1    0    0    -1  
-$EndComp
 Text Label 2950 2600 0    50   ~ 0
 AMP_OUT
-Wire Wire Line
-	4400 5175 6675 5175
 Text Label 2950 2400 0    50   ~ 0
 SIPM_OUT
 $Comp
-L payload2020_custom:+4.7V #PWR?
+L payload2020_custom:+4.7V #PWR0101
 U 1 1 60E8A021
-P 2725 2050
-F 0 "#PWR?" H 2725 1900 50  0001 C CNN
-F 1 "+4.7V" H 2725 2200 50  0000 C CNN
-F 2 "" H 2725 2050 50  0001 C CNN
-F 3 "" H 2725 2050 50  0001 C CNN
-	1    2725 2050
+P 2650 1575
+F 0 "#PWR0101" H 2650 1425 50  0001 C CNN
+F 1 "+4.7V" H 2650 1725 50  0000 C CNN
+F 2 "" H 2650 1575 50  0001 C CNN
+F 3 "" H 2650 1575 50  0001 C CNN
+	1    2650 1575
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2725 2050 2725 2300
-Wire Wire Line
-	2725 2300 2400 2300
+	2650 1575 2650 1825
 Wire Wire Line
 	2400 2400 2950 2400
 Wire Wire Line
@@ -363,10 +323,10 @@ Wire Wire Line
 Wire Wire Line
 	2375 1350 2950 1350
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0102
 U 1 1 60E8B575
 P 2700 2875
-F 0 "#PWR?" H 2700 2625 50  0001 C CNN
+F 0 "#PWR0102" H 2700 2625 50  0001 C CNN
 F 1 "GND" H 2705 2702 50  0000 C CNN
 F 2 "" H 2700 2875 50  0001 C CNN
 F 3 "" H 2700 2875 50  0001 C CNN
@@ -381,17 +341,6 @@ Wire Wire Line
 	2400 2600 2950 2600
 Wire Wire Line
 	2950 5175 3400 5175
-$Comp
-L Connector:Conn_01x05_Female J?
-U 1 1 60E8E01A
-P 2200 2500
-F 0 "J?" H 2092 2075 50  0000 C CNN
-F 1 "Conn_01x05_Female" H 2092 2166 50  0000 C CNN
-F 2 "" H 2200 2500 50  0001 C CNN
-F 3 "~" H 2200 2500 50  0001 C CNN
-	1    2200 2500
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	2950 2600 2950 5175
 Text Label 2950 2500 0    50   ~ 0
@@ -410,4 +359,81 @@ F7 "INTERRUPT" I L 6650 5175 50
 $EndSheet
 Wire Wire Line
 	2400 2500 6650 2500
+$Comp
+L Connector:Conn_01x04_Female J11
+U 1 1 60EAC638
+P 2200 2600
+F 0 "J11" H 2092 2175 50  0000 C CNN
+F 1 "DET_CONN" H 2092 2266 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2200 2600 50  0001 C CNN
+F 3 "~" H 2200 2600 50  0001 C CNN
+	1    2200 2600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2650 1825 2375 1825
+$Comp
+L Connector:Conn_01x02_Female J2
+U 1 1 60EAD8D4
+P 2175 1925
+F 0 "J2" H 2067 1600 50  0000 C CNN
+F 1 "DET_CONN_PWR" H 2067 1691 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2175 1925 50  0001 C CNN
+F 3 "~" H 2175 1925 50  0001 C CNN
+	1    2175 1925
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 60EAF16C
+P 2650 2100
+F 0 "#PWR0103" H 2650 1850 50  0001 C CNN
+F 1 "GND" H 2655 1927 50  0000 C CNN
+F 2 "" H 2650 2100 50  0001 C CNN
+F 3 "" H 2650 2100 50  0001 C CNN
+	1    2650 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 1925 2650 2100
+Wire Wire Line
+	2650 1925 2375 1925
+$Comp
+L power:+5V #PWR0104
+U 1 1 60EB0698
+P 2150 5075
+F 0 "#PWR0104" H 2150 4925 50  0001 C CNN
+F 1 "+5V" H 2165 5248 50  0000 C CNN
+F 2 "" H 2150 5075 50  0001 C CNN
+F 3 "" H 2150 5075 50  0001 C CNN
+	1    2150 5075
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 60EB088C
+P 2500 5075
+F 0 "#PWR0105" H 2500 4925 50  0001 C CNN
+F 1 "+5V" H 2515 5248 50  0000 C CNN
+F 2 "" H 2500 5075 50  0001 C CNN
+F 3 "" H 2500 5075 50  0001 C CNN
+	1    2500 5075
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 60EB0BD7
+P 3800 4575
+F 0 "#PWR0107" H 3800 4425 50  0001 C CNN
+F 1 "+5V" H 3815 4748 50  0000 C CNN
+F 2 "" H 3800 4575 50  0001 C CNN
+F 3 "" H 3800 4575 50  0001 C CNN
+	1    3800 4575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 5175 4400 5175
+Connection ~ 4400 5175
+Wire Wire Line
+	4400 5025 4400 5175
 $EndSCHEMATC
