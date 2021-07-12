@@ -277,7 +277,6 @@ Wire Wire Line
 Connection ~ 5050 1550
 Wire Wire Line
 	5350 1550 5050 1550
-Connection ~ 2450 1400
 Wire Wire Line
 	2450 1050 2450 1400
 Wire Wire Line
@@ -300,8 +299,6 @@ F 3 "~" H 2950 1050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3100 2425 3500 2425
-Wire Wire Line
-	2450 2425 2450 2450
 Connection ~ 2450 2425
 Wire Wire Line
 	2800 2425 2450 2425
@@ -320,7 +317,6 @@ Wire Wire Line
 Wire Wire Line
 	2800 2100 2450 2100
 Connection ~ 3500 1750
-Connection ~ 2450 1750
 $Comp
 L Device:R R31
 U 1 1 60BB58F3
@@ -374,8 +370,6 @@ F 3 "~" H 10850 2925 50  0001 C CNN
 	1    10850 2925
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5850 3200 5750 3200
 Wire Notes Line
 	10600 550  10600 4450
 Connection ~ 2450 2850
@@ -455,17 +449,17 @@ $EndComp
 $Comp
 L Device:C C9
 U 1 1 609C6212
-P 2950 1400
+P 2950 1750
 AR Path="/609B2504/609C6212" Ref="C9"  Part="1" 
 AR Path="/60A2E32E/609C6212" Ref="C20"  Part="1" 
 AR Path="/60A2EDF1/609C6212" Ref="C31"  Part="1" 
 AR Path="/60A2F85E/609C6212" Ref="C?"  Part="1" 
 AR Path="/609C6212" Ref="C31"  Part="1" 
-F 0 "C31" V 2698 1400 50  0000 C CNN
-F 1 "1n" V 2789 1400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2988 1250 50  0001 C CNN
-F 3 "~" H 2950 1400 50  0001 C CNN
-	1    2950 1400
+F 0 "C31" V 2698 1750 50  0000 C CNN
+F 1 "1n" V 2789 1750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2988 1600 50  0001 C CNN
+F 3 "~" H 2950 1750 50  0001 C CNN
+	1    2950 1750
 	0    1    1    0   
 $EndComp
 $Comp
@@ -487,17 +481,17 @@ $EndComp
 $Comp
 L Device:R R7
 U 1 1 609C0BA4
-P 2950 1750
+P 2950 1400
 AR Path="/609B2504/609C0BA4" Ref="R7"  Part="1" 
 AR Path="/60A2E32E/609C0BA4" Ref="R15"  Part="1" 
 AR Path="/60A2EDF1/609C0BA4" Ref="R23"  Part="1" 
 AR Path="/60A2F85E/609C0BA4" Ref="R?"  Part="1" 
 AR Path="/609C0BA4" Ref="R40"  Part="1" 
-F 0 "R40" V 2743 1750 50  0000 C CNN
-F 1 "150" V 2834 1750 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2880 1750 50  0001 C CNN
-F 3 "~" H 2950 1750 50  0001 C CNN
-	1    2950 1750
+F 0 "R40" V 2743 1400 50  0000 C CNN
+F 1 "150" V 2834 1400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2880 1400 50  0001 C CNN
+F 3 "~" H 2950 1400 50  0001 C CNN
+	1    2950 1400
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -705,8 +699,6 @@ Wire Wire Line
 	2450 1750 2800 1750
 Wire Wire Line
 	3100 1750 3500 1750
-Wire Wire Line
-	2450 1400 2450 1750
 Wire Wire Line
 	2550 3100 2550 3550
 Wire Wire Line
@@ -1080,7 +1072,7 @@ Wire Wire Line
 	1550 2425 1550 2850
 Connection ~ 1550 2850
 Wire Wire Line
-	1550 2850 2075 2850
+	1550 2850 2025 2850
 Text Label 1700 2950 0    50   ~ 0
 DET_ADC
 Text Label 1700 3050 0    50   ~ 0
@@ -1101,21 +1093,14 @@ Wire Wire Line
 $Comp
 L Connector:TestPoint TP2
 U 1 1 60F23463
-P 1925 2400
-F 0 "TP2" H 1983 2518 50  0000 L CNN
-F 1 "TestPoint" H 1983 2427 50  0000 L CNN
-F 2 "" H 2125 2400 50  0001 C CNN
-F 3 "~" H 2125 2400 50  0001 C CNN
-	1    1925 2400
+P 2250 2425
+F 0 "TP2" H 2175 2750 50  0000 L CNN
+F 1 "SIPM" H 2150 2650 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2450 2425 50  0001 C CNN
+F 3 "~" H 2450 2425 50  0001 C CNN
+	1    2250 2425
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1925 2400 1925 2450
-Wire Wire Line
-	1925 2450 2450 2450
-Connection ~ 2450 2450
-Wire Wire Line
-	2450 2450 2450 2850
 Wire Wire Line
 	10250 3200 10850 3200
 Wire Wire Line
@@ -1196,4 +1181,16 @@ Wire Wire Line
 Connection ~ 10600 3800
 Wire Wire Line
 	10600 3800 10600 5525
+Wire Wire Line
+	2025 2850 2025 1400
+Wire Wire Line
+	2025 1400 2450 1400
+Connection ~ 2025 2850
+Wire Wire Line
+	2025 2850 2075 2850
+Connection ~ 2450 1400
+Wire Wire Line
+	2250 2425 2450 2425
+Wire Wire Line
+	2450 2425 2450 2850
 $EndSCHEMATC

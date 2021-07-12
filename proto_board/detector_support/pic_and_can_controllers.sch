@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -675,7 +675,6 @@ Wire Wire Line
 	1700 2400 2400 2400
 Text Label 2775 4200 2    50   ~ 0
 CS
-NoConn ~ 4225 4600
 NoConn ~ 4225 4500
 Wire Wire Line
 	10475 5700 10650 5700
@@ -744,7 +743,7 @@ Text HLabel 4225 4700 2    50   Input ~ 0
 INTERRUPT
 Wire Wire Line
 	4225 4200 4825 4200
-Text HLabel 4225 3900 2    50   Input ~ 0
+Text HLabel 4225 4600 2    50   Input ~ 0
 DET_ADC
 NoConn ~ 2775 3800
 NoConn ~ 2775 3700
@@ -766,4 +765,5 @@ Text Notes 5425 4600 0    50   ~ 0
 BLUE
 Text Notes 6275 5200 0    50   ~ 0
 CLEAR
+NoConn ~ 4225 3900
 $EndSCHEMATC
