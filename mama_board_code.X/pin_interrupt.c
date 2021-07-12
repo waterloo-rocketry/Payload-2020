@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <pic18f26k83.h>
 
 void pin_init(){
@@ -18,8 +19,7 @@ void pin_init(){
     IOCAPbits.IOCAP2 = 1;
 }
 
-void pin_interrupt_handler()
-{
+void pin_interrupt_handler(){
     uint8_t sensor_identifier;
     
     if (IOCAFbits.IOCAF0){

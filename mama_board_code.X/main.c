@@ -17,6 +17,8 @@
 
 #define MAX_LOOP_TIME_DIFF_ms 250
 
+#define _XTAL_FREQ 1000000
+
 #define BOARD_UNIQUE_ID 0x7A0
 
 static void can_msg_handler(const can_msg_t *msg);
@@ -74,7 +76,7 @@ int main(int argc, char** argv) {
 }
 
 //CHANGE FOR PAPABAORD
-static void interrupt interrupt_handler() {
+static void __interrupt() interrupt_handler() {
     if (PIR5) {
         can_handle_interrupt();
     }
