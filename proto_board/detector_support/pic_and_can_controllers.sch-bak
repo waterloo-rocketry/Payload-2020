@@ -73,7 +73,7 @@ Wire Wire Line
 Wire Wire Line
 	9450 3800 9450 4150
 Wire Wire Line
-	2025 3175 2025 3275
+	1825 3175 1825 3275
 $Comp
 L power:GND #PWR045
 U 1 1 5FF85B73
@@ -172,7 +172,7 @@ Wire Wire Line
 	2925 6325 3175 6325
 Wire Wire Line
 	2725 6175 2525 6175
-Text Label 2775 4400 2    50   ~ 0
+Text Label 2750 4400 2    50   ~ 0
 OSC2
 Text Label 3575 6025 0    50   ~ 0
 OSC1
@@ -185,8 +185,6 @@ Wire Wire Line
 	3175 6025 3575 6025
 Connection ~ 3175 6025
 Wire Wire Line
-	4225 3600 4525 3600
-Wire Wire Line
 	4525 3600 4525 3400
 Connection ~ 4525 3400
 Wire Wire Line
@@ -194,13 +192,13 @@ Wire Wire Line
 Connection ~ 2725 6175
 Wire Wire Line
 	2725 6175 2725 6325
-Text Label 2775 4500 2    50   ~ 0
+Text Label 2750 4500 2    50   ~ 0
 PIC_TX
-Text Label 2775 4600 2    50   ~ 0
+Text Label 2750 4600 2    50   ~ 0
 PIC_RX
-Text Label 2775 4700 2    50   ~ 0
+Text Label 2250 4700 2    50   ~ 0
 MISO
-Text Label 2775 4800 2    50   ~ 0
+Text Label 2750 4800 2    50   ~ 0
 SCK
 $Comp
 L power:GND #PWR043
@@ -218,11 +216,7 @@ F 3 "" H 4425 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4225 4900 4425 4900
-Wire Wire Line
 	4425 4900 4425 4950
-Wire Wire Line
-	4225 4800 4425 4800
 Wire Wire Line
 	4425 4800 4425 4900
 Connection ~ 4425 4900
@@ -252,8 +246,6 @@ Text HLabel 10650 6275 2    50   Input ~ 0
 SCK
 Text Label 10475 6100 2    50   ~ 0
 CS
-Text Label 10475 5900 2    50   ~ 0
-MISO
 Text Label 10475 6275 2    50   ~ 0
 SCK
 Wire Wire Line
@@ -310,20 +302,20 @@ $EndComp
 $Comp
 L Device:R_Small_US R10
 U 1 1 60AC5D2E
-P 2025 3375
+P 1825 3375
 AR Path="/609B2504/60BBD477/60AC5D2E" Ref="R10"  Part="1" 
 AR Path="/60A2E32E/60BBD477/60AC5D2E" Ref="R10"  Part="1" 
 AR Path="/60A2EDF1/60BBD477/60AC5D2E" Ref="R10"  Part="1" 
 AR Path="/60BBD477/60AC5D2E" Ref="R10"  Part="1" 
-F 0 "R10" H 2093 3421 50  0000 L CNN
-F 1 "10k" H 2093 3330 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2025 3375 50  0001 C CNN
-F 3 "~" H 2025 3375 50  0001 C CNN
-	1    2025 3375
+F 0 "R10" H 1893 3421 50  0000 L CNN
+F 1 "10k" H 1893 3330 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1825 3375 50  0001 C CNN
+F 3 "~" H 1825 3375 50  0001 C CNN
+	1    1825 3375
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4225 4300
-NoConn ~ 4225 4400
+NoConn ~ 4200 4300
+NoConn ~ 4200 4400
 $Comp
 L Device:LED D?
 U 1 1 60ADFB56
@@ -438,99 +430,76 @@ F 3 "" H 6225 5550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6225 5450 6225 5550
-Text Label 2775 4300 2    50   ~ 0
+Text Label 2750 4300 2    50   ~ 0
 OSC1
 Wire Wire Line
 	6225 4000 6225 4800
 Wire Wire Line
-	4225 4000 6225 4000
+	1400 3600 1825 3600
 Wire Wire Line
-	4225 4100 5400 4100
-Wire Wire Line
-	1600 3600 2025 3600
-Wire Wire Line
-	2025 3475 2025 3600
-Connection ~ 2025 3600
-Wire Wire Line
-	2025 3600 2375 3600
+	1825 3475 1825 3600
+Connection ~ 1825 3600
 $Comp
 L Device:R_Small_US R6
 U 1 1 60BB5950
-P 2475 3600
+P 2300 3600
 AR Path="/609B2504/60BBD477/60BB5950" Ref="R6"  Part="1" 
 AR Path="/60A2E32E/60BBD477/60BB5950" Ref="R6"  Part="1" 
 AR Path="/60A2EDF1/60BBD477/60BB5950" Ref="R6"  Part="1" 
 AR Path="/60BBD477/60BB5950" Ref="R6"  Part="1" 
-F 0 "R6" V 2270 3600 50  0000 C CNN
-F 1 "100" V 2361 3600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2475 3600 50  0001 C CNN
-F 3 "~" H 2475 3600 50  0001 C CNN
-	1    2475 3600
+F 0 "R6" V 2095 3600 50  0000 C CNN
+F 1 "100" V 2186 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2300 3600 50  0001 C CNN
+F 3 "~" H 2300 3600 50  0001 C CNN
+	1    2300 3600
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C C3
 U 1 1 60BB6750
-P 2025 4050
+P 1825 4050
 AR Path="/609B2504/60BBD477/60BB6750" Ref="C3"  Part="1" 
 AR Path="/60A2E32E/60BBD477/60BB6750" Ref="C3"  Part="1" 
 AR Path="/60A2EDF1/60BBD477/60BB6750" Ref="C3"  Part="1" 
 AR Path="/60BBD477/60BB6750" Ref="C3"  Part="1" 
-F 0 "C3" H 2140 4096 50  0000 L CNN
-F 1 "0.1u" H 2140 4005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2063 3900 50  0001 C CNN
-F 3 "~" H 2025 4050 50  0001 C CNN
-	1    2025 4050
+F 0 "C3" H 1940 4096 50  0000 L CNN
+F 1 "0.1u" H 1940 4005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1863 3900 50  0001 C CNN
+F 3 "~" H 1825 4050 50  0001 C CNN
+	1    1825 4050
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0119
 U 1 1 60BB6BB8
-P 2025 4200
+P 1825 4200
 AR Path="/609B2504/60BBD477/60BB6BB8" Ref="#PWR0119"  Part="1" 
 AR Path="/60A2E32E/60BBD477/60BB6BB8" Ref="#PWR0172"  Part="1" 
 AR Path="/60A2EDF1/60BBD477/60BB6BB8" Ref="#PWR0212"  Part="1" 
 AR Path="/60BBD477/60BB6BB8" Ref="#PWR0212"  Part="1" 
-F 0 "#PWR0212" H 2025 3950 50  0001 C CNN
-F 1 "GND" H 2030 4027 50  0000 C CNN
-F 2 "" H 2025 4200 50  0001 C CNN
-F 3 "" H 2025 4200 50  0001 C CNN
-	1    2025 4200
+F 0 "#PWR0212" H 1825 3950 50  0001 C CNN
+F 1 "GND" H 1830 4027 50  0000 C CNN
+F 2 "" H 1825 4200 50  0001 C CNN
+F 3 "" H 1825 4200 50  0001 C CNN
+	1    1825 4200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2025 3600 2025 3900
-NoConn ~ 2775 4000
-Wire Wire Line
-	2575 3600 2775 3600
-$Comp
-L canhw:PIC18LF26K83 U5
-U 1 1 60BA2EF2
-P 3525 4200
-AR Path="/609B2504/60BBD477/60BA2EF2" Ref="U5"  Part="1" 
-AR Path="/60A2E32E/60BBD477/60BA2EF2" Ref="U5"  Part="1" 
-AR Path="/60A2EDF1/60BBD477/60BA2EF2" Ref="U5"  Part="1" 
-AR Path="/60BBD477/60BA2EF2" Ref="U5"  Part="1" 
-F 0 "U5" H 3500 5065 50  0000 C CNN
-F 1 "PIC18LF26K83" H 3500 4974 50  0000 C CNN
-F 2 "Package_SO:SOIC-28W_7.5x18.7mm_P1.27mm" H 3525 5100 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40001943A.pdf" H 3525 5100 50  0001 C CNN
-	1    3525 4200
-	1    0    0    -1  
-$EndComp
+	1825 3600 1825 3900
+NoConn ~ 2750 4000
 $Comp
 L power:+5V #PWR0120
 U 1 1 60BA7F7D
-P 2025 3175
+P 1825 3175
 AR Path="/609B2504/60BBD477/60BA7F7D" Ref="#PWR0120"  Part="1" 
 AR Path="/60A2E32E/60BBD477/60BA7F7D" Ref="#PWR0173"  Part="1" 
 AR Path="/60A2EDF1/60BBD477/60BA7F7D" Ref="#PWR0213"  Part="1" 
 AR Path="/60BBD477/60BA7F7D" Ref="#PWR0213"  Part="1" 
-F 0 "#PWR0213" H 2025 3025 50  0001 C CNN
-F 1 "+5V" H 2040 3348 50  0000 C CNN
-F 2 "" H 2025 3175 50  0001 C CNN
-F 3 "" H 2025 3175 50  0001 C CNN
-	1    2025 3175
+F 0 "#PWR0213" H 1825 3025 50  0001 C CNN
+F 1 "+5V" H 1840 3348 50  0000 C CNN
+F 2 "" H 1825 3175 50  0001 C CNN
+F 3 "" H 1825 3175 50  0001 C CNN
+	1    1825 3175
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -563,7 +532,7 @@ F 3 "" H 8400 3050 50  0001 C CNN
 	1    8400 3050
 	1    0    0    -1  
 $EndComp
-NoConn ~ 2775 3900
+NoConn ~ 2750 3900
 $Comp
 L Connector:Conn_01x05_Female J1
 U 1 1 60BF1C01
@@ -629,12 +598,12 @@ Wire Wire Line
 	1700 1250 2400 1250
 Wire Wire Line
 	2400 1250 2400 1650
-Text Label 4225 3700 0    50   ~ 0
+Text Label 4200 3700 0    50   ~ 0
 ICSPDAT
-Text Label 4225 3800 0    50   ~ 0
+Text Label 4200 3800 0    50   ~ 0
 ICSPCLK
-NoConn ~ 2775 4100
-Text Label 1600 3600 2    50   ~ 0
+NoConn ~ 2750 4100
+Text Label 1400 3600 2    50   ~ 0
 MCLR
 NoConn ~ 1700 2500
 NoConn ~ 1700 2100
@@ -673,14 +642,12 @@ Wire Wire Line
 	1700 2200 2050 2200
 Wire Wire Line
 	1700 2400 2400 2400
-Text Label 2775 4200 2    50   ~ 0
+Text Label 2750 4200 2    50   ~ 0
 CS
-NoConn ~ 4225 4500
+NoConn ~ 4200 4500
 Wire Wire Line
 	10475 5700 10650 5700
-Text Label 10475 5700 2    50   ~ 0
-MOSI
-Text Label 2775 4900 2    50   ~ 0
+Text Label 2250 4900 2    50   ~ 0
 MOSI
 Wire Wire Line
 	4825 4500 4825 4650
@@ -739,14 +706,12 @@ F 3 "" H 4825 5025 50  0001 C CNN
 	1    4825 5025
 	1    0    0    -1  
 $EndComp
-Text HLabel 4225 4700 2    50   Input ~ 0
+Text HLabel 4200 4700 2    50   Input ~ 0
 INTERRUPT
-Wire Wire Line
-	4225 4200 4825 4200
-Text HLabel 4225 4600 2    50   Input ~ 0
+Text HLabel 4200 4600 2    50   Input ~ 0
 DET_ADC
-NoConn ~ 2775 3800
-NoConn ~ 2775 3700
+NoConn ~ 2750 3800
+NoConn ~ 2750 3700
 $Comp
 L Connector:Conn_01x06_Female J10
 U 1 1 60D30F16
@@ -765,5 +730,40 @@ Text Notes 5425 4600 0    50   ~ 0
 BLUE
 Text Notes 6275 5200 0    50   ~ 0
 CLEAR
-NoConn ~ 4225 3900
+NoConn ~ 4200 3900
+$Comp
+L canhw:PIC18LF26K83 U5
+U 1 1 60BA2EF2
+P 3500 4200
+AR Path="/609B2504/60BBD477/60BA2EF2" Ref="U5"  Part="1" 
+AR Path="/60A2E32E/60BBD477/60BA2EF2" Ref="U5"  Part="1" 
+AR Path="/60A2EDF1/60BBD477/60BA2EF2" Ref="U5"  Part="1" 
+AR Path="/60BBD477/60BA2EF2" Ref="U5"  Part="1" 
+F 0 "U5" H 3475 5065 50  0000 C CNN
+F 1 "PIC18LF26K83" H 3475 4974 50  0000 C CNN
+F 2 "Package_SO:SOIC-28W_7.5x18.7mm_P1.27mm" H 3500 5100 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40001943A.pdf" H 3500 5100 50  0001 C CNN
+	1    3500 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3600 2750 3600
+Wire Wire Line
+	1825 3600 2200 3600
+Wire Wire Line
+	4200 4000 6225 4000
+Wire Wire Line
+	4200 4200 4825 4200
+Wire Wire Line
+	4200 4800 4425 4800
+Wire Wire Line
+	4200 4900 4425 4900
+Wire Wire Line
+	4200 3600 4525 3600
+Wire Wire Line
+	4200 4100 5400 4100
+Wire Wire Line
+	2750 4900 2250 4900
+Wire Wire Line
+	2250 4700 2750 4700
 $EndSCHEMATC

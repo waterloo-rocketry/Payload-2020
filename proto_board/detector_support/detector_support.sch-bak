@@ -302,7 +302,7 @@ Wire Wire Line
 Text Label 2950 2600 0    50   ~ 0
 AMP_OUT
 Text Label 2950 2400 0    50   ~ 0
-SIPM_OUT
+SIPM_OUT_DET
 $Comp
 L payload2020_custom:+4.7V #PWR0101
 U 1 1 60E8A021
@@ -318,8 +318,6 @@ Wire Wire Line
 	2650 1575 2650 1825
 Wire Wire Line
 	2400 2400 2950 2400
-Wire Wire Line
-	2950 2400 2950 1350
 Wire Wire Line
 	2375 1350 2950 1350
 $Comp
@@ -436,4 +434,12 @@ Wire Wire Line
 Connection ~ 4400 5175
 Wire Wire Line
 	4400 5025 4400 5175
+Text Label 2950 1350 0    50   ~ 0
+SIPM_OUT
+Wire Wire Line
+	2950 1350 2950 1500
+NoConn ~ 2950 1500
+Wire Wire Line
+	2950 2400 2950 2250
+NoConn ~ 2950 2250
 $EndSCHEMATC
