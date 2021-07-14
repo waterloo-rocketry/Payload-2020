@@ -562,7 +562,7 @@ U 1 1 6000B832
 P 10500 2400
 F 0 "J4" H 10600 2450 50  0000 L CNN
 F 1 "Conn_01x05" H 10600 2350 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 10500 2400 50  0001 C CNN
+F 2 "Payload2020_custom:PinHeader_2x03_P2.00mm_Vertical_MINISENSOR_Harwin_Spacing" H 10500 2400 50  0001 C CNN
 F 3 "~" H 10500 2400 50  0001 C CNN
 	1    10500 2400
 	1    0    0    -1  
