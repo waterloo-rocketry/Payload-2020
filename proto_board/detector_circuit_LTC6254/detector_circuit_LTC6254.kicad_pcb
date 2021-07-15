@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 60)
+    (drawings 61)
     (tracks 234)
     (zones 0)
     (modules 42)
@@ -12,8 +12,8 @@
   (page A4)
   (layers
     (0 Papa.Cu signal)
-    (1 GND.Cu power hide)
-    (2 VCC.Cu power hide)
+    (1 GND.Cu power)
+    (2 VCC.Cu power)
     (31 Mama.Cu signal)
     (32 B.Adhes user hide)
     (33 F.Adhes user hide)
@@ -1799,6 +1799,9 @@
     )
   )
 
+  (gr_text 2021-07-15 (at 137.287 137.541) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
   (dimension 6.35 (width 0.15) (layer Cmts.User)
     (gr_text "6.350 mm" (at 86.995 153.319) (layer Cmts.User)
       (effects (font (size 1 1) (thickness 0.15)))

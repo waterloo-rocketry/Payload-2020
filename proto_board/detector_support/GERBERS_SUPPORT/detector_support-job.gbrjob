@@ -7,20 +7,20 @@
       "Application": "Pcbnew",
       "Version":     "(5.1.9)-1"
     },
-    "CreationDate":  "2021-07-10T10:04:42-04:00"
+    "CreationDate":  "2021-07-15T19:20:44-04:00"
   },
   "GeneralSpecs":
   {
     "ProjectId":
     {
-      "Name": "detector_circuit_alt_LTC6254",
-      "GUID": "64657465-6374-46f7-925f-636972637569",
+      "Name": "detector_support",
+      "GUID": "64657465-6374-46f7-925f-737570706f72",
       "Revision": "rev?"
     },
     "Size":
     {
-      "X": 69.315,
-      "Y": 53.313
+      "X": 94.080,
+      "Y": 99.160
     },
     "LayerNumber": 4,
     "BoardThickness":  1.600
@@ -41,6 +41,7 @@
       "PadToPad":  0.200,
       "PadToTrack":  0.200,
       "TrackToTrack":  0.200,
+      "MinLineWidth":  2.500,
       "TrackToRegion":  0.200,
       "RegionToRegion":  0.200
     }
@@ -48,57 +49,57 @@
   "FilesAttributes":
   [
     {
-      "Path":  "detector_circuit_alt_LTC6254-Papa_Cu.gbr",
+      "Path":  "detector_support-Papa_Cu.gbr",
       "FileFunction":  "Copper,L1,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "detector_circuit_alt_LTC6254-GND_Cu.gbr",
+      "Path":  "detector_support-GND_Cu.gbr",
       "FileFunction":  "Copper,L2,Inr",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "detector_circuit_alt_LTC6254-VCC_Cu.gbr",
+      "Path":  "detector_support-VCC_Cu.gbr",
       "FileFunction":  "Copper,L3,Inr",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "detector_circuit_alt_LTC6254-Mama_Cu.gbr",
+      "Path":  "detector_support-Mama_Cu.gbr",
       "FileFunction":  "Copper,L4,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "detector_circuit_alt_LTC6254-F_Paste.gbr",
+      "Path":  "detector_support-F_Paste.gbr",
       "FileFunction":  "SolderPaste,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "detector_circuit_alt_LTC6254-B_Paste.gbr",
+      "Path":  "detector_support-B_Paste.gbr",
       "FileFunction":  "SolderPaste,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "detector_circuit_alt_LTC6254-F_SilkS.gbr",
+      "Path":  "detector_support-F_SilkS.gbr",
       "FileFunction":  "Legend,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "detector_circuit_alt_LTC6254-B_SilkS.gbr",
+      "Path":  "detector_support-B_SilkS.gbr",
       "FileFunction":  "Legend,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "detector_circuit_alt_LTC6254-F_Mask.gbr",
+      "Path":  "detector_support-F_Mask.gbr",
       "FileFunction":  "SolderMask,Top",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "detector_circuit_alt_LTC6254-B_Mask.gbr",
+      "Path":  "detector_support-B_Mask.gbr",
       "FileFunction":  "SolderMask,Bot",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "detector_circuit_alt_LTC6254-Edge_Cuts.gbr",
+      "Path":  "detector_support-Edge_Cuts.gbr",
       "FileFunction":  "Profile",
       "FilePolarity":  "Positive"
     }
