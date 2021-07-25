@@ -30,7 +30,7 @@ static uint32_t last_can_traffic_timestamp_ms = 0;
 uint8_t tx_pool[100];
 
 int main(int argc, char** argv) { 
-    // MCC generated initializer
+    // MCC generated initializer, I don't think I need these
     //SYSTEM_Initialize();
     //OSCILLATOR_Initialize();
 
@@ -75,7 +75,6 @@ int main(int argc, char** argv) {
     return (EXIT_SUCCESS);
 }
 
-//CHANGE FOR PAPABAORD
 static void __interrupt() interrupt_handler() {
     if (PIR5) {
         can_handle_interrupt();
@@ -99,7 +98,6 @@ static void __interrupt() interrupt_handler() {
     }
 }
 
-//CHANGE FOR PAPABAORD
 static void can_msg_handler(const can_msg_t *msg) {
     uint16_t msg_type = get_message_type(msg);
 
@@ -138,7 +136,6 @@ static void can_msg_handler(const can_msg_t *msg) {
     last_can_traffic_timestamp_ms = millis();
 }
 
-//CHANGE FOR PAPABOARD
 // Send a CAN message with nominal status
 static void send_status_ok(void) {
     can_msg_t board_stat_msg;

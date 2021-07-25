@@ -1,17 +1,5 @@
 #include "adc.h"
 
-#include "canlib/can.h"
-#include "canlib/can_common.h"
-#include "canlib/pic18f26k83/pic18f26k83_can.h"
-#include "canlib/message_types.h"
-#include "canlib/util/timing_util.h"
-#include "canlib/util/can_tx_buffer.h"
-
-#include "timer.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <xc.h>
-
 void adc_init()
 {
     //THESE PINS ARE PROB DIFFERENT BASED ON SCHEMATIC

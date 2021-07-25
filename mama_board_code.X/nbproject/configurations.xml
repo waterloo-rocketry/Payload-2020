@@ -23,7 +23,6 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>adc.h</itemPath>
-      <itemPath>sensor.h</itemPath>
       <itemPath>timer.h</itemPath>
       <itemPath>pin_interrupt.h</itemPath>
     </logicalFolder>
@@ -36,7 +35,6 @@
                    projectFiles="true">
       <itemPath>adc.c</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>sensor.c</itemPath>
       <itemPath>timer.c</itemPath>
       <itemPath>pin_interrupt.c</itemPath>
     </logicalFolder>
