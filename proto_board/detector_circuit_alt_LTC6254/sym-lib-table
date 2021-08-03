@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name canhw)(type Legacy)(uri ${KIPRJMOD}/../../../canhw/lib/canhw.lib)(options "")(descr ""))
+  (lib (name payload2020_custom)(type Legacy)(uri ${KIPRJMOD}/../payload2020_custom.lib)(options "")(descr ""))
+)
