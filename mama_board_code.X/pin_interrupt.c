@@ -43,6 +43,4 @@ void pin_interrupt_handler(){
     
     //Rest of the process is handled by adc_interrupt_handler
     //bec completion of adc conversion/calc triggers an interrupt
-    
-    //SHOULD THERE BE A DELAY? 
 }
