@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #include "canlib/can.h"
 #include "canlib/can_common.h"
@@ -10,7 +11,6 @@
 
 #include "adc.h"
 #include "pin_interrupt.h"
-#include "sensor.h"
 #include "timer.h"
 
 #include <xc.h>
@@ -30,7 +30,7 @@ static uint32_t last_can_traffic_timestamp_ms = 0;
 uint8_t tx_pool[100];
 
 int main(int argc, char** argv) { 
-    // MCC generated initializer, I don't think I need these
+    //MCC generated initializer, I don't think I need these
     //SYSTEM_Initialize();
     //OSCILLATOR_Initialize();
 
