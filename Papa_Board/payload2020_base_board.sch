@@ -292,8 +292,6 @@ F 3 "" H 9750 850 50  0001 C CNN
 $EndComp
 Text Notes 10575 975  0    50   ~ 0
 Live Telemetry
-Text Notes 5450 6050 0    50   ~ 0
-Not all pins support peripheral output,\nwhich is required for MOSI, SCK,\nand CANTX. RP20 and RP35-43 are \nthe ones that support peripheral ouptut
 $Sheet
 S 3850 1000 900  500 
 U 5E13F8E9
