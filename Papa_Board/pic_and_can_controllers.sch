@@ -389,40 +389,40 @@ $EndComp
 $Comp
 L Device:R_Small_US R?
 U 1 1 60B56CD5
-P 5550 5500
+P 5850 5650
 AR Path="/60B56CD5" Ref="R?"  Part="1" 
 AR Path="/6016C5CD/60B56CD5" Ref="R9"  Part="1" 
-F 0 "R9" H 5618 5546 50  0000 L CNN
-F 1 "330R" H 5618 5455 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5550 5500 50  0001 C CNN
-F 3 "~" H 5550 5500 50  0001 C CNN
-	1    5550 5500
+F 0 "R9" H 5918 5696 50  0000 L CNN
+F 1 "330R" H 5918 5605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5850 5650 50  0001 C CNN
+F 3 "~" H 5850 5650 50  0001 C CNN
+	1    5850 5650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 60B56CCD
-P 5550 6150
+P 5850 6300
 AR Path="/60B56CCD" Ref="#PWR?"  Part="1" 
 AR Path="/6016C5CD/60B56CCD" Ref="#PWR07"  Part="1" 
-F 0 "#PWR07" H 5550 5900 50  0001 C CNN
-F 1 "GND" H 5555 5977 50  0000 C CNN
-F 2 "" H 5550 6150 50  0001 C CNN
-F 3 "" H 5550 6150 50  0001 C CNN
-	1    5550 6150
+F 0 "#PWR07" H 5850 6050 50  0001 C CNN
+F 1 "GND" H 5855 6127 50  0000 C CNN
+F 2 "" H 5850 6300 50  0001 C CNN
+F 3 "" H 5850 6300 50  0001 C CNN
+	1    5850 6300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:LED D?
 U 1 1 60B56CC6
-P 5550 5900
+P 5850 6050
 AR Path="/60B56CC6" Ref="D?"  Part="1" 
 AR Path="/6016C5CD/60B56CC6" Ref="DW1"  Part="1" 
-F 0 "DW1" V 5589 5782 50  0000 R CNN
-F 1 "QBLP650-IW" V 5498 5782 50  0000 R CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5550 5900 50  0001 C CNN
-F 3 "~" H 5550 5900 50  0001 C CNN
-	1    5550 5900
+F 0 "DW1" V 5889 5932 50  0000 R CNN
+F 1 "QBLP650-IW" V 5798 5932 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5850 6050 50  0001 C CNN
+F 3 "~" H 5850 6050 50  0001 C CNN
+	1    5850 6050
 	0    -1   -1   0   
 $EndComp
 Text Label 3550 1350 2    50   ~ 0
@@ -432,11 +432,9 @@ Text Label 7650 1450 2    50   ~ 0
 Text Label 9800 2850 0    50   ~ 0
 5V3_ALWAYS_ON
 Wire Wire Line
-	5550 5300 5550 5400
+	5850 5750 5850 5900
 Wire Wire Line
-	5550 5600 5550 5750
-Wire Wire Line
-	5550 6050 5550 6150
+	5850 6200 5850 6300
 $Comp
 L Device:Crystal Y2
 U 1 1 60B1FA37
@@ -571,8 +569,6 @@ Text Label 8700 1900 2    50   ~ 0
 MCP_RX
 Text Label 8700 1800 2    50   ~ 0
 MCP_TX
-Wire Wire Line
-	5100 5300 5550 5300
 Text HLabel 850  3900 0    50   Input ~ 0
 MCLR
 $Comp
@@ -798,104 +794,6 @@ Wire Wire Line
 	1900 4450 1900 4700
 Text Notes 4950 3750 0    50   ~ 0
 Not all pins support peripheral output. RP20\nand RP35-43 are the pins that support peripheral ouptut.
-Wire Wire Line
-	7050 5100 7050 5200
-Wire Wire Line
-	7050 5400 7050 5500
-Wire Wire Line
-	6250 5600 6250 5500
-Text Notes 5750 5000 0    50   ~ 0
-Mama board power is on when MAMA_PWR_EN is low.\n
-Wire Wire Line
-	5100 5100 7050 5100
-Wire Wire Line
-	7050 5900 7050 5800
-$Comp
-L power:GND #PWR?
-U 1 1 60AEEF59
-P 7050 5900
-AR Path="/60AEEF59" Ref="#PWR?"  Part="1" 
-AR Path="/6016C5CD/60AEEF59" Ref="#PWR019"  Part="1" 
-F 0 "#PWR019" H 7050 5650 50  0001 C CNN
-F 1 "GND" H 7055 5727 50  0000 C CNN
-F 2 "" H 7050 5900 50  0001 C CNN
-F 3 "" H 7050 5900 50  0001 C CNN
-	1    7050 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small_US R?
-U 1 1 60AEEF52
-P 7050 5300
-AR Path="/60AEEF52" Ref="R?"  Part="1" 
-AR Path="/6016C5CD/60AEEF52" Ref="R5"  Part="1" 
-F 0 "R5" H 7118 5346 50  0000 L CNN
-F 1 "330R" H 7118 5255 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 7050 5300 50  0001 C CNN
-F 3 "~" H 7050 5300 50  0001 C CNN
-	1    7050 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 60AEEF4C
-P 7050 5650
-AR Path="/60AEEF4C" Ref="D?"  Part="1" 
-AR Path="/6016C5CD/60AEEF4C" Ref="DB1"  Part="1" 
-F 0 "DB1" V 7089 5532 50  0000 R CNN
-F 1 "150120BS75000" V 6998 5532 50  0000 R CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7050 5650 50  0001 C CNN
-F 3 "~" H 7050 5650 50  0001 C CNN
-	1    7050 5650
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6250 5900 6250 6000
-Wire Wire Line
-	6250 5200 6250 5300
-Text Notes 6050 6400 0    50   ~ 0
-Debugging LEDs\nVs = 5V\n
-$Comp
-L power:GND #PWR?
-U 1 1 60ADFB63
-P 6250 6000
-AR Path="/60ADFB63" Ref="#PWR?"  Part="1" 
-AR Path="/6016C5CD/60ADFB63" Ref="#PWR018"  Part="1" 
-F 0 "#PWR018" H 6250 5750 50  0001 C CNN
-F 1 "GND" H 6255 5827 50  0000 C CNN
-F 2 "" H 6250 6000 50  0001 C CNN
-F 3 "" H 6250 6000 50  0001 C CNN
-	1    6250 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small_US R?
-U 1 1 60ADFB5C
-P 6250 5400
-AR Path="/60ADFB5C" Ref="R?"  Part="1" 
-AR Path="/6016C5CD/60ADFB5C" Ref="R4"  Part="1" 
-F 0 "R4" H 6318 5446 50  0000 L CNN
-F 1 "330R" H 6318 5355 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 6250 5400 50  0001 C CNN
-F 3 "~" H 6250 5400 50  0001 C CNN
-	1    6250 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 60ADFB56
-P 6250 5750
-AR Path="/60ADFB56" Ref="D?"  Part="1" 
-AR Path="/6016C5CD/60ADFB56" Ref="DR1"  Part="1" 
-F 0 "DR1" V 6289 5632 50  0000 R CNN
-F 1 "156120RS75000" V 6198 5632 50  0000 R CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6250 5750 50  0001 C CNN
-F 3 "~" H 6250 5750 50  0001 C CNN
-	1    6250 5750
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5100 5200 6250 5200
 Text Label 4600 1800 2    50   ~ 0
 PIC_RX
 Text Label 4600 1700 2    50   ~ 0
@@ -906,4 +804,117 @@ Text Label 5100 4500 0    50   ~ 0
 CS_1
 Text Label 5100 4300 0    50   ~ 0
 PIC_TX
+Wire Wire Line
+	7300 5100 7300 5200
+Wire Wire Line
+	7300 5400 7300 5500
+Wire Wire Line
+	6500 5600 6500 5500
+Wire Wire Line
+	7300 5900 7300 5800
+$Comp
+L power:GND #PWR?
+U 1 1 60AEEF59
+P 7300 5900
+AR Path="/60AEEF59" Ref="#PWR?"  Part="1" 
+AR Path="/6016C5CD/60AEEF59" Ref="#PWR019"  Part="1" 
+F 0 "#PWR019" H 7300 5650 50  0001 C CNN
+F 1 "GND" H 7305 5727 50  0000 C CNN
+F 2 "" H 7300 5900 50  0001 C CNN
+F 3 "" H 7300 5900 50  0001 C CNN
+	1    7300 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 60AEEF52
+P 7300 5300
+AR Path="/60AEEF52" Ref="R?"  Part="1" 
+AR Path="/6016C5CD/60AEEF52" Ref="R5"  Part="1" 
+F 0 "R5" H 7368 5346 50  0000 L CNN
+F 1 "330R" H 7368 5255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 7300 5300 50  0001 C CNN
+F 3 "~" H 7300 5300 50  0001 C CNN
+	1    7300 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 60AEEF4C
+P 7300 5650
+AR Path="/60AEEF4C" Ref="D?"  Part="1" 
+AR Path="/6016C5CD/60AEEF4C" Ref="DB1"  Part="1" 
+F 0 "DB1" V 7339 5532 50  0000 R CNN
+F 1 "150120BS75000" V 7248 5532 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7300 5650 50  0001 C CNN
+F 3 "~" H 7300 5650 50  0001 C CNN
+	1    7300 5650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6500 5900 6500 6000
+Wire Wire Line
+	6500 5200 6500 5300
+Text Notes 6300 6400 0    50   ~ 0
+Debugging LEDs\nVs = 5V\n
+$Comp
+L power:GND #PWR?
+U 1 1 60ADFB63
+P 6500 6000
+AR Path="/60ADFB63" Ref="#PWR?"  Part="1" 
+AR Path="/6016C5CD/60ADFB63" Ref="#PWR018"  Part="1" 
+F 0 "#PWR018" H 6500 5750 50  0001 C CNN
+F 1 "GND" H 6505 5827 50  0000 C CNN
+F 2 "" H 6500 6000 50  0001 C CNN
+F 3 "" H 6500 6000 50  0001 C CNN
+	1    6500 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 60ADFB5C
+P 6500 5400
+AR Path="/60ADFB5C" Ref="R?"  Part="1" 
+AR Path="/6016C5CD/60ADFB5C" Ref="R4"  Part="1" 
+F 0 "R4" H 6568 5446 50  0000 L CNN
+F 1 "330R" H 6568 5355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 6500 5400 50  0001 C CNN
+F 3 "~" H 6500 5400 50  0001 C CNN
+	1    6500 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 60ADFB56
+P 6500 5750
+AR Path="/60ADFB56" Ref="D?"  Part="1" 
+AR Path="/6016C5CD/60ADFB56" Ref="DR1"  Part="1" 
+F 0 "DR1" V 6539 5632 50  0000 R CNN
+F 1 "156120RS75000" V 6448 5632 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6500 5750 50  0001 C CNN
+F 3 "~" H 6500 5750 50  0001 C CNN
+	1    6500 5750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8300 5500 8250 5500
+Wire Wire Line
+	8250 5500 8250 5650
+Wire Wire Line
+	8250 5800 8300 5800
+Wire Wire Line
+	8250 5650 8150 5650
+Connection ~ 8250 5650
+Wire Wire Line
+	8250 5650 8250 5800
+Wire Wire Line
+	5850 5300 5850 5550
+Wire Wire Line
+	5100 5100 7300 5100
+Wire Wire Line
+	5100 5200 6500 5200
+Text Notes 4950 5700 0    50   ~ 0
+Mama board power is\non when MAMA_PWR_EN\nis low.\n
+Wire Wire Line
+	5100 5300 5850 5300
 $EndSCHEMATC
