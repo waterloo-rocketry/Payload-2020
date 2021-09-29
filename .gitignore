@@ -39,3 +39,4 @@ Debug
 # .ioc only has the I/O config, no compilation dependency info
 .settings
 .mxproject
+*.sch-bak

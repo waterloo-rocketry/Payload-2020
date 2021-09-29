@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name payload2020_custom)(type Legacy)(uri C:/Users/randd/Documents/Rocketry/Git/Payload-2020/mama_board/payload2020_custom.lib)(options "")(descr ""))
+  (lib (name canhw)(type Legacy)(uri C:/Users/randd/Documents/Rocketry/Git/Payload-2020/mama_board/canhw.lib)(options "")(descr ""))
+)
