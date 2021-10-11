@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -196,10 +196,6 @@ Text Label 2750 4500 2    50   ~ 0
 PIC_TX
 Text Label 2750 4600 2    50   ~ 0
 PIC_RX
-Text Label 2250 4700 2    50   ~ 0
-MISO
-Text Label 2750 4800 2    50   ~ 0
-SCK
 $Comp
 L power:GND #PWR043
 U 1 1 60A8AF8F
@@ -583,8 +579,6 @@ ICSPCLK
 NoConn ~ 2750 4100
 Text Label 1400 3600 2    50   ~ 0
 MCLR
-NoConn ~ 1700 2500
-NoConn ~ 1700 2100
 Text Label 10650 3500 0    50   ~ 0
 CANH
 Wire Wire Line
@@ -593,37 +587,27 @@ Text Label 10650 3700 0    50   ~ 0
 CANL
 Wire Wire Line
 	10450 3700 10650 3700
-Text Label 2050 2300 0    50   ~ 0
+Text Label 2000 2450 0    50   ~ 0
 CANH
-Text Label 2050 2200 0    50   ~ 0
+Text Label 2000 2550 0    50   ~ 0
 CANL
 $Comp
 L power:GND #PWR023
 U 1 1 60C0AF28
-P 2400 2550
+P 2350 2500
 AR Path="/609B2504/60BBD477/60C0AF28" Ref="#PWR023"  Part="1" 
 AR Path="/60A2E32E/60BBD477/60C0AF28" Ref="#PWR0178"  Part="1" 
 AR Path="/60A2EDF1/60BBD477/60C0AF28" Ref="#PWR0218"  Part="1" 
 AR Path="/60BBD477/60C0AF28" Ref="#PWR0218"  Part="1" 
-F 0 "#PWR0218" H 2400 2300 50  0001 C CNN
-F 1 "GND" H 2405 2377 50  0000 C CNN
-F 2 "" H 2400 2550 50  0001 C CNN
-F 3 "" H 2400 2550 50  0001 C CNN
-	1    2400 2550
+F 0 "#PWR0218" H 2350 2250 50  0001 C CNN
+F 1 "GND" H 2355 2327 50  0000 C CNN
+F 2 "" H 2350 2500 50  0001 C CNN
+F 3 "" H 2350 2500 50  0001 C CNN
+	1    2350 2500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2400 2400 2400 2550
-Wire Wire Line
-	2050 2300 1700 2300
-Wire Wire Line
-	1700 2200 2050 2200
-Wire Wire Line
-	1700 2400 2400 2400
-Text Label 2750 4200 2    50   ~ 0
-CS
-Text Label 2250 4900 2    50   ~ 0
-MOSI
+	2350 2350 2350 2500
 Wire Wire Line
 	4825 4500 4825 4650
 Wire Wire Line
@@ -685,18 +669,6 @@ Text HLabel 2750 3700 0    50   Input ~ 0
 INTERRUPT_1
 Text HLabel 4200 4500 2    50   Input ~ 0
 DET_ADC_1
-$Comp
-L Connector:Conn_01x06_Female J10
-U 1 1 60D30F16
-P 1500 2400
-F 0 "J10" H 1392 1875 50  0000 C CNN
-F 1 "Conn_01x06_Female" H 1392 1966 50  0000 C CNN
-F 2 "canhw_footprints:connector_Harwin_M80-5000642" H 1500 2400 50  0001 C CNN
-F 3 "~" H 1500 2400 50  0001 C CNN
-	1    1500 2400
-	-1   0    0    1   
-$EndComp
-NoConn ~ 1700 2600
 Text Notes 4950 4700 0    50   ~ 0
 RED
 Text Notes 5425 4600 0    50   ~ 0
@@ -735,10 +707,6 @@ Wire Wire Line
 	4200 3600 4525 3600
 Wire Wire Line
 	4200 4100 5400 4100
-Wire Wire Line
-	2750 4900 2250 4900
-Wire Wire Line
-	2250 4700 2750 4700
 Text HLabel 4200 4600 2    50   Input ~ 0
 DET_ADC_2
 Text HLabel 4200 4700 2    50   Input ~ 0
@@ -748,4 +716,28 @@ INTERRUPT_2
 Text HLabel 2750 3900 0    50   Input ~ 0
 INTERRUPT_3
 NoConn ~ 4200 4400
+NoConn ~ 1650 2150
+$Comp
+L Connector:Conn_01x06_Female J10
+U 1 1 60D30F16
+P 1450 2350
+F 0 "J10" H 1342 1825 50  0000 C CNN
+F 1 "Conn_01x06_Female" H 1342 1916 50  0000 C CNN
+F 2 "canhw_footprints:connector_Harwin_M80-5000642" H 1450 2350 50  0001 C CNN
+F 3 "~" H 1450 2350 50  0001 C CNN
+	1    1450 2350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 2350 2350 2350
+Wire Wire Line
+	1650 2550 2000 2550
+Wire Wire Line
+	2000 2450 1650 2450
+NoConn ~ 1650 2650
+NoConn ~ 1650 2250
+NoConn ~ 2750 4700
+NoConn ~ 2750 4800
+NoConn ~ 2750 4900
+NoConn ~ 2750 4200
 $EndSCHEMATC
