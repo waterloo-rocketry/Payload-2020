@@ -70,7 +70,7 @@ $Sheet
 S 2300 2850 1650 850 
 U 6154476A
 F0 "Detector Circuit 2" 50
-F1 "detector_circuit_LTC6269_2.sch" 50
+F1 "detector_circuit_LTC6269_1.sch" 50
 F2 "AMP_OUT_2" I R 3950 3550 50 
 F3 "DET_ADC_2" I R 3950 3350 50 
 F4 "SIPM_OUT_2" I L 2300 3350 50 
@@ -79,7 +79,7 @@ $Sheet
 S 2300 4000 1650 850 
 U 61546E3B
 F0 "Detector Circuit 3" 50
-F1 "detector_circuit_LTC6269_3.sch" 50
+F1 "detector_circuit_LTC6269_1.sch" 50
 F2 "AMP_OUT_3" I R 3950 4700 50 
 F3 "DET_ADC_3" I R 3950 4500 50 
 F4 "SIPM_OUT_3" I L 2300 4500 50 
@@ -173,11 +173,11 @@ AMP_OUT_2
 Text HLabel 2200 6700 2    50   Input ~ 0
 AMP_OUT_2
 Text Label 2200 6700 2    50   ~ 0
-AMP_OUT_3
+DET_ADC_3
 Text Label 2200 6500 2    50   ~ 0
-AMP_OUT_2
+DET_ADC_2
 Text Label 2200 6300 2    50   ~ 0
-AMP_OUT_1
+DET_ADC_1
 Text HLabel 3850 6300 0    50   Input ~ 0
 INTERRUPT_1
 Text HLabel 3850 6500 0    50   Input ~ 0
