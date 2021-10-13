@@ -21,7 +21,7 @@ U 1 1 6155A977
 P 6450 2550
 F 0 "U11" H 5950 3300 50  0000 C CNN
 F 1 "AS393P-E1" H 6000 3200 50  0000 C CNN
-F 2 "" H 6450 2800 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 6450 2800 50  0001 C CNN
 F 3 "https://datasheet.octopart.com/AS393P-E1-Diodes-Inc.-datasheet-24967545.pdf" H 6450 2800 50  0001 C CNN
 	1    6450 2550
 	1    0    0    -1  
@@ -456,7 +456,7 @@ U 1 1 615D5B27
 P 6450 5300
 F 0 "U12" H 5950 6050 50  0000 C CNN
 F 1 "AS393P-E1" H 6000 5950 50  0000 C CNN
-F 2 "" H 6450 5550 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 6450 5550 50  0001 C CNN
 F 3 "https://datasheet.octopart.com/AS393P-E1-Diodes-Inc.-datasheet-24967545.pdf" H 6450 5550 50  0001 C CNN
 	1    6450 5300
 	1    0    0    -1  

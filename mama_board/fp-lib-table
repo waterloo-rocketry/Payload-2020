@@ -1,3 +1,3 @@
 (fp_lib_table
-  (lib (name Payload2020_custom)(type KiCad)(uri C:/Users/lanam/Documents/WaterlooRocketry/Payload/Payload-2020/proto_board/Payload2020_custom.pretty)(options "")(descr ""))
+  (lib (name Payload2020_custom)(type KiCad)(uri ${KIPRJMOD}/Payload2020_custom.pretty)(options "")(descr ""))
 )
