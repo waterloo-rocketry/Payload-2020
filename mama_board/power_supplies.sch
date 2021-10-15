@@ -199,7 +199,7 @@ AR Path="/60A2EDF1/60B9C4D3/60BC470C" Ref="U3"  Part="1"
 F 0 "U3" H 5750 5415 50  0000 C CNN
 F 1 "LT3014IS5#TRMPBF" H 5750 5324 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:TSOT-23-5_HandSoldering" H 5750 5050 50  0001 C CNN
-F 3 "" H 5750 5050 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/3014fd.pdf" H 5750 5050 50  0001 C CNN
 	1    5750 5050
 	1    0    0    -1  
 $EndComp

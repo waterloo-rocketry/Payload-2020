@@ -721,9 +721,9 @@ $Comp
 L Connector:Conn_01x06_Female J10
 U 1 1 60D30F16
 P 1450 2350
-F 0 "J10" H 1342 1825 50  0000 C CNN
-F 1 "Conn_01x06_Female" H 1342 1916 50  0000 C CNN
-F 2 "canhw_footprints:connector_Harwin_M80-5000642" H 1450 2350 50  0001 C CNN
+F 0 "J10" H 1850 2750 50  0000 C CNN
+F 1 "Conn_01x06_Female" H 1850 2650 50  0000 C CNN
+F 2 "Payload2020_custom:connector_Harwin_M80-5000642" H 1450 2350 50  0001 C CNN
 F 3 "~" H 1450 2350 50  0001 C CNN
 	1    1450 2350
 	-1   0    0    -1  
