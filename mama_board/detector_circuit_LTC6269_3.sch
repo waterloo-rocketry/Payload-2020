@@ -773,9 +773,9 @@ L payload2020_custom:Broadcom_sipm U15
 U 1 1 6170F34E
 P 1100 2800
 F 0 "U15" H 1125 2385 50  0000 C CNN
-F 1 "Broadcom_sipm" H 1125 2476 50  0000 C CNN
-F 2 "" H 1100 2800 50  0001 C CNN
-F 3 "" H 1100 2800 50  0001 C CNN
+F 1 "Broadcom_SiPM_3" H 1125 2476 50  0000 C CNN
+F 2 "Payload2020_custom:BROADCOM_SiPM" H 1100 2800 50  0001 C CNN
+F 3 "https://docs.broadcom.com/doc/AFBR-S4N66C013-DS" H 1100 2800 50  0001 C CNN
 	1    1100 2800
 	-1   0    0    1   
 $EndComp
