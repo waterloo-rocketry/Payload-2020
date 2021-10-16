@@ -580,17 +580,17 @@ NoConn ~ 2750 4100
 Text Label 1400 3600 2    50   ~ 0
 MCLR
 Text Label 10650 3500 0    50   ~ 0
-CANH
++
 Wire Wire Line
 	10450 3500 10650 3500
 Text Label 10650 3700 0    50   ~ 0
-CANL
+-
 Wire Wire Line
 	10450 3700 10650 3700
 Text Label 2000 2450 0    50   ~ 0
-CANH
++
 Text Label 2000 2550 0    50   ~ 0
-CANL
+-
 $Comp
 L power:GND #PWR023
 U 1 1 60C0AF28
@@ -665,7 +665,7 @@ F 3 "" H 4825 5025 50  0001 C CNN
 	1    4825 5025
 	1    0    0    -1  
 $EndComp
-Text HLabel 2750 3700 0    50   Input ~ 0
+Text HLabel 2750 3800 0    50   Input ~ 0
 INTERRUPT_1
 Text HLabel 4200 4500 2    50   Input ~ 0
 DET_ADC_1
@@ -711,9 +711,9 @@ Text HLabel 4200 4600 2    50   Input ~ 0
 DET_ADC_2
 Text HLabel 4200 4700 2    50   Input ~ 0
 DET_ADC_3
-Text HLabel 2750 3800 0    50   Input ~ 0
-INTERRUPT_2
 Text HLabel 2750 3900 0    50   Input ~ 0
+INTERRUPT_2
+Text HLabel 2750 3700 0    50   Input ~ 0
 INTERRUPT_3
 NoConn ~ 4200 4400
 NoConn ~ 1650 2150

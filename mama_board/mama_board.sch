@@ -111,7 +111,7 @@ Wire Wire Line
 $Sheet
 S 6550 1900 1625 3575
 U 60BBD477
-F0 "Microcontroller [DO NOT PLACE]" 50
+F0 "Microcontroller" 50
 F1 "pic_and_can_controllers.sch" 50
 F2 "DET_ADC_1" I L 6550 2150 50 
 F3 "INTERRUPT_1" I L 6550 4350 50 
