@@ -580,17 +580,17 @@ NoConn ~ 2750 4100
 Text Label 1400 3600 2    50   ~ 0
 MCLR
 Text Label 10650 3500 0    50   ~ 0
-+
+CANH
 Wire Wire Line
 	10450 3500 10650 3500
 Text Label 10650 3700 0    50   ~ 0
--
+CANL
 Wire Wire Line
 	10450 3700 10650 3700
 Text Label 2000 2450 0    50   ~ 0
-+
+CANH
 Text Label 2000 2550 0    50   ~ 0
--
+CANL
 $Comp
 L power:GND #PWR023
 U 1 1 60C0AF28
