@@ -220,7 +220,7 @@ F 3 "~" H 5100 6350 50  0001 C CNN
 	1    5100 6350
 	-1   0    0    1   
 $EndComp
-Text Notes 4800 6050 0    50   ~ 0
+Text Notes 4750 6100 0    50   ~ 0
 To make ERC happy
 Wire Wire Line
 	3900 4550 5500 4550

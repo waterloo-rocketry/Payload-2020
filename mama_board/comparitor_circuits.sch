@@ -134,57 +134,6 @@ Text HLabel 6000 2200 0    50   Input ~ 0
 AMP_OUT_1
 $Comp
 L Device:R R?
-U 1 1 61573E51
-P 3700 2250
-AR Path="/609B2504/61573E51" Ref="R?"  Part="1" 
-AR Path="/60A2E32E/61573E51" Ref="R?"  Part="1" 
-AR Path="/60A2EDF1/61573E51" Ref="R?"  Part="1" 
-AR Path="/60A2F85E/61573E51" Ref="R?"  Part="1" 
-AR Path="/61573E51" Ref="R?"  Part="1" 
-AR Path="/61589C62/61573E51" Ref="R27"  Part="1" 
-F 0 "R27" H 3770 2296 50  0000 L CNN
-F 1 "DNP" H 3770 2205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3630 2250 50  0001 C CNN
-F 3 "~" H 3700 2250 50  0001 C CNN
-	1    3700 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 61573E57
-P 3700 1950
-AR Path="/609B2504/61573E57" Ref="R?"  Part="1" 
-AR Path="/60A2E32E/61573E57" Ref="R?"  Part="1" 
-AR Path="/60A2EDF1/61573E57" Ref="R?"  Part="1" 
-AR Path="/60A2F85E/61573E57" Ref="R?"  Part="1" 
-AR Path="/61573E57" Ref="R?"  Part="1" 
-AR Path="/61589C62/61573E57" Ref="R26"  Part="1" 
-F 0 "R26" H 3770 1996 50  0000 L CNN
-F 1 "DNP" H 3770 1905 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3630 1950 50  0001 C CNN
-F 3 "~" H 3700 1950 50  0001 C CNN
-	1    3700 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 61573E5D
-P 3700 2400
-AR Path="/609B2504/61573E5D" Ref="#PWR?"  Part="1" 
-AR Path="/60A2E32E/61573E5D" Ref="#PWR?"  Part="1" 
-AR Path="/60A2EDF1/61573E5D" Ref="#PWR?"  Part="1" 
-AR Path="/60A2F85E/61573E5D" Ref="#PWR?"  Part="1" 
-AR Path="/61573E5D" Ref="#PWR?"  Part="1" 
-AR Path="/61589C62/61573E5D" Ref="#PWR046"  Part="1" 
-F 0 "#PWR046" H 3700 2150 50  0001 C CNN
-F 1 "GND" H 3705 2227 50  0000 C CNN
-F 2 "" H 3700 2400 50  0001 C CNN
-F 3 "" H 3700 2400 50  0001 C CNN
-	1    3700 2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
 U 1 1 61573E63
 P 4050 2250
 AR Path="/609B2504/61573E63" Ref="R?"  Part="1" 
@@ -236,19 +185,6 @@ F 3 "" H 4050 2400 50  0001 C CNN
 $EndComp
 $Comp
 L power:+5V #PWR?
-U 1 1 61573E75
-P 3700 1800
-AR Path="/61573E75" Ref="#PWR?"  Part="1" 
-AR Path="/61589C62/61573E75" Ref="#PWR045"  Part="1" 
-F 0 "#PWR045" H 3700 1650 50  0001 C CNN
-F 1 "+5V" H 3715 1973 50  0000 C CNN
-F 2 "" H 3700 1800 50  0001 C CNN
-F 3 "" H 3700 1800 50  0001 C CNN
-	1    3700 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
 U 1 1 61573E7B
 P 4050 1800
 AR Path="/61573E7B" Ref="#PWR?"  Part="1" 
@@ -260,10 +196,7 @@ F 3 "" H 4050 1800 50  0001 C CNN
 	1    4050 1800
 	1    0    0    -1  
 $EndComp
-Connection ~ 3700 2100
 Connection ~ 4050 2100
-Wire Wire Line
-	4050 2100 3700 2100
 Wire Wire Line
 	4050 2100 4400 2100
 $Comp
@@ -287,57 +220,6 @@ Wire Wire Line
 	4400 2100 5150 2100
 Text HLabel 6000 2700 0    50   Input ~ 0
 AMP_OUT_2
-$Comp
-L Device:R R?
-U 1 1 615AC05A
-P 3700 3400
-AR Path="/609B2504/615AC05A" Ref="R?"  Part="1" 
-AR Path="/60A2E32E/615AC05A" Ref="R?"  Part="1" 
-AR Path="/60A2EDF1/615AC05A" Ref="R?"  Part="1" 
-AR Path="/60A2F85E/615AC05A" Ref="R?"  Part="1" 
-AR Path="/615AC05A" Ref="R?"  Part="1" 
-AR Path="/61589C62/615AC05A" Ref="R29"  Part="1" 
-F 0 "R29" H 3770 3446 50  0000 L CNN
-F 1 "DNP" H 3770 3355 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3630 3400 50  0001 C CNN
-F 3 "~" H 3700 3400 50  0001 C CNN
-	1    3700 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 615AC060
-P 3700 3100
-AR Path="/609B2504/615AC060" Ref="R?"  Part="1" 
-AR Path="/60A2E32E/615AC060" Ref="R?"  Part="1" 
-AR Path="/60A2EDF1/615AC060" Ref="R?"  Part="1" 
-AR Path="/60A2F85E/615AC060" Ref="R?"  Part="1" 
-AR Path="/615AC060" Ref="R?"  Part="1" 
-AR Path="/61589C62/615AC060" Ref="R28"  Part="1" 
-F 0 "R28" H 3770 3146 50  0000 L CNN
-F 1 "DNP" H 3770 3055 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3630 3100 50  0001 C CNN
-F 3 "~" H 3700 3100 50  0001 C CNN
-	1    3700 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 615AC066
-P 3700 3550
-AR Path="/609B2504/615AC066" Ref="#PWR?"  Part="1" 
-AR Path="/60A2E32E/615AC066" Ref="#PWR?"  Part="1" 
-AR Path="/60A2EDF1/615AC066" Ref="#PWR?"  Part="1" 
-AR Path="/60A2F85E/615AC066" Ref="#PWR?"  Part="1" 
-AR Path="/615AC066" Ref="#PWR?"  Part="1" 
-AR Path="/61589C62/615AC066" Ref="#PWR048"  Part="1" 
-F 0 "#PWR048" H 3700 3300 50  0001 C CNN
-F 1 "GND" H 3705 3377 50  0000 C CNN
-F 2 "" H 3700 3550 50  0001 C CNN
-F 3 "" H 3700 3550 50  0001 C CNN
-	1    3700 3550
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R?
 U 1 1 615AC06C
@@ -391,19 +273,6 @@ F 3 "" H 4050 3550 50  0001 C CNN
 $EndComp
 $Comp
 L power:+5V #PWR?
-U 1 1 615AC07E
-P 3700 2950
-AR Path="/615AC07E" Ref="#PWR?"  Part="1" 
-AR Path="/61589C62/615AC07E" Ref="#PWR047"  Part="1" 
-F 0 "#PWR047" H 3700 2800 50  0001 C CNN
-F 1 "+5V" H 3715 3123 50  0000 C CNN
-F 2 "" H 3700 2950 50  0001 C CNN
-F 3 "" H 3700 2950 50  0001 C CNN
-	1    3700 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
 U 1 1 615AC084
 P 4050 2950
 AR Path="/615AC084" Ref="#PWR?"  Part="1" 
@@ -415,10 +284,7 @@ F 3 "" H 4050 2950 50  0001 C CNN
 	1    4050 2950
 	1    0    0    -1  
 $EndComp
-Connection ~ 3700 3250
 Connection ~ 4050 3250
-Wire Wire Line
-	4050 3250 3700 3250
 Wire Wire Line
 	4050 3250 4400 3250
 $Comp
@@ -543,57 +409,6 @@ Text HLabel 6000 4950 0    50   Input ~ 0
 AMP_OUT_3
 $Comp
 L Device:R R?
-U 1 1 615D5B5A
-P 3700 5000
-AR Path="/609B2504/615D5B5A" Ref="R?"  Part="1" 
-AR Path="/60A2E32E/615D5B5A" Ref="R?"  Part="1" 
-AR Path="/60A2EDF1/615D5B5A" Ref="R?"  Part="1" 
-AR Path="/60A2F85E/615D5B5A" Ref="R?"  Part="1" 
-AR Path="/615D5B5A" Ref="R?"  Part="1" 
-AR Path="/61589C62/615D5B5A" Ref="R31"  Part="1" 
-F 0 "R31" H 3770 5046 50  0000 L CNN
-F 1 "DNP" H 3770 4955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3630 5000 50  0001 C CNN
-F 3 "~" H 3700 5000 50  0001 C CNN
-	1    3700 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 615D5B60
-P 3700 4700
-AR Path="/609B2504/615D5B60" Ref="R?"  Part="1" 
-AR Path="/60A2E32E/615D5B60" Ref="R?"  Part="1" 
-AR Path="/60A2EDF1/615D5B60" Ref="R?"  Part="1" 
-AR Path="/60A2F85E/615D5B60" Ref="R?"  Part="1" 
-AR Path="/615D5B60" Ref="R?"  Part="1" 
-AR Path="/61589C62/615D5B60" Ref="R30"  Part="1" 
-F 0 "R30" H 3770 4746 50  0000 L CNN
-F 1 "DNP" H 3770 4655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3630 4700 50  0001 C CNN
-F 3 "~" H 3700 4700 50  0001 C CNN
-	1    3700 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 615D5B66
-P 3700 5150
-AR Path="/609B2504/615D5B66" Ref="#PWR?"  Part="1" 
-AR Path="/60A2E32E/615D5B66" Ref="#PWR?"  Part="1" 
-AR Path="/60A2EDF1/615D5B66" Ref="#PWR?"  Part="1" 
-AR Path="/60A2F85E/615D5B66" Ref="#PWR?"  Part="1" 
-AR Path="/615D5B66" Ref="#PWR?"  Part="1" 
-AR Path="/61589C62/615D5B66" Ref="#PWR050"  Part="1" 
-F 0 "#PWR050" H 3700 4900 50  0001 C CNN
-F 1 "GND" H 3705 4977 50  0000 C CNN
-F 2 "" H 3700 5150 50  0001 C CNN
-F 3 "" H 3700 5150 50  0001 C CNN
-	1    3700 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
 U 1 1 615D5B6C
 P 4050 5000
 AR Path="/609B2504/615D5B6C" Ref="R?"  Part="1" 
@@ -645,19 +460,6 @@ F 3 "" H 4050 5150 50  0001 C CNN
 $EndComp
 $Comp
 L power:+5V #PWR?
-U 1 1 615D5B7E
-P 3700 4550
-AR Path="/615D5B7E" Ref="#PWR?"  Part="1" 
-AR Path="/61589C62/615D5B7E" Ref="#PWR049"  Part="1" 
-F 0 "#PWR049" H 3700 4400 50  0001 C CNN
-F 1 "+5V" H 3715 4723 50  0000 C CNN
-F 2 "" H 3700 4550 50  0001 C CNN
-F 3 "" H 3700 4550 50  0001 C CNN
-	1    3700 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
 U 1 1 615D5B84
 P 4050 4550
 AR Path="/615D5B84" Ref="#PWR?"  Part="1" 
@@ -669,10 +471,7 @@ F 3 "" H 4050 4550 50  0001 C CNN
 	1    4050 4550
 	1    0    0    -1  
 $EndComp
-Connection ~ 3700 4850
 Connection ~ 4050 4850
-Wire Wire Line
-	4050 4850 3700 4850
 Wire Wire Line
 	4050 4850 4400 4850
 $Comp
@@ -716,8 +515,6 @@ F 3 "" H 6450 6000 50  0001 C CNN
 	1    6450 6000
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6000 5450
-NoConn ~ 6000 5650
 NoConn ~ 6900 5550
 $Comp
 L power:GND #PWR0104
@@ -728,6 +525,48 @@ F 1 "GND" H 6455 3077 50  0000 C CNN
 F 2 "" H 6450 3250 50  0001 C CNN
 F 3 "" H 6450 3250 50  0001 C CNN
 	1    6450 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 617A3707
+P 5900 5750
+AR Path="/609B2504/617A3707" Ref="#PWR?"  Part="1" 
+AR Path="/60A2E32E/617A3707" Ref="#PWR?"  Part="1" 
+AR Path="/60A2EDF1/617A3707" Ref="#PWR?"  Part="1" 
+AR Path="/60A2F85E/617A3707" Ref="#PWR?"  Part="1" 
+AR Path="/617A3707" Ref="#PWR?"  Part="1" 
+AR Path="/61589C62/617A3707" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 5900 5500 50  0001 C CNN
+F 1 "GND" H 5905 5577 50  0000 C CNN
+F 2 "" H 5900 5750 50  0001 C CNN
+F 3 "" H 5900 5750 50  0001 C CNN
+	1    5900 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 5750 5900 5650
+Wire Wire Line
+	5900 5650 6000 5650
+Wire Wire Line
+	6000 5450 5700 5450
+Wire Wire Line
+	5700 5450 5700 5750
+$Comp
+L power:GND #PWR?
+U 1 1 617A46A5
+P 5700 5750
+AR Path="/609B2504/617A46A5" Ref="#PWR?"  Part="1" 
+AR Path="/60A2E32E/617A46A5" Ref="#PWR?"  Part="1" 
+AR Path="/60A2EDF1/617A46A5" Ref="#PWR?"  Part="1" 
+AR Path="/60A2F85E/617A46A5" Ref="#PWR?"  Part="1" 
+AR Path="/617A46A5" Ref="#PWR?"  Part="1" 
+AR Path="/61589C62/617A46A5" Ref="#PWR0111"  Part="1" 
+F 0 "#PWR0111" H 5700 5500 50  0001 C CNN
+F 1 "GND" H 5705 5577 50  0000 C CNN
+F 2 "" H 5700 5750 50  0001 C CNN
+F 3 "" H 5700 5750 50  0001 C CNN
+	1    5700 5750
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
