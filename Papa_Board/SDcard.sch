@@ -436,6 +436,15 @@ F 3 "" H 5300 2900 50  0001 C CNN
 	1    5300 2900
 	1    0    0    -1  
 $EndComp
-Text HLabel 3350 3400 0    50   Input ~ 0
-+5.3V
+$Comp
+L payload2020_custom:+5.3V #PWR?0108
+U 1 1 618136F5
+P 3350 3300
+F 0 "#PWR?0108" H 3350 3475 50  0001 C CNN
+F 1 "+5.3V" H 3332 3375 50  0000 C CNN
+F 2 "" H 3350 3350 50  0001 C CNN
+F 3 "" H 3350 3350 50  0001 C CNN
+	1    3350 3300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -421,8 +421,6 @@ F 3 "~" H 2900 1250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5400 1400 5400 1600
-Wire Wire Line
-	5400 1600 5425 1600
 $Comp
 L power:+3.3V #PWR010
 U 1 1 60BC98D5
@@ -509,17 +507,6 @@ Wire Wire Line
 	6600 1900 6600 2000
 Connection ~ 6600 2000
 $Comp
-L Device:Polyfuse F5
-U 1 1 60B6FD96
-P 5575 1600
-F 0 "F5" V 5775 1575 50  0000 C CNN
-F 1 "400mA" V 5675 1575 50  0000 C CNN
-F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5625 1400 50  0001 L CNN
-F 3 "~" H 5575 1600 50  0001 C CNN
-	1    5575 1600
-	0    -1   -1   0   
-$EndComp
-$Comp
 L payload2020_custom:INA180 U2
 U 1 1 60A32560
 P 6750 2550
@@ -535,30 +522,12 @@ Wire Wire Line
 Wire Wire Line
 	6400 1600 6250 1600
 Wire Wire Line
-	5900 1600 5750 1600
-Wire Wire Line
-	5750 1600 5750 2650
-Wire Wire Line
 	5750 2650 6250 2650
-Connection ~ 5750 1600
-Wire Wire Line
-	5750 1600 5725 1600
 Wire Wire Line
 	6250 2450 6250 1600
 Connection ~ 6250 1600
 Wire Wire Line
 	6250 1600 6100 1600
-$Comp
-L Device:Polyfuse F4
-U 1 1 60B34196
-P 2500 1250
-F 0 "F4" V 2700 1250 50  0000 C CNN
-F 1 "400mA" V 2600 1250 50  0000 C CNN
-F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2550 1050 50  0001 L CNN
-F 3 "~" H 2500 1250 50  0001 C CNN
-	1    2500 1250
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	2300 1100 2350 1100
 Wire Wire Line
@@ -571,7 +540,6 @@ Wire Wire Line
 	3150 2300 2650 2300
 Wire Wire Line
 	2650 2300 2650 1250
-Connection ~ 2650 1250
 Wire Wire Line
 	3300 1250 3150 1250
 Wire Wire Line
@@ -896,8 +864,6 @@ Wire Wire Line
 Connection ~ 3350 4750
 Wire Wire Line
 	4200 4300 4600 4300
-Wire Wire Line
-	4600 4300 4600 3850
 Connection ~ 4200 4300
 Connection ~ 2050 4100
 Connection ~ 2050 4750
@@ -992,26 +958,6 @@ Wire Wire Line
 Wire Wire Line
 	4100 7450 4500 7450
 Connection ~ 4100 7450
-Text Label 4600 3850 0    50   ~ 0
-+5.3V
-Text Label 3500 1550 2    50   ~ 0
-+5.3V
-Text Label 6600 1900 2    50   ~ 0
-+5.3V
-Text Label 5550 3800 2    50   ~ 0
-+5.3V
-Text HLabel 10900 3950 2    50   Input ~ 0
-+5.3V
-Text Label 10900 3950 2    50   ~ 0
-+5.3V
-Wire Wire Line
-	4700 5850 4700 6000
-Text Label 4700 5850 0    50   ~ 0
-+37V
-Text HLabel 10900 4100 2    50   Input ~ 0
-+37V
-Text Label 10900 4100 2    50   ~ 0
-+37V
 $Comp
 L Device:R_Small_US R11
 U 1 1 60B4B0DF
@@ -1022,5 +968,74 @@ F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" H 6000 1600 50  0
 F 3 "~" H 6000 1600 50  0001 C CNN
 	1    6000 1600
 	0    1    1    0   
+$EndComp
+$Comp
+L payload2020_custom:+37V #PWR?0106
+U 1 1 617E675B
+P 4700 5900
+F 0 "#PWR?0106" H 4700 5850 50  0001 C CNN
+F 1 "+37V" H 4682 6025 50  0000 C CNN
+F 2 "" H 4700 5900 50  0001 C CNN
+F 3 "" H 4700 5900 50  0001 C CNN
+	1    4700 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 5950 4700 6000
+$Comp
+L payload2020_custom:+5.3V #PWR?0107
+U 1 1 617F224C
+P 4600 3800
+F 0 "#PWR?0107" H 4600 3975 50  0001 C CNN
+F 1 "+5.3V" H 4582 3875 50  0000 C CNN
+F 2 "" H 4600 3850 50  0001 C CNN
+F 3 "" H 4600 3850 50  0001 C CNN
+	1    4600 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3900 4600 4300
+Wire Wire Line
+	2350 1250 2650 1250
+Connection ~ 2650 1250
+Wire Wire Line
+	5750 2650 5750 1600
+Wire Wire Line
+	5400 1600 5750 1600
+Connection ~ 5750 1600
+Wire Wire Line
+	5750 1600 5900 1600
+$Comp
+L payload2020_custom:+5.3V #PWR0107
+U 1 1 6183B17C
+P 5550 3700
+F 0 "#PWR0107" H 5550 3875 50  0001 C CNN
+F 1 "+5.3V" H 5532 3775 50  0000 C CNN
+F 2 "" H 5550 3750 50  0001 C CNN
+F 3 "" H 5550 3750 50  0001 C CNN
+	1    5550 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L payload2020_custom:+5.3V #PWR0108
+U 1 1 6183B5A2
+P 6600 1800
+F 0 "#PWR0108" H 6600 1975 50  0001 C CNN
+F 1 "+5.3V" H 6582 1875 50  0000 C CNN
+F 2 "" H 6600 1850 50  0001 C CNN
+F 3 "" H 6600 1850 50  0001 C CNN
+	1    6600 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L payload2020_custom:+5.3V #PWR0109
+U 1 1 6183CA47
+P 3500 1450
+F 0 "#PWR0109" H 3500 1625 50  0001 C CNN
+F 1 "+5.3V" H 3482 1525 50  0000 C CNN
+F 2 "" H 3500 1500 50  0001 C CNN
+F 3 "" H 3500 1500 50  0001 C CNN
+	1    3500 1450
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
