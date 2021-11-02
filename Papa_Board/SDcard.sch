@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 3 4
 Title ""
 Date ""
 Rev ""
@@ -244,7 +244,7 @@ U 1 1 60B00586
 P 5300 3000
 F 0 "R3" H 5368 3046 50  0000 L CNN
 F 1 "10kR" H 5368 2955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5300 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5300 3000 50  0001 C CNN
 F 3 "~" H 5300 3000 50  0001 C CNN
 	1    5300 3000
 	1    0    0    -1  
@@ -339,35 +339,12 @@ F 3 "" H 9550 4550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9550 4450 9550 4550
-$Comp
-L Device:R_Small_US R25
-U 1 1 60C3FFBB
-P 3350 3600
-F 0 "R25" H 3418 3646 50  0000 L CNN
-F 1 "30kR" H 3418 3555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 3350 3600 50  0001 C CNN
-F 3 "~" H 3350 3600 50  0001 C CNN
-	1    3350 3600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3350 3400 3350 3500
 Wire Wire Line
 	3350 3700 3350 3850
 Wire Wire Line
 	3350 3850 3900 3850
-$Comp
-L Device:R_Small_US R26
-U 1 1 60C41ED4
-P 3350 3950
-F 0 "R26" H 3418 3996 50  0000 L CNN
-F 1 "5kR" H 3418 3905 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 3350 3950 50  0001 C CNN
-F 3 "~" H 3350 3950 50  0001 C CNN
-	1    3350 3950
-	1    0    0    -1  
-$EndComp
-Connection ~ 3350 3850
 $Comp
 L power:GND #PWR015
 U 1 1 60C422C2
@@ -445,6 +422,29 @@ F 1 "+5.3V" H 3332 3375 50  0000 C CNN
 F 2 "" H 3350 3350 50  0001 C CNN
 F 3 "" H 3350 3350 50  0001 C CNN
 	1    3350 3300
+	1    0    0    -1  
+$EndComp
+Connection ~ 3350 3850
+$Comp
+L Device:R_Small_US R26
+U 1 1 60C41ED4
+P 3350 3950
+F 0 "R26" H 3418 3996 50  0000 L CNN
+F 1 "5kR" H 3418 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 3350 3950 50  0001 C CNN
+F 3 "~" H 3350 3950 50  0001 C CNN
+	1    3350 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R25
+U 1 1 6181DD47
+P 3350 3600
+F 0 "R25" H 3418 3646 50  0000 L CNN
+F 1 "30kR" H 3418 3555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3350 3600 50  0001 C CNN
+F 3 "~" H 3350 3600 50  0001 C CNN
+	1    3350 3600
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

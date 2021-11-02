@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -411,19 +411,6 @@ F 2 "" H 5850 6300 50  0001 C CNN
 F 3 "" H 5850 6300 50  0001 C CNN
 	1    5850 6300
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 60B56CC6
-P 5850 6050
-AR Path="/60B56CC6" Ref="D?"  Part="1" 
-AR Path="/6016C5CD/60B56CC6" Ref="DW1"  Part="1" 
-F 0 "DW1" V 5889 5932 50  0000 R CNN
-F 1 "QBLP650-IW" V 5798 5932 50  0000 R CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5850 6050 50  0001 C CNN
-F 3 "~" H 5850 6050 50  0001 C CNN
-	1    5850 6050
-	0    -1   -1   0   
 $EndComp
 Text Label 3550 1350 2    50   ~ 0
 5V3_ALWAYS_ON
@@ -838,19 +825,6 @@ F 3 "~" H 7300 5300 50  0001 C CNN
 	1    7300 5300
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:LED D?
-U 1 1 60AEEF4C
-P 7300 5650
-AR Path="/60AEEF4C" Ref="D?"  Part="1" 
-AR Path="/6016C5CD/60AEEF4C" Ref="DB1"  Part="1" 
-F 0 "DB1" V 7339 5532 50  0000 R CNN
-F 1 "150120BS75000" V 7248 5532 50  0000 R CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7300 5650 50  0001 C CNN
-F 3 "~" H 7300 5650 50  0001 C CNN
-	1    7300 5650
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	6500 5900 6500 6000
 Wire Wire Line
@@ -883,19 +857,6 @@ F 3 "~" H 6500 5400 50  0001 C CNN
 	1    6500 5400
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:LED D?
-U 1 1 60ADFB56
-P 6500 5750
-AR Path="/60ADFB56" Ref="D?"  Part="1" 
-AR Path="/6016C5CD/60ADFB56" Ref="DR1"  Part="1" 
-F 0 "DR1" V 6539 5632 50  0000 R CNN
-F 1 "156120RS75000" V 6448 5632 50  0000 R CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6500 5750 50  0001 C CNN
-F 3 "~" H 6500 5750 50  0001 C CNN
-	1    6500 5750
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	8300 5500 8250 5500
 Wire Wire Line
@@ -917,4 +878,49 @@ Text Notes 4950 5700 0    50   ~ 0
 Mama board power is\non when MAMA_PWR_EN\nis low.\n
 Wire Wire Line
 	5100 5300 5850 5300
+$Comp
+L Device:LED D?
+U 1 1 60B56CC6
+P 5850 6050
+AR Path="/60B56CC6" Ref="D?"  Part="1" 
+AR Path="/6016C5CD/60B56CC6" Ref="D3"  Part="1" 
+F 0 "D3" V 5889 5932 50  0000 R CNN
+F 1 "QBLP650-IW" V 5798 5932 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5850 6050 50  0001 C CNN
+F 3 "~" H 5850 6050 50  0001 C CNN
+	1    5850 6050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 60ADFB56
+P 6500 5750
+AR Path="/60ADFB56" Ref="D?"  Part="1" 
+AR Path="/6016C5CD/60ADFB56" Ref="D4"  Part="1" 
+F 0 "D4" V 6539 5632 50  0000 R CNN
+F 1 "156120RS75000" V 6448 5632 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6500 5750 50  0001 C CNN
+F 3 "~" H 6500 5750 50  0001 C CNN
+	1    6500 5750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 60AEEF4C
+P 7300 5650
+AR Path="/60AEEF4C" Ref="D?"  Part="1" 
+AR Path="/6016C5CD/60AEEF4C" Ref="D5"  Part="1" 
+F 0 "D5" V 7339 5532 50  0000 R CNN
+F 1 "150120BS75000" V 7248 5532 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7300 5650 50  0001 C CNN
+F 3 "~" H 7300 5650 50  0001 C CNN
+	1    7300 5650
+	0    -1   -1   0   
+$EndComp
+Text Notes 5975 5950 0    50   ~ 0
+WHITE\n
+Text Notes 6625 5650 0    50   ~ 0
+RED
+Text Notes 7425 5550 0    50   ~ 0
+BLUE\n
 $EndSCHEMATC
