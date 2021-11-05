@@ -11,7 +11,7 @@
 
 #include "adc.h"
 #include "pin_interrupt.h"
-#include "timer.h"
+#include "canlib/pic18f26k83/pic18f26k83_timer.h"
 
 #include <xc.h>
 
@@ -51,6 +51,12 @@ int main(int argc, char** argv) {
     TRISC0 = 1;
     ANSELC0 = 0;
     CANRXPPS = 0x10;
+    
+    // Init ADC
+    adc_init();
+    
+    // Init interrupt pins
+    pin_interrupt_init();
 
     // set up CAN module
     can_timing_t can_setup;

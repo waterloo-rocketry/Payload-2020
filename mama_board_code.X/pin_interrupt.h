@@ -7,6 +7,6 @@
 void pin_interrupt_init();
 
 // Pin interrupt handler
-void pin_interrupt_hander();
+void pin_interrupt_handler();
 
 #endif	/* PIN_INTERRUPT_H */

@@ -8,7 +8,7 @@
 #include "canlib/util/timing_util.h"
 #include "canlib/util/can_tx_buffer.h"
 
-#include "timer.h"
+#include "canlib/pic18f26k83/pic18f26k83_timer.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <xc.h>

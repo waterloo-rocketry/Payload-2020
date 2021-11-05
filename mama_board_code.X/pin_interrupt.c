@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include <pic18f26k83.h>
 
-void pin_init(){
+void pin_interrupt_init(){
     PIE0bits.IOCIE = 1; //Set bit to generate interrupts on change
     
     // Input pins CHANGE TO CORRECT
