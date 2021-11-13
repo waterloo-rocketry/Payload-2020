@@ -4,13 +4,12 @@ Waterloo Rocketry's Payload hardware and software for the radiation materials an
 
 ## Contents
 
-PCB Hardware and software for:
-* Main control board
-* Scintillator board
-* Detector board
-* Sensor board
+PCB Hardware and embedded software for:
+* Papa board (power management, logging)
+* Mama board (particle detection, noise filtering)
+* Protoboard (Mama board prototype board)
 
-Geant4 Monte Carlo simulations
+Geant4 Monte Carlo simulations have been moved to Payload-Sims
 
 Software for the in-flight controller (see [firmware readme](controller_firmware/README.md))
 
