@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 7 7
 Title ""
 Date ""
 Rev ""
@@ -29,54 +29,52 @@ $EndComp
 $Comp
 L Connector:TestPoint TP?
 U 1 1 6156482F
-P 7200 2200
+P 7600 2200
 AR Path="/609B2504/6156482F" Ref="TP?"  Part="1" 
 AR Path="/60A2E32E/6156482F" Ref="TP?"  Part="1" 
 AR Path="/60A2EDF1/6156482F" Ref="TP?"  Part="1" 
 AR Path="/60A2F85E/6156482F" Ref="TP?"  Part="1" 
 AR Path="/6156482F" Ref="TP?"  Part="1" 
 AR Path="/61589C62/6156482F" Ref="TP10"  Part="1" 
-F 0 "TP10" H 7258 2318 50  0000 L CNN
-F 1 "INTERRUPT" H 7258 2227 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7400 2200 50  0001 C CNN
-F 3 "~" H 7400 2200 50  0001 C CNN
-	1    7200 2200
+F 0 "TP10" H 7658 2318 50  0000 L CNN
+F 1 "INTERRUPT" H 7658 2227 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7800 2200 50  0001 C CNN
+F 3 "~" H 7800 2200 50  0001 C CNN
+	1    7600 2200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6900 2300 6950 2300
 Wire Wire Line
-	7200 2200 7200 2300
+	7600 2200 7600 2300
 Wire Wire Line
-	7700 2300 7200 2300
-Connection ~ 7200 2300
-Text HLabel 7700 2300 2    50   Input ~ 0
+	8100 2300 7600 2300
+Connection ~ 7600 2300
+Text HLabel 8100 2300 2    50   Input ~ 0
 INTERRUPT_1
 $Comp
 L Connector:TestPoint TP?
 U 1 1 6156692E
-P 7200 2700
+P 7600 2700
 AR Path="/609B2504/6156692E" Ref="TP?"  Part="1" 
 AR Path="/60A2E32E/6156692E" Ref="TP?"  Part="1" 
 AR Path="/60A2EDF1/6156692E" Ref="TP?"  Part="1" 
 AR Path="/60A2F85E/6156692E" Ref="TP?"  Part="1" 
 AR Path="/6156692E" Ref="TP?"  Part="1" 
 AR Path="/61589C62/6156692E" Ref="TP11"  Part="1" 
-F 0 "TP11" H 7258 2818 50  0000 L CNN
-F 1 "INTERRUPT" H 7258 2727 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7400 2700 50  0001 C CNN
-F 3 "~" H 7400 2700 50  0001 C CNN
-	1    7200 2700
+F 0 "TP11" H 7658 2818 50  0000 L CNN
+F 1 "INTERRUPT" H 7658 2727 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7800 2700 50  0001 C CNN
+F 3 "~" H 7800 2700 50  0001 C CNN
+	1    7600 2700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 2800 7200 2800
+	7600 2700 7600 2800
 Wire Wire Line
-	7200 2700 7200 2800
-Wire Wire Line
-	7700 2800 7200 2800
-Connection ~ 7200 2800
-Text HLabel 7700 2800 2    50   Input ~ 0
+	8100 2800 7600 2800
+Connection ~ 7600 2800
+Text HLabel 8100 2800 2    50   Input ~ 0
 INTERRUPT_2
 $Comp
 L power:+5V #PWR?
@@ -123,11 +121,6 @@ F 3 "" H 5500 1850 50  0001 C CNN
 	1    5500 1850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6950 1425 6950 1475
-Wire Wire Line
-	6450 1425 6950 1425
-Connection ~ 6450 1425
 Text HLabel 6000 2400 0    50   Input ~ 0
 AMP_OUT_1
 $Comp
@@ -216,7 +209,7 @@ F 3 "~" H 4600 2100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4400 2100 5150 2100
-Text HLabel 6000 2700 0    50   Input ~ 0
+Text HLabel 6000 2900 0    50   Input ~ 0
 AMP_OUT_2
 $Comp
 L Device:R R?
@@ -308,10 +301,6 @@ Wire Wire Line
 Connection ~ 4400 2100
 Wire Wire Line
 	5150 2200 6000 2200
-Wire Wire Line
-	6000 2900 5150 2900
-Wire Wire Line
-	5150 2900 5150 3250
 $Comp
 L canhw:AS393P-E1 U12
 U 1 1 615D5B27
@@ -326,28 +315,26 @@ $EndComp
 $Comp
 L Connector:TestPoint TP?
 U 1 1 615D5B2D
-P 7200 4950
+P 7600 4950
 AR Path="/609B2504/615D5B2D" Ref="TP?"  Part="1" 
 AR Path="/60A2E32E/615D5B2D" Ref="TP?"  Part="1" 
 AR Path="/60A2EDF1/615D5B2D" Ref="TP?"  Part="1" 
 AR Path="/60A2F85E/615D5B2D" Ref="TP?"  Part="1" 
 AR Path="/615D5B2D" Ref="TP?"  Part="1" 
 AR Path="/61589C62/615D5B2D" Ref="TP12"  Part="1" 
-F 0 "TP12" H 7258 5068 50  0000 L CNN
-F 1 "INTERRUPT" H 7258 4977 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7400 4950 50  0001 C CNN
-F 3 "~" H 7400 4950 50  0001 C CNN
-	1    7200 4950
+F 0 "TP12" H 7658 5068 50  0000 L CNN
+F 1 "INTERRUPT" H 7658 4977 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7800 4950 50  0001 C CNN
+F 3 "~" H 7800 4950 50  0001 C CNN
+	1    7600 4950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 5050 7200 5050
+	7600 4950 7600 5050
 Wire Wire Line
-	7200 4950 7200 5050
-Wire Wire Line
-	7700 5050 7200 5050
-Connection ~ 7200 5050
-Text HLabel 7700 5050 2    50   Input ~ 0
+	8100 5050 7600 5050
+Connection ~ 7600 5050
+Text HLabel 8100 5050 2    50   Input ~ 0
 INTERRUPT_3
 $Comp
 L power:+5V #PWR?
@@ -365,43 +352,38 @@ $EndComp
 $Comp
 L Device:C C?
 U 1 1 615D5B49
-P 6950 4600
+P 5325 4575
 AR Path="/609B2504/615D5B49" Ref="C?"  Part="1" 
 AR Path="/60A2E32E/615D5B49" Ref="C?"  Part="1" 
 AR Path="/60A2EDF1/615D5B49" Ref="C?"  Part="1" 
 AR Path="/615D5B49" Ref="C?"  Part="1" 
 AR Path="/61589C62/615D5B49" Ref="C31"  Part="1" 
-F 0 "C31" H 7065 4646 50  0000 L CNN
-F 1 "0.1u" H 7065 4555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6988 4450 50  0001 C CNN
-F 3 "~" H 6950 4600 50  0001 C CNN
-	1    6950 4600
+F 0 "C31" H 5440 4621 50  0000 L CNN
+F 1 "0.1u" H 5440 4530 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5363 4425 50  0001 C CNN
+F 3 "~" H 5325 4575 50  0001 C CNN
+	1    5325 4575
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 615D5B4F
-P 6950 4750
+P 5325 4725
 AR Path="/609B2504/615D5B4F" Ref="#PWR?"  Part="1" 
 AR Path="/60A2E32E/615D5B4F" Ref="#PWR?"  Part="1" 
 AR Path="/60A2EDF1/615D5B4F" Ref="#PWR?"  Part="1" 
 AR Path="/615D5B4F" Ref="#PWR?"  Part="1" 
 AR Path="/61589C62/615D5B4F" Ref="#PWR062"  Part="1" 
-F 0 "#PWR062" H 6950 4500 50  0001 C CNN
-F 1 "GND" H 6955 4577 50  0000 C CNN
-F 2 "" H 6950 4750 50  0001 C CNN
-F 3 "" H 6950 4750 50  0001 C CNN
-	1    6950 4750
+F 0 "#PWR062" H 5325 4475 50  0001 C CNN
+F 1 "GND" H 5330 4552 50  0000 C CNN
+F 2 "" H 5325 4725 50  0001 C CNN
+F 3 "" H 5325 4725 50  0001 C CNN
+	1    5325 4725
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6950 4400 6950 4450
-Wire Wire Line
-	6450 4600 6450 4400
-Wire Wire Line
-	6450 4400 6950 4400
-Connection ~ 6450 4400
-Text HLabel 6000 4950 0    50   Input ~ 0
+	6450 4600 6450 4425
+Text HLabel 6000 5150 0    50   Input ~ 0
 AMP_OUT_3
 $Comp
 L Device:R R?
@@ -490,10 +472,6 @@ $EndComp
 Wire Wire Line
 	4400 4850 5150 4850
 Connection ~ 4400 4850
-Wire Wire Line
-	5150 5150 6000 5150
-Wire Wire Line
-	5150 4850 5150 5150
 $Comp
 L power:GND #PWR?
 U 1 1 615D5BD7
@@ -568,26 +546,90 @@ $EndComp
 Wire Wire Line
 	5150 2100 5150 2200
 Wire Wire Line
-	6450 1425 6450 1550
-Wire Wire Line
 	5500 1550 6450 1550
 Connection ~ 6450 1550
 Wire Wire Line
 	6450 1550 6450 1850
 $Comp
-L Device:R R?
+L Device:R R26
 U 1 1 618627AC
 P 6950 1625
-F 0 "R?" H 7020 1671 50  0000 L CNN
+F 0 "R26" H 7020 1671 50  0000 L CNN
 F 1 "5.1k" H 7020 1580 50  0000 L CNN
-F 2 "" V 6880 1625 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6880 1625 50  0001 C CNN
 F 3 "~" H 6950 1625 50  0001 C CNN
 	1    6950 1625
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
+	6450 1425 6450 1550
+Wire Wire Line
+	6450 1425 6950 1425
+Wire Wire Line
+	6950 1425 6950 1475
+Connection ~ 6450 1425
+$Comp
+L Device:R R28
+U 1 1 618925D9
+P 7350 1625
+F 0 "R28" H 7420 1671 50  0000 L CNN
+F 1 "5.1k" H 7420 1580 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7280 1625 50  0001 C CNN
+F 3 "~" H 7350 1625 50  0001 C CNN
+	1    7350 1625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 1425 7350 1425
+Wire Wire Line
+	7350 1425 7350 1475
+Connection ~ 6950 1425
+Wire Wire Line
 	6950 1775 6950 2300
+Wire Wire Line
+	6950 2300 7600 2300
 Connection ~ 6950 2300
 Wire Wire Line
-	6950 2300 7200 2300
+	7350 1775 7350 2800
+Connection ~ 7350 2800
+Wire Wire Line
+	7350 2800 7600 2800
+Wire Wire Line
+	6900 2800 7350 2800
+Wire Wire Line
+	5325 4425 6450 4425
+Connection ~ 6450 4425
+Wire Wire Line
+	6450 4425 6450 4400
+$Comp
+L Device:R R27
+U 1 1 6189B940
+P 7100 4625
+F 0 "R27" H 7170 4671 50  0000 L CNN
+F 1 "5.1k" H 7170 4580 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7030 4625 50  0001 C CNN
+F 3 "~" H 7100 4625 50  0001 C CNN
+	1    7100 4625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 4400 7100 4400
+Wire Wire Line
+	7100 4400 7100 4475
+Connection ~ 6450 4400
+Wire Wire Line
+	6900 5050 7100 5050
+Wire Wire Line
+	7100 4775 7100 5050
+Connection ~ 7100 5050
+Wire Wire Line
+	7100 5050 7600 5050
+Wire Wire Line
+	6000 2700 5150 2700
+Wire Wire Line
+	5150 2700 5150 3250
+Wire Wire Line
+	6000 4950 5150 4950
+Wire Wire Line
+	5150 4950 5150 4850
 $EndSCHEMATC
