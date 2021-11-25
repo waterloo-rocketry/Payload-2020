@@ -876,12 +876,4 @@ Wire Notes Line
 	725  1875 950  1875
 Wire Wire Line
 	1100 1300 1525 1300
-Text Label 5450 2650 0    50   ~ 0
-+
-Text Label 5450 2750 0    50   ~ 0
--
-Text Label 10300 1300 2    50   ~ 0
-+
-Text Label 10300 1400 1    50   ~ 0
--
 $EndSCHEMATC
