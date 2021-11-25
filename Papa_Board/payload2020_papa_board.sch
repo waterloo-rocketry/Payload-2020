@@ -44,19 +44,19 @@ Text Notes 800  1000 0    50   ~ 0
 $Comp
 L power:GND #PWR01
 U 1 1 60962B95
-P 1200 2600
+P 1200 2000
 AR Path="/60962B95" Ref="#PWR01"  Part="1" 
 AR Path="/5E13F8E9/60962B95" Ref="#PWR?"  Part="1" 
-F 0 "#PWR01" H 1200 2350 50  0001 C CNN
-F 1 "GND" H 1205 2427 50  0000 C CNN
-F 2 "" H 1200 2600 50  0001 C CNN
-F 3 "" H 1200 2600 50  0001 C CNN
-	1    1200 2600
+F 0 "#PWR01" H 1200 1750 50  0001 C CNN
+F 1 "GND" H 1205 1827 50  0000 C CNN
+F 2 "" H 1200 2000 50  0001 C CNN
+F 3 "" H 1200 2000 50  0001 C CNN
+	1    1200 2000
 	1    0    0    -1  
 $EndComp
 Text Notes 6300 675  0    50   ~ 0
 Mama Board Sleep Control
-Text Notes 1650 1150 2    50   ~ 0
+Text Notes 1775 1150 2    50   ~ 0
 12V - 16V\n\n
 Text Label 4750 1100 0    50   ~ 0
 PWR_EN
@@ -141,118 +141,50 @@ F 3 "" H 9600 2450 50  0001 C CNN
 $EndComp
 Text Notes 10300 3750 0    50   ~ 0
 Mama_Board_1
-$Comp
-L Connector_Generic:Conn_01x02 J7
-U 1 1 60B288EC
-P 900 1800
-AR Path="/60B288EC" Ref="J7"  Part="1" 
-AR Path="/5E13F8E9/60B288EC" Ref="J?"  Part="1" 
-F 0 "J7" H 900 1500 50  0000 C CNN
-F 1 "1862" H 850 1600 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 900 1800 50  0001 C CNN
-F 3 "~" H 900 1800 50  0001 C CNN
-	1    900  1800
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J9
-U 1 1 60B28FEC
-P 900 2200
-AR Path="/60B28FEC" Ref="J9"  Part="1" 
-AR Path="/5E13F8E9/60B28FEC" Ref="J?"  Part="1" 
-F 0 "J9" H 900 1900 50  0000 C CNN
-F 1 "1862" H 850 2000 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 900 2200 50  0001 C CNN
-F 3 "~" H 900 2200 50  0001 C CNN
-	1    900  2200
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J10
-U 1 1 60B293F4
-P 900 2600
-AR Path="/60B293F4" Ref="J10"  Part="1" 
-AR Path="/5E13F8E9/60B293F4" Ref="J?"  Part="1" 
-F 0 "J10" H 900 2300 50  0000 C CNN
-F 1 "1862" H 850 2400 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 900 2600 50  0001 C CNN
-F 3 "~" H 900 2600 50  0001 C CNN
-	1    900  2600
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 60B2C497
-P 900 1400
-AR Path="/60B2C497" Ref="J1"  Part="1" 
-AR Path="/5E13F8E9/60B2C497" Ref="J?"  Part="1" 
-F 0 "J1" H 900 1100 50  0000 C CNN
-F 1 "1862" H 850 1200 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 900 1400 50  0001 C CNN
-F 3 "~" H 900 1400 50  0001 C CNN
-	1    900  1400
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	1100 1400 1200 1400
 Wire Wire Line
-	1100 2600 1200 2600
-Wire Wire Line
-	1100 2500 1200 2500
-Wire Wire Line
-	1200 2200 1100 2200
+	1100 2000 1200 2000
 $Comp
 L Device:Fuse_Small F?
 U 1 1 60B44E5D
-P 1200 2400
+P 1300 1800
 AR Path="/5E13F8E9/60B44E5D" Ref="F?"  Part="1" 
 AR Path="/60B44E5D" Ref="F3"  Part="1" 
-F 0 "F3" H 1200 2650 50  0000 C CNN
-F 1 "400mA" H 1225 2575 50  0000 C CNN
-F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1200 2400 50  0001 C CNN
-F 3 "~" H 1200 2400 50  0001 C CNN
-	1    1200 2400
-	0    1    1    0   
+F 0 "F3" H 1300 1750 50  0000 C CNN
+F 1 "400mA" H 1075 1800 50  0000 C CNN
+F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1300 1800 50  0001 C CNN
+F 3 "~" H 1300 1800 50  0001 C CNN
+	1    1300 1800
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:Fuse_Small F?
 U 1 1 60B48620
-P 1200 2000
+P 1300 1600
 AR Path="/5E13F8E9/60B48620" Ref="F?"  Part="1" 
 AR Path="/60B48620" Ref="F2"  Part="1" 
-F 0 "F2" H 1200 2250 50  0000 C CNN
-F 1 "400mA" H 1225 2175 50  0000 C CNN
-F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1200 2000 50  0001 C CNN
-F 3 "~" H 1200 2000 50  0001 C CNN
-	1    1200 2000
-	0    1    1    0   
+F 0 "F2" H 1300 1550 50  0000 C CNN
+F 1 "400mA" H 1075 1600 50  0000 C CNN
+F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1300 1600 50  0001 C CNN
+F 3 "~" H 1300 1600 50  0001 C CNN
+	1    1300 1600
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1200 2300 1200 2200
-Wire Wire Line
-	1100 2100 1200 2100
-Wire Wire Line
-	1200 1900 1200 1800
-Wire Wire Line
-	1200 1800 1100 1800
 $Comp
 L Device:Fuse_Small F?
 U 1 1 60B50BBB
-P 1200 1600
+P 1300 1400
 AR Path="/5E13F8E9/60B50BBB" Ref="F?"  Part="1" 
 AR Path="/60B50BBB" Ref="F1"  Part="1" 
-F 0 "F1" H 1200 1850 50  0000 C CNN
-F 1 "400mA" H 1225 1775 50  0000 C CNN
-F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1200 1600 50  0001 C CNN
-F 3 "~" H 1200 1600 50  0001 C CNN
-	1    1200 1600
-	0    1    1    0   
+F 0 "F1" H 1300 1350 50  0000 C CNN
+F 1 "400mA" H 1075 1400 50  0000 C CNN
+F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1300 1400 50  0001 C CNN
+F 3 "~" H 1300 1400 50  0001 C CNN
+	1    1300 1400
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1100 1700 1200 1700
-Wire Wire Line
-	1200 1500 1200 1400
-Text Label 1400 1300 0    50   ~ 0
+Text Label 1525 1300 0    50   ~ 0
 VBATT_OUT
 Wire Notes Line
 	650  2900 2800 2900
@@ -427,8 +359,6 @@ F 3 "~" H 7000 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1100 1300 1400 1300
-Wire Wire Line
 	1400 3700 2000 3700
 Wire Notes Line
 	9000 2600 9000 550 
@@ -512,12 +442,12 @@ Text Label 9250 4750 0    50   ~ 0
 $Comp
 L power:+BATT #PWR03
 U 1 1 60EE456A
-P 1400 1300
-F 0 "#PWR03" H 1400 1150 50  0001 C CNN
-F 1 "+BATT" H 1415 1473 50  0000 C CNN
-F 2 "" H 1400 1300 50  0001 C CNN
-F 3 "" H 1400 1300 50  0001 C CNN
-	1    1400 1300
+P 1525 1300
+F 0 "#PWR03" H 1525 1150 50  0001 C CNN
+F 1 "+BATT" H 1540 1473 50  0000 C CNN
+F 2 "" H 1525 1300 50  0001 C CNN
+F 3 "" H 1525 1300 50  0001 C CNN
+	1    1525 1300
 	1    0    0    -1  
 $EndComp
 Text Notes 10600 1350 0    50   ~ 0
@@ -576,54 +506,54 @@ Wire Wire Line
 $Comp
 L Device:R_Small_US R29
 U 1 1 60E4F9DC
-P 2050 2000
-F 0 "R29" H 2118 2046 50  0000 L CNN
-F 1 "30k" H 2118 1955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2050 2000 50  0001 C CNN
-F 3 "~" H 2050 2000 50  0001 C CNN
-	1    2050 2000
+P 2075 2000
+F 0 "R29" H 2143 2046 50  0000 L CNN
+F 1 "30k" H 2143 1955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2075 2000 50  0001 C CNN
+F 3 "~" H 2075 2000 50  0001 C CNN
+	1    2075 2000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small_US R30
 U 1 1 60E4FDB9
-P 2050 2400
-F 0 "R30" H 2118 2446 50  0000 L CNN
-F 1 "10k" H 2118 2355 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2050 2400 50  0001 C CNN
-F 3 "~" H 2050 2400 50  0001 C CNN
-	1    2050 2400
+P 2075 2400
+F 0 "R30" H 2143 2446 50  0000 L CNN
+F 1 "10k" H 2143 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2075 2400 50  0001 C CNN
+F 3 "~" H 2075 2400 50  0001 C CNN
+	1    2075 2400
 	1    0    0    -1  
 $EndComp
-Text Label 2050 1800 2    50   ~ 0
+Text Label 2075 1800 2    50   ~ 0
 VBATT_OUT
 Wire Wire Line
-	2050 1800 2050 1900
+	2075 1800 2075 1900
 Wire Wire Line
-	2050 2100 2050 2200
+	2075 2100 2075 2200
 $Comp
 L power:GND #PWR0104
 U 1 1 60E56D58
-P 2050 2500
-F 0 "#PWR0104" H 2050 2250 50  0001 C CNN
-F 1 "GND" H 2055 2327 50  0000 C CNN
-F 2 "" H 2050 2500 50  0001 C CNN
-F 3 "" H 2050 2500 50  0001 C CNN
-	1    2050 2500
+P 2075 2500
+F 0 "#PWR0104" H 2075 2250 50  0001 C CNN
+F 1 "GND" H 2080 2327 50  0000 C CNN
+F 2 "" H 2075 2500 50  0001 C CNN
+F 3 "" H 2075 2500 50  0001 C CNN
+	1    2075 2500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2050 2200 2350 2200
-Connection ~ 2050 2200
+	2075 2200 2375 2200
+Connection ~ 2075 2200
 Wire Wire Line
-	2050 2200 2050 2300
-Text GLabel 2350 2200 2    50   Input ~ 0
+	2075 2200 2075 2300
+Text GLabel 2375 2200 2    50   Input ~ 0
 V_SENSE
-Text Notes 1700 1700 0    50   ~ 0
+Text Notes 1725 1700 0    50   ~ 0
 12-16V
 Text Notes 2300 2150 0    50   ~ 0
 3-4V output
-Text Notes 1800 1550 0    50   ~ 0
+Text Notes 1825 1550 0    50   ~ 0
 Voltage Sensing\n
 Wire Wire Line
 	9550 850  9550 1100
@@ -883,4 +813,75 @@ F 3 "" H 8950 4650 50  0001 C CNN
 	1    8950 4650
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x10_Male J1
+U 1 1 619EF329
+P 900 1800
+F 0 "J1" H 1025 1100 50  0000 C CNN
+F 1 "S10B-XH-A(LF)(SN)" H 1050 1200 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_S10B-XH-A_1x10_P2.50mm_Horizontal" H 900 1800 50  0001 C CNN
+F 3 "~" H 900 1800 50  0001 C CNN
+	1    900  1800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1400 1400 1400 1500
+Wire Wire Line
+	1400 1500 1100 1500
+Wire Wire Line
+	1100 1600 1200 1600
+Wire Wire Line
+	1400 1600 1400 1700
+Wire Wire Line
+	1400 1700 1100 1700
+Wire Wire Line
+	1100 1800 1200 1800
+Wire Wire Line
+	1400 1800 1400 1900
+Wire Wire Line
+	1400 1900 1100 1900
+NoConn ~ 1100 2100
+NoConn ~ 1100 2200
+Wire Notes Line
+	725  1275 950  1275
+Wire Notes Line
+	950  1275 950  1425
+Wire Notes Line
+	950  1425 725  1425
+Wire Notes Line
+	725  1425 725  1275
+Wire Notes Line
+	725  1475 950  1475
+Wire Notes Line
+	950  1475 950  1625
+Wire Notes Line
+	950  1625 725  1625
+Wire Notes Line
+	725  1625 725  1475
+Wire Notes Line
+	950  1675 950  1825
+Wire Notes Line
+	950  1825 725  1825
+Wire Notes Line
+	725  1825 725  1675
+Wire Notes Line
+	725  1675 950  1675
+Wire Notes Line
+	950  1875 950  2025
+Wire Notes Line
+	950  2025 725  2025
+Wire Notes Line
+	725  2025 725  1875
+Wire Notes Line
+	725  1875 950  1875
+Wire Wire Line
+	1100 1300 1525 1300
+Text Label 5450 2650 0    50   ~ 0
++
+Text Label 5450 2750 0    50   ~ 0
+-
+Text Label 10300 1300 2    50   ~ 0
++
+Text Label 10300 1400 1    50   ~ 0
+-
 $EndSCHEMATC
