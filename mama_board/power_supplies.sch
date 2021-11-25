@@ -523,15 +523,6 @@ F 3 "" H 3700 1900 50  0001 C CNN
 	1    3700 1900
 	1    0    0    -1  
 $EndComp
-$Comp
-L payload2020_custom:+5.4V #PWR020
-U 1 1 615C87AD
-P 4900 2300
-F 0 "#PWR020" H 4900 2150 50  0001 C CNN
-F 1 "+5.4V" H 4900 2450 50  0000 C CNN
-F 2 "" H 4900 2300 50  0001 C CNN
-F 3 "" H 4900 2300 50  0001 C CNN
-	1    4900 2300
-	1    0    0    -1  
-$EndComp
+Text GLabel 4900 2300 0    50   Input ~ 0
++5.4V
 $EndSCHEMATC

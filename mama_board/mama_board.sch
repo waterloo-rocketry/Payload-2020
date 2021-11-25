@@ -50,17 +50,6 @@ F 3 "~" H 2600 6350 50  0001 C CNN
 	1    2600 6350
 	1    0    0    -1  
 $EndComp
-$Comp
-L payload2020_custom:+5.4V #PWR014
-U 1 1 615C9433
-P 1950 6150
-F 0 "#PWR014" H 1950 6000 50  0001 C CNN
-F 1 "+5.4V" H 1950 6300 50  0000 C CNN
-F 2 "" H 1950 6150 50  0001 C CNN
-F 3 "" H 1950 6150 50  0001 C CNN
-	1    1950 6150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2400 6250 1950 6250
 Wire Wire Line
@@ -246,4 +235,6 @@ Text Label 2250 4750 2    50   ~ 0
 AMP_OUT_2
 Text Label 2250 4550 2    50   ~ 0
 AMP_OUT_1
+Text GLabel 1950 6150 2    50   Input ~ 0
++5.4V
 $EndSCHEMATC

@@ -737,11 +737,11 @@ Normal Header\n
 Text Notes 750  2150 0    50   ~ 0
 Harwin Connector\n
 Text Label 2000 2450 0    50   ~ 0
-+
+CANH
 Text Label 2000 2550 0    50   ~ 0
--
+CANL
 Text Label 10650 3500 0    50   ~ 0
-+
+CANH
 Text Label 10650 3700 0    50   ~ 0
--
+CANL
 $EndSCHEMATC
