@@ -1,0 +1,3 @@
+[submodule "canlib"]
+	path = canlib
+	url = ssh://git@github.com/waterloo-rocketry/canlib.git

@@ -1,0 +1,3 @@
+[submodule "papaboardcode.X/canlib"]
+	path = papaboardcode.X/canlib
+	url = https://github.com/waterloo-rocketry/canlib.git
