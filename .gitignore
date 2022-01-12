@@ -4,6 +4,7 @@
 # Temporary files
 *.000
 *.bak
+*.sch-bak
 *.bck
 *.kicad_pcb-bak
 ~$*
@@ -39,3 +40,4 @@ Debug
 # .ioc only has the I/O config, no compilation dependency info
 .settings
 .mxproject
+*.sch-bak
