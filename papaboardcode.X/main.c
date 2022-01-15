@@ -9,6 +9,7 @@
 #include "sd.h"
 #include "error.h"
 #include "timing_util.h"
+#include "mamaboard_activate.h"
 #include <string.h>
 #include <libpic30.h>
 
@@ -25,6 +26,10 @@ void can_callback_function(const can_msg_t *message)
             LED_1_OFF();
             LED_2_OFF();
             break;
+            
+        case MSG_ACTUATOR_CMD:
+            ACTIVATE_MAMABOARD();
+            
         default:
             break;
     }

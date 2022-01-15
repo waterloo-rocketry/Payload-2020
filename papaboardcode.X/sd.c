@@ -316,16 +316,19 @@ void init_spi()
     SPI2CON2bits.SPIBEN = 0; //use standard mode, not enhanced mode
 
     //set SCK output to RP39, and input to RP32 (both must be set)
-    RPOR2bits.RP39R = 0x09;
+    RPOR2bits.RP39R = 0x09; //WHAT IS THIS FOR?
     RPINR22bits.SCK2R = 0x27;
     //set MOSI output to RP40
     RPOR3bits.RP40R = 0x08;
-    //set MISO input to RP38 (RB6)
-    RPINR22bits.SDI2R = 0x26;
-    TRISBbits.TRISB6 = 1;
-    //set CS as GPIO output on RB9. Start high.
-    TRISBbits.TRISB9 = 0;
-    LATBbits.LATB9 = 1;
+    //set MISO input to RP40 (RB8)
+    RPINR22bits.SDI2R = 0x28;
+    TRISBbits.TRISB8 = 1;
+    //set CS_1 as GPIO output on RB9. Start high.
+    TRISBbits.TRISB6 = 0;
+    LATBbits.LATB6 = 1;
+    //set CS_2 as GPIO output on RB9. Start high.
+    TRISBbits.TRISB5 = 0;
+    LATBbits.LATB5 = 1;
 
     //enable spi module 1
     SPI2STATbits.SPIEN = 1;
