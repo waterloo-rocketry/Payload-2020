@@ -7,12 +7,12 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#define cs_high() (LATBbits.LATB9 = 1)
-#define cs_low()  (LATBbits.LATB9 = 0)
+#define cs2_high() (LATBbits.LATB5 = 1)
+#define cs2_low()  (LATBbits.LATB5 = 0)
 
 static char GLOBAL_FILENAME[20];
 
-static void spi2_send(uint8_t data)
+void spi2_send(uint8_t data)
 {
     SPI2BUF = data;
     while (!SPI2STATbits.SPIRBF) {}
@@ -28,7 +28,7 @@ static void spi2_send_buffer(uint8_t *data, uint16_t data_len)
     }
 }
 
-static uint8_t spi2_read(void)
+uint8_t spi2_read(void)
 {
     SPI2BUF = 0xFF;
     while (!SPI2STATbits.SPIRBF) {}
@@ -42,6 +42,11 @@ static void spi2_read_buffer(uint8_t *data, uint16_t data_len)
         data++;
         data_len--;
     }
+}
+
+void cs1_drive (uint8_t state)
+{
+    LATBbits.LATB6 = state;
 }
 
 //SD card commands
@@ -113,7 +118,7 @@ int media_read(unsigned long sector,
     uint32_t address = sector;
     uint8_t i;
     for (i = 0; i < sector_count; ++i) {
-        cs_low();
+        cs2_low();
         uint8_t status = sd_send_command(READ_SINGLE_BLOCK, RESP_R1, address, 0, 0);
         if (status != 0) {
             error(E_SD_FAIL_READ_BLOCK);
@@ -126,7 +131,7 @@ int media_read(unsigned long sector,
         uint16_t crc = spi2_read();
         crc <<= 8;
         crc |= spi2_read();
-        cs_high();
+        cs2_high();
 
         buffer += 512;
         address += 512;
@@ -142,7 +147,7 @@ int media_write(unsigned long sector,
     uint32_t address = sector;
     uint8_t i;
     for (i = 0; i < sector_count; ++i) {
-        cs_low();
+        cs2_low();
         uint8_t status = sd_send_command(WRITE_BLOCK, RESP_R1, address, 0, 0);
         if (status != 0) {
             error(E_SD_FAIL_WRITE_BLOCK);
@@ -172,7 +177,7 @@ int media_write(unsigned long sector,
         //wait until the card stops being busy
         while (spi2_read() != 0xFF);
 
-        cs_high();
+        cs2_high();
         buffer += 512;
         address += 512;
     }
@@ -197,16 +202,16 @@ void sd_card_log_to_file(const char *buffer, uint16_t length)
 uint8_t init_sd_card2()
 {
     //based on a tutorial, set CS and MOSI high, and toggle SCK 74 times
-    cs_high();
+    cs2_high();
     int i;
     for (i = 0; i < 10; ++i) {
         spi2_send(0xFF);
     }
     for (i = 0; i < 1000; ++i) ;
 
-    cs_low();
+    cs2_low();
     uint8_t status = sd_send_command(GO_IDLE_STATE, RESP_R1, 0, 0x95, 0);
-    cs_high();
+    cs2_high();
 
     if (status != 0x01) {
         error(E_SD_FAIL_GO_IDLE);
@@ -214,9 +219,9 @@ uint8_t init_sd_card2()
     }
 
     uint8_t response[4];
-    cs_low();
+    cs2_low();
     status = sd_send_command(SEND_IF_COND, RESP_R7, 0x1AA, 0x87, response);
-    cs_high();
+    cs2_high();
     if (status != 0x01) {
         error(E_SD_FAIL_SEND_IF_COND);
         //illegal command, using a weird version of SD card. Return false
@@ -229,25 +234,25 @@ uint8_t init_sd_card2()
     }
 
     while (status != 0) {
-        cs_low();
+        cs2_low();
         status = sd_send_command(APP_CMD, RESP_R1, 0, 0x87, 0);
-        cs_high();
-        cs_low();
+        cs2_high();
+        cs2_low();
         status = sd_send_command(APP_SEND_OP_COND, RESP_R1, 0x40000000, 0x87, 0);
-        cs_high();
+        cs2_high();
     }
 
     //read the OCR register
-    cs_low();
+    cs2_low();
     status = sd_send_command(APP_CMD, RESP_R1, 0, 0x87, 0);
-    cs_high();
+    cs2_high();
     if (status != 0x00) {
         while (1);
         return false;
     }
-    cs_low();
+    cs2_low();
     status = sd_send_command(READ_OCR, RESP_R3, 0, 0x87, response);
-    cs_high();
+    cs2_high();
 
     uint32_t ocr = response[0];
     ocr <<= 8;
@@ -323,13 +328,13 @@ void init_spi()
     //set MISO input to RP40 (RB8)
     RPINR22bits.SDI2R = 0x28;
     TRISBbits.TRISB8 = 1;
-    //set CS_1 as GPIO output on RB9. Start high.
+    //set CS_1 as GPIO output on RB6. Start high.
     TRISBbits.TRISB6 = 0;
     LATBbits.LATB6 = 1;
-    //set CS_2 as GPIO output on RB9. Start high.
+    //set CS_2 as GPIO output on RB5. Start high.
     TRISBbits.TRISB5 = 0;
     LATBbits.LATB5 = 1;
-
+    
     //enable spi module 1
     SPI2STATbits.SPIEN = 1;
 }
