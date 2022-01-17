@@ -13,6 +13,7 @@
 #include <string.h>
 #include <libpic30.h>
 
+#define TURN_ON_MAMABOARD (LATBbits.LATB15 = 0)
 
 void can_callback_function(const can_msg_t *message)
 {
@@ -105,7 +106,7 @@ int main()
             //if MCP trigger interrupt pin, receive message
             if (!PORTBbits.RB10){
                 if (check_mamaboard_msg()){
-                    LATBbits.LATB15 = 0; //officially turning on mamaboard
+                    TURN_ON_MAMABOARD; //officially turning on mamaboard
                     is_mama_on = true;
                 }
             }
