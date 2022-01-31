@@ -37,7 +37,7 @@ void can_callback_function(const can_msg_t *message)
 
 static uint8_t txb_pool[100];
 
-void init_pins()
+void init_pins_main()
 {
     //Setting this pin to input, will be used to periodically check if there is 
     //a can message from MCP2515
@@ -54,7 +54,9 @@ bool check_mamaboard_msg(){
     //MSG_ACTUATOR_STATUS, we are just calling the get_actuator_id function
     //which will return -1 if the message is not valid for the function call,
     //leading to a false return
-    return (get_actuator_id(&msg) == MAMA_BOARD_ACTIVATE)
+    //return (get_actuator_id(&msg) == MAMA_BOARD_ACTIVATE);
+    
+    return true; //THIS IS JUST SO IT COMPILES UNTIL NEW CAN CHANGES ARE MADE
 }
 
 int main()
@@ -72,7 +74,7 @@ int main()
     init_peripherals();
     txb_init(txb_pool, sizeof(txb_pool), can_send, can_send_rdy);
     //initialize mcp interrupt pin and mamaboard power pin
-    init_pins();
+    init_pins_main();
 
     //turn off blue LED, since we're done initializing
     LED_1_OFF();

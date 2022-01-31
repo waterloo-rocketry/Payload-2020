@@ -95,246 +95,246 @@ MP_LINKER_FILE_OPTION=,--script=p33EP256GP502.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o: canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.c  .generated_files/cbb970ef4e11d2e8d77a739e124ae2014856f7c6.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o: canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.c  .generated_files/627214bd6a75825a6f548c33a83c11fd2a2f395d.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib/dspic33epxxxgp50x" 
 	@${RM} ${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o.d 
 	@${RM} ${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.c  -o ${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.c  -o ${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/canlib/can_common.o: canlib/can_common.c  .generated_files/af90607f2c62904c2fc860506ce70650ceb91f39.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/can_common.o: canlib/can_common.c  .generated_files/a3ef2e2e2d56329e45a2bc52d2357a304735a121.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib" 
 	@${RM} ${OBJECTDIR}/canlib/can_common.o.d 
 	@${RM} ${OBJECTDIR}/canlib/can_common.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/can_common.c  -o ${OBJECTDIR}/canlib/can_common.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/can_common.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/can_common.c  -o ${OBJECTDIR}/canlib/can_common.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/can_common.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/canlib/util/can_tx_buffer.o: canlib/util/can_tx_buffer.c  .generated_files/6da72dd3204a2a4cf4b34f6bba4aa8fa94c16f6b.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/util/can_tx_buffer.o: canlib/util/can_tx_buffer.c  .generated_files/4c70c830d8193981ed4d7bca95a0ea6a19bcff55.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib/util" 
 	@${RM} ${OBJECTDIR}/canlib/util/can_tx_buffer.o.d 
 	@${RM} ${OBJECTDIR}/canlib/util/can_tx_buffer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/can_tx_buffer.c  -o ${OBJECTDIR}/canlib/util/can_tx_buffer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/can_tx_buffer.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/can_tx_buffer.c  -o ${OBJECTDIR}/canlib/util/can_tx_buffer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/can_tx_buffer.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/canlib/util/safe_ring_buffer.o: canlib/util/safe_ring_buffer.c  .generated_files/88cd408f9aaefd4a295cf72bc76c68e166f4e5f7.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/util/safe_ring_buffer.o: canlib/util/safe_ring_buffer.c  .generated_files/1c976311a9f1372e9f8e55b953b7c8eb60d2edf0.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib/util" 
 	@${RM} ${OBJECTDIR}/canlib/util/safe_ring_buffer.o.d 
 	@${RM} ${OBJECTDIR}/canlib/util/safe_ring_buffer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/safe_ring_buffer.c  -o ${OBJECTDIR}/canlib/util/safe_ring_buffer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/safe_ring_buffer.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/safe_ring_buffer.c  -o ${OBJECTDIR}/canlib/util/safe_ring_buffer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/safe_ring_buffer.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/canlib/util/timing_util.o: canlib/util/timing_util.c  .generated_files/7debed8487c8104f16a732ad69686bd7d290c00e.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/util/timing_util.o: canlib/util/timing_util.c  .generated_files/dabe9ad153fb99098071a792aefb7b8fda8fb043.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib/util" 
 	@${RM} ${OBJECTDIR}/canlib/util/timing_util.o.d 
 	@${RM} ${OBJECTDIR}/canlib/util/timing_util.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/timing_util.c  -o ${OBJECTDIR}/canlib/util/timing_util.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/timing_util.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/timing_util.c  -o ${OBJECTDIR}/canlib/util/timing_util.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/timing_util.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/canlib/mcp2515/mcp_2515.o: canlib/mcp2515/mcp_2515.c  .generated_files/d95bdfe8020297dec18c5f772eb8793d97bf3472.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/mcp2515/mcp_2515.o: canlib/mcp2515/mcp_2515.c  .generated_files/8f9bd923e3263f1d8b771c97c688aed313648ecc.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib/mcp2515" 
 	@${RM} ${OBJECTDIR}/canlib/mcp2515/mcp_2515.o.d 
 	@${RM} ${OBJECTDIR}/canlib/mcp2515/mcp_2515.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/mcp2515/mcp_2515.c  -o ${OBJECTDIR}/canlib/mcp2515/mcp_2515.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/mcp2515/mcp_2515.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/mcp2515/mcp_2515.c  -o ${OBJECTDIR}/canlib/mcp2515/mcp_2515.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/mcp2515/mcp_2515.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_access.o: fat_io_lib/fat_access.c  .generated_files/9eec0256ad101d5960eff4e170670b4e4ede75bf.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_access.o: fat_io_lib/fat_access.c  .generated_files/4b4839d49b4054b5bcb1986149e699c80d403755.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_access.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_access.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_access.c  -o ${OBJECTDIR}/fat_io_lib/fat_access.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_access.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_access.c  -o ${OBJECTDIR}/fat_io_lib/fat_access.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_access.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_cache.o: fat_io_lib/fat_cache.c  .generated_files/e56dbae8f2d792253efbdee7cba282a2647e47a5.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_cache.o: fat_io_lib/fat_cache.c  .generated_files/5caffdf6aca8f69c21a6d33f02be6cedb640293f.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_cache.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_cache.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_cache.c  -o ${OBJECTDIR}/fat_io_lib/fat_cache.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_cache.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_cache.c  -o ${OBJECTDIR}/fat_io_lib/fat_cache.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_cache.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_filelib.o: fat_io_lib/fat_filelib.c  .generated_files/a17febc74d8349188004ddce6ef12172eaebd592.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_filelib.o: fat_io_lib/fat_filelib.c  .generated_files/c1acd8b4a52376203296b31dc1e253ee0b8c8491.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_filelib.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_filelib.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_filelib.c  -o ${OBJECTDIR}/fat_io_lib/fat_filelib.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_filelib.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_filelib.c  -o ${OBJECTDIR}/fat_io_lib/fat_filelib.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_filelib.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_format.o: fat_io_lib/fat_format.c  .generated_files/24eaf0f2356c15f7d5dcac938a9559362b931ddd.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_format.o: fat_io_lib/fat_format.c  .generated_files/fec2c6727ed179cb2d99686506bcc2b6f05dedbf.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_format.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_format.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_format.c  -o ${OBJECTDIR}/fat_io_lib/fat_format.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_format.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_format.c  -o ${OBJECTDIR}/fat_io_lib/fat_format.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_format.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_misc.o: fat_io_lib/fat_misc.c  .generated_files/432a779d34a27e2d09df088fd9a9eeb91c792871.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_misc.o: fat_io_lib/fat_misc.c  .generated_files/7cc61e4bc6b58321ad84072fabd136be1fce476.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_misc.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_misc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_misc.c  -o ${OBJECTDIR}/fat_io_lib/fat_misc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_misc.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_misc.c  -o ${OBJECTDIR}/fat_io_lib/fat_misc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_misc.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_string.o: fat_io_lib/fat_string.c  .generated_files/8124994fa24258cc49e2043452184a302f5fd033.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_string.o: fat_io_lib/fat_string.c  .generated_files/3c9147e927b82558bb0d9a68ef90cb2b7f7a4247.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_string.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_string.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_string.c  -o ${OBJECTDIR}/fat_io_lib/fat_string.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_string.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_string.c  -o ${OBJECTDIR}/fat_io_lib/fat_string.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_string.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_table.o: fat_io_lib/fat_table.c  .generated_files/62dc519aaff8785ef73ff95403d433d1e672d3cf.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_table.o: fat_io_lib/fat_table.c  .generated_files/6f90c3d117b1f11c8225a5ef7baf3803d225d856.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_table.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_table.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_table.c  -o ${OBJECTDIR}/fat_io_lib/fat_table.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_table.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_table.c  -o ${OBJECTDIR}/fat_io_lib/fat_table.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_table.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_write.o: fat_io_lib/fat_write.c  .generated_files/a9e382e6027167392d68dbc96a8679376329c906.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_write.o: fat_io_lib/fat_write.c  .generated_files/2f875518f92eb8f9e4e600ab26b316fd92ec9b5.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_write.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_write.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_write.c  -o ${OBJECTDIR}/fat_io_lib/fat_write.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_write.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_write.c  -o ${OBJECTDIR}/fat_io_lib/fat_write.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_write.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/main.o: main.c  .generated_files/a714509a6b61ef5b3d19c1974986518da2027e36.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/main.o: main.c  .generated_files/84ed04661d742648d2caa5f2f8bac03f6e825a92.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/init.o: init.c  .generated_files/9059c75ddf11b9ca1e02b1b5c8897aaf9daf843f.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/init.o: init.c  .generated_files/f278c46207540d27986ab700838c601215465a1b.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/init.o.d 
 	@${RM} ${OBJECTDIR}/init.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  init.c  -o ${OBJECTDIR}/init.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/init.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  init.c  -o ${OBJECTDIR}/init.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/init.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/sd.o: sd.c  .generated_files/7972b753d32d66e5ea70cbf0dddcb2678bc22b1b.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/sd.o: sd.c  .generated_files/b19ccd31cfdaaba93de65138db250176987239e.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/sd.o.d 
 	@${RM} ${OBJECTDIR}/sd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  sd.c  -o ${OBJECTDIR}/sd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/sd.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  sd.c  -o ${OBJECTDIR}/sd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/sd.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/error.o: error.c  .generated_files/9636cd67f87447a0a701194b12bf5e21e3711304.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/error.o: error.c  .generated_files/643507dc02c63f508a3c2fffbb9500eed4abdc67.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/error.o.d 
 	@${RM} ${OBJECTDIR}/error.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  error.c  -o ${OBJECTDIR}/error.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/error.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  error.c  -o ${OBJECTDIR}/error.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/error.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/can_syslog.o: can_syslog.c  .generated_files/1d0dfabb07165db9c1c9a42878f256bc6082cb42.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/can_syslog.o: can_syslog.c  .generated_files/74f0142e56357bc8294d4c4f61cf3d35ca14b1af.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/can_syslog.o.d 
 	@${RM} ${OBJECTDIR}/can_syslog.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  can_syslog.c  -o ${OBJECTDIR}/can_syslog.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/can_syslog.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  can_syslog.c  -o ${OBJECTDIR}/can_syslog.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/can_syslog.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/platform.o: platform.c  .generated_files/310a04aa036c994ecc388a12f4280eba36462d70.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/platform.o: platform.c  .generated_files/41bc62afada9641f0f77895248653032f18b4067.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/platform.o.d 
 	@${RM} ${OBJECTDIR}/platform.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  platform.c  -o ${OBJECTDIR}/platform.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/platform.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  platform.c  -o ${OBJECTDIR}/platform.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/platform.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
 else
-${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o: canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.c  .generated_files/3773ac693da41dbdad69fa4976c6e0821f25f0cf.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o: canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.c  .generated_files/a72bb8503b11696f17981dee0c5a75993600b6d2.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib/dspic33epxxxgp50x" 
 	@${RM} ${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o.d 
 	@${RM} ${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.c  -o ${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.c  -o ${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/dspic33epxxxgp50x/dspic33epxxxgp50x_can.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/canlib/can_common.o: canlib/can_common.c  .generated_files/c65f77520f8ee351a97a389280804d0eeca4b187.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/can_common.o: canlib/can_common.c  .generated_files/807b28465917624aa1eb04a00e876aef596b6aba.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib" 
 	@${RM} ${OBJECTDIR}/canlib/can_common.o.d 
 	@${RM} ${OBJECTDIR}/canlib/can_common.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/can_common.c  -o ${OBJECTDIR}/canlib/can_common.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/can_common.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/can_common.c  -o ${OBJECTDIR}/canlib/can_common.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/can_common.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/canlib/util/can_tx_buffer.o: canlib/util/can_tx_buffer.c  .generated_files/1c3ca3e30edc4a4502b30ec63d5b2cf991aa65a.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/util/can_tx_buffer.o: canlib/util/can_tx_buffer.c  .generated_files/5236cac6e3bb228830f4196db88c866f6b9ccdd.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib/util" 
 	@${RM} ${OBJECTDIR}/canlib/util/can_tx_buffer.o.d 
 	@${RM} ${OBJECTDIR}/canlib/util/can_tx_buffer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/can_tx_buffer.c  -o ${OBJECTDIR}/canlib/util/can_tx_buffer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/can_tx_buffer.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/can_tx_buffer.c  -o ${OBJECTDIR}/canlib/util/can_tx_buffer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/can_tx_buffer.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/canlib/util/safe_ring_buffer.o: canlib/util/safe_ring_buffer.c  .generated_files/8bd7e0ef2a3a6b310dc39057ae73c2219e991f9.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/util/safe_ring_buffer.o: canlib/util/safe_ring_buffer.c  .generated_files/378a48054748f18e5dc48dc738399235e7832118.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib/util" 
 	@${RM} ${OBJECTDIR}/canlib/util/safe_ring_buffer.o.d 
 	@${RM} ${OBJECTDIR}/canlib/util/safe_ring_buffer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/safe_ring_buffer.c  -o ${OBJECTDIR}/canlib/util/safe_ring_buffer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/safe_ring_buffer.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/safe_ring_buffer.c  -o ${OBJECTDIR}/canlib/util/safe_ring_buffer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/safe_ring_buffer.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/canlib/util/timing_util.o: canlib/util/timing_util.c  .generated_files/d3019a96c164cdd6f29f44c1ffe73856247e36c1.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/util/timing_util.o: canlib/util/timing_util.c  .generated_files/cd558c20c9dbdf0df66b94a7e1d15ae055950fb2.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib/util" 
 	@${RM} ${OBJECTDIR}/canlib/util/timing_util.o.d 
 	@${RM} ${OBJECTDIR}/canlib/util/timing_util.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/timing_util.c  -o ${OBJECTDIR}/canlib/util/timing_util.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/timing_util.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/util/timing_util.c  -o ${OBJECTDIR}/canlib/util/timing_util.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/util/timing_util.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/canlib/mcp2515/mcp_2515.o: canlib/mcp2515/mcp_2515.c  .generated_files/96e01cebb6f79aa285b3d6d8ba46258f0a930aa8.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/canlib/mcp2515/mcp_2515.o: canlib/mcp2515/mcp_2515.c  .generated_files/1db323426b9dbb0169d559241a636e99b0a0b52f.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/canlib/mcp2515" 
 	@${RM} ${OBJECTDIR}/canlib/mcp2515/mcp_2515.o.d 
 	@${RM} ${OBJECTDIR}/canlib/mcp2515/mcp_2515.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/mcp2515/mcp_2515.c  -o ${OBJECTDIR}/canlib/mcp2515/mcp_2515.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/mcp2515/mcp_2515.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  canlib/mcp2515/mcp_2515.c  -o ${OBJECTDIR}/canlib/mcp2515/mcp_2515.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/canlib/mcp2515/mcp_2515.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_access.o: fat_io_lib/fat_access.c  .generated_files/a252a2b3f6e9dfa5cc2a7505c4a70af459084d66.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_access.o: fat_io_lib/fat_access.c  .generated_files/cb9d321535765b126def81353091432cc6e223b5.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_access.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_access.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_access.c  -o ${OBJECTDIR}/fat_io_lib/fat_access.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_access.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_access.c  -o ${OBJECTDIR}/fat_io_lib/fat_access.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_access.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_cache.o: fat_io_lib/fat_cache.c  .generated_files/317f3f119877bb3da9702a2998c9d2241a339270.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_cache.o: fat_io_lib/fat_cache.c  .generated_files/3e93f5ed3f8b2315463cf28c6c0556f408ae13be.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_cache.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_cache.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_cache.c  -o ${OBJECTDIR}/fat_io_lib/fat_cache.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_cache.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_cache.c  -o ${OBJECTDIR}/fat_io_lib/fat_cache.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_cache.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_filelib.o: fat_io_lib/fat_filelib.c  .generated_files/4603867fdc880626f89dc9f6d642bccceb694f8e.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_filelib.o: fat_io_lib/fat_filelib.c  .generated_files/44593f3043eeda1de1e307f2b41a8e5c627ce68a.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_filelib.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_filelib.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_filelib.c  -o ${OBJECTDIR}/fat_io_lib/fat_filelib.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_filelib.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_filelib.c  -o ${OBJECTDIR}/fat_io_lib/fat_filelib.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_filelib.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_format.o: fat_io_lib/fat_format.c  .generated_files/c9dedc3eb9517b11fd968903e23e775268a40102.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_format.o: fat_io_lib/fat_format.c  .generated_files/f233397f6672cc2f741b5c84e2842ad187e723cc.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_format.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_format.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_format.c  -o ${OBJECTDIR}/fat_io_lib/fat_format.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_format.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_format.c  -o ${OBJECTDIR}/fat_io_lib/fat_format.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_format.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_misc.o: fat_io_lib/fat_misc.c  .generated_files/c194525d82549e9d3950dfb884ab310e3bbfaf4c.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_misc.o: fat_io_lib/fat_misc.c  .generated_files/f4dae09c7992f9c657c5cdd5912c0dfcbe23db7d.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_misc.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_misc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_misc.c  -o ${OBJECTDIR}/fat_io_lib/fat_misc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_misc.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_misc.c  -o ${OBJECTDIR}/fat_io_lib/fat_misc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_misc.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_string.o: fat_io_lib/fat_string.c  .generated_files/cd8c9a543775d784b1c4b1c67f91bd59403c9fbc.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_string.o: fat_io_lib/fat_string.c  .generated_files/73b5d1c347428ad02188523592afcefd781b018a.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_string.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_string.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_string.c  -o ${OBJECTDIR}/fat_io_lib/fat_string.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_string.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_string.c  -o ${OBJECTDIR}/fat_io_lib/fat_string.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_string.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_table.o: fat_io_lib/fat_table.c  .generated_files/6945653d490ab003aa1f425e87006207b5e484d4.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_table.o: fat_io_lib/fat_table.c  .generated_files/476ac65925e76a1959be7e33333eae60f20d2cc2.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_table.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_table.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_table.c  -o ${OBJECTDIR}/fat_io_lib/fat_table.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_table.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_table.c  -o ${OBJECTDIR}/fat_io_lib/fat_table.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_table.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/fat_io_lib/fat_write.o: fat_io_lib/fat_write.c  .generated_files/67e7a33d51dbbeb752e1afa7587c341ec3c86c36.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/fat_io_lib/fat_write.o: fat_io_lib/fat_write.c  .generated_files/dc6ebf73f0ce9c8d9ac1289c40b573ed73001c18.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}/fat_io_lib" 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_write.o.d 
 	@${RM} ${OBJECTDIR}/fat_io_lib/fat_write.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_write.c  -o ${OBJECTDIR}/fat_io_lib/fat_write.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_write.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  fat_io_lib/fat_write.c  -o ${OBJECTDIR}/fat_io_lib/fat_write.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/fat_io_lib/fat_write.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/main.o: main.c  .generated_files/90f6d44671430440e9275b9983f7ac3809c42123.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/main.o: main.c  .generated_files/b964c72137f7d58eac19ee8125374ad47126fef8.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/init.o: init.c  .generated_files/d3772e83453661231f420909c3acb4bc35ad704c.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/init.o: init.c  .generated_files/e11685273ee3ef8458cb342740db951844adb509.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/init.o.d 
 	@${RM} ${OBJECTDIR}/init.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  init.c  -o ${OBJECTDIR}/init.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/init.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  init.c  -o ${OBJECTDIR}/init.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/init.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/sd.o: sd.c  .generated_files/fe876e4f4f98cbcf485203bb91a99610f823b9f2.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/sd.o: sd.c  .generated_files/feaa70835f7e798e975a0c53eb5fc6f244fb075f.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/sd.o.d 
 	@${RM} ${OBJECTDIR}/sd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  sd.c  -o ${OBJECTDIR}/sd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/sd.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  sd.c  -o ${OBJECTDIR}/sd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/sd.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/error.o: error.c  .generated_files/f4d2474bafdf411cf36dc5f8bae34cc7871bd38.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/error.o: error.c  .generated_files/ad76bee262dc88336168010254e816814b754630.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/error.o.d 
 	@${RM} ${OBJECTDIR}/error.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  error.c  -o ${OBJECTDIR}/error.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/error.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  error.c  -o ${OBJECTDIR}/error.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/error.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/can_syslog.o: can_syslog.c  .generated_files/cf6ee5081228e5b98943c5c520129743bf9f1b03.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/can_syslog.o: can_syslog.c  .generated_files/608b8f9d5bf9d9749364ff47d4a00eecccc0bfe1.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/can_syslog.o.d 
 	@${RM} ${OBJECTDIR}/can_syslog.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  can_syslog.c  -o ${OBJECTDIR}/can_syslog.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/can_syslog.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  can_syslog.c  -o ${OBJECTDIR}/can_syslog.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/can_syslog.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/platform.o: platform.c  .generated_files/120527e1e9b5c4bf8719056e95ea7e93f983075d.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
+${OBJECTDIR}/platform.o: platform.c  .generated_files/61db4781527c9eab3b51f1ae3fa74cfe610f5007.flag .generated_files/55df2f800995a7df2fee4897836bbd60b9c7aabb.flag
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/platform.o.d 
 	@${RM} ${OBJECTDIR}/platform.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  platform.c  -o ${OBJECTDIR}/platform.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/platform.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -Wall -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
+	${MP_CC} $(MP_EXTRA_CC_PRE)  platform.c  -o ${OBJECTDIR}/platform.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/platform.o.d"      -mno-eds-warn  -g -omf=elf -DBOARD_UNIQUE_ID=BOARD_ID_LOGGER -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Werror -Wno-unused-function -Wall -O0 -I"canlib" -I"canlib/util" -I"canlib/dspic33epxxxgp50x" -msmart-io=1 -msfr-warn=off   --std=c99  -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
