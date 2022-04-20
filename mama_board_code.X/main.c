@@ -11,6 +11,7 @@
 
 #include "adc.h"
 #include "pin_interrupt.h"
+#include "mama.h"
 #include "canlib/pic18f26k83/pic18f26k83_timer.h"
 
 #include <xc.h>
@@ -19,7 +20,7 @@
 
 #define _XTAL_FREQ 1000000
 
-#define BOARD_UNIQUE_ID 0x7A0
+//#define BOARD_UNIQUE_ID 0x7A0
 
 static void can_msg_handler(const can_msg_t *msg);
 static void send_status_ok(void);
@@ -57,6 +58,9 @@ int main(int argc, char** argv) {
     
     // Init interrupt pins
     pin_interrupt_init();
+    
+    // Init LEDs
+    led_init();
 
     // set up CAN module
     can_timing_t can_setup;
@@ -67,9 +71,15 @@ int main(int argc, char** argv) {
 
     // loop timer
     uint32_t last_millis = millis();
+    bool led_heartbeat = 0;
     
     while (1) {
         if (millis() - last_millis > MAX_LOOP_TIME_DIFF_ms) {
+            
+            led_heartbeat ^= 1;
+            if (led_heartbeat) { BLUE_LED_ON(); }
+            else {BLUE_LED_OFF(); }
+            
             // update our loop counter
             last_millis = millis();
         }

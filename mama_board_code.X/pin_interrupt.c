@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <pic18f26k83.h>
+#include <pic18lf26k83.h>
 
 void pin_interrupt_init(){
     PIE0bits.IOCIE = 1; //Set bit to generate interrupts on change
