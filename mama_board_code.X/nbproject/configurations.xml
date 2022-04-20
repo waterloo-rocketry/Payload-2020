@@ -24,6 +24,7 @@
                    projectFiles="true">
       <itemPath>adc.h</itemPath>
       <itemPath>pin_interrupt.h</itemPath>
+      <itemPath>mama.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
