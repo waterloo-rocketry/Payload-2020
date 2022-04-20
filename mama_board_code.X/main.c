@@ -97,7 +97,7 @@ static void __interrupt() interrupt_handler() {
     }
     
     //Interrupt flag for adc pins
-    if (IOCAFbits.IOCAF0 || IOCAFbits.IOCAF1 || IOCAFbits.IOCAF2 ){
+    if (IOCAFbits.IOCAF0 || IOCAFbits.IOCAF1 || IOCAFbits.IOCAF2) {
         pin_interrupt_handler();
     }
     

@@ -7,6 +7,9 @@
 
 void pin_interrupt_init(){
     PIE0bits.IOCIE = 1; //Set bit to generate interrupts on change
+    ANSELAbits.ANSELA0 = 0;
+    ANSELAbits.ANSELA1 = 0;
+    ANSELAbits.ANSELA2 = 0;
     
     // Input pins CHANGE TO CORRECT
     TRISAbits.TRISA0 = 1;
@@ -20,7 +23,7 @@ void pin_interrupt_init(){
 }
 
 void pin_interrupt_handler(){
-    uint8_t sensor_identifier;
+    uint8_t sensor_identifier = 0;
     
     if (IOCAFbits.IOCAF0){
         IOCAFbits.IOCAF0 = 0; //clear flag
@@ -37,7 +40,7 @@ void pin_interrupt_handler(){
         sensor_identifier = 2;
     }
     
-    ADPCH = 0xb00001000 || sensor_identifier; //bitwise op
+    ADPCH = sensor_identifier;
     ADCON0bits.ON = 1;
     ADCON0bits.GO = 1;
     
