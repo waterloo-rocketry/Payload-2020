@@ -4,6 +4,7 @@
 # Temporary files
 *.000
 *.bak
+*.sch-bak
 *.bck
 *.kicad_pcb-bak
 ~$*
@@ -25,6 +26,7 @@ _autosave-*
 *.ses
 
 # Exported BOM files
+*.xml
 *.csv
 
 # Debug/Binary files
@@ -38,7 +40,4 @@ Debug
 # .ioc only has the I/O config, no compilation dependency info
 .settings
 .mxproject
-
-#Code Files
-build/
-dist/
+*.sch-bak

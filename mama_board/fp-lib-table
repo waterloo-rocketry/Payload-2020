@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Payload2020_custom)(type KiCad)(uri ${KIPRJMOD}/Payload2020_custom.pretty)(options "")(descr ""))
+)

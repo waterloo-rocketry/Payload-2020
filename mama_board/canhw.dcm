@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AS393P-E1
+D Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/SOP-8/TSSOP-8/VSSOP-8
+K dual comparator
+F https://datasheet.octopart.com/AS393P-E1-Diodes-Inc.-datasheet-24967545.pdf
+$ENDCMP
+#
+$CMP LM393
+D Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/TO-99-8
+K dual comparator
+F http://www.ti.com/lit/ds/symlink/lm393.pdf
+$ENDCMP
+#
+#End Doc Library
