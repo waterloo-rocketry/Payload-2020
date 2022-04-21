@@ -25,25 +25,37 @@ void pin_interrupt_init(){
 void pin_interrupt_handler(){
     uint8_t sensor_identifier = 0;
     
-    if (IOCAFbits.IOCAF0){
+    if (IOCAFbits.IOCAF0) {
         IOCAFbits.IOCAF0 = 0; //clear flag
-        sensor_identifier = 0;
-    }
-    
-    else if (IOCAFbits.IOCAF1){
+        sensor_identifier = 3;
+        // read RC7
+        ADPCH = 0b010111;
+    } else if (IOCAFbits.IOCAF1) {
         IOCAFbits.IOCAF1 = 0; //clear flag
         sensor_identifier = 1;
-    }
-    
-    else{
+        // read RC6
+        ADPCH = 0b010110;
+    } else {
         IOCAFbits.IOCAF2 = 0; //clear flag
         sensor_identifier = 2;
+        // read RC5
+        ADPCH = 0b010101;
     }
     
-    ADPCH = sensor_identifier;
     ADCON0bits.ON = 1;
     ADCON0bits.GO = 1;
     
-    //Rest of the process is handled by adc_interrupt_handler
-    //bec completion of adc conversion/calc triggers an interrupt
+
+    // Wait until ADC conversion is finished
+    while (ADCON0bits.GO);
+    
+    uint8_t result_high = ADRESH & 0xF;
+    uint8_t result_low = ADRESL;
+            
+    can_msg_t radiation_msg;
+
+    uint16_t adc_res = ((uint16_t) (result_high) << 8) | (uint16_t) (result_low);
+    
+    build_radi_info_msg(millis(), sensor_identifier, adc_res, &radiation_msg);
+    txb_enqueue(&radiation_msg);
 }

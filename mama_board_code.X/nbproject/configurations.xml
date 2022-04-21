@@ -25,6 +25,7 @@
       <itemPath>adc.h</itemPath>
       <itemPath>pin_interrupt.h</itemPath>
       <itemPath>mama.h</itemPath>
+      <itemPath>config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -36,7 +37,6 @@
       <itemPath>adc.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>pin_interrupt.c</itemPath>
-      <itemPath>config.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

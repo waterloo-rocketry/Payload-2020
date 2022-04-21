@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=canlib/can_common.c canlib/util/can_rcv_buffer.c canlib/util/can_tx_buffer.c canlib/util/safe_ring_buffer.c canlib/util/timing_util.c canlib/pic18f26k83/pic18f26k83_can.c canlib/pic18f26k83/pic18f26k83_timer.c adc.c main.c pin_interrupt.c config.c
+SOURCEFILES_QUOTED_IF_SPACED=canlib/can_common.c canlib/util/can_rcv_buffer.c canlib/util/can_tx_buffer.c canlib/util/safe_ring_buffer.c canlib/util/timing_util.c canlib/pic18f26k83/pic18f26k83_can.c canlib/pic18f26k83/pic18f26k83_timer.c adc.c main.c pin_interrupt.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/canlib/can_common.p1 ${OBJECTDIR}/canlib/util/can_rcv_buffer.p1 ${OBJECTDIR}/canlib/util/can_tx_buffer.p1 ${OBJECTDIR}/canlib/util/safe_ring_buffer.p1 ${OBJECTDIR}/canlib/util/timing_util.p1 ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_can.p1 ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_timer.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/pin_interrupt.p1 ${OBJECTDIR}/config.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/canlib/can_common.p1.d ${OBJECTDIR}/canlib/util/can_rcv_buffer.p1.d ${OBJECTDIR}/canlib/util/can_tx_buffer.p1.d ${OBJECTDIR}/canlib/util/safe_ring_buffer.p1.d ${OBJECTDIR}/canlib/util/timing_util.p1.d ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_can.p1.d ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_timer.p1.d ${OBJECTDIR}/adc.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/pin_interrupt.p1.d ${OBJECTDIR}/config.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/canlib/can_common.p1 ${OBJECTDIR}/canlib/util/can_rcv_buffer.p1 ${OBJECTDIR}/canlib/util/can_tx_buffer.p1 ${OBJECTDIR}/canlib/util/safe_ring_buffer.p1 ${OBJECTDIR}/canlib/util/timing_util.p1 ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_can.p1 ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_timer.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/pin_interrupt.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/canlib/can_common.p1.d ${OBJECTDIR}/canlib/util/can_rcv_buffer.p1.d ${OBJECTDIR}/canlib/util/can_tx_buffer.p1.d ${OBJECTDIR}/canlib/util/safe_ring_buffer.p1.d ${OBJECTDIR}/canlib/util/timing_util.p1.d ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_can.p1.d ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_timer.p1.d ${OBJECTDIR}/adc.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/pin_interrupt.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/canlib/can_common.p1 ${OBJECTDIR}/canlib/util/can_rcv_buffer.p1 ${OBJECTDIR}/canlib/util/can_tx_buffer.p1 ${OBJECTDIR}/canlib/util/safe_ring_buffer.p1 ${OBJECTDIR}/canlib/util/timing_util.p1 ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_can.p1 ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_timer.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/pin_interrupt.p1 ${OBJECTDIR}/config.p1
+OBJECTFILES=${OBJECTDIR}/canlib/can_common.p1 ${OBJECTDIR}/canlib/util/can_rcv_buffer.p1 ${OBJECTDIR}/canlib/util/can_tx_buffer.p1 ${OBJECTDIR}/canlib/util/safe_ring_buffer.p1 ${OBJECTDIR}/canlib/util/timing_util.p1 ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_can.p1 ${OBJECTDIR}/canlib/pic18f26k83/pic18f26k83_timer.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/pin_interrupt.p1
 
 # Source Files
-SOURCEFILES=canlib/can_common.c canlib/util/can_rcv_buffer.c canlib/util/can_tx_buffer.c canlib/util/safe_ring_buffer.c canlib/util/timing_util.c canlib/pic18f26k83/pic18f26k83_can.c canlib/pic18f26k83/pic18f26k83_timer.c adc.c main.c pin_interrupt.c config.c
+SOURCEFILES=canlib/can_common.c canlib/util/can_rcv_buffer.c canlib/util/can_tx_buffer.c canlib/util/safe_ring_buffer.c canlib/util/timing_util.c canlib/pic18f26k83/pic18f26k83_can.c canlib/pic18f26k83/pic18f26k83_timer.c adc.c main.c pin_interrupt.c
 
 
 
@@ -174,14 +174,6 @@ ${OBJECTDIR}/pin_interrupt.p1: pin_interrupt.c  nbproject/Makefile-${CND_CONF}.m
 	@-${MV} ${OBJECTDIR}/pin_interrupt.d ${OBJECTDIR}/pin_interrupt.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/pin_interrupt.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/config.p1: config.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/config.p1.d 
-	@${RM} ${OBJECTDIR}/config.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -DBOARD_UNIQUE_ID=BOARD_ID_SENSOR -xassembler-with-cpp -I"canlib" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/config.p1 config.c 
-	@-${MV} ${OBJECTDIR}/config.d ${OBJECTDIR}/config.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/config.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 else
 ${OBJECTDIR}/canlib/can_common.p1: canlib/can_common.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/canlib" 
@@ -262,14 +254,6 @@ ${OBJECTDIR}/pin_interrupt.p1: pin_interrupt.c  nbproject/Makefile-${CND_CONF}.m
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -DBOARD_UNIQUE_ID=BOARD_ID_SENSOR -xassembler-with-cpp -I"canlib" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/pin_interrupt.p1 pin_interrupt.c 
 	@-${MV} ${OBJECTDIR}/pin_interrupt.d ${OBJECTDIR}/pin_interrupt.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/pin_interrupt.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/config.p1: config.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/config.p1.d 
-	@${RM} ${OBJECTDIR}/config.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -DBOARD_UNIQUE_ID=BOARD_ID_SENSOR -xassembler-with-cpp -I"canlib" -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/config.p1 config.c 
-	@-${MV} ${OBJECTDIR}/config.d ${OBJECTDIR}/config.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/config.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

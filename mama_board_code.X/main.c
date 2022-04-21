@@ -12,6 +12,7 @@
 #include "adc.h"
 #include "pin_interrupt.h"
 #include "mama.h"
+#include "config.h"
 #include "canlib/pic18f26k83/pic18f26k83_timer.h"
 
 #include <xc.h>
@@ -96,16 +97,11 @@ static void __interrupt() interrupt_handler() {
         can_handle_interrupt();
     }
     
-    //Interrupt flag for adc pins
+    //Interrupt flag for comparator pins
     if (IOCAFbits.IOCAF0 || IOCAFbits.IOCAF1 || IOCAFbits.IOCAF2) {
         pin_interrupt_handler();
     }
     
-    //Interrupt flag for adc conversion/calc completion
-    if (PIR1bits.ADIF){
-        adc_interrupt_handler();
-    }
-
     // Timer0 has overflowed - update millis() function
     // This happens approximately every 500us
     if (PIE3bits.TMR0IE == 1 && PIR3bits.TMR0IF == 1) {
