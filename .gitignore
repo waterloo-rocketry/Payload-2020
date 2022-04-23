@@ -41,3 +41,8 @@ Debug
 .settings
 .mxproject
 *.sch-bak
+
+# MPLAB files
+build
+dist
+

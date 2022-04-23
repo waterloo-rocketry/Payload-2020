@@ -22,7 +22,9 @@ void adc_init()
     ADCON0bits.ON = 1; //ADC is enabled
     ADCON0bits.CS = 1; //Clock supplied from FRC dedicated oscillator
     ADCON0bits.FM = 1; //Data is right justified
-    PIE1bits.ADIE = 1; //Set interrupt enable bit
+    //ADCON0bits.CONT = 1; //Continuous conversion
+    //PIE1bits.ADIE = 1; //Set interrupt enable bit
     ADREFbits.ADPREF = 0; // Use Vdd as the positive voltage reference
+    //ADCON0bits.GO = 1; //Start conversion
     
 }

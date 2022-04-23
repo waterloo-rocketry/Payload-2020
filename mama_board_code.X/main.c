@@ -81,6 +81,8 @@ int main(int argc, char** argv) {
             if (led_heartbeat) { BLUE_LED_ON(); }
             else {BLUE_LED_OFF(); }
             
+            send_status_ok();
+            
             // update our loop counter
             last_millis = millis();
         }

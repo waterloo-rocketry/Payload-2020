@@ -1,4 +1,5 @@
 #include "pin_interrupt.h"
+#include "mama.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,7 +23,8 @@ void pin_interrupt_init(){
     IOCAPbits.IOCAP2 = 1;
 }
 
-void pin_interrupt_handler(){
+void pin_interrupt_handler() {
+    WHITE_LED_ON();
     uint8_t sensor_identifier = 0;
     
     if (IOCAFbits.IOCAF0) {
@@ -30,25 +32,23 @@ void pin_interrupt_handler(){
         sensor_identifier = 3;
         // read RC7
         ADPCH = 0b010111;
-    } else if (IOCAFbits.IOCAF1) {
+    }
+    if (IOCAFbits.IOCAF1) {
         IOCAFbits.IOCAF1 = 0; //clear flag
         sensor_identifier = 1;
-        // read RC6
-        ADPCH = 0b010110;
-    } else {
-        IOCAFbits.IOCAF2 = 0; //clear flag
-        sensor_identifier = 2;
         // read RC5
         ADPCH = 0b010101;
     }
+    if (IOCAFbits.IOCAF2) {
+        IOCAFbits.IOCAF2 = 0; //clear flag
+        sensor_identifier = 2;
+        // read RC6
+        ADPCH = 0b010110;
+    }
     
-    ADCON0bits.ON = 1;
     ADCON0bits.GO = 1;
-    
-
-    // Wait until ADC conversion is finished
-    while (ADCON0bits.GO);
-    
+    while(ADCON0bits.GO);
+            
     uint8_t result_high = ADRESH & 0xF;
     uint8_t result_low = ADRESL;
             
@@ -58,4 +58,5 @@ void pin_interrupt_handler(){
     
     build_radi_info_msg(millis(), sensor_identifier, adc_res, &radiation_msg);
     txb_enqueue(&radiation_msg);
+    WHITE_LED_OFF();
 }
