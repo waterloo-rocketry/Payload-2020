@@ -32,13 +32,6 @@ static uint32_t last_can_traffic_timestamp_ms = 0;
 uint8_t tx_pool[100];
 
 int main(int argc, char** argv) { 
-    //MCC generated initializer, I don't think I need these
-    //SYSTEM_Initialize();
-    //OSCILLATOR_Initialize();
-
-    //ADCC_Initialize();
-    //ADCC_DisableContinuousConversion();
-
     // init our millisecond function
     timer0_init();
 
@@ -46,13 +39,13 @@ int main(int argc, char** argv) {
     INTCON0bits.GIE = 1;
 
     // Set up CAN TX
-    TRISC1 = 0;
-    RC1PPS = 0x33;
+    TRISC0 = 0;
+    RC0PPS = 0x33;
 
     // Set up CAN RX
-    TRISC0 = 1;
-    ANSELC0 = 0;
-    CANRXPPS = 0x10;
+    TRISC1 = 1;
+    ANSELC1 = 0;
+    CANRXPPS = 0x11;
     
     // Init ADC
     adc_init();
@@ -79,9 +72,9 @@ int main(int argc, char** argv) {
             
             led_heartbeat ^= 1;
             if (led_heartbeat) { BLUE_LED_ON(); }
-            else {BLUE_LED_OFF(); }
+            else { BLUE_LED_OFF(); }
             
-            send_status_ok();
+            //send_status_ok();
             
             // update our loop counter
             last_millis = millis();
