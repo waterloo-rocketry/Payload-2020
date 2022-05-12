@@ -81,6 +81,24 @@ int main(int argc, char** argv) {
         }
         //send any queued CAN messages
         txb_heartbeat();
+        
+        if(sensor_identifier)
+        {
+            WHITE_LED_ON();
+            ADCON0bits.GO = 1;
+            while(ADCON0bits.GO);
+            
+            uint8_t result_high = ADRESH & 0xF;
+            uint8_t result_low = ADRESL;
+    
+            can_msg_t radiation_msg;
+            uint16_t adc_res = ((uint16_t) (result_high) << 8) | (uint16_t) (result_low);
+            build_radi_info_msg(millis(), sensor_identifier, adc_res, &radiation_msg);
+            txb_enqueue(&radiation_msg);
+            sensor_identifier = 0;
+        }
+        WHITE_LED_OFF();
+
     }
 
     // unreachable
@@ -121,11 +139,11 @@ static void can_msg_handler(const can_msg_t *msg) {
     switch (msg_type) {
 
         // all the other ones - do nothing
-        case MSG_INJ_VALVE_CMD: //IS THIS NECESSARY?
+        //case MSG_INJ_VALVE_CMD: //IS THIS NECESSARY?
         case MSG_DEBUG_MSG:
         case MSG_DEBUG_PRINTF:
-        case MSG_VENT_VALVE_STATUS:
-        case MSG_INJ_VALVE_STATUS:
+        //case MSG_VENT_VALVE_STATUS:
+        //case MSG_INJ_VALVE_STATUS:
         case MSG_SENSOR_ACC:
         case MSG_SENSOR_GYRO:
         case MSG_SENSOR_MAG:

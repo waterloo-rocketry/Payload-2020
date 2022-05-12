@@ -24,8 +24,6 @@ void pin_interrupt_init(){
 }
 
 void pin_interrupt_handler() {
-    WHITE_LED_ON();
-    uint8_t sensor_identifier = 0;
     
     if (IOCAFbits.IOCAF0) {
         IOCAFbits.IOCAF0 = 0; //clear flag
@@ -46,17 +44,4 @@ void pin_interrupt_handler() {
         ADPCH = 0b010110;
     }
     
-    ADCON0bits.GO = 1;
-    while(ADCON0bits.GO);
-            
-    uint8_t result_high = ADRESH & 0xF;
-    uint8_t result_low = ADRESL;
-            
-    can_msg_t radiation_msg;
-
-    uint16_t adc_res = ((uint16_t) (result_high) << 8) | (uint16_t) (result_low);
-    
-    build_radi_info_msg(millis(), sensor_identifier, adc_res, &radiation_msg);
-    txb_enqueue(&radiation_msg);
-    WHITE_LED_OFF();
 }
