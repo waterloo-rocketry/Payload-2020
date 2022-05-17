@@ -1209,7 +1209,7 @@
       (reference "R7") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000060b9c4d3/00000000-0000-0000-0000-000060ba76e4"
-      (reference "R8") (unit 1) (value "3.5k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder")
+      (reference "R8") (unit 1) (value "3.330k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000060bbd477/00000000-0000-0000-0000-000060b56cd5"
       (reference "R9") (unit 1) (value "500") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder")

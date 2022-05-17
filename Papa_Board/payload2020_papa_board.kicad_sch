@@ -3003,7 +3003,7 @@
       (reference "R2") (unit 1) (value "10kR") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000060a2c79f/00000000-0000-0000-0000-000060b00586"
-      (reference "R3") (unit 1) (value "10kR") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder")
+      (reference "R3") (unit 1) (value "1kR") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00006016c5cd/00000000-0000-0000-0000-000060adfb5c"
       (reference "R4") (unit 1) (value "500R") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
@@ -3048,7 +3048,7 @@
       (reference "R17") (unit 1) (value "330R") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000060a2c79f/00000000-0000-0000-0000-000060abc197"
-      (reference "R18") (unit 1) (value "15kR") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder")
+      (reference "R18") (unit 1) (value "100kR") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000060a2c79f/00000000-0000-0000-0000-000060abba7d"
       (reference "R19") (unit 1) (value "15kR") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
@@ -3060,7 +3060,7 @@
       (reference "R21") (unit 1) (value "27kR") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000060a2c79f/00000000-0000-0000-0000-000060abc4b7"
-      (reference "R22") (unit 1) (value "27kR") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder")
+      (reference "R22") (unit 1) (value "160kR") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000060a2c79f/00000000-0000-0000-0000-000060abbd3d"
       (reference "R23") (unit 1) (value "27kR") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
