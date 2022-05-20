@@ -8,7 +8,7 @@
         "copper_text_size_h": 1.5,
         "copper_text_size_v": 1.5,
         "copper_text_thickness": 0.3,
-        "copper_text_upright": true,
+        "copper_text_upright": false,
         "courtyard_line_width": 0.049999999999999996,
         "dimension_precision": 4,
         "dimension_units": 3,
@@ -26,35 +26,29 @@
         "fab_text_size_v": 1.0,
         "fab_text_thickness": 0.15,
         "fab_text_upright": false,
-        "other_line_width": 0.15,
+        "other_line_width": 0.09999999999999999,
         "other_text_italic": false,
         "other_text_size_h": 1.0,
         "other_text_size_v": 1.0,
         "other_text_thickness": 0.15,
-        "other_text_upright": true,
+        "other_text_upright": false,
         "pads": {
-          "drill": 3.5,
-          "height": 7.0,
-          "width": 7.0
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
         "silk_text_size_h": 1.0,
         "silk_text_size_v": 1.0,
         "silk_text_thickness": 0.15,
-        "silk_text_upright": true,
+        "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.19999999999999998
+          "min_clearance": 0.508
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.25,
-          "via_gap": 0.25,
-          "width": 0.42
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -99,8 +93,6 @@
         "zone_has_empty_net": "error",
         "zones_intersect": "error"
       },
-      "rule_severitieslegacy_courtyards_overlap": true,
-      "rule_severitieslegacy_no_courtyard_defined": false,
       "rules": {
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
@@ -112,30 +104,14 @@
         "min_microvia_diameter": 0.19999999999999998,
         "min_microvia_drill": 0.09999999999999999,
         "min_silk_clearance": 0.0,
-        "min_through_hole_diameter": 0.381,
-        "min_track_width": 0.2032,
+        "min_through_hole_diameter": 0.3,
+        "min_track_width": 0.19999999999999998,
         "min_via_annular_width": 0.049999999999999996,
-        "min_via_diameter": 0.762,
-        "solder_mask_clearance": 0.051,
-        "solder_mask_min_width": 0.25,
-        "solder_paste_clearance": 0.0,
-        "solder_paste_margin_ratio": -0.0,
+        "min_via_diameter": 0.39999999999999997,
         "use_height_for_length_calcs": true
       },
-      "track_widths": [
-        0.2032,
-        0.2032
-      ],
-      "via_dimensions": [
-        {
-          "diameter": 0.762,
-          "drill": 0.381
-        },
-        {
-          "diameter": 0.762,
-          "drill": 0.381
-        }
-      ],
+      "track_widths": [],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
@@ -350,6 +326,7 @@
       "wire_dangling": "error"
     }
   },
+  "legacy": [],
   "libraries": {
     "pinned_footprint_libs": [],
     "pinned_symbol_libs": []
@@ -387,7 +364,7 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "payload2020_base_board.net",
+      "netlist": "",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
@@ -415,7 +392,7 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "Pcbnew",
+    "net_format_name": "",
     "ngspice": {
       "fix_include_paths": true,
       "fix_passive_vals": false,
