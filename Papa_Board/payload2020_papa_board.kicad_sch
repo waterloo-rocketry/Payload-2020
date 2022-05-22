@@ -1848,7 +1848,7 @@
       (reference "L1") (unit 1) (value "33uH") (footprint "Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005e13f8e9/00000000-0000-0000-0000-000060d06323"
-      (reference "L2") (unit 1) (value "47uH") (footprint "Inductor_THT:L_Radial_D8.7mm_P5.00mm_Fastron_07HCP")
+      (reference "L2") (unit 1) (value "47uH") (footprint "Inductor_SMD:L_Wuerth_WE-PD-Typ-LS_Handsoldering")
     )
     (path "/00000000-0000-0000-0000-00006016c5cd/e7dc167e-0711-48d6-bc76-a1a6fe84ce9b"
       (reference "R2") (unit 1) (value "10kR") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")

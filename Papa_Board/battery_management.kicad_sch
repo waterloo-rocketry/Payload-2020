@@ -2824,7 +2824,7 @@
     (uuid 00000000-0000-0000-0000-000060d06323)
     (property "Reference" "L2" (id 0) (at 95.758 97.79 0))
     (property "Value" "47uH" (id 1) (at 95.758 100.33 0))
-    (property "Footprint" "Inductor_THT:L_Radial_D8.7mm_P5.00mm_Fastron_07HCP" (id 2) (at 95.758 104.14 0)
+    (property "Footprint" "Inductor_SMD:L_Wuerth_WE-PD-Typ-LS_Handsoldering" (id 2) (at 95.758 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.we-online.de/katalog/datasheet/7443551181.pdf" (id 3) (at 95.758 104.14 0)
