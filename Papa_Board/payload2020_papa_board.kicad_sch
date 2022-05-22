@@ -444,10 +444,10 @@
 
 
   (no_connect (at 261.874 89.154) (uuid 1171ce37-6ad7-4662-bb68-5592c945ebf3))
-  (no_connect (at 167.64 66.04) (uuid 199c829a-1160-4b3a-a15d-84ac09145ef9))
   (no_connect (at 44.704 118.364) (uuid 224768bc-6009-43ba-aa4a-70cbaa15b5a3))
   (no_connect (at 261.874 119.634) (uuid 7a74c4b1-6243-4a12-85a2-bc41d346e7aa))
   (no_connect (at 167.894 32.258) (uuid 8bb5ca65-7746-4112-9329-44aa45c8afd4))
+  (no_connect (at 167.64 55.88) (uuid fb4d994e-c8cb-4eab-a568-76e6853b4efc))
   (no_connect (at 44.704 120.904) (uuid fef37e8b-0ff0-4da2-8a57-acaf19551d1a))
 
   (wire (pts (xy 35.56 76.2) (xy 43.18 76.2))
@@ -471,7 +471,7 @@
     (uuid 26801cfb-b53b-4a6a-a2f4-5f4986565765)
   )
 
-  (wire (pts (xy 152.4 63.5) (xy 167.64 63.5))
+  (wire (pts (xy 152.4 58.42) (xy 167.64 58.42))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 2c380f71-1691-44ab-9071-53437b21fef0)
   )
@@ -558,7 +558,7 @@
     (uuid aa79024d-ca7e-4c24-b127-7df08bbd0c75)
   )
 
-  (wire (pts (xy 152.4 55.88) (xy 152.4 63.5))
+  (wire (pts (xy 152.4 55.88) (xy 152.4 58.42))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid ae1f0f78-88c0-4ae0-8290-740dcae09b66)
   )
@@ -699,7 +699,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 62e8c4d4-266c-4e53-8981-1028251d724c)
   )
-  (label "CANH_PAYLOAD" (at 167.64 58.42 180)
+  (label "CANH_PAYLOAD" (at 167.64 63.5 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 633a6ac6-f4d1-47e1-8eb9-77d47b9fb4d5)
   )
@@ -723,7 +723,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid b60f6da2-ab6d-4be8-b41a-943c80544c57)
   )
-  (label "CANL_PAYLOAD" (at 167.64 55.88 180)
+  (label "CANL_PAYLOAD" (at 167.64 66.04 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid c775f7f8-6417-4c52-a6ab-e3c320514688)
   )
