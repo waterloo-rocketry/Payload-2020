@@ -19,6 +19,9 @@ void adc_init()
     ANSELCbits.ANSELC6 = 1;
     ANSELCbits.ANSELC7 = 1;
     
+    FVRCON = 0b10010011;
+    
+    
     ADCON0bits.ON = 1; //ADC is enabled
     ADCON0bits.CS = 1; //Clock supplied from FRC dedicated oscillator
     ADCON0bits.FM = 1; //Data is right justified

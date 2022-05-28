@@ -66,6 +66,7 @@ int main(int argc, char** argv) {
     // loop timer
     uint32_t last_millis = millis();
     bool led_heartbeat = 0;
+    bool test_sensor = 0; //force ADC to sample but not frequently
     
     while (1) {
         if (millis() - last_millis > MAX_LOOP_TIME_DIFF_ms) {
@@ -74,7 +75,8 @@ int main(int argc, char** argv) {
             if (led_heartbeat) { BLUE_LED_ON(); }
             else { BLUE_LED_OFF(); }
             
-            //send_status_ok();
+            send_status_ok();
+            test_sensor = 1;
             
             // update our loop counter
             last_millis = millis();
@@ -82,20 +84,46 @@ int main(int argc, char** argv) {
         //send any queued CAN messages
         txb_heartbeat();
         
-        if(sensor_identifier)
+        if(sensor_identifier || test_sensor)
         {
             WHITE_LED_ON();
+            //ADCON0bits.ON = 1;
+            for(int i = 0; i < 1000; ++i);
+            
+            switch(sensor_identifier)
+            {
+                case 0:
+                   ADPCH = 0b010101;
+                   break;
+                case 1:
+                   ADPCH = 0b010101;
+                   break;
+                case 2:
+                   ADPCH = 0b010110;
+                   break;
+                case 3:
+                   ADPCH = 0b010111;
+                   break;  
+            }
+            
+            
+            
             ADCON0bits.GO = 1;
             while(ADCON0bits.GO);
             
             uint8_t result_high = ADRESH & 0xF;
             uint8_t result_low = ADRESL;
+            
+            //ADCON0bits.ON = 0;
+            //ADCON0bits.ON = 1;
     
             can_msg_t radiation_msg;
             uint16_t adc_res = ((uint16_t) (result_high) << 8) | (uint16_t) (result_low);
             build_radi_info_msg(millis(), sensor_identifier, adc_res, &radiation_msg);
             txb_enqueue(&radiation_msg);
             sensor_identifier = 0;
+            test_sensor = 0;
+            //ADCON0bits.ON = 0;
         }
         WHITE_LED_OFF();
 
