@@ -67,6 +67,7 @@ int main(int argc, char** argv) {
     uint32_t last_millis = millis();
     bool led_heartbeat = 0;
     bool test_sensor = 0; //force ADC to sample but not frequently
+    ADPCH = 0b010101;
     
     while (1) {
         if (millis() - last_millis > MAX_LOOP_TIME_DIFF_ms) {
@@ -87,24 +88,8 @@ int main(int argc, char** argv) {
         if(sensor_identifier || test_sensor)
         {
             WHITE_LED_ON();
-            //ADCON0bits.ON = 1;
+            ADCON0bits.ON = 1;
             for(int i = 0; i < 1000; ++i);
-            
-            switch(sensor_identifier)
-            {
-                case 0:
-                   ADPCH = 0b010101;
-                   break;
-                case 1:
-                   ADPCH = 0b010101;
-                   break;
-                case 2:
-                   ADPCH = 0b010110;
-                   break;
-                case 3:
-                   ADPCH = 0b010111;
-                   break;  
-            }
             
             
             
@@ -123,7 +108,7 @@ int main(int argc, char** argv) {
             txb_enqueue(&radiation_msg);
             sensor_identifier = 0;
             test_sensor = 0;
-            //ADCON0bits.ON = 0;
+            ADCON0bits.ON = 0;
         }
         WHITE_LED_OFF();
 
