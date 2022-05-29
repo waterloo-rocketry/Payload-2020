@@ -90,6 +90,8 @@ int main()
     can_generate_timing_params(FCY, &timing);
     init_can(&timing, can_callback_function, false);
     
+    
+    
     //Init of can module using external mcp2515 can controller over spi
     mcp_can_init(&timing, spi2_read, spi2_send, cs1_drive);
     
@@ -106,7 +108,7 @@ int main()
         // Only if mamaboard is on, start logging, no point otherwise
         if (!is_mama_on){
             //if MCP trigger interrupt pin, receive message
-            if (!PORTBbits.RB10){
+            if (!PORTBbits.RB14){
                 if (check_mamaboard_msg()){
                     TURN_ON_MAMABOARD; //officially turning on mamaboard
                     is_mama_on = true;

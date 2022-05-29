@@ -21,6 +21,11 @@ void init_pins()
     TRISBbits.TRISB11 = 0; //set CANTX as output
     RPINR26bits.C1RXR = 0b0101010; //set CAN input to pin RP42/RB10
     RPOR4bits.RP43R = 0b1110; //set CAN output to pin RP43/RB11
+
+    //MCP2151 CLK stuff
+    RPOR1bits.RP36R = 0b110001; //set reference clock output to pin 11 RP36
+    //RPORT4bits.RP43R = 0b110001; //set REFCLKO to pin 22 RP43/RB11
+
 }
 
 //Get running off of the external oscillator.

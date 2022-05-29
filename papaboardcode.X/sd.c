@@ -7,8 +7,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#define cs2_high() (LATBbits.LATB5 = 1)
-#define cs2_low()  (LATBbits.LATB5 = 0)
+#define cs2_high() (LATBbits.LATB9 = 1)
+#define cs2_low()  (LATBbits.LATB9 = 0)
 
 static char GLOBAL_FILENAME[20];
 
@@ -46,8 +46,9 @@ static void spi2_read_buffer(uint8_t *data, uint16_t data_len)
 
 void cs1_drive (uint8_t state)
 {
-    LATBbits.LATB6 = state;
+    LATBbits.LATB5 = state;
 }
+
 
 //SD card commands
 #define GO_IDLE_STATE             0 //software reset
@@ -321,16 +322,17 @@ void init_spi()
     SPI2CON2bits.SPIBEN = 0; //use standard mode, not enhanced mode
 
     //set SCK output to RP39, and input to RP32 (both must be set)
-    RPOR2bits.RP39R = 0x09; //WHAT IS THIS FOR?
+    RPOR2bits.RP39R = 0x09; //setting RPn tied to SPI2 clock output
     RPINR22bits.SCK2R = 0x27;
-    //set MOSI output to RP40
+    //set MOSI output to RP40 (RB8)
     RPOR3bits.RP40R = 0x08;
-    //set MISO input to RP40 (RB8)
-    RPINR22bits.SDI2R = 0x28;
-    TRISBbits.TRISB8 = 1;
+    TRISBbits.TRISB8 = 0;
+    //set MISO input to RP38 (RB6)
+    RPINR22bits.SDI2R = 0x26;
+    TRISBbits.TRISB6 = 1;
     //set CS_1 as GPIO output on RB6. Start high.
-    TRISBbits.TRISB6 = 0;
-    LATBbits.LATB6 = 1;
+    TRISBbits.TRISB9 = 0;
+    LATBbits.LATB9 = 1;
     //set CS_2 as GPIO output on RB5. Start high.
     TRISBbits.TRISB5 = 0;
     LATBbits.LATB5 = 1;
