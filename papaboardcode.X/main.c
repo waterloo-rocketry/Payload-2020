@@ -140,6 +140,12 @@ int main()
             }
             txb_enqueue(&board_stat_msg);
             
+            LED_2_ON();
+            while(!mcp_can_send_rdy());
+            LED_2_OFF();
+            mcp_can_send(&board_stat_msg);
+            
+            
             last_board_status_msg = millis();
         }
 
