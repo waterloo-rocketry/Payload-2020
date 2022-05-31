@@ -23,7 +23,16 @@ void init_pins()
     RPOR4bits.RP43R = 0b1110; //set CAN output to pin RP43/RB11
 
     //MCP2151 CLK stuff
+    REFOCONbits.ROON = 0; //disable reference oscillator
+    TRISBbits.TRISB4 = 0; //set REFCLKO as output
     RPOR1bits.RP36R = 0b110001; //set reference clock output to pin 11 RP36
+    
+    REFOCONbits.ROSSLP = 1; //continue to run in sleep
+    REFOCONbits.ROSEL = 0; //use reference clk
+    REFOCONbits.RODIV = 0x0; //no clk divider
+
+    REFOCONbits.ROON = 1; //enable reference oscillator
+
     //RPORT4bits.RP43R = 0b110001; //set REFCLKO to pin 22 RP43/RB11
 
 }
