@@ -1,5 +1,6 @@
 #include "pin_interrupt.h"
 #include "mama.h"
+#include "adc.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,21 +28,15 @@ void pin_interrupt_handler() {
     
     if (IOCAFbits.IOCAF0) {
         IOCAFbits.IOCAF0 = 0; //clear flag
-        sensor_identifier = 3;
-        // read RC7
-        ADPCH = 0b010111;
+        sensor_identifier = channel_RC7;
     }
     if (IOCAFbits.IOCAF1) {
         IOCAFbits.IOCAF1 = 0; //clear flag
-        sensor_identifier = 1;
-        // read RC5
-        ADPCH = 0b010101;
+        sensor_identifier = channel_RC5;
     }
     if (IOCAFbits.IOCAF2) {
         IOCAFbits.IOCAF2 = 0; //clear flag
-        sensor_identifier = 2;
-        // read RC6
-        ADPCH = 0b010110;
+        sensor_identifier = channel_RC6;
     }
     
 }

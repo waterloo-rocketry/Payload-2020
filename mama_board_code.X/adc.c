@@ -31,3 +31,28 @@ void adc_init()
     //ADCON0bits.GO = 1; //Start conversion
     
 }
+
+uint16_t read_ADC_value(ADC_CHANNEL chan) {
+    //Select ADC Channel
+    ADPCH = chan;
+    
+    //Activating the ADC and wait a while before starting
+    ADCON0bits.ON = 1;                  
+    for(int i = 0; i < 1000; ++i);           
+    
+    //Start Converting and wait until the conversion is complete
+    ADCON0bits.GO = 1;                  
+    while(ADCON0bits.GO);        
+
+    //Read all each set of 8 bits into its own variable
+    uint8_t result_high = ADRESH & 0xF;
+    uint8_t result_low = ADRESL;
+
+    //combine into one, unsigned 16 bit integer
+    uint16_t adc_res = ((uint16_t) (result_high) << 8) | (uint16_t) (result_low);
+    
+    //Deactivate the ADC
+    ADCON0bits.ON = 0;
+    
+    return adc_res;
+}
