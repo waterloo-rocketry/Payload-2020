@@ -1,6 +1,9 @@
 #include "init.h"
 #include "sd.h"
 #include "can_syslog.h"
+#include "dspic33epxxxgp50x_can.h"
+#include "timing_util.h"
+#include "canlib/mcp2515/mcp_2515.h"
 #include "platform.h"
 #include <xc.h>
 #include <stdbool.h>
@@ -12,29 +15,50 @@ void init_pins()
     //LEDs off at startup
     LATBbits.LATB13 = 0;
     LATBbits.LATB14 = 0;
+    LATBbits.LATB15 = 0; 
+
 
     //set LEDs as outputs
-    TRISBbits.TRISB13 = 1;
-    TRISBbits.TRISB14 = 1;
+    TRISBbits.TRISB12 = 0; //BLUE
+    TRISBbits.TRISB13 = 0; //RED 
+    TRISBbits.TRISB15 = 0; //WHITE
+
 
     //CAN stuff
-    TRISBbits.TRISB11 = 0; //set CANTX as output
-    RPINR26bits.C1RXR = 0b0101010; //set CAN input to pin RP42/RB10
-    RPOR4bits.RP43R = 0b1110; //set CAN output to pin RP43/RB11
+    TRISBbits.TRISB4 = 0; //set CANTX as output
+   // ANSELAbits.ANSA4 = 0; //SET AS PIC_RX as digital (analog by default)
+    RPINR26bits.C1RXR = 0b0101010; //set CAN input to pin RP20/RA4/pin12
+    RPOR1bits.RP36R = 0b1110; //set CAN output to pin RP43/RB11
 
     //MCP2151 CLK stuff
     REFOCONbits.ROON = 0; //disable reference oscillator
-    TRISBbits.TRISB4 = 0; //set REFCLKO as output
-    RPOR1bits.RP36R = 0b110001; //set reference clock output to pin 11 RP36
+    TRISBbits.TRISB11 = 0; //set REFCLKO as output
+    RPOR4bits.RP43R = 0b110001; //set reference clock output to pin 11 RP36
     
     REFOCONbits.ROSSLP = 1; //continue to run in sleep
-    REFOCONbits.ROSEL = 0; //use reference clk
+    REFOCONbits.ROSEL = 0; //use system clk
     REFOCONbits.RODIV = 0x0; //no clk divider
 
     REFOCONbits.ROON = 1; //enable reference oscillator
+    TRISBbits.TRISB10 = 1; //CAN_INT from MCP2515
 
-    //RPORT4bits.RP43R = 0b110001; //set REFCLKO to pin 22 RP43/RB11
 
+    //Papa board power peripherals
+    TRISBbits.TRISB0 = 0; //set 37V EN as output
+    TRISBbits.TRISB1 = 1; //set V_SENSE as input
+    TRISBbits.TRISB15 = 0; //set MAMA_PWR_EN as input
+    TRISAbits.TRISA0 = 1; //set BAT_CURR_AMP as input
+    TRISAbits.TRISA1 = 1; //set 3V3_CURR_AMP as input
+
+    //SPI STUFF
+    TRISBbits.TRISB5 = 0; //set CS2 (sd card) as output
+    TRISBbits.TRISB6 = 0; //set CS1 MCP2515 as output
+    TRISBbits.TRISB7 = 0; //set SCK as output
+    TRISBbits.TRISB8 = 1; //set MISO as input
+    TRISBbits.TRISB9 = 0; //set MOSI as input
+    
+
+    
 }
 
 //Get running off of the external oscillator.
@@ -114,12 +138,39 @@ void init_timers()
     T2CONbits.TON = 1;
 }
 
-void init_peripherals()
+void init_peripherals(void (*can_callback_function)(const can_msg_t *message))
 {
     // initialize CAN first, so that we don't miss incoming messages
     init_can_syslog();
+
     // Wait 20ms before initializing SD card, to let it boot up
     __delay32(20 * (FCY / 1000));
     init_spi();
     init_sd_card2();
+ 
+    
+    //Initialization of can module using internal can controller
+    //timing parameters that cause a bit time of 24us
+    /* FCAN is 32MHz,
+     * bit time is 5+5+1+1 = 12 time quanta
+     * bit time is 12 * (BRP + 1) * 2 / 32= 24
+     * so BRP + 1 = 32
+     */
+    can_timing_t timing;
+    can_generate_timing_params(FCY, &timing);
+    init_can(&timing, can_callback_function, false);
+  
+    
+    //Init of can module using external mcp2515 can controller over spi
+    mcp_can_init(&timing, spi2_read, spi2_send, cs1_drive);
+}
+void init_system()
+{
+    //initialize the oscillator so we're running faster
+    init_oscillator();
+    //initialize the pins first so we can use the LEDs to tell us if init fails
+    init_pins();
+
+    //start timers
+    init_timers();
 }
