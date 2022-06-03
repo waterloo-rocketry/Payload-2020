@@ -13,6 +13,8 @@
 #include <libpic30.h>
 
 #define TURN_ON_MAMABOARD (LATBbits.LATB15 = 0)
+#define TURN_OFF_MAMABOARD (LATBbits.LATB15 = 1)
+
 #define ROCKETCAN_INT (PORTBbits.RB10)
 
 uint32_t led_heatbeat(uint32_t last_on_time);
@@ -33,7 +35,7 @@ void can_callback_function(const can_msg_t *message)
             break;
         case MSG_ACTUATOR_CMD:
             if (message->data[3] == MAMA_BOARD_ACTIVATE) {
-                //TURN_ON_MAMABOARD;
+                TURN_ON_MAMABOARD;
                 LED_3_ON();
             }
                 
@@ -67,7 +69,10 @@ bool check_rocketcan_msg(){
                     LED_2_OFF();
                     break;
                 case MSG_ACTUATOR_STATUS:
-                    //msg << 3;
+                    if (msg.data[3] == MAMA_BOARD_ACTIVATE) {
+                    TURN_ON_MAMABOARD;
+                    LED_3_ON();
+                }
                     
                 default:
                     break;
@@ -124,8 +129,10 @@ uint32_t led_heatbeat(uint32_t last_on_time)
     //blink blue LED at 1/3 Hz, duty cycle of 1/12
         if (millis() - last_on_time < 250) {
             LED_1_ON();
+            TURN_ON_MAMABOARD;
         } else if (millis() - last_on_time < 3000) {
             LED_1_OFF();
+            TURN_OFF_MAMABOARD;
         } else {
             last_on_time = millis();
         }

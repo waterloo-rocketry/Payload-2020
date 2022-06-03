@@ -12,17 +12,23 @@
 //Set up pin registers
 void init_pins()
 {
-    //LEDs off at startup
+    
+    
+        //LEDs off at startup
     LATBbits.LATB13 = 0;
     LATBbits.LATB14 = 0;
-    LATBbits.LATB15 = 0; 
+    
+    //LEDs off at startup
+    LATBbits.LATB12 = 0;
+    LATBbits.LATB13 = 0;
+    LATBbits.LATB14 = 0; 
 
 
     //set LEDs as outputs
     TRISBbits.TRISB12 = 0; //BLUE
     TRISBbits.TRISB13 = 0; //RED 
-    TRISBbits.TRISB15 = 0; //WHITE
-
+    TRISBbits.TRISB14 = 0; //WHITE
+    
 
     //CAN stuff
     TRISBbits.TRISB4 = 0; //set CANTX as output
@@ -162,7 +168,7 @@ void init_peripherals(void (*can_callback_function)(const can_msg_t *message))
   
     
     //Init of can module using external mcp2515 can controller over spi
-    mcp_can_init(&timing, spi2_read, spi2_send, cs1_drive);
+    //mcp_can_init(&timing, spi2_read, spi2_send, cs1_drive);
 }
 void init_system()
 {
