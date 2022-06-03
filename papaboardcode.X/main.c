@@ -15,6 +15,9 @@
 #define TURN_ON_MAMABOARD (LATBbits.LATB15 = 0)
 #define TURN_OFF_MAMABOARD (LATBbits.LATB15 = 1)
 
+#define TURN_ON_37V (LATBbits.LATB0 = 0)
+#define TURN_OFF_37V (LATBbits.LATB0 = 1)
+
 #define ROCKETCAN_INT (PORTBbits.RB10)
 
 uint32_t led_heatbeat(uint32_t last_on_time);
@@ -130,9 +133,11 @@ uint32_t led_heatbeat(uint32_t last_on_time)
         if (millis() - last_on_time < 250) {
             LED_1_ON();
             TURN_ON_MAMABOARD;
-        } else if (millis() - last_on_time < 3000) {
+            TURN_ON_37V;
+        } else if (millis() - last_on_time < 30000) {
             LED_1_OFF();
             TURN_OFF_MAMABOARD;
+            TURN_OFF_37V;
         } else {
             last_on_time = millis();
         }

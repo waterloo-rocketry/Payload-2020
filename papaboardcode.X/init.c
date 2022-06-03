@@ -51,8 +51,12 @@ void init_pins()
 
     //Papa board power peripherals
     TRISBbits.TRISB0 = 0; //set 37V EN as output
+    LATBbits.LATB0 = 1; //initially disable 37VEN
+
     TRISBbits.TRISB1 = 1; //set V_SENSE as input
     TRISBbits.TRISB15 = 0; //set MAMA_PWR_EN as input
+    LATBbits.LATB15 = 1; //initially disable MAMA_PWR_EN
+
     TRISAbits.TRISA0 = 1; //set BAT_CURR_AMP as input
     TRISAbits.TRISA1 = 1; //set 3V3_CURR_AMP as input
 
