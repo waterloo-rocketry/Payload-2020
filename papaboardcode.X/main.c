@@ -3,6 +3,7 @@
 #include "init.h"
 #include "canlib/mcp2515/mcp_2515.h"
 #include "can_syslog.h"
+#include "dspic33epxxxgp50x_can.h"
 #include "can_common.h"
 #include "message_types.h"
 #include "can_tx_buffer.h"
@@ -14,7 +15,8 @@
 #define TURN_ON_MAMABOARD (LATBbits.LATB15 = 0)
 #define ROCKETCAN_INT (PORTBbits.RB10)
 
-void led_heatbeat(uint32_t last_on_time);
+uint32_t led_heatbeat(uint32_t last_on_time);
+uint32_t status_heatbeat(uint32_t last_board_status_msg);
 
 void can_callback_function(const can_msg_t *message)
 {
@@ -71,6 +73,7 @@ bool check_rocketcan_msg(){
                     break;
 
             }
+        }
     }
     return true; //THIS IS JUST SO IT COMPILES UNTIL NEW CAN CHANGES ARE MADE
 }
