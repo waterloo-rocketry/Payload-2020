@@ -20,5 +20,7 @@ void init_system();
 
 void cs1_mcp_drive(uint8_t state);
 
+void init_spi();
+
 #endif	/* INIT_H */
 

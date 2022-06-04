@@ -22,91 +22,37 @@
 
 #define ROCKETCAN_INT (PORTBbits.RB10)
 
-uint32_t led_heatbeat(uint32_t last_on_time);
-uint32_t status_heatbeat(uint32_t last_board_status_msg);
-
-void can_callback_function(const can_msg_t *message)
-{
-    //handle a "LED_ON" or "LED_OFF" message
-    //incoming mamaboard and minisensor data can pass right through to be logged
-    switch (get_message_type(message)) {
-        case MSG_LEDS_ON:
-            LED_1_ON();
-            LED_2_ON();
-            break;
-        case MSG_LEDS_OFF:
-            LED_1_OFF();
-            LED_2_OFF();
-            break;
-        case MSG_ACTUATOR_CMD:
-            if (message->data[3] == MAMA_BOARD_ACTIVATE) {
-                //TURN_ON_MAMABOARD;
-                LED_3_ON();
-            }
-                
-        default:
-            break;
-    }
-    //sends can message to SYSLOG (for logging)
-    handle_can_interrupt(message);
-}
-
+#define OSC_CLK 12000000
 static uint8_t txb_pool[100];
 
 
-bool check_rocketcan_msg(){
-    //if MCP triggered "interrupt" (but we're polling)
-   
-    if (!ROCKETCAN_INT){
-        
-        can_msg_t msg;
-        bool stat = mcp_can_receive(&msg);
-        if(stat)
-        {
-            //handle a "LED_ON" or "LED_OFF", MAMA ON message
-            switch (get_message_type(&msg)) {
-                case MSG_LEDS_ON:
-                    LED_1_ON();
-                    LED_2_ON();
-                    break;
-                case MSG_LEDS_OFF:
-                    LED_1_OFF();
-                    LED_2_OFF();
-                    break;
-                case MSG_ACTUATOR_STATUS:
-                    if (msg.data[3] == MAMA_BOARD_ACTIVATE) {
-                    //TURN_ON_MAMABOARD;
-                    LED_3_ON();
-                }
-                    
-                default:
-                    break;
-
-            }
-        }
-    }
-    return true; //THIS IS JUST SO IT COMPILES UNTIL NEW CAN CHANGES ARE MADE
-}
+uint32_t led_heatbeat(uint32_t last_on_time);
+uint32_t status_heatbeat(uint32_t last_board_status_msg);
+void init_mamacan();
+void init_rocketcan();
+//CAN CALLBACK FUNCTIONS
+void can_callback_function(const can_msg_t *message);
+bool check_rocketcan_msg();
 
 int main(void)
 {
-    //initialize pinout, ocillator, timers
+    //initialize pin out, oscillator, timers
     init_system();
     LED_1_ON();
-    //initialize SPI, SD card, and CAN syslog, MCP2515
+    //initialize SPI, SD card, and CAN system log, MCP2515
     init_peripherals(can_callback_function);
-    
-    can_timing_t timing;
-    can_generate_timing_params(FCY, &timing);
-   init_can(&timing, can_callback_function, false);
+    //initialize canbusses
+    init_mamacan();
+    init_rocketcan();
+
     LED_2_OFF();
     //i actually don't know
-    txb_init(txb_pool, sizeof(txb_pool), can_send, can_send_rdy);
 
     //turn on the white LED to show that initialization has succeeded
     LED_2_ON();
     
-    //TURN_ON_MAMABOARD;
+    TURN_ON_MAMABOARD;
+    
     uint32_t last_on_time = 0;
     uint32_t last_board_status_msg = 0;
     
@@ -170,4 +116,97 @@ uint32_t status_heatbeat(uint32_t last_board_status_msg)
         
         return last_board_status_msg;
 
+}
+
+void init_mamacan()
+{
+      //Initialization of can module using internal can controller
+    //timing parameters that cause a bit time of 24us
+    /* FCAN is 32MHz,
+     * bit time is 5+5+1+1 = 12 time quanta
+     * bit time is 12 * (BRP + 1) * 2 / 32= 24
+     * so BRP + 1 = 32
+     */
+   can_timing_t timing;
+   can_generate_timing_params(FCY, &timing);
+   init_can(&timing, can_callback_function, false);
+   txb_init(txb_pool, sizeof(txb_pool), can_send, can_send_rdy);
+}
+
+
+void init_rocketcan()
+{
+       //Initialization of can module using internal can controller
+    //timing parameters that cause a bit time of 24us
+    /* FCAN is 12MHz,
+     * bit time is 5+5+1+1 = 12 time quanta
+     * bit time is 12 * (BRP + 1) * 2 / 12 = 24
+     * so BRP + 1 = 12
+     */
+    can_timing_t timing;
+    can_generate_timing_params(OSC_CLK, &timing);
+    //Init of can module using external mcp2515 can controller over spi
+    mcp_can_init(&timing, spi2_read, spi2_send, cs1_mcp_drive);
+}
+void can_callback_function(const can_msg_t *message)
+{
+    //handle a "LED_ON" or "LED_OFF" message
+    //incoming mamaboard and minisensor data can pass right through to be logged
+    switch (get_message_type(message)) {
+        case MSG_LEDS_ON:
+            LED_1_ON();
+            LED_2_ON();
+            break;
+        case MSG_LEDS_OFF:
+            LED_1_OFF();
+            LED_2_OFF();
+            break;
+        case MSG_ACTUATOR_CMD:
+            if (message->data[3] == MAMA_BOARD_ACTIVATE) {
+                TURN_ON_MAMABOARD;
+                TURN_ON_37V;
+                LED_3_ON();
+            }
+                
+        default:
+            break;
+    }
+    //sends can message to SYSLOG (for logging)
+    handle_can_interrupt(message);
+}
+
+
+bool check_rocketcan_msg(){
+    //if MCP triggered "interrupt" (but we're polling)
+    bool stat = 0;
+    if (!ROCKETCAN_INT){
+        
+        can_msg_t msg;
+        stat = mcp_can_receive(&msg);
+        if(stat)
+        {
+            //handle a "LED_ON" or "LED_OFF", MAMA ON message
+            switch (get_message_type(&msg)) {
+                case MSG_LEDS_ON:
+                    LED_1_ON();
+                    LED_2_ON();
+                    break;
+                case MSG_LEDS_OFF:
+                    LED_1_OFF();
+                    LED_2_OFF();
+                    break;
+                case MSG_ACTUATOR_STATUS:
+                    if (msg.data[3] == MAMA_BOARD_ACTIVATE) {
+                    TURN_ON_MAMABOARD;
+                    TURN_ON_37V;
+                    LED_3_ON();
+                }
+                    
+                default:
+                    break;
+
+            }
+        }
+    }
+    return stat; 
 }

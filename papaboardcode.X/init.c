@@ -152,32 +152,6 @@ void init_timers()
     T2CONbits.TON = 1;
 }
 
-void init_peripherals(void (*can_callback_function)(const can_msg_t *message))
-{
-    // initialize CAN first, so that we don't miss incoming messages
-    init_can_syslog();
-
-    // Wait 20ms before initializing SD card, to let it boot up
-    __delay32(20 * (FCY / 1000));
-    init_spi();
-    init_sd_card2();
- 
-    
-    //Initialization of can module using internal can controller
-    //timing parameters that cause a bit time of 24us
-    /* FCAN is 32MHz,
-     * bit time is 5+5+1+1 = 12 time quanta
-     * bit time is 12 * (BRP + 1) * 2 / 32= 24
-     * so BRP + 1 = 32
-     */
-
-  
-    can_timing_t timing;
-    can_generate_timing_params(12000000, &timing);
-    
-    //Init of can module using external mcp2515 can controller over spi
-    mcp_can_init(&timing, spi2_read, spi2_send, cs1_mcp_drive);
-}
 void init_system()
 {
     //initialize the oscillator so we're running faster
@@ -193,4 +167,57 @@ void init_system()
 void cs1_mcp_drive(uint8_t state)
 {
      LATBbits.LATB6 = state;
+}
+
+void init_spi()
+{
+    //enable spi module 2 as master mode
+    SPI2CON1bits.DISSCK = 0; //enable sck
+    SPI2CON1bits.DISSDO = 0; //enable SDO
+    SPI2CON1bits.MODE16 = 0; //8 bit things
+    SPI2CON1bits.SMP    = 0; //sample at middle of data time
+    SPI2CON1bits.CKE    = 0; //switch output on rising edge of SCK
+    SPI2CON1bits.SSEN   = 0; //we are not in slave mode, leave CS GPIO
+    SPI2CON1bits.CKP    = 1; //idle clock level high.
+    SPI2CON1bits.MSTEN  = 1; //use master mode
+    SPI2CON1bits.SPRE   = 6; //secondary prescale 2:1
+    SPI2CON1bits.PPRE   = 0x01; //primary prescale 16:1
+    SPI2CON2bits.FRMEN  = 0; //don't use framed mode
+    SPI2CON2bits.SPIBEN = 0; //use standard mode, not enhanced mode
+
+    //set SCK output to RP39, and input to RI32 (both must be set)
+    RPOR2bits.RP39R = 0x09; //setting RPn tied to SPI2
+
+    //clock input
+    RPINR22bits.SCK2R = 0b0100000;//that's setting the clock input???
+    //set MOSI output to RP41 (RB9)
+    RPOR3bits.RP41R = 0x08;
+    TRISBbits.TRISB9 = 0;
+    //set MISO input to RP40 (RB8)
+    RPINR22bits.SDI2R = 0b0101000;
+    TRISBbits.TRISB8 = 1;
+    //set CS_1 as GPIO output on RB6. Start high. RP38
+    TRISBbits.TRISB6 = 0;
+    LATBbits.LATB6 = 1;
+    RPOR2bits.RP38R = 0b001011; //slave select
+    //set CS_2 as GPIO output on RB5. Start high. RP37
+    TRISBbits.TRISB5 = 0;
+    LATBbits.LATB5 = 1;
+   // RPOR2bits.RP37R = 0b001011; //slave select
+
+    //enable spi module 1
+    SPI2STATbits.SPIEN = 1;
+}
+
+
+void init_peripherals(void (*can_callback_function)(const can_msg_t *message))
+{
+    // initialize CAN first, so that we don't miss incoming messages
+    init_can_syslog();
+
+    // Wait 20ms before initializing SD card, to let it boot up
+    __delay32(20 * (FCY / 1000));
+    init_spi();
+    init_sd_card2();
+ 
 }
