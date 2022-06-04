@@ -14,10 +14,6 @@ void init_pins()
 {
     
     
-        //LEDs off at startup
-    LATBbits.LATB13 = 0;
-    LATBbits.LATB14 = 0;
-    
     //LEDs off at startup
     LATBbits.LATB12 = 0;
     LATBbits.LATB13 = 0;
@@ -30,9 +26,16 @@ void init_pins()
     TRISBbits.TRISB14 = 0; //WHITE
     
 
+    //disable all analogs that don't give me errors
+    ANSELAbits.ANSA4 = 0; //SET AS PIC_RX as digital (analog by default)
+    ANSELBbits.ANSB0 = 0; //37V EN
+    ANSELBbits.ANSB8 = 0;
+    
     //CAN stuff
     TRISBbits.TRISB4 = 0; //set CANTX as output
-   // ANSELAbits.ANSA4 = 0; //SET AS PIC_RX as digital (analog by default)
+    TRISAbits.TRISA4 = 1; //set CANRX as input
+
+    ANSELAbits.ANSA4 = 0; //SET AS PIC_RX as digital (analog by default)
     RPINR26bits.C1RXR = 0b0101010; //set CAN input to pin RP20/RA4/pin12
     RPOR1bits.RP36R = 0b1110; //set CAN output to pin RP43/RB11
 
@@ -42,7 +45,7 @@ void init_pins()
     RPOR4bits.RP43R = 0b110001; //set reference clock output to pin 11 RP36
     
     REFOCONbits.ROSSLP = 1; //continue to run in sleep
-    REFOCONbits.ROSEL = 0; //use system clk
+    REFOCONbits.ROSEL = 1; //use reference clk
     REFOCONbits.RODIV = 0x0; //no clk divider
 
     REFOCONbits.ROON = 1; //enable reference oscillator
@@ -67,6 +70,7 @@ void init_pins()
     TRISBbits.TRISB8 = 1; //set MISO as input
     TRISBbits.TRISB9 = 0; //set MOSI as input
     
+    REFOCONbits.ROON = 1; //enable reference oscillator
 
     
 }
@@ -166,13 +170,13 @@ void init_peripherals(void (*can_callback_function)(const can_msg_t *message))
      * bit time is 12 * (BRP + 1) * 2 / 32= 24
      * so BRP + 1 = 32
      */
-    can_timing_t timing;
-    can_generate_timing_params(FCY, &timing);
-    init_can(&timing, can_callback_function, false);
+
   
+    can_timing_t timing;
+    can_generate_timing_params(12000000, &timing);
     
     //Init of can module using external mcp2515 can controller over spi
-    //mcp_can_init(&timing, spi2_read, spi2_send, cs1_drive);
+    mcp_can_init(&timing, spi2_read, spi2_send, cs1_mcp_drive);
 }
 void init_system()
 {
@@ -183,4 +187,10 @@ void init_system()
 
     //start timers
     init_timers();
+}
+
+
+void cs1_mcp_drive(uint8_t state)
+{
+     LATBbits.LATB6 = state;
 }

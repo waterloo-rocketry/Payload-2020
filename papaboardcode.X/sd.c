@@ -321,22 +321,26 @@ void init_spi()
     SPI2CON2bits.FRMEN  = 0; //don't use framed mode
     SPI2CON2bits.SPIBEN = 0; //use standard mode, not enhanced mode
 
-    //set SCK output to RP39, and input to RP32 (both must be set)
-    RPOR2bits.RP39R = 0x09; //setting RPn tied to SPI2 clock output
-    RPINR22bits.SCK2R = 0x27;
-    //set MOSI output to RP40 (RB8)
-    RPOR3bits.RP40R = 0x08;
-    TRISBbits.TRISB8 = 0;
-    //set MISO input to RP38 (RB6)
-    RPINR22bits.SDI2R = 0x26;
-    TRISBbits.TRISB6 = 1;
-    //set CS_1 as GPIO output on RB6. Start high.
+    //set SCK output to RP39, and input to RI32 (both must be set)
+    RPOR2bits.RP39R = 0x09; //setting RPn tied to SPI2
+
+    //clock input
+    RPINR22bits.SCK2R = 0b0100000;//that's setting the clock input???
+    //set MOSI output to RP41 (RB9)
+    RPOR3bits.RP41R = 0x08;
     TRISBbits.TRISB9 = 0;
-    LATBbits.LATB9 = 1;
-    //set CS_2 as GPIO output on RB5. Start high.
+    //set MISO input to RP40 (RB8)
+    RPINR22bits.SDI2R = 0b0101000;
+    TRISBbits.TRISB8 = 1;
+    //set CS_1 as GPIO output on RB6. Start high. RP38
+    TRISBbits.TRISB6 = 0;
+    LATBbits.LATB6 = 1;
+    RPOR2bits.RP38R = 0b001011; //slave select
+    //set CS_2 as GPIO output on RB5. Start high. RP37
     TRISBbits.TRISB5 = 0;
     LATBbits.LATB5 = 1;
-    
+   // RPOR2bits.RP37R = 0b001011; //slave select
+
     //enable spi module 1
     SPI2STATbits.SPIEN = 1;
 }

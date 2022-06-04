@@ -11,6 +11,8 @@
 #include "error.h"
 #include <string.h>
 #include <libpic30.h>
+#include "timing_util.h"
+
 
 #define TURN_ON_MAMABOARD (LATBbits.LATB15 = 0)
 #define TURN_OFF_MAMABOARD (LATBbits.LATB15 = 1)
@@ -38,7 +40,7 @@ void can_callback_function(const can_msg_t *message)
             break;
         case MSG_ACTUATOR_CMD:
             if (message->data[3] == MAMA_BOARD_ACTIVATE) {
-                TURN_ON_MAMABOARD;
+                //TURN_ON_MAMABOARD;
                 LED_3_ON();
             }
                 
@@ -73,7 +75,7 @@ bool check_rocketcan_msg(){
                     break;
                 case MSG_ACTUATOR_STATUS:
                     if (msg.data[3] == MAMA_BOARD_ACTIVATE) {
-                    TURN_ON_MAMABOARD;
+                    //TURN_ON_MAMABOARD;
                     LED_3_ON();
                 }
                     
@@ -93,30 +95,24 @@ int main(void)
     LED_1_ON();
     //initialize SPI, SD card, and CAN syslog, MCP2515
     init_peripherals(can_callback_function);
+    
+    can_timing_t timing;
+    can_generate_timing_params(FCY, &timing);
+   init_can(&timing, can_callback_function, false);
     LED_2_OFF();
     //i actually don't know
     txb_init(txb_pool, sizeof(txb_pool), can_send, can_send_rdy);
 
     //turn on the white LED to show that initialization has succeeded
     LED_2_ON();
-
+    
+    //TURN_ON_MAMABOARD;
     uint32_t last_on_time = 0;
     uint32_t last_board_status_msg = 0;
     
     //bool to check if mama is on
-    bool is_mama_on = false; 
     while (1) {
         
-        // Only if mamaboard is on, start logging, no point otherwise
-        if (!is_mama_on){
-            //if MCP trigger interrupt pin, receive message
-            if (!ROCKETCAN_INT){
-                if (check_rocketcan_msg()){
-                    TURN_ON_MAMABOARD; //officially turning on mamaboard
-                    is_mama_on = true;
-                }
-            }
-        }
         //clear out LOG QUEUE
         can_syslog_heartbeat();
         //periodic LED to say we're alive
@@ -132,12 +128,15 @@ uint32_t led_heatbeat(uint32_t last_on_time)
     //blink blue LED at 1/3 Hz, duty cycle of 1/12
         if (millis() - last_on_time < 250) {
             LED_1_ON();
-            TURN_ON_MAMABOARD;
-            TURN_ON_37V;
-        } else if (millis() - last_on_time < 30000) {
+            //LATBbits.LATB4 = 0; //CANTX
+            //LATAbits.LATA4 = 0; //CANRX
+
+            //TURN_ON_37V;
+            
+        } else if (millis() - last_on_time < 3000) {
             LED_1_OFF();
-            TURN_OFF_MAMABOARD;
-            TURN_OFF_37V;
+         //LATBbits.LATB4 = 1; //CANTX
+         //LATAbits.LATA4 = 1; //CANRX
         } else {
             last_on_time = millis();
         }
@@ -150,18 +149,20 @@ uint32_t status_heatbeat(uint32_t last_board_status_msg)
         if (millis() - last_board_status_msg > 500) {
             can_msg_t board_stat_msg;
             // for now just always pretend everything is ok
-            if (any_errors()) {
+            if (any_errors()) 
+            {
                 uint8_t e = (uint8_t) get_last_error();
                 build_board_stat_msg(millis(), E_LOGGING, &e, 1, &board_stat_msg);
             } else {
                 build_board_stat_msg(millis(), E_NOMINAL, NULL, 0, &board_stat_msg);
             }
+            
             txb_enqueue(&board_stat_msg);
             
             LED_2_ON();
-            while(!mcp_can_send_rdy());
+           while(mcp_can_send_rdy());
             LED_2_OFF();
-            mcp_can_send(&board_stat_msg);
+           mcp_can_send(&board_stat_msg);
             
             last_board_status_msg = millis();
 
