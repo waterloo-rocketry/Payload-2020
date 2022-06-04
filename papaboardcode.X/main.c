@@ -13,12 +13,12 @@
 #include <libpic30.h>
 #include "timing_util.h"
 
+#include <xc.h>
+#define TURN_ON_MAMABOARD (LATBbits.LATB15 = 1)
+#define TURN_OFF_MAMABOARD (LATBbits.LATB15 = 0)
 
-#define TURN_ON_MAMABOARD (LATBbits.LATB15 = 0)
-#define TURN_OFF_MAMABOARD (LATBbits.LATB15 = 1)
-
-#define TURN_ON_37V (LATBbits.LATB0 = 0)
-#define TURN_OFF_37V (LATBbits.LATB0 = 1)
+#define TURN_ON_37V (LATBbits.LATB0 = 1)
+#define TURN_OFF_37V (LATBbits.LATB0 = 0)
 
 #define ROCKETCAN_INT (PORTBbits.RB10)
 
@@ -52,6 +52,7 @@ int main(void)
     LED_2_ON();
     
     TURN_ON_MAMABOARD;
+    TURN_OFF_37V;
     
     uint32_t last_on_time = 0;
     uint32_t last_board_status_msg = 0;
@@ -67,6 +68,7 @@ int main(void)
         last_board_status_msg = status_heatbeat(last_board_status_msg);
         //clear CAN buffer
         txb_heartbeat();
+        //check_rocketcan_msg();
     }
 }
 uint32_t led_heatbeat(uint32_t last_on_time)
@@ -176,10 +178,11 @@ void can_callback_function(const can_msg_t *message)
 }
 
 
-static void __interrupt() interrupt_handler() {
+static void __attribute__ ((interrupt, no_auto_psv)) _INT1Interrupt() {
    if(IFS1bits.INT1IF) {
       check_rocketcan_msg();
-      IFS1bits.INT1IF = 0;
+         IFS1bits.INT1IF = 0;
+
    }
 }
 
@@ -187,7 +190,7 @@ static void __interrupt() interrupt_handler() {
 bool check_rocketcan_msg(){
     //if MCP triggered "interrupt" (but we're polling)
     bool stat = 0;
-    if (!ROCKETCAN_INT){
+   // if (!ROCKETCAN_INT){
         
         can_msg_t msg;
         stat = mcp_can_receive(&msg);
@@ -198,10 +201,13 @@ bool check_rocketcan_msg(){
                 case MSG_LEDS_ON:
                     LED_1_ON();
                     LED_2_ON();
+                    LED_3_ON();
+
                     break;
                 case MSG_LEDS_OFF:
                     LED_1_OFF();
                     LED_2_OFF();
+                    LED_3_OFF();
                     break;
                 case MSG_ACTUATOR_STATUS:
                     if (msg.data[3] == MAMA_BOARD_ACTIVATE) {
@@ -215,6 +221,6 @@ bool check_rocketcan_msg(){
 
             }
         }
-    }
+   // }
     return stat; 
 }
