@@ -176,6 +176,14 @@ void can_callback_function(const can_msg_t *message)
 }
 
 
+static void __interrupt() interrupt_handler() {
+   if(IFS1bits.INT1IF) {
+      check_rocketcan_msg();
+      IFS1bits.INT1IF = 0;
+   }
+}
+
+
 bool check_rocketcan_msg(){
     //if MCP triggered "interrupt" (but we're polling)
     bool stat = 0;

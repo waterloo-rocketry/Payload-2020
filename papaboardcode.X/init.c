@@ -13,7 +13,9 @@
 void init_pins()
 {
     
-    
+    // Enable global interrupt
+    INTCON2bits.GIE = 1;
+
     //LEDs off at startup
     LATBbits.LATB12 = 0;
     LATBbits.LATB13 = 0;
@@ -49,8 +51,12 @@ void init_pins()
     REFOCONbits.RODIV = 0x0; //no clk divider
 
     REFOCONbits.ROON = 1; //enable reference oscillator
-    TRISBbits.TRISB10 = 1; //CAN_INT from MCP2515
 
+    TRISBbits.TRISB10 = 1; //CAN_INT from MCP2515
+    RPINR0bits.INT1R = 0b0101010; // assign interrupt 1 to RP42 (RB10)
+    INTCON2bits.INT1EP = 1; // interrupt 1 on negative edge
+    IEC1bits.INT1IE = 1; // enable interrupt 1
+    IFS1bits.INT1IF = 0; // clear interrupt 1
 
     //Papa board power peripherals
     TRISBbits.TRISB0 = 0; //set 37V EN as output
