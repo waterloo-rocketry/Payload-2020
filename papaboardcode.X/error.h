@@ -19,11 +19,11 @@ typedef enum {
     E_SD_FAIL_WRITE_DATA_RESP,
     //syslog related failures
     E_SYSLOG_ALL_BUFFERS_FULL,
-} cansw_logger_error_t;
+} papaboard_error_t;
 
-void error(cansw_logger_error_t error);
+void error(papaboard_error_t error);
 
-cansw_logger_error_t get_last_error(void);
+papaboard_error_t get_last_error(void);
 
 bool any_errors(void);
 
