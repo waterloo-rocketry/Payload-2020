@@ -18,5 +18,9 @@ void init_peripherals(void (*can_callback_function)(const can_msg_t *message));
 //Perform all of the above
 void init_system();
 
+void cs1_mcp_drive(uint8_t state);
+
+void init_spi();
+
 #endif	/* INIT_H */
 

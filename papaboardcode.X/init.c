@@ -12,21 +12,32 @@
 //Set up pin registers
 void init_pins()
 {
+    
+    // Enable global interrupt
+    INTCON2bits.GIE = 1;
+
     //LEDs off at startup
+    LATBbits.LATB12 = 0;
     LATBbits.LATB13 = 0;
-    LATBbits.LATB14 = 0;
-    LATBbits.LATB15 = 0; 
+    LATBbits.LATB14 = 0; 
 
 
     //set LEDs as outputs
     TRISBbits.TRISB12 = 0; //BLUE
     TRISBbits.TRISB13 = 0; //RED 
-    TRISBbits.TRISB15 = 0; //WHITE
+    TRISBbits.TRISB14 = 0; //WHITE
+    
 
-
+    //disable all analogs that don't give me errors
+    ANSELAbits.ANSA4 = 0; //SET AS PIC_RX as digital (analog by default)
+    ANSELBbits.ANSB0 = 0; //37V EN
+    ANSELBbits.ANSB8 = 0;
+    
     //CAN stuff
     TRISBbits.TRISB4 = 0; //set CANTX as output
-   // ANSELAbits.ANSA4 = 0; //SET AS PIC_RX as digital (analog by default)
+    TRISAbits.TRISA4 = 1; //set CANRX as input
+
+    ANSELAbits.ANSA4 = 0; //SET AS PIC_RX as digital (analog by default)
     RPINR26bits.C1RXR = 0b0101010; //set CAN input to pin RP20/RA4/pin12
     RPOR1bits.RP36R = 0b1110; //set CAN output to pin RP43/RB11
 
@@ -36,17 +47,25 @@ void init_pins()
     RPOR4bits.RP43R = 0b110001; //set reference clock output to pin 11 RP36
     
     REFOCONbits.ROSSLP = 1; //continue to run in sleep
-    REFOCONbits.ROSEL = 0; //use system clk
+    REFOCONbits.ROSEL = 1; //use reference clk
     REFOCONbits.RODIV = 0x0; //no clk divider
 
     REFOCONbits.ROON = 1; //enable reference oscillator
-    TRISBbits.TRISB10 = 1; //CAN_INT from MCP2515
 
+    TRISBbits.TRISB10 = 1; //CAN_INT from MCP2515
+    RPINR0bits.INT1R = 0b0101010; // assign interrupt 1 to RP42 (RB10)
+    INTCON2bits.INT1EP = 1; // interrupt 1 on negative edge
+    IEC1bits.INT1IE = 1; // enable interrupt 1
+    IFS1bits.INT1IF = 0; // clear interrupt 1
 
     //Papa board power peripherals
     TRISBbits.TRISB0 = 0; //set 37V EN as output
+    LATBbits.LATB0 = 1; //initially disable 37VEN
+
     TRISBbits.TRISB1 = 1; //set V_SENSE as input
     TRISBbits.TRISB15 = 0; //set MAMA_PWR_EN as input
+    LATBbits.LATB15 = 1; //initially disable MAMA_PWR_EN
+
     TRISAbits.TRISA0 = 1; //set BAT_CURR_AMP as input
     TRISAbits.TRISA1 = 1; //set 3V3_CURR_AMP as input
 
@@ -57,6 +76,7 @@ void init_pins()
     TRISBbits.TRISB8 = 1; //set MISO as input
     TRISBbits.TRISB9 = 0; //set MOSI as input
     
+    REFOCONbits.ROON = 1; //enable reference oscillator
 
     
 }
@@ -138,6 +158,64 @@ void init_timers()
     T2CONbits.TON = 1;
 }
 
+void init_system()
+{
+    //initialize the oscillator so we're running faster
+    init_oscillator();
+    //initialize the pins first so we can use the LEDs to tell us if init fails
+    init_pins();
+
+    //start timers
+    init_timers();
+}
+
+
+void cs1_mcp_drive(uint8_t state)
+{
+     LATBbits.LATB6 = state;
+}
+
+void init_spi()
+{
+    //enable spi module 2 as master mode
+    SPI2CON1bits.DISSCK = 0; //enable sck
+    SPI2CON1bits.DISSDO = 0; //enable SDO
+    SPI2CON1bits.MODE16 = 0; //8 bit things
+    SPI2CON1bits.SMP    = 0; //sample at middle of data time
+    SPI2CON1bits.CKE    = 0; //switch output on rising edge of SCK
+    SPI2CON1bits.SSEN   = 0; //we are not in slave mode, leave CS GPIO
+    SPI2CON1bits.CKP    = 1; //idle clock level high.
+    SPI2CON1bits.MSTEN  = 1; //use master mode
+    SPI2CON1bits.SPRE   = 6; //secondary prescale 2:1
+    SPI2CON1bits.PPRE   = 0x01; //primary prescale 16:1
+    SPI2CON2bits.FRMEN  = 0; //don't use framed mode
+    SPI2CON2bits.SPIBEN = 0; //use standard mode, not enhanced mode
+
+    //set SCK output to RP39, and input to RI32 (both must be set)
+    RPOR2bits.RP39R = 0x09; //setting RPn tied to SPI2
+
+    //clock input
+    RPINR22bits.SCK2R = 0b0100000;//that's setting the clock input???
+    //set MOSI output to RP41 (RB9)
+    RPOR3bits.RP41R = 0x08;
+    TRISBbits.TRISB9 = 0;
+    //set MISO input to RP40 (RB8)
+    RPINR22bits.SDI2R = 0b0101000;
+    TRISBbits.TRISB8 = 1;
+    //set CS_1 as GPIO output on RB6. Start high. RP38
+    TRISBbits.TRISB6 = 0;
+    LATBbits.LATB6 = 1;
+    RPOR2bits.RP38R = 0b001011; //slave select
+    //set CS_2 as GPIO output on RB5. Start high. RP37
+    TRISBbits.TRISB5 = 0;
+    LATBbits.LATB5 = 1;
+   // RPOR2bits.RP37R = 0b001011; //slave select
+
+    //enable spi module 1
+    SPI2STATbits.SPIEN = 1;
+}
+
+
 void init_peripherals(void (*can_callback_function)(const can_msg_t *message))
 {
     // initialize CAN first, so that we don't miss incoming messages
@@ -148,29 +226,4 @@ void init_peripherals(void (*can_callback_function)(const can_msg_t *message))
     init_spi();
     init_sd_card2();
  
-    
-    //Initialization of can module using internal can controller
-    //timing parameters that cause a bit time of 24us
-    /* FCAN is 32MHz,
-     * bit time is 5+5+1+1 = 12 time quanta
-     * bit time is 12 * (BRP + 1) * 2 / 32= 24
-     * so BRP + 1 = 32
-     */
-    can_timing_t timing;
-    can_generate_timing_params(FCY, &timing);
-    init_can(&timing, can_callback_function, false);
-  
-    
-    //Init of can module using external mcp2515 can controller over spi
-    mcp_can_init(&timing, spi2_read, spi2_send, cs1_drive);
-}
-void init_system()
-{
-    //initialize the oscillator so we're running faster
-    init_oscillator();
-    //initialize the pins first so we can use the LEDs to tell us if init fails
-    init_pins();
-
-    //start timers
-    init_timers();
 }

@@ -305,38 +305,3 @@ uint8_t init_sd_card2()
     return retval;
 }
 
-void init_spi()
-{
-    //enable spi module 2 as master mode
-    SPI2CON1bits.DISSCK = 0; //enable sck
-    SPI2CON1bits.DISSDO = 0; //enable SDO
-    SPI2CON1bits.MODE16 = 0; //8 bit things
-    SPI2CON1bits.SMP    = 0; //sample at middle of data time
-    SPI2CON1bits.CKE    = 0; //switch output on rising edge of SCK
-    SPI2CON1bits.SSEN   = 0; //we are not in slave mode, leave CS GPIO
-    SPI2CON1bits.CKP    = 1; //idle clock level high.
-    SPI2CON1bits.MSTEN  = 1; //use master mode
-    SPI2CON1bits.SPRE   = 6; //secondary prescale 2:1
-    SPI2CON1bits.PPRE   = 0x01; //primary prescale 16:1
-    SPI2CON2bits.FRMEN  = 0; //don't use framed mode
-    SPI2CON2bits.SPIBEN = 0; //use standard mode, not enhanced mode
-
-    //set SCK output to RP39, and input to RP32 (both must be set)
-    RPOR2bits.RP39R = 0x09; //setting RPn tied to SPI2 clock output
-    RPINR22bits.SCK2R = 0x27;
-    //set MOSI output to RP40 (RB8)
-    RPOR3bits.RP40R = 0x08;
-    TRISBbits.TRISB8 = 0;
-    //set MISO input to RP38 (RB6)
-    RPINR22bits.SDI2R = 0x26;
-    TRISBbits.TRISB6 = 1;
-    //set CS_1 as GPIO output on RB6. Start high.
-    TRISBbits.TRISB9 = 0;
-    LATBbits.LATB9 = 1;
-    //set CS_2 as GPIO output on RB5. Start high.
-    TRISBbits.TRISB5 = 0;
-    LATBbits.LATB5 = 1;
-    
-    //enable spi module 1
-    SPI2STATbits.SPIEN = 1;
-}

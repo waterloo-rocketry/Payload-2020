@@ -3,7 +3,6 @@
 
 #include <stdint.h>
 
-void init_spi();
 uint8_t init_sd_card2();
 
 void spi2_send(uint8_t);
