@@ -31,6 +31,8 @@
       <itemPath>sd.h</itemPath>
       <itemPath>error.h</itemPath>
       <itemPath>can_syslog.h</itemPath>
+      <itemPath>adc1.h</itemPath>
+      <itemPath>health_checks.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -63,6 +65,8 @@
       <itemPath>error.c</itemPath>
       <itemPath>can_syslog.c</itemPath>
       <itemPath>platform.c</itemPath>
+      <itemPath>adc1.c</itemPath>
+      <itemPath>health_checks.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -71,8 +75,7 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>fat_io_lib</Elem>
-    <Elem>canlib</Elem>
+    <Elem>.</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -84,7 +87,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>2.00</languageToolchainVersion>
+        <languageToolchainVersion>1.70</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>

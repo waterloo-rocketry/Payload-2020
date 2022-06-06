@@ -59,7 +59,15 @@ int main(void)
     
     //bool to check if mama is on
     while (1) {
-        
+        //Check for errors
+        bool status_ok = true;
+        status_ok = check_battery_over_current() & status_ok;
+        status_ok = check_battery_extreme_voltage() & status_ok;
+        status_ok = check_3v3_over_currentt & status_ok;
+        if (!status_ok) {
+            TURN_OFF_MAMABOARD;
+            TURN_OFF_37V;
+        }
         //clear out LOG QUEUE
         can_syslog_heartbeat();
         //periodic LED to say we're alive
