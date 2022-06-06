@@ -6,6 +6,7 @@
 #include "dspic33epxxxgp50x_can.h"
 #include "can_common.h"
 #include "message_types.h"
+#include "health_checks.h"
 #include "can_tx_buffer.h"
 #include "sd.h"
 #include "error.h"
@@ -63,7 +64,7 @@ int main(void)
         bool status_ok = true;
         status_ok = check_battery_over_current() & status_ok;
         status_ok = check_battery_extreme_voltage() & status_ok;
-        status_ok = check_3v3_over_currentt & status_ok;
+        status_ok = check_3v3_over_current() & status_ok;
         if (!status_ok) {
             TURN_OFF_MAMABOARD;
             TURN_OFF_37V;

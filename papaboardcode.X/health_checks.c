@@ -61,7 +61,7 @@ bool check_battery_extreme_voltage() {
     return erroneous;
 }
 
-bool check_3v3_over_currentt() {
+bool check_3v3_over_current() {
     uint16_t battery_current_mA = (uint16_t)ADC1_GetSingleConversion(channel_3V3_CURR_AMP)/v3v3_CURRENT_SCALAR;
     
     if (battery_current_mA > v3v3_CURRENT_THRESHOLD) {
