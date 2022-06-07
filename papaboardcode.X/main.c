@@ -6,6 +6,7 @@
 #include "dspic33epxxxgp50x_can.h"
 #include "can_common.h"
 #include "message_types.h"
+#include "health_checks.h"
 #include "can_tx_buffer.h"
 #include "sd.h"
 #include "error.h"
@@ -64,8 +65,19 @@ int main(void)
     //bool to check if mama is on
     while (1) {
         //Check for errors
+<<<<<<< HEAD
         
         last_health_check = health_heatbeat(last_health_check);
+=======
+        bool status_ok = true;
+        status_ok = check_battery_over_current() & status_ok;
+        status_ok = check_battery_extreme_voltage() & status_ok;
+        status_ok = check_3v3_over_current() & status_ok;
+        if (!status_ok) {
+            TURN_OFF_MAMABOARD;
+            TURN_OFF_37V;
+        }
+>>>>>>> ba68a2f0cf1c10771b766925d9b580581bda2913
         //clear out LOG QUEUE
         can_syslog_heartbeat();
         //periodic LED to say we're alive

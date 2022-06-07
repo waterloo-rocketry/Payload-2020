@@ -83,3 +83,5 @@ void ADC1_SetInterruptHandler(void* handler);
 void ADC1_Tasks(void);
 
 int ADC1_GetSingleConversion(ADC1_CHANNEL channel);
+
+#endif
