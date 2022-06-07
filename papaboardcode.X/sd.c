@@ -7,8 +7,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#define cs2_high() (LATBbits.LATB9 = 1)
-#define cs2_low()  (LATBbits.LATB9 = 0)
+#define cs2_high() (LATBbits.LATB5 = 1)
+#define cs2_low()  (LATBbits.LATB5 = 0)
 
 static char GLOBAL_FILENAME[20];
 
@@ -44,9 +44,10 @@ static void spi2_read_buffer(uint8_t *data, uint16_t data_len)
     }
 }
 
+//FOR MCP2515
 void cs1_drive (uint8_t state)
 {
-    LATBbits.LATB5 = state;
+    LATBbits.LATB6 = state;
 }
 
 

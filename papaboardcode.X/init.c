@@ -39,7 +39,7 @@ void init_pins()
 
     ANSELAbits.ANSA4 = 0; //SET AS PIC_RX as digital (analog by default)
     RPINR26bits.C1RXR = 0b0101010; //set CAN input to pin RP20/RA4/pin12
-    RPOR1bits.RP36R = 0b1110; //set CAN output to pin RP43/RB11
+    RPOR1bits.RP36R = 0b1110; //set CAN output to pin RP36/RB4
 
     //MCP2151 CLK stuff
     REFOCONbits.ROON = 0; //disable reference oscillator
@@ -60,11 +60,11 @@ void init_pins()
 
     //Papa board power peripherals
     TRISBbits.TRISB0 = 0; //set 37V EN as output
-    LATBbits.LATB0 = 1; //initially disable 37VEN
+    LATBbits.LATB0 = 0; //initially disable 37VEN
 
     TRISBbits.TRISB1 = 1; //set V_SENSE as input
-    TRISBbits.TRISB15 = 0; //set MAMA_PWR_EN as input
-    LATBbits.LATB15 = 1; //initially disable MAMA_PWR_EN
+    TRISBbits.TRISB15 = 0; //set MAMA_PWR_EN as output
+    PORTBbits.RB15 = 0; //initially disable MAMA_PWR_EN
 
     TRISAbits.TRISA0 = 1; //set BAT_CURR_AMP as input
     TRISAbits.TRISA1 = 1; //set 3V3_CURR_AMP as input

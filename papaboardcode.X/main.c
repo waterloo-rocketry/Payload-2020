@@ -12,6 +12,7 @@
 #include <string.h>
 #include <libpic30.h>
 #include "timing_util.h"
+#include "health_checks.h"
 
 #include <xc.h>
 #define TURN_ON_MAMABOARD (LATBbits.LATB15 = 1)
@@ -33,6 +34,8 @@ void init_rocketcan();
 //CAN CALLBACK FUNCTIONS
 void can_callback_function(const can_msg_t *message);
 bool check_rocketcan_msg();
+uint32_t health_heatbeat(uint32_t last_health_check);
+
 
 int main(void)
 {
@@ -45,29 +48,24 @@ int main(void)
     init_mamacan();
     init_rocketcan();
 
+        TURN_ON_MAMABOARD;
+        TURN_ON_37V;
     LED_2_OFF();
     //i actually don't know
 
     //turn on the white LED to show that initialization has succeeded
     LED_2_ON();
     
-    TURN_ON_MAMABOARD;
-    TURN_OFF_37V;
     
     uint32_t last_on_time = 0;
     uint32_t last_board_status_msg = 0;
+    uint32_t last_health_check = 0;
     
     //bool to check if mama is on
     while (1) {
         //Check for errors
-        bool status_ok = true;
-        status_ok = check_battery_over_current() & status_ok;
-        status_ok = check_battery_extreme_voltage() & status_ok;
-        status_ok = check_3v3_over_currentt & status_ok;
-        if (!status_ok) {
-            TURN_OFF_MAMABOARD;
-            TURN_OFF_37V;
-        }
+        
+        last_health_check = health_heatbeat(last_health_check);
         //clear out LOG QUEUE
         can_syslog_heartbeat();
         //periodic LED to say we're alive
@@ -231,4 +229,23 @@ bool check_rocketcan_msg(){
         }
    // }
     return stat; 
+}
+uint32_t health_heatbeat(uint32_t last_health_check)
+{
+    //give status update
+    if (millis() - last_health_check > 100) {
+    bool status_ok = true;
+        
+        status_ok = check_battery_over_current() & status_ok;
+        
+        status_ok = check_battery_extreme_voltage() & status_ok;
+        status_ok = check_3v3_over_current() & status_ok;
+        /*
+        if (!status_ok) {
+            TURN_OFF_MAMABOARD;
+            TURN_OFF_37V;
+        }
+        */
+    }
+    return millis();
 }
