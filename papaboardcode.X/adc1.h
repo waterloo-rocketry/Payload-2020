@@ -12,7 +12,7 @@ typedef enum
 {
     channel_BATT_CURR_AMP = 0b00000,//Channel Name:AN0   Assigned to:Shared Channel
     channel_3V3_CURR_AMP = 0b00001,//Channel Name:AN1 Temp   Assigned to:Shared Channel
-    channel_V_SENSE = 0b11000,//Channel Name:AN3   Assigned to:Shared Channel
+    channel_V_SENSE = 0b00011,//Channel Name:AN3   Assigned to:Shared Channel
 } ADC1_CHANNEL;
 
 void ADC1_Initialize (void);
