@@ -9,7 +9,7 @@
 #define LED_1_ON()  (PORTBbits.RB12 = 1)
 #define LED_1_OFF() (PORTBbits.RB12 = 0)
 
-// white LED
+// red LED
 #define LED_2_ON()  (PORTBbits.RB13 = 1)
 #define LED_2_OFF() (PORTBbits.RB13 = 0)
 

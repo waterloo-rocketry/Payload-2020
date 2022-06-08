@@ -14,6 +14,8 @@
 #include <libpic30.h>
 #include "timing_util.h"
 #include "health_checks.h"
+#include "adc1.h"
+
 
 #include <xc.h>
 #define TURN_ON_MAMABOARD (LATBbits.LATB15 = 1)
@@ -22,7 +24,6 @@
 #define TURN_ON_37V (LATBbits.LATB0 = 1)
 #define TURN_OFF_37V (LATBbits.LATB0 = 0)
 
-#define ROCKETCAN_INT (PORTBbits.RB10)
 
 #define OSC_CLK 12000000
 static uint8_t txb_pool[100];
@@ -42,20 +43,19 @@ int main(void)
 {
     //initialize pin out, oscillator, timers
     init_system();
+    ADC1_Initialize();
+
     LED_1_ON();
     //initialize SPI, SD card, and CAN system log, MCP2515
     init_peripherals(can_callback_function);
     //initialize canbusses
     init_mamacan();
     init_rocketcan();
-
-        TURN_ON_MAMABOARD;
-        TURN_ON_37V;
-    LED_2_OFF();
-    //i actually don't know
+    TURN_OFF_MAMABOARD;
+    TURN_OFF_37V;
+   //i actually don't know
 
     //turn on the white LED to show that initialization has succeeded
-    LED_2_ON();
     
     
     uint32_t last_on_time = 0;
@@ -64,17 +64,19 @@ int main(void)
     
     //bool to check if mama is on
     while (1) {
-        //Check for errors
 
+        //Check for errors
+        last_health_check = health_heatbeat(last_health_check);
         //clear out LOG QUEUE
         can_syslog_heartbeat();
         //periodic LED to say we're alive
+        
         last_on_time = led_heatbeat(last_on_time);
         //send alive message to CAN
         last_board_status_msg = status_heatbeat(last_board_status_msg);
         //clear CAN buffer
         txb_heartbeat();
-        //check_rocketcan_msg();
+
     }
 }
 uint32_t led_heatbeat(uint32_t last_on_time)
@@ -82,17 +84,16 @@ uint32_t led_heatbeat(uint32_t last_on_time)
     //blink blue LED at 1/3 Hz, duty cycle of 1/12
         if (millis() - last_on_time < 250) {
             LED_1_ON();
-            //LATBbits.LATB4 = 0; //CANTX
-            //LATAbits.LATA4 = 0; //CANRX
-
-            //TURN_ON_37V;
             
+          
         } else if (millis() - last_on_time < 3000) {
             LED_1_OFF();
-         //LATBbits.LATB4 = 1; //CANTX
-         //LATAbits.LATA4 = 1; //CANRX
-        } else {
+            //LED_3_OFF();
+
+        }else
+        {
             last_on_time = millis();
+
         }
         return last_on_time;
 }
@@ -101,6 +102,7 @@ uint32_t status_heatbeat(uint32_t last_board_status_msg)
 {
     //give status update
         if (millis() - last_board_status_msg > 500) {
+            LED_2_ON();
             can_msg_t board_stat_msg;
             // for now just always pretend everything is ok
             if (any_errors()) 
@@ -113,12 +115,10 @@ uint32_t status_heatbeat(uint32_t last_board_status_msg)
             
             txb_enqueue(&board_stat_msg);
             
-            LED_2_ON();
            while(mcp_can_send_rdy());
             LED_2_OFF();
            mcp_can_send(&board_stat_msg);
-            
-            last_board_status_msg = millis();
+           last_board_status_msg = millis();
 
         }
         
@@ -164,10 +164,12 @@ void can_callback_function(const can_msg_t *message)
         case MSG_LEDS_ON:
             LED_1_ON();
             LED_2_ON();
+            LED_3_ON();
             break;
         case MSG_LEDS_OFF:
             LED_1_OFF();
             LED_2_OFF();
+            LED_3_OFF();
             break;
         case MSG_ACTUATOR_CMD:
             if (message->data[3] == MAMA_BOARD_ACTIVATE) {
@@ -230,22 +232,26 @@ bool check_rocketcan_msg(){
    // }
     return stat; 
 }
+
 uint32_t health_heatbeat(uint32_t last_health_check)
 {
     //give status update
-    if (millis() - last_health_check > 100) {
-    bool status_ok = true;
-        
-        status_ok = check_battery_over_current() & status_ok;
-        
-        status_ok = check_battery_extreme_voltage() & status_ok;
-        status_ok = check_3v3_over_current() & status_ok;
-        /*
-        if (!status_ok) {
-            TURN_OFF_MAMABOARD;
-            TURN_OFF_37V;
-        }
-        */
+
+    if(millis() -last_health_check > 1000 )
+    {
+            bool status_ok = true;
+
+           //status_ok = check_battery_over_current() & status_ok;
+           status_ok = check_battery_extreme_voltage() & status_ok;
+           // status_ok = check_3v3_over_current() & status_ok;
+            /*
+            if (!status_ok) {
+                TURN_OFF_MAMABOARD;
+                TURN_OFF_37V;
+            }
+             */
+           
+        last_health_check = millis();
     }
-    return millis();
+    return last_health_check;
 }

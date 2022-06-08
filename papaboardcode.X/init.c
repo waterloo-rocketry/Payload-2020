@@ -23,9 +23,9 @@ void init_pins()
 
 
     //set LEDs as outputs
-    TRISBbits.TRISB12 = 0; //BLUE
-    TRISBbits.TRISB13 = 0; //RED 
-    TRISBbits.TRISB14 = 0; //WHITE
+    TRISBbits.TRISB12 = 0; //BLUE D5 
+    TRISBbits.TRISB13 = 0; //RED D4
+    TRISBbits.TRISB14 = 0; //WHITE D3
     
 
     //disable all analogs that don't give me errors
@@ -38,7 +38,7 @@ void init_pins()
     TRISAbits.TRISA4 = 1; //set CANRX as input
 
     ANSELAbits.ANSA4 = 0; //SET AS PIC_RX as digital (analog by default)
-    RPINR26bits.C1RXR = 0b0101010; //set CAN input to pin RP20/RA4/pin12
+    RPINR26bits.C1RXR = 0b0010100; //set CAN input to pin RP20/RA4/pin12
     RPOR1bits.RP36R = 0b1110; //set CAN output to pin RP36/RB4
 
     //MCP2151 CLK stuff

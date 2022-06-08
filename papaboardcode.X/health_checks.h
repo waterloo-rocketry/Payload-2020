@@ -17,8 +17,8 @@
 #define v3v3_CURRENT_THRESHOLD 0
 
 #define VOLTAGE_SCALAR 50
-#define V_SENSE_VOLTAGE_UPPER 50
-#define V_SENSE_VOLTAGE_LOWER 0
+#define V_SENSE_VOLTAGE_UPPER 20000
+#define V_SENSE_VOLTAGE_LOWER 20000
 
 
 bool check_battery_over_current();

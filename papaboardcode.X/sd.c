@@ -12,6 +12,12 @@
 
 static char GLOBAL_FILENAME[20];
 
+//FOR MCP2515
+void cs1_drive (uint8_t state)
+{
+    LATBbits.LATB6 = state;
+}
+
 void spi2_send(uint8_t data)
 {
     SPI2BUF = data;
@@ -43,13 +49,6 @@ static void spi2_read_buffer(uint8_t *data, uint16_t data_len)
         data_len--;
     }
 }
-
-//FOR MCP2515
-void cs1_drive (uint8_t state)
-{
-    LATBbits.LATB6 = state;
-}
-
 
 //SD card commands
 #define GO_IDLE_STATE             0 //software reset
