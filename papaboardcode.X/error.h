@@ -19,6 +19,11 @@ typedef enum {
     E_SD_FAIL_WRITE_DATA_RESP,
     //syslog related failures
     E_SYSLOG_ALL_BUFFERS_FULL,
+    //canbus errors
+    E_CAN_MSG_UNKNOWN,
+    E_CAN_MSG_UNHANDLED,
+    E_CAN_MSG_ACT_UNKNOWN,
+    E_CAN_MSG_FALSE_INT,
 } papaboard_error_t;
 
 void error(papaboard_error_t error);
@@ -26,6 +31,8 @@ void error(papaboard_error_t error);
 papaboard_error_t get_last_error(void);
 
 bool any_errors(void);
+
+void clear_errors(void);
 
 
 #endif //compile guard

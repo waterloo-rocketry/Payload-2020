@@ -20,3 +20,8 @@ bool any_errors(void)
 {
     return any_errors_happened;
 }
+
+void clear_errors(void)
+{
+    any_errors_happened = false;
+}

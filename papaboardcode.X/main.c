@@ -51,12 +51,9 @@ int main(void)
     //initialize canbusses
     init_mamacan();
     init_rocketcan();
+    //make sure everything is off
     TURN_OFF_MAMABOARD;
     TURN_OFF_37V;
-   //i actually don't know
-
-    //turn on the white LED to show that initialization has succeeded
-    
     
     uint32_t last_on_time = 0;
     uint32_t last_board_status_msg = 0;
@@ -70,7 +67,6 @@ int main(void)
         //clear out LOG QUEUE
         can_syslog_heartbeat();
         //periodic LED to say we're alive
-        
         last_on_time = led_heatbeat(last_on_time);
         //send alive message to CAN
         last_board_status_msg = status_heatbeat(last_board_status_msg);
@@ -88,7 +84,6 @@ uint32_t led_heatbeat(uint32_t last_on_time)
           
         } else if (millis() - last_on_time < 3000) {
             LED_1_OFF();
-            //LED_3_OFF();
 
         }else
         {
@@ -109,6 +104,7 @@ uint32_t status_heatbeat(uint32_t last_board_status_msg)
             {
                 uint8_t e = (uint8_t) get_last_error();
                 build_board_stat_msg(millis(), E_LOGGING, &e, 1, &board_stat_msg);
+                clear_errors();
             } else {
                 build_board_stat_msg(millis(), E_NOMINAL, NULL, 0, &board_stat_msg);
             }
@@ -177,8 +173,21 @@ void can_callback_function(const can_msg_t *message)
                 TURN_ON_37V;
                 LED_3_ON();
             }
-                
+            else{
+              error(E_CAN_MSG_ACT_UNKNOWN);
+              LED_2_ON();
+              LED_1_ON();
+            }
+            break;
+        case 0:
+            error(E_CAN_MSG_UNKNOWN);
+            LED_3_ON();
+            LED_2_ON();
+            break;
         default:
+            error(E_CAN_MSG_UNHANDLED);
+            LED_1_ON();
+            LED_2_ON();
             break;
     }
     //sends can message to SYSLOG (for logging)
@@ -187,49 +196,67 @@ void can_callback_function(const can_msg_t *message)
 
 
 static void __attribute__ ((interrupt, no_auto_psv)) _INT1Interrupt() {
-   if(IFS1bits.INT1IF) {
+   IEC1bits.INT1IE = 0; // disable interrupt 1
+
+  if(IFS1bits.INT1IF) {
       check_rocketcan_msg();
          IFS1bits.INT1IF = 0;
-
-   }
+  }
+    IEC1bits.INT1IE = 1; // enable interrupt 1
+     
 }
 
 
 bool check_rocketcan_msg(){
-    //if MCP triggered "interrupt" (but we're polling)
+    //if MCP triggered "interrupt"
     bool stat = 0;
-   // if (!ROCKETCAN_INT){
         
-        can_msg_t msg;
-        stat = mcp_can_receive(&msg);
-        if(stat)
-        {
-            //handle a "LED_ON" or "LED_OFF", MAMA ON message
-            switch (get_message_type(&msg)) {
-                case MSG_LEDS_ON:
-                    LED_1_ON();
-                    LED_2_ON();
-                    LED_3_ON();
+    can_msg_t msg;
+    stat = mcp_can_receive(&msg);
 
-                    break;
-                case MSG_LEDS_OFF:
-                    LED_1_OFF();
-                    LED_2_OFF();
-                    LED_3_OFF();
-                    break;
-                case MSG_ACTUATOR_STATUS:
-                    if (msg.data[3] == MAMA_BOARD_ACTIVATE) {
+    if(stat)
+    {
+        //handle a "LED_ON" or "LED_OFF", MAMA ON message
+        switch (get_message_type(&msg)) {
+            case MSG_LEDS_ON:
+                LED_1_ON();
+                LED_2_ON();
+                LED_3_ON();
+                break;
+            case MSG_LEDS_OFF:
+                LED_1_OFF();
+                LED_2_OFF();
+                LED_3_OFF();
+                break;
+            case MSG_ACTUATOR_STATUS:
+                if (msg.data[3] == MAMA_BOARD_ACTIVATE) {
                     TURN_ON_MAMABOARD;
                     TURN_ON_37V;
                     LED_3_ON();
                 }
-                    
-                default:
-                    break;
-
-            }
-        }
-   // }
+                else {
+                    error(E_CAN_MSG_ACT_UNKNOWN);
+                    LED_2_ON();
+                    LED_1_ON();
+                }
+                break;
+            case 0:
+                error(E_CAN_MSG_UNKNOWN);
+                LED_3_ON();
+                LED_2_ON();
+                break;
+            default:
+                error(E_CAN_MSG_UNHANDLED);
+                LED_1_ON();
+                LED_2_ON();
+                break;
+        }//end of switch
+    }
+    else { //no result from mcp2515
+        error(E_CAN_MSG_FALSE_INT);
+        LED_1_ON();
+        LED_3_ON();
+    }
     return stat; 
 }
 

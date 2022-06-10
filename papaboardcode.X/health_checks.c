@@ -11,7 +11,7 @@
 
 
 bool check_battery_over_current() {
-    uint16_t battery_current_mA = (uint16_t)ADC1_GetSingleConversion(channel_BATT_CURR_AMP)/BATT_CURRENT_SCALAR;
+    uint16_t battery_current_mA = (uint16_t)ADC1_GetSingleConversion(channel_BATT_CURR_AMP);
     
     
     //if (battery_current_mA > BATTERY_CURRENT_THRESHOLD) {
@@ -33,7 +33,7 @@ bool check_battery_over_current() {
 }
 
 bool check_battery_extreme_voltage() {
-    uint16_t battery_voltage = (uint16_t)ADC1_GetSingleConversion(channel_V_SENSE) * VOLTAGE_SCALAR;
+    uint16_t battery_voltage = (uint16_t)ADC1_GetSingleConversion(channel_V_SENSE);
     
     bool erroneous = false;
     
@@ -71,9 +71,9 @@ bool check_battery_extreme_voltage() {
 }
 
 bool check_3v3_over_current() {
-    uint16_t battery_current_mA = (uint16_t)ADC1_GetSingleConversion(channel_3V3_CURR_AMP)/v3v3_CURRENT_SCALAR;
+    uint16_t battery_current_mA = (uint16_t)ADC1_GetSingleConversion(channel_3V3_CURR_AMP);
     
-    //if (battery_current_mA > v3v3_CURRENT_THRESHOLD) {
+    if (battery_current_mA > v3v3_CURRENT_THRESHOLD) {
         uint32_t timestamp = millis();
         uint8_t curr_data[2] = {0};
         curr_data[0] = (battery_current_mA >> 8) & 0xff;
@@ -85,8 +85,8 @@ bool check_3v3_over_current() {
        while(mcp_can_send_rdy());
        mcp_can_send(&error_msg);
         
-      // return true;
-    //}
+      return true;
+    }
     
     return false;
 }

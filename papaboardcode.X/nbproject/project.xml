@@ -7,9 +7,9 @@
             <name>cansw_logger</name>
             <creation-uuid>30ac20b2-a3bf-45f0-b04b-968cc2a168d6</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions>c,h</header-extensions>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

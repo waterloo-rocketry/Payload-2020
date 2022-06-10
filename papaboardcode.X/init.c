@@ -31,7 +31,7 @@ void init_pins()
     //disable all analogs that don't give me errors
     ANSELAbits.ANSA4 = 0; //SET AS PIC_RX as digital (analog by default)
     ANSELBbits.ANSB0 = 0; //37V EN
-    ANSELBbits.ANSB8 = 0;
+    ANSELBbits.ANSB8 = 0; 
     
     //CAN stuff
     TRISBbits.TRISB4 = 0; //set CANTX as output
@@ -195,7 +195,7 @@ void init_spi()
     RPOR2bits.RP39R = 0x09; //setting RPn tied to SPI2
 
     //clock input
-    RPINR22bits.SCK2R = 0b0100000;//that's setting the clock input???
+    RPINR22bits.SCK2R = 0b0100000;//that's setting the clock input to RPI32
     //set MOSI output to RP41 (RB9)
     RPOR3bits.RP41R = 0x08;
     TRISBbits.TRISB9 = 0;
