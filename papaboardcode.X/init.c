@@ -72,9 +72,12 @@ void init_pins()
     //SPI STUFF
     TRISBbits.TRISB5 = 0; //set CS2 (sd card) as output
     TRISBbits.TRISB6 = 0; //set CS1 MCP2515 as output
+    LATBbits.LATB6 = 1; //drive CS 1 line high
+    LATBbits.LATB5 = 1; //drive CS 2 line high
+    
     TRISBbits.TRISB7 = 0; //set SCK as output
     TRISBbits.TRISB8 = 1; //set MISO as input
-    TRISBbits.TRISB9 = 0; //set MOSI as input
+    TRISBbits.TRISB9 = 0; //set MOSI as output
     
     REFOCONbits.ROON = 1; //enable reference oscillator
 
@@ -169,11 +172,11 @@ void init_system()
     init_timers();
 }
 
-
-void cs1_mcp_drive(uint8_t state)
+//OLD CS1 FUNCTION
+/*void cs1_mcp_drive(uint8_t state)
 {
      LATBbits.LATB6 = state;
-}
+*/
 
 void init_spi()
 {
@@ -187,29 +190,29 @@ void init_spi()
     SPI2CON1bits.CKP    = 1; //idle clock level high.
     SPI2CON1bits.MSTEN  = 1; //use master mode
     SPI2CON1bits.SPRE   = 6; //secondary prescale 2:1
-    SPI2CON1bits.PPRE   = 0x01; //primary prescale 16:1
+    //SPI2CON1bits.PPRE   = 0x01; //primary prescale 16:1
+    SPI2CON1bits.PPRE  = 3; //primary prescale 1:1
     SPI2CON2bits.FRMEN  = 0; //don't use framed mode
     SPI2CON2bits.SPIBEN = 0; //use standard mode, not enhanced mode
 
     //set SCK output to RP39, and input to RI32 (both must be set)
     RPOR2bits.RP39R = 0x09; //setting RPn tied to SPI2
-
-    //clock input
     RPINR22bits.SCK2R = 0b0100000;//that's setting the clock input to RPI32
+    
     //set MOSI output to RP41 (RB9)
     RPOR3bits.RP41R = 0x08;
-    TRISBbits.TRISB9 = 0;
     //set MISO input to RP40 (RB8)
     RPINR22bits.SDI2R = 0b0101000;
-    TRISBbits.TRISB8 = 1;
-    //set CS_1 as GPIO output on RB6. Start high. RP38
+    
+    //Already done in init_pins()
+    /*set CS_1 as GPIO output on RB6. Start high. RP38
     TRISBbits.TRISB6 = 0;
     LATBbits.LATB6 = 1;
-    RPOR2bits.RP38R = 0b001011; //slave select
+    //RPOR2bits.RP38R = 0b001011; //slave select
     //set CS_2 as GPIO output on RB5. Start high. RP37
     TRISBbits.TRISB5 = 0;
     LATBbits.LATB5 = 1;
-   // RPOR2bits.RP37R = 0b001011; //slave select
+    RPOR2bits.RP37R = 0b001011; //slave select*/
 
     //enable spi module 1
     SPI2STATbits.SPIEN = 1;

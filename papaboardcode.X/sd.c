@@ -18,10 +18,12 @@ void cs1_drive (uint8_t state)
     LATBbits.LATB6 = state;
 }
 
+
+//FOR MOSI and MISO lines (shared btw MCP and SD card)
 void spi2_send(uint8_t data)
 {
     SPI2BUF = data;
-    while (!SPI2STATbits.SPIRBF) {}
+    while (!SPI2STATbits.SPITBF) {}
     uint8_t __attribute__((unused)) temp = SPI2BUF;
 }
 

@@ -57,15 +57,19 @@ int main(void)
     
     uint32_t last_on_time = 0;
     uint32_t last_board_status_msg = 0;
-    uint32_t last_health_check = 0;
+//    uint32_t last_health_check = 0;
     
     //bool to check if mama is on
     while (1) {
 
         //Check for errors
-        last_health_check = health_heatbeat(last_health_check);
+        
+        //health_check looking more broken than the american healthcare system
+        //last_health_check = health_heatbeat(last_health_check);
+        
         //clear out LOG QUEUE
         can_syslog_heartbeat();
+        
         //periodic LED to say we're alive
         last_on_time = led_heatbeat(last_on_time);
         //send alive message to CAN
@@ -150,7 +154,7 @@ void init_rocketcan()
     can_timing_t timing;
     can_generate_timing_params(OSC_CLK, &timing);
     //Init of can module using external mcp2515 can controller over spi
-    mcp_can_init(&timing, spi2_read, spi2_send, cs1_mcp_drive);
+    mcp_can_init(&timing, spi2_read, spi2_send, cs1_drive);
 }
 void can_callback_function(const can_msg_t *message)
 {
