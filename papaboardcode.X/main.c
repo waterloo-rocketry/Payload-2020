@@ -27,6 +27,7 @@
 
 #define OSC_CLK 12000000
 static uint8_t txb_pool[100];
+bool rocketcan_msg_present = 0;
 
 
 uint32_t led_heatbeat(uint32_t last_on_time);
@@ -58,6 +59,7 @@ int main(void)
     uint32_t last_on_time = 0;
     uint32_t last_board_status_msg = 0;
 //    uint32_t last_health_check = 0;
+
     
     //bool to check if mama is on
     while (1) {
@@ -66,6 +68,13 @@ int main(void)
         
         //health_check looking more broken than the american healthcare system
         //last_health_check = health_heatbeat(last_health_check);
+        
+        if(rocketcan_msg_present){
+            check_rocketcan_msg();
+            rocketcan_msg_present = 0;
+        }
+        
+        
         
         //clear out LOG QUEUE
         can_syslog_heartbeat();
@@ -203,7 +212,7 @@ static void __attribute__ ((interrupt, no_auto_psv)) _INT1Interrupt() {
    IEC1bits.INT1IE = 0; // disable interrupt 1
 
   if(IFS1bits.INT1IF) {
-      check_rocketcan_msg();
+      rocketcan_msg_present = 1;
          IFS1bits.INT1IF = 0;
   }
     IEC1bits.INT1IE = 1; // enable interrupt 1

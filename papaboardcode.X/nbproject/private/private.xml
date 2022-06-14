@@ -5,6 +5,8 @@
         <group>
             <file>file:/C:/Users/joedo/Documents/UW%20Rocketry/Payload-2020/papaboardcode.X/main.c</file>
             <file>file:/C:/Users/joedo/Documents/UW%20Rocketry/Payload-2020/papaboardcode.X/canlib/can_common.c</file>
+            <file>file:/C:/Users/joedo/Documents/UW%20Rocketry/Payload-2020/papaboardcode.X/canlib/mcp2515/mcp_2515.h</file>
+            <file>file:/C:/Users/joedo/Documents/UW%20Rocketry/Payload-2020/papaboardcode.X/canlib/mcp2515/mcp_2515.c</file>
             <file>file:/C:/Users/joedo/Documents/UW%20Rocketry/Payload-2020/papaboardcode.X/canlib/message_types.h</file>
         </group>
     </open-files>
