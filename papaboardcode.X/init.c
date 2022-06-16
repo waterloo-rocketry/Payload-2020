@@ -55,7 +55,7 @@ void init_pins()
     TRISBbits.TRISB10 = 1; //CAN_INT from MCP2515
     RPINR0bits.INT1R = 0b0101010; // assign interrupt 1 to RP42 (RB10)
     INTCON2bits.INT1EP = 1; // interrupt 1 on negative edge
-    IEC1bits.INT1IE = 1; // enable interrupt 1
+    IEC1bits.INT1IE = 0; // disable interrupt 1
     IFS1bits.INT1IF = 0; // clear interrupt 1
 
     //Papa board power peripherals
