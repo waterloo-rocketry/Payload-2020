@@ -44,17 +44,20 @@ int main(void)
 {
     //initialize pin out, oscillator, timers
     init_system();
+    
     //ADC1_Initialize();
 
     LED_1_ON();
+    TURN_ON_37V;
+    TURN_ON_MAMABOARD;
     //initialize SPI, MCP2515
-    init_peripherals(can_callback_function);
+    //init_peripherals(can_callback_function);
     //initialize canbusses
     //init_mamacan();
-    init_rocketcan();
+    //init_rocketcan();
     //make sure everything is off
-    TURN_OFF_MAMABOARD;
-    TURN_OFF_37V;
+    //TURN_OFF_MAMABOARD;
+    //TURN_OFF_37V;
     
     uint32_t last_on_time = 0;
     uint32_t last_board_status_msg = 0;
@@ -116,7 +119,7 @@ uint32_t status_heatbeat(uint32_t last_board_status_msg)
             
             txb_enqueue(&board_stat_msg);
             
-           while(mcp_can_send_rdy());
+           while(!mcp_can_send_rdy());
             LED_2_OFF();
            mcp_can_send(&board_stat_msg);
            last_board_status_msg = millis();
