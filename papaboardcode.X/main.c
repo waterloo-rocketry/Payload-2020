@@ -27,16 +27,16 @@
 
 #define OSC_CLK 12000000
 static uint8_t txb_pool[100];
-bool rocketcan_msg_present = 0;
+//bool rocketcan_msg_present = 0;
 
 
 uint32_t led_heatbeat(uint32_t last_on_time);
-uint32_t status_heatbeat(uint32_t last_board_status_msg);
+//uint32_t status_heatbeat(uint32_t last_board_status_msg);
 void init_mamacan();
-void init_rocketcan();
+//void init_rocketcan();
 //CAN CALLBACK FUNCTIONS
 void can_callback_function(const can_msg_t *message);
-bool check_rocketcan_msg();
+//bool check_rocketcan_msg();
 uint32_t health_heatbeat(uint32_t last_health_check);
 
 
@@ -48,16 +48,16 @@ int main(void)
 
     LED_1_ON();
     //initialize SPI, SD card, and CAN system log, MCP2515
-    init_peripherals(can_callback_function);
+    //init_peripherals(can_callback_function);
     //initialize canbusses
     init_mamacan();
-    init_rocketcan();
+    //init_rocketcan();
     //make sure everything is off
-    TURN_OFF_MAMABOARD;
-    TURN_OFF_37V;
+    TURN_ON_MAMABOARD;
+    TURN_ON_37V;
     
     uint32_t last_on_time = 0;
-    uint32_t last_board_status_msg = 0;
+    //uint32_t last_board_status_msg = 0;
     uint32_t last_health_check = 0;
 
     
@@ -68,21 +68,25 @@ int main(void)
         
         //health_check looking more broken than the american healthcare system
         last_health_check = health_heatbeat(last_health_check);
-        
-        if(rocketcan_msg_present){
-            check_rocketcan_msg();
-            rocketcan_msg_present = 0;
-        }
-        
-        
-        
-        //clear out LOG QUEUE
-        can_syslog_heartbeat();
-        
         //periodic LED to say we're alive
         last_on_time = led_heatbeat(last_on_time);
+        
+        
+        
+
+        
+        /*if(rocketcan_msg_present){
+            check_rocketcan_msg();
+            rocketcan_msg_present = 0;
+        }*/
+        
+ 
+        //clear out LOG QUEUE
+        //can_syslog_heartbeat();
+        
+        
         //send alive message to CAN
-        last_board_status_msg = status_heatbeat(last_board_status_msg);
+        //last_board_status_msg = status_heatbeat(last_board_status_msg);
         //clear CAN buffer
         txb_heartbeat();
 
@@ -215,7 +219,7 @@ static void __attribute__ ((interrupt, no_auto_psv)) _INT1Interrupt() {
    IEC1bits.INT1IE = 0; // disable interrupt 1
 
   if(IFS1bits.INT1IF) {
-      rocketcan_msg_present = 1;
+      //rocketcan_msg_present = 1;
          IFS1bits.INT1IF = 0;
   }
     IEC1bits.INT1IE = 1; // enable interrupt 1
@@ -287,12 +291,12 @@ uint32_t health_heatbeat(uint32_t last_health_check)
            //status_ok = check_battery_over_current() & status_ok;
            status_ok = check_battery_extreme_voltage() & status_ok;
            // status_ok = check_3v3_over_current() & status_ok;
-            /*
+            
             if (!status_ok) {
                 TURN_OFF_MAMABOARD;
                 TURN_OFF_37V;
             }
-             */
+            
            
         last_health_check = millis();
     }

@@ -34,7 +34,21 @@ bool check_battery_over_current() {
 
 bool check_battery_extreme_voltage() {
     uint16_t battery_voltage = (uint16_t)ADC1_GetSingleConversion(channel_V_SENSE);
+    uint32_t timestamp = millis();
+    uint8_t volt_data[2] = {0, 0};
+    volt_data[0] = (battery_voltage >> 8) & 0xff;
+    volt_data[1] = (battery_voltage >> 0) & 0xff;
+
+
+
+    can_msg_t error_msg;
+    build_board_stat_msg(timestamp, E_BATT_OVER_VOLTAGE, volt_data, 2, &error_msg);
+    txb_enqueue(&error_msg);
+    return (battery_voltage <= V_SENSE_VOLTAGE_UPPER) && 
+            (battery_voltage >= V_SENSE_VOLTAGE_LOWER);
     
+   
+    /*
     bool erroneous = false;
     
    if (battery_voltage > V_SENSE_VOLTAGE_UPPER) {
@@ -43,11 +57,15 @@ bool check_battery_extreme_voltage() {
         volt_data[0] = (battery_voltage >> 8) & 0xff;
         volt_data[1] = (battery_voltage >> 0) & 0xff;
         
+        
+        //CAN error logging disabled
+        
         can_msg_t error_msg;
         build_board_stat_msg(timestamp, E_BATT_OVER_VOLTAGE, volt_data, 2, &error_msg);
         txb_enqueue(&error_msg);
        while(mcp_can_send_rdy());
        mcp_can_send(&error_msg);
+        
         
       erroneous = true;
    }
@@ -58,16 +76,21 @@ bool check_battery_extreme_voltage() {
         volt_data[0] = (battery_voltage >> 8) & 0xff;
         volt_data[1] = (battery_voltage >> 0) & 0xff;
         
+        
         can_msg_t error_msg;
         build_board_stat_msg(timestamp, E_BATT_UNDER_VOLTAGE, volt_data, 2, &error_msg);
         txb_enqueue(&error_msg);
        while(mcp_can_send_rdy());
        mcp_can_send(&error_msg);
+       
         
-       erroneous = false;
+       erroneous = true;
     }
+    */
     
-    return erroneous;
+    
+    
+    
 }
 
 bool check_3v3_over_current() {

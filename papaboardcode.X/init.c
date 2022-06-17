@@ -33,6 +33,8 @@ void init_pins()
     ANSELBbits.ANSB0 = 0; //37V EN
     ANSELBbits.ANSB8 = 0; 
     
+    
+    
     //CAN stuff
     TRISBbits.TRISB4 = 0; //set CANTX as output
     TRISAbits.TRISA4 = 1; //set CANRX as input
@@ -70,6 +72,7 @@ void init_pins()
     TRISAbits.TRISA1 = 1; //set 3V3_CURR_AMP as input
 
     //SPI STUFF
+    /*
     TRISBbits.TRISB5 = 0; //set CS2 (sd card) as output
     TRISBbits.TRISB6 = 0; //set CS1 MCP2515 as output
     LATBbits.LATB6 = 1; //drive CS 1 line high
@@ -78,6 +81,7 @@ void init_pins()
     TRISBbits.TRISB7 = 0; //set SCK as output
     TRISBbits.TRISB8 = 1; //set MISO as input
     TRISBbits.TRISB9 = 0; //set MOSI as output
+    */
     
     REFOCONbits.ROON = 1; //enable reference oscillator
 

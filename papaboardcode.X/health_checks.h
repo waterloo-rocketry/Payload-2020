@@ -16,9 +16,8 @@
 #define v3v3_CURRENT_SCALAR 50
 #define v3v3_CURRENT_THRESHOLD 0
 
-#define VOLTAGE_SCALAR 50
-#define V_SENSE_VOLTAGE_UPPER 20000
-#define V_SENSE_VOLTAGE_LOWER 20000
+#define V_SENSE_VOLTAGE_UPPER 1895 //upr bound is 16.4v (4.2v per batt)
+#define V_SENSE_VOLTAGE_LOWER 1579 //lower bound is 14v (3.5v per batt)
 
 
 bool check_battery_over_current();
