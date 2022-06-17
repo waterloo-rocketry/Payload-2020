@@ -13,8 +13,8 @@
 #include <string.h>
 #include <libpic30.h>
 #include "timing_util.h"
-#include "health_checks.h"
-#include "adc1.h"
+//#include "health_checks.h"
+//#include "adc1.h"
 
 
 #include <xc.h>
@@ -32,25 +32,25 @@ bool rocketcan_msg_present = 0;
 
 uint32_t led_heatbeat(uint32_t last_on_time);
 uint32_t status_heatbeat(uint32_t last_board_status_msg);
-void init_mamacan();
+//void init_mamacan();
 void init_rocketcan();
 //CAN CALLBACK FUNCTIONS
 void can_callback_function(const can_msg_t *message);
 bool check_rocketcan_msg();
-uint32_t health_heatbeat(uint32_t last_health_check);
+//uint32_t health_heatbeat(uint32_t last_health_check);
 
 
 int main(void)
 {
     //initialize pin out, oscillator, timers
     init_system();
-    ADC1_Initialize();
+    //ADC1_Initialize();
 
     LED_1_ON();
-    //initialize SPI, SD card, and CAN system log, MCP2515
+    //initialize SPI, MCP2515
     init_peripherals(can_callback_function);
     //initialize canbusses
-    init_mamacan();
+    //init_mamacan();
     init_rocketcan();
     //make sure everything is off
     TURN_OFF_MAMABOARD;
@@ -58,30 +58,22 @@ int main(void)
     
     uint32_t last_on_time = 0;
     uint32_t last_board_status_msg = 0;
-    uint32_t last_health_check = 0;
-
     
     //bool to check if mama is on
     while (1) {
 
         //Check for errors
-        
-        //health_check looking more broken than the american healthcare system
-        last_health_check = health_heatbeat(last_health_check);
-        
         if(rocketcan_msg_present){
             check_rocketcan_msg();
             rocketcan_msg_present = 0;
         }
-        
-        
         
         //clear out LOG QUEUE
         can_syslog_heartbeat();
         
         //periodic LED to say we're alive
         last_on_time = led_heatbeat(last_on_time);
-        //send alive message to CAN
+        //send alive message to rocketCAN
         last_board_status_msg = status_heatbeat(last_board_status_msg);
         //clear CAN buffer
         txb_heartbeat();

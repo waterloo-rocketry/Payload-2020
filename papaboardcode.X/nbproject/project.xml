@@ -14,7 +14,8 @@
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>.</sourceRootElem>
+                <sourceRootElem>fat_io_lib</sourceRootElem>
+                <sourceRootElem>canlib</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

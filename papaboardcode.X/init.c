@@ -222,11 +222,11 @@ void init_spi()
 void init_peripherals(void (*can_callback_function)(const can_msg_t *message))
 {
     // initialize CAN first, so that we don't miss incoming messages
-    init_can_syslog();
+    //init_can_syslog();
 
     // Wait 20ms before initializing SD card, to let it boot up
     __delay32(20 * (FCY / 1000));
     init_spi();
-    init_sd_card2();
+    //init_sd_card2();
  
 }
