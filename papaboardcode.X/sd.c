@@ -23,7 +23,7 @@ void cs1_drive (uint8_t state)
 void spi2_send(uint8_t data)
 {
     SPI2BUF = data;
-    while (!SPI2STATbits.SPITBF) {}
+    while (!SPI2STATbits.SPIRBF) {}
     uint8_t __attribute__((unused)) temp = SPI2BUF;
 }
 

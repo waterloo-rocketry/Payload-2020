@@ -13,7 +13,7 @@ void init_oscillator();
 void init_timers();
 
 //Set up the SPI module. CAN to come later.
-void init_peripherals(void (*can_callback_function)(const can_msg_t *message));
+void init_peripherals();
 
 //Perform all of the above
 void init_system();
