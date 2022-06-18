@@ -219,7 +219,7 @@ void init_spi()
 }
 
 
-void init_peripherals(void (*can_callback_function)(const can_msg_t *message))
+void init_peripherals()
 {
     // initialize CAN first, so that we don't miss incoming messages
     init_can_syslog();

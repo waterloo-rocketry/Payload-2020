@@ -49,6 +49,7 @@ int main(void)
     LED_1_ON();
     //initialize SPI, SD card, and CAN system log, MCP2515
     //++++init_peripherals(can_callback_function);
+    init_peripherals();
     //initialize canbusses
     //init_mamacan();
     //init_rocketcan();
