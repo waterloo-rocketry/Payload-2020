@@ -44,22 +44,27 @@ int main(void)
 {
     //initialize pin out, oscillator, timers
     init_system();
-    ADC1_Initialize();
+    //ADC1_Initialize();
 
     LED_1_ON();
     //initialize SPI, SD card, and CAN system log, MCP2515
-    init_peripherals(can_callback_function);
+    //++++init_peripherals(can_callback_function);
     //initialize canbusses
-    init_mamacan();
-    init_rocketcan();
+    //init_mamacan();
+    //init_rocketcan();
     //make sure everything is off
-    TURN_OFF_MAMABOARD;
-    TURN_OFF_37V;
+    TURN_ON_MAMABOARD;
+    TURN_ON_37V;
+        LED_1_OFF();
+
     
-    uint32_t last_on_time = 0;
+    
+    uint32_t last_on_time = 0;/*
+    
+    
     uint32_t last_board_status_msg = 0;
     uint32_t last_health_check = 0;
-
+    */
     
     //bool to check if mama is on
     while (1) {
@@ -67,24 +72,24 @@ int main(void)
         //Check for errors
         
         //health_check looking more broken than the american healthcare system
-        last_health_check = health_heatbeat(last_health_check);
-        
+        //last_health_check = health_heatbeat(last_health_check);
+        /*
         if(rocketcan_msg_present){
             check_rocketcan_msg();
             rocketcan_msg_present = 0;
         }
-        
+        */
         
         
         //clear out LOG QUEUE
-        can_syslog_heartbeat();
+       // can_syslog_heartbeat();
         
         //periodic LED to say we're alive
         last_on_time = led_heatbeat(last_on_time);
         //send alive message to CAN
-        last_board_status_msg = status_heatbeat(last_board_status_msg);
+        //last_board_status_msg = status_heatbeat(last_board_status_msg);
         //clear CAN buffer
-        txb_heartbeat();
+        //txb_heartbeat();
 
     }
 }
@@ -110,7 +115,6 @@ uint32_t status_heatbeat(uint32_t last_board_status_msg)
 {
     //give status update
         if (millis() - last_board_status_msg > 500) {
-            LED_2_ON();
             can_msg_t board_stat_msg;
             // for now just always pretend everything is ok
             if (any_errors()) 
@@ -125,7 +129,6 @@ uint32_t status_heatbeat(uint32_t last_board_status_msg)
             txb_enqueue(&board_stat_msg);
             
            while(mcp_can_send_rdy());
-            LED_2_OFF();
            mcp_can_send(&board_stat_msg);
            last_board_status_msg = millis();
 
@@ -230,7 +233,7 @@ bool check_rocketcan_msg(){
     can_msg_t msg;
     stat = mcp_can_receive(&msg);
 
-    if(stat)
+   if(stat)
     {
         //handle a "LED_ON" or "LED_OFF", MAMA ON message
         switch (get_message_type(&msg)) {
@@ -284,9 +287,9 @@ uint32_t health_heatbeat(uint32_t last_health_check)
     {
             bool status_ok = true;
 
-           //status_ok = check_battery_over_current() & status_ok;
+          // status_ok = check_battery_over_current() & status_ok;
            status_ok = check_battery_extreme_voltage() & status_ok;
-           // status_ok = check_3v3_over_current() & status_ok;
+          // status_ok = check_3v3_over_current() & status_ok;
             /*
             if (!status_ok) {
                 TURN_OFF_MAMABOARD;

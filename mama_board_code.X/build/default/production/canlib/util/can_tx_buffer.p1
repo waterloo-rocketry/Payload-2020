@@ -1,0 +1,136 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"16 canlib/util/safe_ring_buffer.h
+[; ;canlib/util/safe_ring_buffer.h: 16: typedef struct {
+[s S3 `*v 1 `ui 1 `ui 1 `ui 1 `ui 1 ]
+[n S3 . memory_pool element_size max_elements rd_idx wr_idx ]
+"37 canlib/util/../../canlib/can.h
+[; ;canlib/util/../../canlib/can.h: 37: typedef struct {
+[s S2 `us 1 `uc 1 `uc -> 8 `i ]
+[n S2 . sid data_len data ]
+[v F94 `(v ~T0 @X0 0 tf1`*CS2 ]
+[v F97 `(a ~T0 @X0 0 tf ]
+"4 canlib/util/can_tx_buffer.c
+[; ;canlib/util/can_tx_buffer.c: 4: typedef struct {
+[s S4 `*F94 1 `*F97 1 ]
+[n S4 . can_send_fp can_tx_ready ]
+[v F102 `(v ~T0 @X0 0 tf1`*CS2 ]
+[v F104 `(a ~T0 @X0 0 tf ]
+[v F108 `(v ~T0 @X0 0 tf1`*CS2 ]
+[v F111 `(a ~T0 @X0 0 tf ]
+"34 canlib/util/safe_ring_buffer.h
+[; ;canlib/util/safe_ring_buffer.h: 34: void srb_init(srb_ctx_t *ctx,
+[v _srb_init `(v ~T0 @X0 0 ef4`*S3`*v`ui`ui ]
+"50
+[; ;canlib/util/safe_ring_buffer.h: 50: _Bool srb_is_full(const srb_ctx_t *ctx);
+[v _srb_is_full `(a ~T0 @X0 0 ef1`*CS3 ]
+"44
+[; ;canlib/util/safe_ring_buffer.h: 44: _Bool srb_push(srb_ctx_t *ctx,
+[v _srb_push `(a ~T0 @X0 0 ef2`*S3`*Cv ]
+"55
+[; ;canlib/util/safe_ring_buffer.h: 55: _Bool srb_is_empty(const srb_ctx_t *ctx);
+[v _srb_is_empty `(a ~T0 @X0 0 ef1`*CS3 ]
+"62
+[; ;canlib/util/safe_ring_buffer.h: 62: _Bool srb_pop(srb_ctx_t *ctx,
+[v _srb_pop `(a ~T0 @X0 0 ef2`*S3`*v ]
+"10 canlib/util/can_tx_buffer.c
+[; ;canlib/util/can_tx_buffer.c: 10: static srb_ctx_t buf;
+[v _buf `S3 ~T0 @X0 1 s ]
+"13
+[; ;canlib/util/can_tx_buffer.c: 13: static cbl_ctx_t ctx;
+[v _ctx `S4 ~T0 @X0 1 s ]
+"15
+[; ;canlib/util/can_tx_buffer.c: 15: void txb_init(void *pool, size_t pool_size,
+[v _txb_init `(v ~T0 @X0 1 ef4`*v`ui`*F102`*F104 ]
+"17
+[; ;canlib/util/can_tx_buffer.c: 17:               _Bool (*can_tx_ready)(void)) {
+{
+[e :U _txb_init ]
+"15
+[; ;canlib/util/can_tx_buffer.c: 15: void txb_init(void *pool, size_t pool_size,
+[v _pool `*v ~T0 @X0 1 r1 ]
+[v _pool_size `ui ~T0 @X0 1 r2 ]
+"16
+[; ;canlib/util/can_tx_buffer.c: 16:               void (*can_send_fp)(const can_msg_t *),
+[v _can_send_fp `*F108 ~T0 @X0 1 r3 ]
+"17
+[; ;canlib/util/can_tx_buffer.c: 17:               _Bool (*can_tx_ready)(void)) {
+[v _can_tx_ready `*F111 ~T0 @X0 1 r4 ]
+[f ]
+"18
+[; ;canlib/util/can_tx_buffer.c: 18:     ctx.can_send_fp = can_send_fp;
+[e = . _ctx 0 _can_send_fp ]
+"19
+[; ;canlib/util/can_tx_buffer.c: 19:     ctx.can_tx_ready = can_tx_ready;
+[e = . _ctx 1 _can_tx_ready ]
+"20
+[; ;canlib/util/can_tx_buffer.c: 20:     srb_init(&buf, pool, pool_size, sizeof(can_msg_t));
+[e ( _srb_init (4 , , , &U _buf _pool _pool_size -> # `S2 `ui ]
+"21
+[; ;canlib/util/can_tx_buffer.c: 21: }
+[e :UE 5 ]
+}
+"23
+[; ;canlib/util/can_tx_buffer.c: 23: _Bool txb_enqueue(const can_msg_t *msg) {
+[v _txb_enqueue `(a ~T0 @X0 1 ef1`*CS2 ]
+{
+[e :U _txb_enqueue ]
+[v _msg `*CS2 ~T0 @X0 1 r1 ]
+[f ]
+"24
+[; ;canlib/util/can_tx_buffer.c: 24:     if (srb_is_full(&buf)) {
+[e $ ! != -> ( _srb_is_full (1 -> &U _buf `*CS3 `i -> 0 `i 7  ]
+{
+"25
+[; ;canlib/util/can_tx_buffer.c: 25:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 6  ]
+"26
+[; ;canlib/util/can_tx_buffer.c: 26:     }
+}
+[e :U 7 ]
+"27
+[; ;canlib/util/can_tx_buffer.c: 27:     srb_push(&buf, msg);
+[e ( _srb_push (2 , &U _buf -> _msg `*Cv ]
+"28
+[; ;canlib/util/can_tx_buffer.c: 28:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 6  ]
+"29
+[; ;canlib/util/can_tx_buffer.c: 29: }
+[e :UE 6 ]
+}
+"31
+[; ;canlib/util/can_tx_buffer.c: 31: void txb_heartbeat(void) {
+[v _txb_heartbeat `(v ~T0 @X0 1 ef ]
+{
+[e :U _txb_heartbeat ]
+[f ]
+"32
+[; ;canlib/util/can_tx_buffer.c: 32:     if (!srb_is_empty(&buf)) {
+[e $ ! ! != -> ( _srb_is_empty (1 -> &U _buf `*CS3 `i -> 0 `i 9  ]
+{
+"33
+[; ;canlib/util/can_tx_buffer.c: 33:         if ((*(ctx.can_tx_ready))()) {
+[e $ ! != -> ( *U . _ctx 1 ..  `i -> 0 `i 10  ]
+{
+"34
+[; ;canlib/util/can_tx_buffer.c: 34:             can_msg_t msg_sent;
+[v _msg_sent `S2 ~T0 @X0 1 a ]
+"35
+[; ;canlib/util/can_tx_buffer.c: 35:             srb_pop(&buf, &msg_sent);
+[e ( _srb_pop (2 , &U _buf -> &U _msg_sent `*v ]
+"36
+[; ;canlib/util/can_tx_buffer.c: 36:             (*(ctx.can_send_fp))(&msg_sent);
+[e ( *U . _ctx 0 (1 -> &U _msg_sent `*CS2 ]
+"37
+[; ;canlib/util/can_tx_buffer.c: 37:         }
+}
+[e :U 10 ]
+"38
+[; ;canlib/util/can_tx_buffer.c: 38:     }
+}
+[e :U 9 ]
+"39
+[; ;canlib/util/can_tx_buffer.c: 39: }
+[e :UE 8 ]
+}

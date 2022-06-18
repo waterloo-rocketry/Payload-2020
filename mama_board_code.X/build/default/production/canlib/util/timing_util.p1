@@ -1,0 +1,157 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"16 canlib/util/../../canlib/can.h
+[; ;canlib/util/../../canlib/can.h: 16: typedef struct {
+[s S1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 ]
+[n S1 . brp sjw sam seg1ph seg2ph prseg btlmode ]
+"7 canlib/util/timing_util.c
+[; ;canlib/util/timing_util.c: 7: _Bool can_generate_timing_params(uint32_t can_frequency, can_timing_t *timing)
+[v _can_generate_timing_params `(a ~T0 @X0 1 ef2`ul`*S1 ]
+"8
+[; ;canlib/util/timing_util.c: 8: {
+{
+[e :U _can_generate_timing_params ]
+"7
+[; ;canlib/util/timing_util.c: 7: _Bool can_generate_timing_params(uint32_t can_frequency, can_timing_t *timing)
+[v _can_frequency `ul ~T0 @X0 1 r1 ]
+[v _timing `*S1 ~T0 @X0 1 r2 ]
+"8
+[; ;canlib/util/timing_util.c: 8: {
+[f ]
+"10
+[; ;canlib/util/timing_util.c: 10:     switch (can_frequency) {
+[e $U 5  ]
+{
+"11
+[; ;canlib/util/timing_util.c: 11:         case 48000000:
+[e :U 6 ]
+"12
+[; ;canlib/util/timing_util.c: 12:             timing->brp = 47;
+[e = . *U _timing 0 -> -> 47 `i `uc ]
+"13
+[; ;canlib/util/timing_util.c: 13:             timing->sjw = 3;
+[e = . *U _timing 1 -> -> 3 `i `uc ]
+"14
+[; ;canlib/util/timing_util.c: 14:             timing->btlmode = 1;
+[e = . *U _timing 6 -> -> 1 `i `a ]
+"15
+[; ;canlib/util/timing_util.c: 15:             timing->sam = 0;
+[e = . *U _timing 2 -> -> 0 `i `uc ]
+"16
+[; ;canlib/util/timing_util.c: 16:             timing->seg1ph = 4;
+[e = . *U _timing 3 -> -> 4 `i `uc ]
+"17
+[; ;canlib/util/timing_util.c: 17:             timing->prseg = 0;
+[e = . *U _timing 5 -> -> 0 `i `uc ]
+"18
+[; ;canlib/util/timing_util.c: 18:             timing->seg2ph = 4;
+[e = . *U _timing 4 -> -> 4 `i `uc ]
+"19
+[; ;canlib/util/timing_util.c: 19:             return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 3  ]
+"20
+[; ;canlib/util/timing_util.c: 20:         case 32000000:
+[e :U 7 ]
+"21
+[; ;canlib/util/timing_util.c: 21:             timing->brp = 31;
+[e = . *U _timing 0 -> -> 31 `i `uc ]
+"22
+[; ;canlib/util/timing_util.c: 22:             timing->sjw = 3;
+[e = . *U _timing 1 -> -> 3 `i `uc ]
+"23
+[; ;canlib/util/timing_util.c: 23:             timing->btlmode = 1;
+[e = . *U _timing 6 -> -> 1 `i `a ]
+"24
+[; ;canlib/util/timing_util.c: 24:             timing->sam = 0;
+[e = . *U _timing 2 -> -> 0 `i `uc ]
+"25
+[; ;canlib/util/timing_util.c: 25:             timing->seg1ph = 4;
+[e = . *U _timing 3 -> -> 4 `i `uc ]
+"26
+[; ;canlib/util/timing_util.c: 26:             timing->prseg = 0;
+[e = . *U _timing 5 -> -> 0 `i `uc ]
+"27
+[; ;canlib/util/timing_util.c: 27:             timing->seg2ph = 4;
+[e = . *U _timing 4 -> -> 4 `i `uc ]
+"28
+[; ;canlib/util/timing_util.c: 28:             return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 3  ]
+"29
+[; ;canlib/util/timing_util.c: 29:         case 12000000:
+[e :U 8 ]
+"30
+[; ;canlib/util/timing_util.c: 30:             timing->brp = 11;
+[e = . *U _timing 0 -> -> 11 `i `uc ]
+"31
+[; ;canlib/util/timing_util.c: 31:             timing->sjw = 3;
+[e = . *U _timing 1 -> -> 3 `i `uc ]
+"32
+[; ;canlib/util/timing_util.c: 32:             timing->btlmode = 1;
+[e = . *U _timing 6 -> -> 1 `i `a ]
+"33
+[; ;canlib/util/timing_util.c: 33:             timing->sam = 0;
+[e = . *U _timing 2 -> -> 0 `i `uc ]
+"34
+[; ;canlib/util/timing_util.c: 34:             timing->seg1ph = 4;
+[e = . *U _timing 3 -> -> 4 `i `uc ]
+"35
+[; ;canlib/util/timing_util.c: 35:             timing->prseg = 0;
+[e = . *U _timing 5 -> -> 0 `i `uc ]
+"36
+[; ;canlib/util/timing_util.c: 36:             timing->seg2ph = 4;
+[e = . *U _timing 4 -> -> 4 `i `uc ]
+"37
+[; ;canlib/util/timing_util.c: 37:             return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 3  ]
+"38
+[; ;canlib/util/timing_util.c: 38:         case 1000000:
+[e :U 9 ]
+"39
+[; ;canlib/util/timing_util.c: 39:             timing->brp = 0;
+[e = . *U _timing 0 -> -> 0 `i `uc ]
+"40
+[; ;canlib/util/timing_util.c: 40:             timing->sjw = 3;
+[e = . *U _timing 1 -> -> 3 `i `uc ]
+"41
+[; ;canlib/util/timing_util.c: 41:             timing->btlmode = 1;
+[e = . *U _timing 6 -> -> 1 `i `a ]
+"42
+[; ;canlib/util/timing_util.c: 42:             timing->sam = 0;
+[e = . *U _timing 2 -> -> 0 `i `uc ]
+"43
+[; ;canlib/util/timing_util.c: 43:             timing->seg1ph = 4;
+[e = . *U _timing 3 -> -> 4 `i `uc ]
+"44
+[; ;canlib/util/timing_util.c: 44:             timing->prseg = 0;
+[e = . *U _timing 5 -> -> 0 `i `uc ]
+"45
+[; ;canlib/util/timing_util.c: 45:             timing->seg2ph = 4;
+[e = . *U _timing 4 -> -> 4 `i `uc ]
+"46
+[; ;canlib/util/timing_util.c: 46:             return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 3  ]
+"47
+[; ;canlib/util/timing_util.c: 47:         default:
+[e :U 10 ]
+"49
+[; ;canlib/util/timing_util.c: 49:             return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 3  ]
+"50
+[; ;canlib/util/timing_util.c: 50:     }
+}
+[e $U 4  ]
+[e :U 5 ]
+[e [\ _can_frequency , $ -> -> 48000000 `l `ul 6
+ , $ -> -> 32000000 `l `ul 7
+ , $ -> -> 12000000 `l `ul 8
+ , $ -> -> 1000000 `l `ul 9
+ 10 ]
+[e :U 4 ]
+"51
+[; ;canlib/util/timing_util.c: 51: }
+[e :UE 3 ]
+}

@@ -1,0 +1,317 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"16 canlib/util/safe_ring_buffer.h
+[; ;canlib/util/safe_ring_buffer.h: 16: typedef struct {
+[s S1 `*v 1 `ui 1 `ui 1 `ui 1 `ui 1 ]
+[n S1 . memory_pool element_size max_elements rd_idx wr_idx ]
+"50
+[; ;canlib/util/safe_ring_buffer.h: 50: _Bool srb_is_full(const srb_ctx_t *ctx);
+[v _srb_is_full `(a ~T0 @X0 0 ef1`*CS1 ]
+"27 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 27: void *memcpy (void *restrict, const void *restrict, size_t);
+[v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
+"5 canlib/util/safe_ring_buffer.c
+[; ;canlib/util/safe_ring_buffer.c: 5: static size_t get_offset_bytes(const srb_ctx_t *ctx,
+[v _get_offset_bytes `(ui ~T0 @X0 1 sf2`*CS1`ui ]
+"7
+[; ;canlib/util/safe_ring_buffer.c: 7: {
+{
+[e :U _get_offset_bytes ]
+"5
+[; ;canlib/util/safe_ring_buffer.c: 5: static size_t get_offset_bytes(const srb_ctx_t *ctx,
+[v _ctx `*CS1 ~T0 @X0 1 r1 ]
+"6
+[; ;canlib/util/safe_ring_buffer.c: 6:                                size_t index)
+[v _index `ui ~T0 @X0 1 r2 ]
+"7
+[; ;canlib/util/safe_ring_buffer.c: 7: {
+[f ]
+"8
+[; ;canlib/util/safe_ring_buffer.c: 8:     if (index >= ctx->max_elements) {
+[e $ ! >= _index . *U _ctx 2 4  ]
+{
+"9
+[; ;canlib/util/safe_ring_buffer.c: 9:         return 0;
+[e ) -> -> 0 `i `ui ]
+[e $UE 3  ]
+"10
+[; ;canlib/util/safe_ring_buffer.c: 10:     }
+}
+[e :U 4 ]
+"11
+[; ;canlib/util/safe_ring_buffer.c: 11:     return index * (ctx->element_size);
+[e ) * _index . *U _ctx 1 ]
+[e $UE 3  ]
+"12
+[; ;canlib/util/safe_ring_buffer.c: 12: }
+[e :UE 3 ]
+}
+"14
+[; ;canlib/util/safe_ring_buffer.c: 14: void srb_init(srb_ctx_t *ctx,
+[v _srb_init `(v ~T0 @X0 1 ef4`*S1`*v`ui`ui ]
+"18
+[; ;canlib/util/safe_ring_buffer.c: 18: {
+{
+[e :U _srb_init ]
+"14
+[; ;canlib/util/safe_ring_buffer.c: 14: void srb_init(srb_ctx_t *ctx,
+[v _ctx `*S1 ~T0 @X0 1 r1 ]
+"15
+[; ;canlib/util/safe_ring_buffer.c: 15:               void *pool,
+[v _pool `*v ~T0 @X0 1 r2 ]
+"16
+[; ;canlib/util/safe_ring_buffer.c: 16:               size_t pool_size,
+[v _pool_size `ui ~T0 @X0 1 r3 ]
+"17
+[; ;canlib/util/safe_ring_buffer.c: 17:               size_t element_size)
+[v _element_size `ui ~T0 @X0 1 r4 ]
+"18
+[; ;canlib/util/safe_ring_buffer.c: 18: {
+[f ]
+"19
+[; ;canlib/util/safe_ring_buffer.c: 19:     ctx->memory_pool = pool;
+[e = . *U _ctx 0 _pool ]
+"20
+[; ;canlib/util/safe_ring_buffer.c: 20:     ctx->element_size = element_size;
+[e = . *U _ctx 1 _element_size ]
+"21
+[; ;canlib/util/safe_ring_buffer.c: 21:     ctx->max_elements = (pool_size / (element_size));
+[e = . *U _ctx 2 / _pool_size _element_size ]
+"22
+[; ;canlib/util/safe_ring_buffer.c: 22:     ctx->rd_idx = 0;
+[e = . *U _ctx 3 -> -> 0 `i `ui ]
+"23
+[; ;canlib/util/safe_ring_buffer.c: 23:     ctx->wr_idx = 0;
+[e = . *U _ctx 4 -> -> 0 `i `ui ]
+"24
+[; ;canlib/util/safe_ring_buffer.c: 24: }
+[e :UE 5 ]
+}
+"26
+[; ;canlib/util/safe_ring_buffer.c: 26: _Bool srb_push(srb_ctx_t *ctx,
+[v _srb_push `(a ~T0 @X0 1 ef2`*S1`*Cv ]
+"28
+[; ;canlib/util/safe_ring_buffer.c: 28: {
+{
+[e :U _srb_push ]
+"26
+[; ;canlib/util/safe_ring_buffer.c: 26: _Bool srb_push(srb_ctx_t *ctx,
+[v _ctx `*S1 ~T0 @X0 1 r1 ]
+"27
+[; ;canlib/util/safe_ring_buffer.c: 27:               const void *element)
+[v _element `*Cv ~T0 @X0 1 r2 ]
+"28
+[; ;canlib/util/safe_ring_buffer.c: 28: {
+[f ]
+"29
+[; ;canlib/util/safe_ring_buffer.c: 29:     if (srb_is_full(ctx)) {
+[e $ ! != -> ( _srb_is_full (1 -> _ctx `*CS1 `i -> 0 `i 7  ]
+{
+"30
+[; ;canlib/util/safe_ring_buffer.c: 30:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 6  ]
+"31
+[; ;canlib/util/safe_ring_buffer.c: 31:     }
+}
+[e :U 7 ]
+"32
+[; ;canlib/util/safe_ring_buffer.c: 32:     size_t offset = get_offset_bytes(ctx, ctx->wr_idx);
+[v _offset `ui ~T0 @X0 1 a ]
+[e = _offset ( _get_offset_bytes (2 , -> _ctx `*CS1 . *U _ctx 4 ]
+"33
+[; ;canlib/util/safe_ring_buffer.c: 33:     memcpy(((uint8_t *) ctx->memory_pool) + offset, element, ctx->element_size);
+[e ( _memcpy (3 , , -> + -> . *U _ctx 0 `*uc * -> _offset `ux -> -> # *U -> . *U _ctx 0 `*uc `ui `ux `*v _element . *U _ctx 1 ]
+"34
+[; ;canlib/util/safe_ring_buffer.c: 34:     if ( ++(ctx->wr_idx) >= ctx->max_elements) {
+[e $ ! >= =+ . *U _ctx 4 -> -> 1 `i `ui . *U _ctx 2 8  ]
+{
+"35
+[; ;canlib/util/safe_ring_buffer.c: 35:         ctx->wr_idx = 0;
+[e = . *U _ctx 4 -> -> 0 `i `ui ]
+"36
+[; ;canlib/util/safe_ring_buffer.c: 36:     }
+}
+[e :U 8 ]
+"37
+[; ;canlib/util/safe_ring_buffer.c: 37:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 6  ]
+"38
+[; ;canlib/util/safe_ring_buffer.c: 38: }
+[e :UE 6 ]
+}
+"40
+[; ;canlib/util/safe_ring_buffer.c: 40: _Bool srb_is_full(const srb_ctx_t *ctx)
+[v _srb_is_full `(a ~T0 @X0 1 ef1`*CS1 ]
+"41
+[; ;canlib/util/safe_ring_buffer.c: 41: {
+{
+[e :U _srb_is_full ]
+"40
+[; ;canlib/util/safe_ring_buffer.c: 40: _Bool srb_is_full(const srb_ctx_t *ctx)
+[v _ctx `*CS1 ~T0 @X0 1 r1 ]
+"41
+[; ;canlib/util/safe_ring_buffer.c: 41: {
+[f ]
+"42
+[; ;canlib/util/safe_ring_buffer.c: 42:     if ((ctx->wr_idx + 1 == ctx->rd_idx) || (ctx->wr_idx + 1 == ctx->max_elements && ctx->rd_idx == 0)) {
+[e $ ! || == + . *U _ctx 4 -> -> 1 `i `ui . *U _ctx 3 && == + . *U _ctx 4 -> -> 1 `i `ui . *U _ctx 2 == . *U _ctx 3 -> -> 0 `i `ui 10  ]
+{
+"43
+[; ;canlib/util/safe_ring_buffer.c: 43:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 9  ]
+"44
+[; ;canlib/util/safe_ring_buffer.c: 44:     } else {
+}
+[e $U 11  ]
+[e :U 10 ]
+{
+"45
+[; ;canlib/util/safe_ring_buffer.c: 45:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 9  ]
+"46
+[; ;canlib/util/safe_ring_buffer.c: 46:     }
+}
+[e :U 11 ]
+"47
+[; ;canlib/util/safe_ring_buffer.c: 47: }
+[e :UE 9 ]
+}
+"49
+[; ;canlib/util/safe_ring_buffer.c: 49: _Bool srb_is_empty(const srb_ctx_t *ctx)
+[v _srb_is_empty `(a ~T0 @X0 1 ef1`*CS1 ]
+"50
+[; ;canlib/util/safe_ring_buffer.c: 50: {
+{
+[e :U _srb_is_empty ]
+"49
+[; ;canlib/util/safe_ring_buffer.c: 49: _Bool srb_is_empty(const srb_ctx_t *ctx)
+[v _ctx `*CS1 ~T0 @X0 1 r1 ]
+"50
+[; ;canlib/util/safe_ring_buffer.c: 50: {
+[f ]
+"51
+[; ;canlib/util/safe_ring_buffer.c: 51:     if (ctx->wr_idx == ctx->rd_idx) {
+[e $ ! == . *U _ctx 4 . *U _ctx 3 13  ]
+{
+"52
+[; ;canlib/util/safe_ring_buffer.c: 52:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 12  ]
+"53
+[; ;canlib/util/safe_ring_buffer.c: 53:     } else {
+}
+[e $U 14  ]
+[e :U 13 ]
+{
+"54
+[; ;canlib/util/safe_ring_buffer.c: 54:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 12  ]
+"55
+[; ;canlib/util/safe_ring_buffer.c: 55:     }
+}
+[e :U 14 ]
+"56
+[; ;canlib/util/safe_ring_buffer.c: 56: }
+[e :UE 12 ]
+}
+"58
+[; ;canlib/util/safe_ring_buffer.c: 58: _Bool srb_pop(srb_ctx_t *ctx,
+[v _srb_pop `(a ~T0 @X0 1 ef2`*S1`*v ]
+"60
+[; ;canlib/util/safe_ring_buffer.c: 60: {
+{
+[e :U _srb_pop ]
+"58
+[; ;canlib/util/safe_ring_buffer.c: 58: _Bool srb_pop(srb_ctx_t *ctx,
+[v _ctx `*S1 ~T0 @X0 1 r1 ]
+"59
+[; ;canlib/util/safe_ring_buffer.c: 59:              void *element)
+[v _element `*v ~T0 @X0 1 r2 ]
+"60
+[; ;canlib/util/safe_ring_buffer.c: 60: {
+[f ]
+"61
+[; ;canlib/util/safe_ring_buffer.c: 61:     if (srb_is_empty(ctx)) {
+[e $ ! != -> ( _srb_is_empty (1 -> _ctx `*CS1 `i -> 0 `i 16  ]
+{
+"62
+[; ;canlib/util/safe_ring_buffer.c: 62:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 15  ]
+"63
+[; ;canlib/util/safe_ring_buffer.c: 63:     }
+}
+[e :U 16 ]
+"64
+[; ;canlib/util/safe_ring_buffer.c: 64:     size_t offset = get_offset_bytes(ctx, ctx->rd_idx);
+[v _offset `ui ~T0 @X0 1 a ]
+[e = _offset ( _get_offset_bytes (2 , -> _ctx `*CS1 . *U _ctx 3 ]
+"65
+[; ;canlib/util/safe_ring_buffer.c: 65:     memcpy(element, ((uint8_t *)ctx->memory_pool) + offset, ctx->element_size);
+[e ( _memcpy (3 , , _element -> + -> . *U _ctx 0 `*uc * -> _offset `ux -> -> # *U -> . *U _ctx 0 `*uc `ui `ux `*Cv . *U _ctx 1 ]
+"66
+[; ;canlib/util/safe_ring_buffer.c: 66:     if ( ++(ctx->rd_idx) >= ctx->max_elements) {
+[e $ ! >= =+ . *U _ctx 3 -> -> 1 `i `ui . *U _ctx 2 17  ]
+{
+"67
+[; ;canlib/util/safe_ring_buffer.c: 67:         ctx->rd_idx = 0;
+[e = . *U _ctx 3 -> -> 0 `i `ui ]
+"68
+[; ;canlib/util/safe_ring_buffer.c: 68:     }
+}
+[e :U 17 ]
+"69
+[; ;canlib/util/safe_ring_buffer.c: 69:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 15  ]
+"70
+[; ;canlib/util/safe_ring_buffer.c: 70: }
+[e :UE 15 ]
+}
+"72
+[; ;canlib/util/safe_ring_buffer.c: 72: _Bool srb_peek(const srb_ctx_t *ctx,
+[v _srb_peek `(a ~T0 @X0 1 ef2`*CS1`*v ]
+"74
+[; ;canlib/util/safe_ring_buffer.c: 74: {
+{
+[e :U _srb_peek ]
+"72
+[; ;canlib/util/safe_ring_buffer.c: 72: _Bool srb_peek(const srb_ctx_t *ctx,
+[v _ctx `*CS1 ~T0 @X0 1 r1 ]
+"73
+[; ;canlib/util/safe_ring_buffer.c: 73:               void *element)
+[v _element `*v ~T0 @X0 1 r2 ]
+"74
+[; ;canlib/util/safe_ring_buffer.c: 74: {
+[f ]
+"75
+[; ;canlib/util/safe_ring_buffer.c: 75:     if (srb_is_empty(ctx)) {
+[e $ ! != -> ( _srb_is_empty (1 _ctx `i -> 0 `i 19  ]
+{
+"76
+[; ;canlib/util/safe_ring_buffer.c: 76:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 18  ]
+"77
+[; ;canlib/util/safe_ring_buffer.c: 77:     }
+}
+[e :U 19 ]
+"78
+[; ;canlib/util/safe_ring_buffer.c: 78:     size_t offset = get_offset_bytes(ctx, ctx->rd_idx);
+[v _offset `ui ~T0 @X0 1 a ]
+[e = _offset ( _get_offset_bytes (2 , _ctx . *U _ctx 3 ]
+"79
+[; ;canlib/util/safe_ring_buffer.c: 79:     memcpy(element, ctx->memory_pool + offset, ctx->element_size);
+[e ( _memcpy (3 , , _element -> + . *U _ctx 0 * -> _offset `ux -> -> # *U . *U _ctx 0 `ui `ux `*Cv . *U _ctx 1 ]
+"80
+[; ;canlib/util/safe_ring_buffer.c: 80:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 18  ]
+"81
+[; ;canlib/util/safe_ring_buffer.c: 81: }
+[e :UE 18 ]
+}
