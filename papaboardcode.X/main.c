@@ -72,6 +72,17 @@ int main(void)
         last_on_time = led_heatbeat(last_on_time);
         
         
+        /*
+        uint8_t result_high = 69 & 0xF;
+        uint8_t result_low = 120;
+        uint8_t sensor_identifier = 1;
+    
+        can_msg_t radiation_msg;
+        uint16_t adc_res = ((uint16_t) (result_high) << 8) | (uint16_t) (result_low);
+        build_radi_info_msg(millis(), sensor_identifier, adc_res, &radiation_msg);
+        txb_enqueue(&radiation_msg);
+        */
+        
         
 
         
