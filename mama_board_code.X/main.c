@@ -67,9 +67,11 @@ int main(int argc, char** argv) {
     uint32_t last_millis = millis();
     bool led_heartbeat = 0;
     bool test_sensor = 0; //force ADC to sample but not frequently
-    sensor_identifier = channel_RC5;
-    
+    sensor_channel = channel_RC5;
+    sensor_identifier = 0;
     while (1) {
+        send_status_ok();
+        
         if (millis() - last_millis > MAX_LOOP_TIME_DIFF_ms) {
             
             led_heartbeat ^= 1;
@@ -88,16 +90,16 @@ int main(int argc, char** argv) {
         if(sensor_identifier || test_sensor)
         {
             WHITE_LED_ON();
-            uint16_t adc_res = read_ADC_value(sensor_identifier);
+            uint16_t adc_res = read_ADC_value(sensor_channel);
             
             can_msg_t radiation_msg;
-            build_radi_info_msg(millis(), sensor_identifier, adc_res, &radiation_msg);
+            build_radi_info_msg(millis(), sensor_identifier + 3, adc_res, &radiation_msg);
             txb_enqueue(&radiation_msg);
             
             test_sensor = 0;
-            sensor_identifier = channel_RC5;
+            sensor_channel = channel_RC5;
             WHITE_LED_OFF();
-            /*
+            
             ADCON0bits.ON = 1;
             for(int i = 0; i < 1000; ++i);
             
@@ -110,14 +112,15 @@ int main(int argc, char** argv) {
             //ADCON0bits.ON = 0;
             //ADCON0bits.ON = 1;
     
-            can_msg_t radiation_msg;
-            uint16_t adc_res = ((uint16_t) (result_high) << 8) | (uint16_t) (result_low);
-            build_radi_info_msg(millis(), sensor_identifier, adc_res, &radiation_msg);
+            radiation_msg;
+            adc_res = ((uint16_t) (result_high) << 8) | (uint16_t) (result_low);
+            build_radi_info_msg(millis(), sensor_channel, adc_res, &radiation_msg);
             txb_enqueue(&radiation_msg);
             sensor_identifier = 0;
             test_sensor = 0;
             ADCON0bits.ON = 0;
-            */
+             
+            
         }
     }
 

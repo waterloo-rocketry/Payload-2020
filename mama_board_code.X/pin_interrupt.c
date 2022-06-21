@@ -18,25 +18,28 @@ void pin_interrupt_init(){
     TRISAbits.TRISA1 = 1;
     TRISAbits.TRISA2 = 1;
      
-    // Interrupt on rising edge
-    IOCAPbits.IOCAP0 = 1;
-    IOCAPbits.IOCAP1 = 1;
-    IOCAPbits.IOCAP2 = 1;
+    // Interrupt on falling edge
+    IOCAPbits.IOCAP0 = 0;
+    IOCAPbits.IOCAP1 = 0;
+    IOCAPbits.IOCAP2 = 0;
 }
 
 void pin_interrupt_handler() {
     
     if (IOCAFbits.IOCAF0) {
         IOCAFbits.IOCAF0 = 0; //clear flag
-        sensor_identifier = channel_RC7;
+        sensor_channel = channel_RC7;
+        sensor_identifier = 4;
     }
     if (IOCAFbits.IOCAF1) {
         IOCAFbits.IOCAF1 = 0; //clear flag
-        sensor_identifier = channel_RC5;
+        sensor_channel = channel_RC5;
+        sensor_identifier = 5;
     }
     if (IOCAFbits.IOCAF2) {
         IOCAFbits.IOCAF2 = 0; //clear flag
-        sensor_identifier = channel_RC6;
+        sensor_channel = channel_RC6;
+        sensor_identifier = 6;
     }
     
 }

@@ -18,6 +18,7 @@ void RED_LED_ON();
 void RED_LED_OFF();  
 
 volatile uint8_t sensor_identifier;
+volatile uint8_t sensor_channel;
 
 #ifdef	__cplusplus
 }
