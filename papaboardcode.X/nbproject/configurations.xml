@@ -33,6 +33,7 @@
       <itemPath>can_syslog.h</itemPath>
       <itemPath>adc1.h</itemPath>
       <itemPath>health_checks.h</itemPath>
+      <itemPath>spi1.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -67,11 +68,13 @@
       <itemPath>platform.c</itemPath>
       <itemPath>adc1.c</itemPath>
       <itemPath>health_checks.c</itemPath>
+      <itemPath>spi1.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
+      <itemPath>papaboardcode.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -87,7 +90,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>2.00</languageToolchainVersion>
+        <languageToolchainVersion>1.70</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>

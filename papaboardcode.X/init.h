@@ -13,14 +13,14 @@ void init_oscillator();
 void init_timers();
 
 //Set up the SPI module. CAN to come later.
-void init_peripherals(void (*can_callback_function)(const can_msg_t *message));
+void init_peripherals();
 
 //Perform all of the above
 void init_system();
 
 void cs1_mcp_drive(uint8_t state);
 
-void init_spi();
+//void init_spi();
 
 #endif	/* INIT_H */
 

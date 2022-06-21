@@ -15,6 +15,7 @@
 #include "timing_util.h"
 #include "health_checks.h"
 #include "adc1.h"
+#include "spi1.h"
 
 
 #include <xc.h>
@@ -33,7 +34,7 @@ static uint8_t txb_pool[100];
 uint32_t led_heatbeat(uint32_t last_on_time);
 //uint32_t status_heatbeat(uint32_t last_board_status_msg);
 void init_mamacan();
-//void init_rocketcan();
+void init_rocketcan();
 //CAN CALLBACK FUNCTIONS
 void can_callback_function(const can_msg_t *message);
 //bool check_rocketcan_msg();
@@ -48,10 +49,11 @@ int main(void)
 
     LED_1_ON();
     //initialize SPI, SD card, and CAN system log, MCP2515
-    //init_peripherals(can_callback_function);
-    //initialize canbusses
+    SPI1_Initialize();
+
+    //initialize can bus
     init_mamacan();
-    //init_rocketcan();
+    init_rocketcan();
     //make sure everything is off
     TURN_ON_MAMABOARD;
     TURN_ON_37V;
@@ -60,10 +62,7 @@ int main(void)
     //uint32_t last_board_status_msg = 0;
     uint32_t last_health_check = 0;
 
-    
-    //bool to check if mama is on
     while (1) {
-
         //Check for errors
         
         //health_check looking more broken than the american healthcare system
@@ -71,34 +70,6 @@ int main(void)
         //periodic LED to say we're alive
         last_on_time = led_heatbeat(last_on_time);
         
-        
-        /*
-        uint8_t result_high = 69 & 0xF;
-        uint8_t result_low = 120;
-        uint8_t sensor_identifier = 1;
-    
-        can_msg_t radiation_msg;
-        uint16_t adc_res = ((uint16_t) (result_high) << 8) | (uint16_t) (result_low);
-        build_radi_info_msg(millis(), sensor_identifier, adc_res, &radiation_msg);
-        txb_enqueue(&radiation_msg);
-        */
-        
-        
-
-        
-        /*if(rocketcan_msg_present){
-            check_rocketcan_msg();
-            rocketcan_msg_present = 0;
-        }*/
-        
- 
-        //clear out LOG QUEUE
-        //can_syslog_heartbeat();
-        
-        
-        //send alive message to CAN
-        //last_board_status_msg = status_heatbeat(last_board_status_msg);
-        //clear CAN buffer
         txb_heartbeat();
 
     }
@@ -178,7 +149,7 @@ void init_rocketcan()
     can_timing_t timing;
     can_generate_timing_params(OSC_CLK, &timing);
     //Init of can module using external mcp2515 can controller over spi
-    mcp_can_init(&timing, spi2_read, spi2_send, cs1_drive);
+    mcp_can_init(&timing, SPI1_Receive, SPI1_Send, cs1_drive);
     
     IEC1bits.INT1IE = 1; // enable interrupt 1
     IFS1bits.INT1IF = 0; // clear interrupt 1
