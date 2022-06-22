@@ -100,19 +100,19 @@ int main(int argc, char** argv) {
             get_rad_sample(); 
         }
         if (millis() - last_millis > MAX_LOOP_TIME_DIFF_ms) {
-            get_base_sample(channel_RC7, 11); //get base val from channel 1
+            get_base_sample(channel_RC5, DETECTOR1_POLL); //get base val from channel 1
         }
         if(sensor_identifier){
             get_rad_sample(); 
         }
         if(millis() - last_millis > MAX_LOOP_TIME_DIFF_ms){
-            get_base_sample(channel_RC5, 10); //get base val from channel 2
+            get_base_sample(channel_RC6, DETECTOR2_POLL); //get base val from channel 2
         }
         if(sensor_identifier){
             get_rad_sample(); 
         }
         if(millis() - last_millis > MAX_LOOP_TIME_DIFF_ms){
-            get_base_sample(channel_RC6, 12); //get base val from channel 3
+            get_base_sample(channel_RC7, DETECTOR3_POLL); //get base val from channel 3
         }
        if(sensor_identifier){
             get_rad_sample(); 
