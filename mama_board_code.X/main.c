@@ -34,8 +34,7 @@ int main(int argc, char** argv) {
     // init our millisecond function
     timer0_init();
 
-    // Enable global interrupts
-    INTCON0bits.GIE = 1;
+    
 
     // Set up CAN TX
     TRISC0 = 0;
@@ -52,6 +51,9 @@ int main(int argc, char** argv) {
     // Init interrupt pins
     pin_interrupt_init();
     
+    // Enable global interrupts
+    INTCON0bits.GIE = 1;
+    
     // Init LEDs
     led_init();
 
@@ -64,7 +66,7 @@ int main(int argc, char** argv) {
 
     // loop timer
     uint32_t last_millis = millis();
-    bool led_heartbeat = 0;
+    bool led_heartbeat = 1;
     sensor_identifier = 0;
     
     //constantly polling sensor_identifier to see if we got an interrupt
@@ -78,9 +80,16 @@ int main(int argc, char** argv) {
        
         if (millis() - last_millis > MAX_LOOP_TIME_DIFF_ms) {
             
-            led_heartbeat = 1;
-            if (led_heartbeat) { BLUE_LED_ON(); }
-            else { BLUE_LED_OFF(); }
+            if (led_heartbeat) { 
+                BLUE_LED_ON(); 
+                led_heartbeat = 0;
+            
+            }
+            else { 
+                BLUE_LED_OFF(); 
+                led_heartbeat = 1;
+
+            }
             
             send_status_ok();            
             // update our loop counter
@@ -91,16 +100,19 @@ int main(int argc, char** argv) {
             get_rad_sample(); 
         }
         if (millis() - last_millis > MAX_LOOP_TIME_DIFF_ms) {
-            get_base_sample(channel_RC7, 1); //get base val from channel 1
+            get_base_sample(channel_RC7, 11); //get base val from channel 1
         }
         if(sensor_identifier){
             get_rad_sample(); 
         }
-        if(sensor_identifier){
-            get_base_sample(channel_RC5, 2); //get base val from channel 2
+        if(millis() - last_millis > MAX_LOOP_TIME_DIFF_ms){
+            get_base_sample(channel_RC5, 10); //get base val from channel 2
         }
         if(sensor_identifier){
-            get_base_sample(channel_RC6, 3); //get base val from channel 3
+            get_rad_sample(); 
+        }
+        if(millis() - last_millis > MAX_LOOP_TIME_DIFF_ms){
+            get_base_sample(channel_RC6, 12); //get base val from channel 3
         }
        if(sensor_identifier){
             get_rad_sample(); 
