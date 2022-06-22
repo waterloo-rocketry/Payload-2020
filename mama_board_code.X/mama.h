@@ -8,14 +8,14 @@
 extern "C" {
 #endif
 
-void led_init();    
+void led_init(void);    
 
-void WHITE_LED_ON();
-void WHITE_LED_OFF();
-void BLUE_LED_ON();
-void BLUE_LED_OFF(); 
-void RED_LED_ON();   
-void RED_LED_OFF();  
+void WHITE_LED_ON(void);
+void WHITE_LED_OFF(void);
+void BLUE_LED_ON(void);
+void BLUE_LED_OFF(void); 
+void RED_LED_ON(void);   
+void RED_LED_OFF(void);  
 
 volatile uint8_t sensor_identifier;
 volatile uint8_t sensor_channel;

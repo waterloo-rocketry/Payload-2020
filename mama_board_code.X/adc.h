@@ -14,13 +14,13 @@
 #include <xc.h>
 
 typedef enum {
-    channel_RC5 = 0b010101,
-    channel_RC6 = 0b010110,
-    channel_RC7 = 0b010111,
+    channel_RC5 = 0b010101, //channel 2
+    channel_RC6 = 0b010110, //channel 3
+    channel_RC7 = 0b010111, //channel 1
 } ADC_CHANNEL;
 
 // Init function for the adc
-void adc_init();
+void adc_init(void);
 
 uint16_t read_ADC_value(ADC_CHANNEL);
 

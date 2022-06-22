@@ -21,11 +21,10 @@
 
 #define _XTAL_FREQ 1000000
 
-//#define BOARD_UNIQUE_ID 0x7A0
-
 static void can_msg_handler(const can_msg_t *msg);
 static void send_status_ok(void);
-
+void get_rad_sample(void);
+void get_base_sample(ADC_CHANNEL channel, uint8_t identifer);
 static uint32_t last_can_traffic_timestamp_ms = 0;
 
 //memory pool for the CAN tx buffer
@@ -66,62 +65,48 @@ int main(int argc, char** argv) {
     // loop timer
     uint32_t last_millis = millis();
     bool led_heartbeat = 0;
-    bool test_sensor = 0; //force ADC to sample but not frequently
-    sensor_channel = channel_RC5;
     sensor_identifier = 0;
+    
+    //constantly polling sensor_identifier to see if we got an interrupt
+    //get baseline samples from each of the channels while we're waiting
+    //send periodic status heartbeats 
     while (1) {
-        send_status_ok();
         
+       if(sensor_identifier){
+            get_rad_sample();   
+        }
+       
         if (millis() - last_millis > MAX_LOOP_TIME_DIFF_ms) {
             
-            led_heartbeat ^= 1;
+            led_heartbeat = 1;
             if (led_heartbeat) { BLUE_LED_ON(); }
             else { BLUE_LED_OFF(); }
             
-            send_status_ok();
-            test_sensor = 1;
-            
+            send_status_ok();            
             // update our loop counter
             last_millis = millis();
         }
-        //send any queued CAN messages
-        txb_heartbeat();
         
-        if(sensor_identifier || test_sensor)
-        {
-            WHITE_LED_ON();
-            uint16_t adc_res = read_ADC_value(sensor_channel);
-            
-            can_msg_t radiation_msg;
-            build_radi_info_msg(millis(), sensor_identifier + 3, adc_res, &radiation_msg);
-            txb_enqueue(&radiation_msg);
-            
-            test_sensor = 0;
-            sensor_channel = channel_RC5;
-            WHITE_LED_OFF();
-            
-            ADCON0bits.ON = 1;
-            for(int i = 0; i < 1000; ++i);
-            
-            ADCON0bits.GO = 1;
-            while(ADCON0bits.GO);
-            
-            uint8_t result_high = ADRESH & 0xF;
-            uint8_t result_low = ADRESL;
-            
-            //ADCON0bits.ON = 0;
-            //ADCON0bits.ON = 1;
-    
-            radiation_msg;
-            adc_res = ((uint16_t) (result_high) << 8) | (uint16_t) (result_low);
-            build_radi_info_msg(millis(), sensor_channel, adc_res, &radiation_msg);
-            txb_enqueue(&radiation_msg);
-            sensor_identifier = 0;
-            test_sensor = 0;
-            ADCON0bits.ON = 0;
-             
-            
+        if(sensor_identifier){
+            get_rad_sample(); 
         }
+        if (millis() - last_millis > MAX_LOOP_TIME_DIFF_ms) {
+            get_base_sample(channel_RC7, 1); //get base val from channel 1
+        }
+        if(sensor_identifier){
+            get_rad_sample(); 
+        }
+        if(sensor_identifier){
+            get_base_sample(channel_RC5, 2); //get base val from channel 2
+        }
+        if(sensor_identifier){
+            get_base_sample(channel_RC6, 3); //get base val from channel 3
+        }
+       if(sensor_identifier){
+            get_rad_sample(); 
+        }
+    //send any queued CAN messages
+    txb_heartbeat();
     }
 
     // unreachable
@@ -191,4 +176,32 @@ static void send_status_ok(void) {
 
     // send it off at low priority
     txb_enqueue(&board_stat_msg);
+}
+
+void get_rad_sample(){
+    WHITE_LED_ON();
+    uint16_t adc_res = read_ADC_value(sensor_channel);
+
+    can_msg_t radiation_msg;
+    build_radi_info_msg(millis(), sensor_identifier, adc_res, &radiation_msg);
+    txb_enqueue(&radiation_msg);
+
+    adc_res = read_ADC_value(sensor_channel);
+    build_radi_info_msg(millis(), sensor_channel, adc_res, &radiation_msg);
+    txb_enqueue(&radiation_msg);
+
+    sensor_identifier = 0;
+
+    WHITE_LED_OFF();
+       
+}
+void get_base_sample(ADC_CHANNEL channel, uint8_t identifer){
+    RED_LED_ON();
+    uint16_t adc_res = read_ADC_value(channel); //channel 1
+
+    can_msg_t radiation_msg;
+    build_radi_info_msg(millis(), identifer, adc_res, &radiation_msg);
+    txb_enqueue(&radiation_msg);
+
+    RED_LED_OFF();
 }

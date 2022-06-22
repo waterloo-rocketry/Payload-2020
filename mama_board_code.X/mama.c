@@ -1,6 +1,6 @@
 #include "mama.h"
 
-void led_init() {
+void led_init(void) {
     // RED LED
     TRISB2 = 0;     
     LATB2 = 0;      
